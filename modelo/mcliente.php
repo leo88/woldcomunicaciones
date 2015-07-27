@@ -12,42 +12,42 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbcliente
 		 */
-		function insertar_cliente($nombreciudad, $numerohab, $estadioprinc)
+		function insertar_cliente($nombre, $telefono, $direccion, $email, $detalle)
 		{
-			$sql = "INSERT INTO tbciudad (nombreciudad, numerohab, estadioprinc)
-						VALUES ('".$nombreciudad."','".$numerohab."','".$estadioprinc."');";
+			$sql = "INSERT INTO tbcliente (nombre, telefono, direccion, email, detalle)
+						VALUES ('".$nombre."','".$telefono."','".$direccion."','".$email."','".$detalle."');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbcliente
 		 */
-		function  actualizar_cliente($idciudad, $nombreciudad, $numerohab, $estadioprinc)
+		/*function  actualizar_cliente($idcliente, $nombre, $telefono, $direccion, $email, $detalle)
 		{
-			$sql = "UPDATE tbciudad SET  nombreciudad = '".$nombreciudad."', numerohab = '".$numerohab."', estadioprinc = '".$estadioprinc."' WHERE idciudad = '".$idciudad."';";
+			$sql = "UPDATE tbcliente SET  nombre = '".$nombre."', telefono = '".$telefono."', direccion = '".$direccion."', email = '".$email."', detalle = '".$detalle."' WHERE idcliente = '".$idcliente."';";
 			$this -> cons($sql);
 		}
 		/*
-		 *función para la consulta de los datos de la tabla tbcliente
+		 *función para la elimnar datos de la tabla tbcliente
 		 */
-		function eliminar_cliente($idciudad)
+		/*function eliminar_cliente($idcliente)
 		{
-			$sql = "DELETE FROM `tbciudad` WHERE `idciudad` = '$idciudad'";
+			$sql = "DELETE FROM `tbcliente` WHERE `idcliente` = '$idcliente'";
 			$this -> cons($sql);
 		}	
 		/*
 		 *función para la consulta de los datos de la tabla tbcliente
 		 */
-		function consultar_cliente()
+		/*function consultar_cliente()
 		{
-			$sql = "SELECT * FROM tbciudad";
+			$sql = "SELECT * FROM tbcliente";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*
-    	 *	Función para retornar los datos de la tbciudad	
+    	 *	Función para retornar los datos de la tbcliente	
          */
-		function consultar_cliente_id($idciudad)
+		/*function consultar_cliente_id($idcliente)
 		{
-			sql = "SELECT * FROM cspruba WHERE idproduc = '$idproduc' ";
+			$sql = "SELECT * FROM tbcliente WHERE idcliente = '$idcliente' ";
 			return $this -> SeleccionDatos($sql);
-		}
+		}*/
 	}

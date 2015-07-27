@@ -1,35 +1,20 @@
 <?php
 	
-	include('modelo/mtbciudad.php');
+	include('modelo/mcliente.php');
 
-	$ciudad = new Mciudad();
+	$cliente = new Mcliente();
 
-	$idciudadedit = isset($_POST['idciudad']) ? $_POST['idciudad'] : NULL;
-	$nombreciudad = isset($_POST['nombreciudad']) ? $_POST['nombreciudad'] : NULL;
-	$numerohab = isset($_POST['numerohab']) ? $_POST['numerohab'] : NULL;
-	$estadioprinc = isset($_POST['estadioprinc']) ? $_POST['estadioprinc'] : NULL;
-	$idciudadeli = isset($_POST['idciudadeli']) ? $_POST['idciudadeli'] : NULL;
+	//$idclienteedit = isset($_POST['idcliente']) ? $_POST['idcliente'] : NULL;
+	$nombre        = isset($_POST['nombre']) ? $_POST['nombre'] : NULL;
+	$telefono      = isset($_POST['telefono']) ? $_POST['telefono'] : NULL;
+	$direccion     = isset($_POST['direccion']) ? $_POST['direccion'] : NULL;
+    $email         = isset($_POST['email']) ? $_POST['email'] : NULL;
+	$detalle       = isset($_POST['detalle']) ? $_POST['detalle'] : NULL;
+	//$idclienteeli  = isset($_POST['idclienteeli']) ? $_POST['idclienteeli'] : NULL;
+	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
+	//$idcliente     = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
-	$actu = isset($_POST['actu']) ? $_POST['actu'] : NULL;
-
-	$idciudad = isset($_GET['id']) ? $_GET['id'] : NULL;	
-
-	if ($nombreciudad &&  !$actu) 
+	if ($nombre && $detalle && !$actu) 
 	{
-		$ciudad->insertar_ciudades($nombreciudad, $numerohab, $estadioprinc);
-	}
-
-	if ($idciudadedit && $nombreciudad && $numerohab && $estadioprinc  && $actu) 
-	{
-		$ciudad->actualizar_ciudades($idciudadedit, $nombreciudad,$numerohab, $estadioprinc);
-	}
-
-	if ($idciudad) 
-	{
-		$consultaedit = $ciudad->consultar_ciudades_id($idciudad);
-	}
-
-	if ($idciudadeli) 
-	{
-		$ciudad->eliminar_ciudades($idciudadeli);
+		$cliente->insertar_cliente($nombre, $telefono, $direccion, $email, $detalle);
 	}
