@@ -14,7 +14,8 @@
 	            <ul class="nav navbar-nav">
 	              <li class="active"><a href="index.php">Home</a></li>
 	              <li><a href="index.php?pag=2">clientes</a></li>
-	              <li><a href="index.php?pag=3">Grupos</a></li>
+	              <li><a href="index.php?pag=3">producto</a></li>
+	              <li><a href="index.php?pag=5">minutos</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -28,6 +29,18 @@
 			if ($page == 2) 
 			{
                 include("vista/vcliente.php");
+			}
+            if ($page == 3) 
+			{
+                include("vista/vproducto.php");
+			}
+            if ($page == 4) 
+			{
+                include("vista/vactuproducto.php");
+			}
+            if ($page == 5) 
+			{
+                include("vista/vminutos.php");
 			}
 		?>
 	</div>
