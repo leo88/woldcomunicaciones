@@ -21,7 +21,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbminutos
 		 */
-		function  actualizar_minutos($idminutos,$valor,$descripcion,$fecha)
+		function  actualizar_minutos($idminutos,$cantidad,$valor,$descripcion,$fecha)
 		{
 			$sql = "UPDATE tbminutos SET cantidad_min = '".$cantidad."',valor_min = '".$valor."',descripcion = '".$descripcion."',fecha = '".$fecha."' WHERE idminutos = '".$idminutos."';";
 			$this -> cons($sql);
@@ -39,7 +39,7 @@
 		 */
 		function consultar_minutos()
 		{
-			$sql = "SELECT * FROM tbminutos";
+			$sql = "SELECT * FROM `tbminutos` ORDER BY idminutos DESC LIMIT 1";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

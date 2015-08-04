@@ -47,14 +47,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php for($i=count;$i<count($consultaminutos);$i++): ?>
+			<?php for($i=0;$i<count($consultaminutos);$i++): ?>
 				<tr>
 					<td><?= $consultaminutos[$i]['idminutos'] ?></td>
 					<td><?= $consultaminutos[$i]['cantidad_min'] ?></td>
 					<td><?= $consultaminutos[$i]['valor_min'] ?></td>
 					<td><?= $consultaminutos[$i]['descripcion'] ?></td>
 					<td><?= $consultaminutos[$i]['fecha'] ?></td>
-					<td><a href="index.php?pag=4&id=<?= $consultaminutos[$i]['idminutos'] ?>" class="btn btn-primary">Editar</a></td>
+					<td><a href="index.php?pag=6&id=<?= $consultaminutos[$i]['idminutos'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idminutoseli" value="<?= $consultaminutos[$i]['idminutos'] ?>">

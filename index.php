@@ -23,7 +23,7 @@
       	</nav>	
     </div>
     <div class="container">  		
-		<h1>Apuestas Copa America</h1>
+		<h1>Wold comunicaciones</h1>
 		<?php
 			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
 			if ($page == 2) 
@@ -41,6 +41,10 @@
             if ($page == 5) 
 			{
                 include("vista/vminutos.php");
+			}
+            if ($page == 6) 
+			{
+                include("vista/vactuminutos.php");
 			}
 		?>
 	</div>
