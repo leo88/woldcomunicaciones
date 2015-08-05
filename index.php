@@ -16,6 +16,7 @@
 	              <li><a href="index.php?pag=2">clientes</a></li>
 	              <li><a href="index.php?pag=3">producto</a></li>
 	              <li><a href="index.php?pag=5">minutos</a></li>
+	              <li><a href="index.php?pag=7">proveedor</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -45,6 +46,14 @@
             if ($page == 6) 
 			{
                 include("vista/vactuminutos.php");
+			}
+            if ($page == 7) 
+			{
+                include("vista/vproveedor.php");
+			}
+            if ($page == 8) 
+			{
+                include("vista/vactuproveedor.php");
 			}
 		?>
 	</div>
