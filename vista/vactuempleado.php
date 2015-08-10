@@ -6,7 +6,7 @@
 	<form action="index.php?pag=9&id=<?= $idemple?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Cédula de Ciudadania:</label>
-            <input type="text" class="form-control" name="idempleado" value="<?= $consultaedit[0]['idproveedor'] ?>" readonly>
+            <input type="text" class="form-control" name="idempleado" value="<?= $consultaedit[0]['idempleado'] ?>" readonly>
 			<input type="hidden" name="idemple" value="<?= $idemple ?>">
             <input type="hidden" name="actu" value="actu">
 		</div>
@@ -41,10 +41,10 @@
 		<div class="form-group col-lg-6">
             <label for="">Estado:</label> 
             <input type=text list=estado name="estado" value="<?= $consultaedit[0]['estado']  ?>"required>
-                <datalist id=estado >
-                   <option> Activo
+                <datalist id="estado">
+                   <option> Activo </option>
                    <option> Inactivo
-                </datalist>     
+                </datalist>       
 		</div>
 		<div class="form-group col-lg-6">
             <input type="submit" class="btn btn-success" value="Editar">

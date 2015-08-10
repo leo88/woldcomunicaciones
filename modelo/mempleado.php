@@ -21,7 +21,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbempleado
 		 */
-		function  actualizar_empleado($idempleado, $nombre, $sueldo, $direccion, $ciudad, $telefono_emple, $telefono_refe, $email,$estado)
+		function  actualizar_empleado($idempleado, $nombre, $sueldo, $direccion, $ciudad, $telefono_emple, $telefono_refe, $email, $estado)
 		{
 			$sql = "UPDATE tbempleado SET nombre = '".$nombre."',sueldo = '".$sueldo."',direccion = '".$direccion."',ciudad = '".$ciudad."',telefono_emple = '".$telefono_emple."',telefono_refe = '".$telefono_refe."',email = '".$email."',estado = '".$estado."' WHERE idempleado = '".$idempleado."';";
 			$this -> cons($sql);

@@ -18,20 +18,19 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idemple       = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
-	/*if ($idempleado && $nombre && $sueldo && $direccion && $ciudad && $telefono_emple && $telefono_refe && $estado && !$actu) 
-	{
-		$empleado->insertar_empleado($idempleado,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado);
-	}*/
-    if ($idempleado && $nombre && $sueldo && $direccion && $ciudad && $telefono_emple && $telefono_refe && $estado != "Inactivo" && !$actu) 
-	{
-		$empleado->insertar_empleado($idempleado,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado);
-    }else{
-        $empleado->insertar_empleado($idempleado,$nombre,$sueldo=0,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado);
-    }
 
-	if ($idempleedit && $nombre && $sueldo && $direccion && $ciudad && $telefono_emple && $telefono_refe && $estado && $actu) 
+	if ($idempleado && $nombre && $sueldo && $direccion && $ciudad && $telefono_emple && $telefono_refe && $estado && !$actu) 
 	{
-		$empleado->actualizar_empleado($idempleedit,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$estado);
+		$empleado->insertar_empleado($idempleado,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado);
+	}
+	
+	if($estado=="Inactivo"){
+		$sueldo = "0";
+	}
+
+	if ($idempleedit && $nombre && $actu) 
+	{
+		$empleado->actualizar_empleado($idempleedit,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado);
 	}
 
 	if ($idemple) 

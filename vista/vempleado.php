@@ -6,7 +6,8 @@
 	<form action="" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Cédula de Ciudadania:</label>
-            <input type="text" class="form-control" name="idempleado" required>       
+            <input type="text" class="form-control" name="idempleado" required> 
+            <input type="hidden" name="estado" value="Activo">  
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Nombre del empleado:</label>
@@ -35,14 +36,6 @@
 		<div class="form-group col-lg-6">
             <label for="">Email:</label>
             <input type="email" class="form-control" name="email">       
-		</div>
-		<div class="form-group col-lg-6">
-            <label for="">Estado:</label> 
-            <input type=text list=estado name="estado" required>
-                <datalist id=estado >
-                   <option> Activo
-                   <option> Inactivo
-                </datalist>     
 		</div>
 		 <div class="form-group col-lg-6">
 			<br>
