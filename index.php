@@ -17,6 +17,7 @@
 	              <li><a href="index.php?pag=3">producto</a></li>
 	              <li><a href="index.php?pag=5">minutos</a></li>
 	              <li><a href="index.php?pag=7">proveedor</a></li>
+	              <li><a href="index.php?pag=9">Empleado</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -54,6 +55,14 @@
             if ($page == 8) 
 			{
                 include("vista/vactuproveedor.php");
+			}
+            if ($page == 9) 
+			{
+                include("vista/vempleado.php");
+			}
+            if ($page == 10) 
+			{
+                include("vista/vactuempleado.php");
 			}
 		?>
 	</div>
