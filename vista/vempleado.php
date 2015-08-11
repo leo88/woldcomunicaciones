@@ -37,6 +37,10 @@
             <label for="">Email:</label>
             <input type="email" class="form-control" name="email">       
 		</div>
+		<div class="form-group col-lg-6">
+            <label for="">Fecha de Ingreso:</label>
+            <input type="date" class="form-control" name="fecha">       
+		</div>
 		 <div class="form-group col-lg-6">
 			<br>
             <input type="submit" class="btn btn-success" value="Insertar">
@@ -57,6 +61,7 @@
 				<th>Teléfono</th>
 				<th>Teléfono de referencia</th>
 				<th>Email</th>
+				<th>Fecha</th>
 				<th>Estado</th>
 				<th>Eliminación</th>
 			</tr>
@@ -72,6 +77,7 @@
 					<td><?= $consultaempleado[$i]['telefono_emple'] ?></td>
 					<td><?= $consultaempleado[$i]['telefono_refe'] ?></td>
 					<td><?= $consultaempleado[$i]['email'] ?></td>
+					<td><?= $consultaempleado[$i]['fecha_ingreso'] ?></td>
 					<td><?= $consultaempleado[$i]['estado'] ?></td>
 					<td><a href="index.php?pag=10&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>

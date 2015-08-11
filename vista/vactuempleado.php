@@ -39,6 +39,10 @@
             <input type="email" class="form-control" name="email" value="<?= $consultaedit[0]['email']  ?>">
 		</div>
 		<div class="form-group col-lg-6">
+            <label for="">Fecha de Ingreso:</label>
+            <input type="date" class="form-control" name="fecha" value="<?= $consultaedit[0]['fecha_ingreso']  ?>">       
+		</div>
+		<div class="form-group col-lg-6">
             <label for="">Estado:</label> 
             <input type=text list=estado name="estado" value="<?= $consultaedit[0]['estado']  ?>"required>
                 <datalist id="estado">

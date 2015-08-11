@@ -12,18 +12,18 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbempleado
 		 */
-		function insertar_empleado($idempleado, $nombre, $sueldo, $direccion, $ciudad, $telefono_emple, $telefono_refe, $email,$estado)
+		function insertar_empleado($idempleado, $nombre, $sueldo, $direccion, $ciudad, $telefono_emple, $telefono_refe, $email,$estado,$fecha)
 		{
-			$sql = "INSERT INTO tbempleado (idempleado, nombre, sueldo, direccion, ciudad, telefono_emple, telefono_refe, email,estado)
-						VALUES ('".$idempleado."','".$nombre."','".$sueldo."','".$direccion."','".$ciudad."','".$telefono_emple."','".$telefono_refe."','".$email."','".$estado."');";
+			$sql = "INSERT INTO tbempleado (idempleado, nombre, sueldo, direccion, ciudad, telefono_emple, telefono_refe, email,estado,fecha_ingreso)
+						VALUES ('".$idempleado."','".$nombre."','".$sueldo."','".$direccion."','".$ciudad."','".$telefono_emple."','".$telefono_refe."','".$email."','".$estado."','".$fecha."');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbempleado
 		 */
-		function  actualizar_empleado($idempleado, $nombre, $sueldo, $direccion, $ciudad, $telefono_emple, $telefono_refe, $email, $estado)
+		function  actualizar_empleado($idempleado, $nombre, $sueldo, $direccion, $ciudad, $telefono_emple, $telefono_refe, $email, $estado, $fecha)
 		{
-			$sql = "UPDATE tbempleado SET nombre = '".$nombre."',sueldo = '".$sueldo."',direccion = '".$direccion."',ciudad = '".$ciudad."',telefono_emple = '".$telefono_emple."',telefono_refe = '".$telefono_refe."',email = '".$email."',estado = '".$estado."' WHERE idempleado = '".$idempleado."';";
+			$sql = "UPDATE tbempleado SET nombre = '".$nombre."',sueldo = '".$sueldo."',direccion = '".$direccion."',ciudad = '".$ciudad."',telefono_emple = '".$telefono_emple."',telefono_refe = '".$telefono_refe."',email = '".$email."',estado = '".$estado."',fecha_ingreso = '".$fecha."' WHERE idempleado = '".$idempleado."';";
 			$this -> cons($sql);
 		}
 		/*

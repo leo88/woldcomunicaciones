@@ -14,6 +14,7 @@
     $telefono_refe = isset($_POST['telefono_refe']) ? $_POST['telefono_refe'] : NULL;
     $email         = isset($_POST['email']) ? $_POST['email'] : NULL;
     $estado        = isset($_POST['estado']) ? $_POST['estado'] : NULL;
+    $fecha         = isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
 	$idempleeli    = isset($_POST['idempleeli ']) ? $_POST['idempleeli '] : NULL;
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idemple       = isset($_GET['id']) ? $_GET['id'] : NULL;	
@@ -21,7 +22,7 @@
 
 	if ($idempleado && $nombre && $sueldo && $direccion && $ciudad && $telefono_emple && $telefono_refe && $estado && !$actu) 
 	{
-		$empleado->insertar_empleado($idempleado,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado);
+		$empleado->insertar_empleado($idempleado,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
 	}
 	
 	if($estado=="Inactivo"){
@@ -30,7 +31,7 @@
 
 	if ($idempleedit && $nombre && $actu) 
 	{
-		$empleado->actualizar_empleado($idempleedit,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado);
+		$empleado->actualizar_empleado($idempleedit,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
 	}
 
 	if ($idemple) 
