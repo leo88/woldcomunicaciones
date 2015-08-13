@@ -19,6 +19,7 @@
 	              <li><a href="index.php?pag=7">proveedor</a></li>
 	              <li><a href="index.php?pag=9">Empleado</a></li>
 	              <li><a href="index.php?pag=11">Otros</a></li>
+	               <li><a href="index.php?pag=13">Servivcio Tecnico</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -72,6 +73,10 @@
             if ($page == 12) 
 			{
                 include("vista/vactuotros.php");
+			}
+            if ($page == 13) 
+			{
+                include("vista/vserviciotecnico.php");
 			}
 		?>
 	</div>
