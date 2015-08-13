@@ -9,13 +9,14 @@
 		{
 
 		}
+		
         /*
 		 *función para el ingreso de los datos de la tabla tbserviciotecnico
 		 */
 		function insertar_serviciotecnico($nombre, $marca, $referencia, $descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono)
 		{
 			$sql = "INSERT INTO tbserviciotecnico (nombre, marca, referencia, descripcion_st, observacion, costo_st, precio_cliente, fecha, id_cliente, empleado, abono)
-						VALUES ('".$nombre."','".$marca."','".$referencia."','".$descripcion_st."','".$observacion."','".$costo_st."','".$precio_cliente."','".$fecha."','".$id_cliente."',,'".$empleado."','".$abono."');";
+						VALUES ('".$nombre."','".$marca."','".$referencia."','".$descripcion_st."','".$observacion."','".$costo_st."','".$precio_cliente."','".$fecha."','".$id_cliente."','".$empleado."','".$abono."');";
 			$this -> cons($sql);
 		}
 		/*
@@ -23,7 +24,7 @@
 		 */
 		function  actualizar_serviciotecnico($numero_orden,$referencia, $descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono)
 		{
-			$sql = "UPDATE tbserviciotecnico SET referencia = '".$referencia."',nombre = '".$nombre."',marca = '".$marca."',referencia = '".$referencia."',descripcion_st = '".$descripcion_st."', observacion = '".$observacion."' WHERE numero_orden = '".$numero_orden."';";
+			$sql = "UPDATE tbserviciotecnico SET nombre = '".$nombre."',marca = '".$marca."',referencia = '".$referencia."',descripcion_st = '".$descripcion_st."', observacion = '".$observacion."' WHERE numero_orden = '".$numero_orden."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -49,5 +50,37 @@
 		{
 			$sql = "SELECT * FROM tbserviciotecnico WHERE numero_orden = '$numero_orden' ";
 			return $this -> SeleccionDatos($sql);
+		}
+		 /*
+		 	Función para la seleccion de la tabla empleado
+		 */
+		function sel_empleado()        
+		{
+            $sql = "SELECT * FROM `tbempleado`";
+            return $this->SeleccionDatos($sql);
+        }
+        /*
+		 	Función para la seleccion especifica de los datos de la tabla empleado
+		 */
+		function sel_empleado1($idempleado)
+		{
+			$sql = "SELECT * FROM tbempleado WHERE idempleado='".$idempleado."';";
+			return $this->SeleccionDatos($sql);
+		}
+		 /*
+		 	Función para la seleccion de la tabla cliente
+		 */
+		function sel_cliente()        
+		{
+            $sql = "SELECT * FROM `tbcliente`";
+            return $this->SeleccionDatos($sql);
+        }
+        /*
+		 	Función para la seleccion especifica de los datos de la tabla cliente
+		 */
+		function sel_cliente1($idcliente)
+		{
+			$sql = "SELECT * FROM tbcliente WHERE idcliente='".$idcliente."';";
+			return $this->SeleccionDatos($sql);
 		}
 	}

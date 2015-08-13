@@ -19,11 +19,11 @@
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Descripcion del servicio:</label>
-            <input type="text" class="form-control" name="descripcion_st" required >       
+            <textarea name="descripcion_st" rows="4" cols="30" required> </textarea>
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Observacion:</label>
-            <input type="text" class="form-control" name="observacion" required >       
+            <input type="text" class="form-control" name="observacion">       
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Costo del servicio:</label>
@@ -39,15 +39,25 @@
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">ID del cliente:</label>
-            <input type="number" class="form-control" name="id_cliente" required >       
+            <select name="id_cliente" class="form-control" required>
+				<option value=0>Seleccione empleado</option>
+				<?php for($i=0;$i<count($cliente2);$i++): ?>
+					<option value="<?= $cliente2[$i]['idcliente'] ?>"><?= $cliente2[$i]['nombre'] ?></option>
+				<?php endfor; ?>
+			</select>       
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">ID del Emplado:</label>
-            <input type="text" class="form-control" name="empleado" required >       
+            <label for="">Empleado:</label>
+            <select name="empleado" class="form-control" required>
+				<option value=0>Seleccione empleado</option>
+				<?php for($i=0;$i<count($empleado2);$i++): ?>
+					<option value="<?= $empleado2[$i]['idempleado'] ?>"><?= $empleado2[$i]['nombre'] ?></option>
+				<?php endfor; ?>
+			</select>      
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Abono:</label>
-            <input type="text" class="form-control" name="abono" required >       
+            <input type="number" class="form-control" name="abono" required >       
 		</div>
 		 <div class="form-city col-lg-6">
 			<br>
@@ -78,7 +88,10 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php for($i=0;$i<count($consultaserviciotecnico);$i++): ?>
+			<?php for($i=0;$i<count($consultaserviciotecnico);$i++): 
+				$empleado1 = $serviciotecnico->sel_empleado1($consultaserviciotecnico[$i]['empleado']);
+				$cliente1 = $serviciotecnico->sel_cliente1($consultaserviciotecnico[$i]['id_cliente']);
+			?>
 				<tr>
 					<td><?= $consultaserviciotecnico[$i]['numero_orden'] ?></td>
 					<td><?= $consultaserviciotecnico[$i]['nombre'] ?></td>
@@ -89,8 +102,8 @@
 					<td><?= $consultaserviciotecnico[$i]['costo_st'] ?></td>
 					<td><?= $consultaserviciotecnico[$i]['precio_cliente'] ?></td>
 					<td><?= $consultaserviciotecnico[$i]['fecha'] ?></td>
-					<td><?= $consultaserviciotecnico[$i]['id_cliente'] ?></td>
-					<td><?= $consultaserviciotecnico[$i]['empleado'] ?></td>
+					<td><?= $cliente1[0]['nombre'] ?></td>
+					<td><?= $empleado1[0]['nombre'] ?></td>
 					<td><?= $consultaserviciotecnico[$i]['abono'] ?></td>
 					<td><a href="index.php?pag=4&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
