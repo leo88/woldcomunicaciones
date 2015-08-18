@@ -19,7 +19,8 @@
 	              <li><a href="index.php?pag=7">proveedor</a></li>
 	              <li><a href="index.php?pag=9">Empleado</a></li>
 	              <li><a href="index.php?pag=11">Otros</a></li>
-	               <li><a href="index.php?pag=13">Servivcio Tecnico</a></li>
+	              <li><a href="index.php?pag=13">Servivcio Tecnico</a></li>
+	              <li><a href="index.php?pag=15">Servivcio Tecnico Entregado</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -77,6 +78,14 @@
             if ($page == 13) 
 			{
                 include("vista/vserviciotecnico.php");
+			}
+            if ($page == 14) 
+			{
+                include("vista/vactuserviciotecnico.php");
+			}
+            if ($page == 15) 
+			{
+                include("vista/vservicioentregado.php");
 			}
 		?>
 	</div>
