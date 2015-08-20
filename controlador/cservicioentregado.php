@@ -14,11 +14,11 @@
     
     $numorden2 = $servicioentregado->sel_orden();
   
-    if ($saldo_cancel == NULL){
+    /*if ($saldo_cancel == NULL){
         $saldo_cancel = "0";
-    }
+    }*/
 
-	if ($numero_orden && $fecha && $saldo_cancel && !$actu) 
+	if ($numero_orden && $fecha && !$actu) 
 	{
         
 		$servicioentregado->insertar_servicioentregado($numero_orden,$fecha,$saldo_cancel);
