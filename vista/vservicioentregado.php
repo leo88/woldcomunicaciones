@@ -34,15 +34,15 @@
             <input type="date" class="form-control" name="fecha" required>       
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Saldo1:</label>
-            <input type="text" class="form-control" value="2" name="saldo1" id="sal1" readonly>       
+            <label for="">Precio:</label>
+            <input type="text" class="form-control" name="saldo1" id="sal1" readonly>       
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Saldo2:</label>
-            <input type="text" class="form-control" value="1" name="saldo2" id="sal2" readonly>       
+            <label for="">Abono:</label>
+            <input type="text" class="form-control" name="saldo2" id="sal2" readonly>       
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Saldo:</label>
+            <label for="">Saldo Cancelado:</label>
             <input type="text" class="form-control" name="saldo_cancel" id="saldo" readonly >       
 		</div>
 		<div class="form-city col-lg-6">
