@@ -13,7 +13,7 @@
 	$idservent     = isset($_GET['id']) ? $_GET['id'] : NULL;	
     
     $numorden2 = $servicioentregado->sel_orden();
-
+  
     if ($saldo_cancel == NULL){
         $saldo_cancel = "0";
     }

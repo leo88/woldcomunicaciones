@@ -1,15 +1,38 @@
 <?php include("controlador/cservicioentregado.php"); ?>
 
+<script src="js/jquery-1.9.1.js"></script>
+
+    <script>
+    $(function(){
+ 	$('#orden').change(function() {
+    	selectedOption = $('option:selected', this);
+    	$('input[name=saldo_cancel]').val( selectedOption.data('saldo') );
+	}).change();
+});
+
+ /*	$(function(){
+    $('select').change(function(){
+        var selected = $(this).find('option:selected');
+       $('#text').html(selected.text()); 
+       $('#value').html(selected.val()); 
+       $('#foo').html(selected.data('foo')); 
+    }).change();
+});*/
+ 
+    </script>
+
+
+
 <div class="container-fluid">
 	<h1>Insertar servicioentregado</h1>
 
 	<form action="" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">No. Orden:</label>
-             <select name="numero_orden" class="form-control" required>
+             <select name="numero_orden" id="orden" class="form-control" required>
 				<option value=0>Seleccione No. Orden</option>
 				<?php for($i=0;$i<count($numorden2);$i++): ?>
-					<option value="<?= $numorden2[$i]['numero_orden'] ?>"><?= $numorden2[$i]['numero_orden'] ?></option>
+					<option value="<?= $numorden2[$i]['numero_orden'];?>" data-saldo="<?= $numorden2[$i]['abono'] ?>"><?= $numorden2[$i]['numero_orden'] ?></option>
 				<?php endfor; ?>
 			</select>        
 		</div>
@@ -19,7 +42,7 @@
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Saldo:</label>
-            <input type="number" class="form-control" name="saldo_cancel" required >       
+            <input type="text" class="form-control" name="saldo_cancel"  >       
 		</div>
 		<div class="form-city col-lg-6">
 			<br>
