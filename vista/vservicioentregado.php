@@ -6,19 +6,12 @@
     $(function(){
  	$('#orden').change(function() {
     	selectedOption = $('option:selected', this);
-    	$('input[name=saldo_cancel]').val( selectedOption.data('saldo') );
+    	var a = parseInt($('input[name=saldo1]').val( selectedOption.data('precio')));
+    	var b = parseInt($('input[name=saldo2]').val( selectedOption.data('abono')));
+    	$('input[name=saldo_cancel]').val( selectedOption.data('precio')- selectedOption.data('abono'));
 	}).change();
 });
 
- /*	$(function(){
-    $('select').change(function(){
-        var selected = $(this).find('option:selected');
-       $('#text').html(selected.text()); 
-       $('#value').html(selected.val()); 
-       $('#foo').html(selected.data('foo')); 
-    }).change();
-});*/
- 
     </script>
 
 
@@ -32,7 +25,7 @@
              <select name="numero_orden" id="orden" class="form-control" required>
 				<option value=0>Seleccione No. Orden</option>
 				<?php for($i=0;$i<count($numorden2);$i++): ?>
-					<option value="<?= $numorden2[$i]['numero_orden'];?>" data-saldo="<?= $numorden2[$i]['abono'] ?>"><?= $numorden2[$i]['numero_orden'] ?></option>
+					<option value="<?= $numorden2[$i]['numero_orden'];?>" data-precio="<?= $numorden2[$i]['precio_cliente'] ?>" data-abono="<?= $numorden2[$i]['abono'] ?>"><?= $numorden2[$i]['numero_orden'] ?></option>
 				<?php endfor; ?>
 			</select>        
 		</div>
@@ -41,8 +34,16 @@
             <input type="date" class="form-control" name="fecha" required>       
 		</div>
 		<div class="form-group col-lg-6">
+            <label for="">Saldo1:</label>
+            <input type="text" class="form-control" value="2" name="saldo1" id="sal1" readonly>       
+		</div>
+		<div class="form-group col-lg-6">
+            <label for="">Saldo2:</label>
+            <input type="text" class="form-control" value="1" name="saldo2" id="sal2" readonly>       
+		</div>
+		<div class="form-group col-lg-6">
             <label for="">Saldo:</label>
-            <input type="text" class="form-control" name="saldo_cancel"  >       
+            <input type="text" class="form-control" name="saldo_cancel" id="saldo" readonly >       
 		</div>
 		<div class="form-city col-lg-6">
 			<br>
