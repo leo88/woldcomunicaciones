@@ -21,6 +21,7 @@
 	              <li><a href="index.php?pag=11">Otros</a></li>
 	              <li><a href="index.php?pag=13">Servivcio Tecnico</a></li>
 	              <li><a href="index.php?pag=15">Servivcio Tecnico Entregado</a></li>
+	              <li><a href="index.php?pag=17">Movimiento</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -86,6 +87,10 @@
             if ($page == 15) 
 			{
                 include("vista/vservicioentregado.php");
+			}
+            if ($page == 16) 
+			{
+                include("vista/vmovimiento.php");
 			}
 		?>
 	</div>
