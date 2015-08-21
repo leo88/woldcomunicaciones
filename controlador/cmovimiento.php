@@ -10,7 +10,17 @@
 	$cantidad   = isset($_POST['cantidad']) ? $_POST['cantidad'] : NULL;
    	$idmovimientoeli  = isset($_POST['idmovimientoeli']) ? $_POST['idmovimientoeli'] : NULL;
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
-	$idmovimiento     = isset($_GET['id']) ? $_GET['id'] : NULL;	
+	$idmovimiento     = isset($_GET['id']) ? $_GET['id'] : NULL;
+
+    if (isset($_POST['Sale'])) {
+    //Out action
+    	$cantidad=$cantidad*(-1);
+	}
+	if (isset($_POST['Entra'])) {
+    //In action
+		$cantidad=$cantidad*1;
+	}
+
 
 	if ($motivo && $referencia && $cantidad && !$actu) 
 	{

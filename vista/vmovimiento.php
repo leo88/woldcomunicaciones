@@ -24,7 +24,8 @@
 		</div>		
 		 <div class="form-group col-lg-6">
 			<br>
-            <input type="submit" class="btn btn-success" value="Insertar">
+            <input type="submit" name="Sale" class="btn btn-success" value="-"> 
+            <input type="submit" name="Entra" class="btn btn-danger" value="+">
         </div>
 	</form>
 </div>
