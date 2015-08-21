@@ -42,7 +42,7 @@
             <input type="text" class="form-control" name="saldo2" id="sal2" readonly>       
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Saldo Cancelado:</label>
+            <label for="">Saldo Pendiente:</label>
             <input type="text" class="form-control" name="saldo_cancel" id="saldo" readonly >       
 		</div>
 		<div class="form-city col-lg-6">
@@ -59,7 +59,7 @@
 			<tr>
 				<th>No. Orden</th>
 				<th>Fecha</th>
-				<th>Saldo</th>
+				<th>Saldo cancelado</th>
 				<th>Edición</th>
 				<th>Eliminación</th>
 			</tr>

@@ -21,7 +21,8 @@
 	              <li><a href="index.php?pag=11">Otros</a></li>
 	              <li><a href="index.php?pag=13">Servivcio Tecnico</a></li>
 	              <li><a href="index.php?pag=15">Servivcio Tecnico Entregado</a></li>
-	              <li><a href="index.php?pag=17">Movimiento</a></li>
+	              <li><a href="index.php?pag=16">Movimiento</a></li>
+	              <li><a href="index.php?pag=17">Devolucion Irregular</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -91,6 +92,10 @@
             if ($page == 16) 
 			{
                 include("vista/vmovimiento.php");
+			}
+			if ($page == 17) 
+			{
+                include("vista/vdevolucion.php");
 			}
 		?>
 	</div>

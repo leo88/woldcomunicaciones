@@ -24,20 +24,20 @@
 
 	if ($fecha && $descripcion && !$actu) 
 	{
-		$otros->insertar_minutos($fecha, $descripcion, $salida, $entrada);
+		$otros->insertar_otros($fecha, $descripcion, $salida, $entrada);
 	}
     
     if ($idreporteedit && $fecha && $descripcion && $salida && $entrada && $actu) 
 	{
-		$otros->actualizar_minutos($idreporteedit,$fecha, $descripcion, $salida, $entrada);
+		$otros->actualizar_otros($idreporteedit,$fecha, $descripcion, $salida, $entrada);
 	}
 
 	if ($idreporte) 
 	{
-		$consultaedit = $otros->consultar_minutos_id($idreporte);
+		$consultaedit = $otros->consultar_otros_id($idreporte);
 	}
 
 	if ($idreporteeli) 
 	{
-		$otros->eliminar_minutos($idreporteeli);
+		$otros->eliminar_otros($idreporteeli);
 	}
