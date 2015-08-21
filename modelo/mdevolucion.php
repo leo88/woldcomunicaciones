@@ -56,7 +56,7 @@
 		 */
 		function sel_movimiento()        
 		{
-            $sql = "SELECT * FROM `tbmovimiento`";
+            $sql = "SELECT * FROM `tbmovimiento` ORDER BY idmovimiento DESC LIMIT 1";
             return $this->SeleccionDatos($sql);
         }
         /*
