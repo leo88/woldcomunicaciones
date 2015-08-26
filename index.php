@@ -23,6 +23,8 @@
 	              <li><a href="index.php?pag=15">Servivcio Tecnico Entregado</a></li>
 	              <li><a href="index.php?pag=16">Movimiento</a></li>
 	              <li><a href="index.php?pag=18">Devolucion Irregular</a></li>
+	              <li><a href="index.php?pag=19">Compra</a></li>
+	              <li><a href="index.php?pag=20">Compra por producto</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -100,6 +102,14 @@
             if ($page == 18) 
 			{
                 include("vista/vdevolucion.php");
+			}
+			 if ($page == 19) 
+			{
+                include("vista/vcompra.php");
+			}
+            if ($page == 20) 
+			{
+                include("vista/vcompraproduc.php");
 			}
 		?>
 	</div>
