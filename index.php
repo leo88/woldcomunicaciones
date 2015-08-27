@@ -25,6 +25,7 @@
 	              <li><a href="index.php?pag=18">Devolucion Irregular</a></li>
 	              <li><a href="index.php?pag=19">Compra</a></li>
 	              <li><a href="index.php?pag=20">Compra por producto</a></li>
+	               <li><a href="index.php?pag=21">Reposcion</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -110,6 +111,14 @@
             if ($page == 20) 
 			{
                 include("vista/vcompraproduc.php");
+			}
+            if ($page == 21) 
+			{
+                include("vista/vreposicion.php");
+			}
+            if ($page == 22) 
+			{
+                include("vista/vactureposicion.php");//no esta en uso//
 			}
 		?>
 	</div>
