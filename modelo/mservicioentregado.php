@@ -51,7 +51,7 @@
 			return $this -> SeleccionDatos($sql);
 		}
         /*
-		 	Función para la seleccion de la tabla empleado
+		 	Función para la seleccion de la tabla servicio tecnico
 		 */
 		function sel_orden()        
 		{
@@ -59,7 +59,7 @@
             return $this->SeleccionDatos($sql);
         }
         /*
-		 	Función para la seleccion especifica de los datos de la tabla empleado
+		 	Función para la seleccion especifica de los datos de la tabla servicio tecnico
 		 */
 		function sel_orden1($numero_orden)
 		{
