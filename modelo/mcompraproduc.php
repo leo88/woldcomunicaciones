@@ -1,7 +1,7 @@
 <?php
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include_once('controlador/conexion.php');
+	include_once('functions.php');
 
 	class Mcompraproduc extends Funciones
 	{
@@ -56,7 +56,7 @@
 		 */
 		function sel_numerocompra()        
 		{
-            $sql = "SELECT * FROM `tbcompra`";
+            $sql = "SELECT * FROM `tbcompra` order by numero_compra asc limit 1" ;
             return $this->SeleccionDatos($sql);
         }
         /*
