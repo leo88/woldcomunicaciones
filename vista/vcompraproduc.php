@@ -31,3 +31,27 @@
 			<br>
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
+    </form>
+</div>
+<?php $consultacompraproduc = $compraproduc->consultar_compraproduc(); ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th colspan="3">Compra</th>
+			</tr>
+			<tr>
+				<th>ID Compra</th>
+				<th>ID Movimiento</th>
+				<th>Valor Unirario</th>
+		</thead>
+		<tbody>
+			<?php for($i=0;$i<count($consultacompraproduc);$i++): ?>
+				<tr>
+					<td><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
+					<td><?= $consultacompraproduc[$i]['movimiento'] ?></td>
+					<td><?= $consultacompraproduc[$i]['valor'] ?></td>
+					
+				</tr>
+			<?php endfor; ?>
+		</tbody>
+	</table>

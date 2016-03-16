@@ -40,7 +40,7 @@
 		 */
 		function consultar_compra()
 		{
-			$sql = "SELECT * FROM tbcompra";
+			$sql = "SELECT * FROM tbcompra ORDER BY numero_compra DESC LIMIT 1";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

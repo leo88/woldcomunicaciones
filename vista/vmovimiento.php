@@ -1,5 +1,4 @@
 <?php include('controlador/cmovimiento.php'); ?>
-
 <div class="container-fluid">
 	<h1>Insertar Movimiento</h1>
 
@@ -29,6 +28,7 @@
         </div>
 	</form>
 </div>
+
 <?php $consultamovimiento = $movimiento->consultar_movimiento(); ?>
 	<table class="table">
 		<thead>
@@ -62,4 +62,3 @@
 			<?php endfor; ?>
 		</tbody>
 	</table>
-</div>

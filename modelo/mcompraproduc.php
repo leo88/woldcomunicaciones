@@ -20,11 +20,11 @@
 			$this -> cons($sql);
 		}
 		/*
-		 *función para la actualización de los datos de la tabla tbcompraxproducto
+		 *función para la actualización de los datos de la tabla tbcompraxproducto Leo le metio mano a esto REVISAR!!!!!
 		 */
 		function  actualizar_compraproduc($numero_compra,$movimiento, $valor)
 		{
-			$sql = "UPDATE tbcompraxproducto SET movimiento = '".$movimiento."',valor = '".$valor."' WHERE numero_compra = '".$numero_compra."';";
+			$sql = "UPDATE tbcompraxproducto SET valor = '".$valor."' WHERE numero_compra = '".$numero_compra."',movimiento= '".$movimiento."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -35,6 +35,14 @@
 			$sql = "DELETE FROM `tbcompraxproducto` WHERE `numero_compra` = '$numero_compra'";
 			$this -> cons($sql);
 		}	
+        /*
+		 *función para la consulta de los datos de la tabla tbcompraxproducto por ultimo registro
+		 */
+		function consultar_compraproduc_u()
+		{
+			$sql = "SELECT * FROM tbcompraxproducto ORDER BY numero_compra DESC LIMIT 1";
+			 return $this->SeleccionDatos($sql);
+		}
 		/*
 		 *función para la consulta de los datos de la tabla tbcompraxproducto
 		 */
@@ -56,7 +64,7 @@
 		 */
 		function sel_numerocompra()        
 		{
-            $sql = "SELECT * FROM `tbcompra` order by numero_compra asc limit 1" ;
+            $sql = "SELECT * FROM `tbcompra` order by numero_compra desc limit 1" ;
             return $this->SeleccionDatos($sql);
         }
         /*
