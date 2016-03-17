@@ -17,7 +17,7 @@
 
 	$numero_compra2= $compraproduc->sel_numerocompra();
 	$movimiento2= $compraproduc->sel_movimiento();
-	//echo $idcompraproducedit;
+	//echo $idcompraproducedit." ".$idmovimientoedit." ".$valor;
 
 	if ($numero_compra && $movimiento && $valor && !$actu) 
 	{
@@ -25,15 +25,15 @@
 		$compraproduc->insertar_compraproduc($numero_compra, $movimiento, $valor);
 	}
 
-	if ($idcompraproducedit && $idmovimientoedit && $valor && !$actu) 
+	if ($idcompraproducedit && $idmovimientoedit && $valor && $actu) 
 	{
 		$compraproduc->actualizar_compraproduc($idcompraproducedit, $idmovimientoedit, $valor);
 	}
 
-	if ($id_compra) 
+	if ($id_compra && $id_movi) 
 	{
 		$consultaedit = $compraproduc->consultar_compraproduc_id($id_compra, $id_movi);
-		//echo $consultaedit;
+		//echo[$consultaedit][0];
 	}
 
 	if ($idcompraproduceli) 

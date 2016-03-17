@@ -7,7 +7,7 @@
 		<div class="form-group col-lg-6">
             <label for="">Numero de Compra:</label>
             <input type="number" class="form-control" name="numero_compra" value="<?= $consultaedit[0]['numero_compra'] ?>" readonly>	
-            <input type="hidden" name="numero_comp" value="<?= $idproduc ?>">
+            <input type="hidden" name="numero_comp" value="<?= $id_compra ?>">
             <input type="hidden" name="id_movimiento" value="<?= $id_movi ?>">
             <input type="hidden" name="actu" value="actu">		
 		</div>

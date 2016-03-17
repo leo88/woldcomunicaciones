@@ -50,7 +50,7 @@
 					<td><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
 					<td><?= $consultacompraproduc[$i]['movimiento'] ?></td>
 					<td><?= $consultacompraproduc[$i]['valor'] ?></td>
-					
+					<td><a href="index.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary">Editar</a></td>
 				</tr>
 			<?php endfor; ?>
 		</tbody>

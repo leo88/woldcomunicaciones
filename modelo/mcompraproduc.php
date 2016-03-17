@@ -22,7 +22,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbcompraxproducto Leo le metio mano a esto REVISAR!!!!!
 		 */
-		function  actualizar_compraproduc($numero_compra,$movimiento, $valor)
+		function  actualizar_compraproduc($numero_compra,$movimiento,$valor)
 		{
 			$sql = "UPDATE tbcompraxproducto SET valor = '".$valor."' WHERE numero_compra = '".$numero_compra."' AND movimiento = '".$movimiento."';";
 			$this -> cons($sql);
