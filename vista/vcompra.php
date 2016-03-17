@@ -1,7 +1,23 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Compra</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="css/miestilo.css" media="screen">
+
+</head>
+
+<body>
+
 <?php include('controlador/cmovimiento.php'); ?>
 <?php include("controlador/ccompra.php"); ?>
 
-<div class="container-fluid">
+<div  class="formulario" >
 	<h1>Insertar Compra</h1>
 
 	<form action="" method="POST">
@@ -23,8 +39,6 @@
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
     </form>
-</div>
-
 
 <?php $consultacompra = $compra->consultar_compra(); ?>
 	<table class="table">
@@ -56,8 +70,13 @@
 			<?php endfor; ?>
 		</tbody>
 	</table>
+</div>
 	
-<div class="container-fluid">
+		
+			
+				
+						
+<div class="formulario">
 	<h1>Insertar Movimiento</h1>
 	<form action="" method="POST">		
 		<div class="form-group col-lg-6">
@@ -74,7 +93,6 @@
             <input type="submit" name="Entra" class="btn btn-danger" value="+">
         </div>
 	</form>
-</div>
 
 <?php $consultamovimiento = $movimiento->consultar_movimiento_c(); ?>
 	<table class="table">
@@ -109,12 +127,12 @@
 			<?php endfor; ?>
 		</tbody>
 	</table>
-	
-<?php include("controlador/ccompraproduc.php"); ?>
-   
+</div>
 
-<div class="container-fluid">
-	<h1>Insertar Compra por producto</h1>
+<?php include("controlador/ccompraproduc.php"); ?>
+
+<div class="formulario">
+	<h1>compra X producto</h1>
 
 	<form action="" method="POST">
 		<div class="form-group col-lg-6">
@@ -144,7 +162,7 @@
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
     </form>
-</div>
+
 <?php $consultacompraproduc = $compraproduc->consultar_compraproduc_u(); ?>
 	<table class="table">
 		<thead>
@@ -162,10 +180,15 @@
 					<td><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
 					<td><?= $consultacompraproduc[$i]['movimiento'] ?></td>
 					<td><?= $consultacompraproduc[$i]['valor'] ?></td>
-					
+					<td><a href="index.php?pag=23&id=<?= $consultaminutos[$i]['numero_compra'] ?>" class="btn btn-primary">Editar</a></td>
 				</tr>
 			<?php endfor; ?>
 		</tbody>
 	</table>
+</div>
 
-<?php //include 'vcompraproduc.php' ?>
+</body>
+
+</html>
+
+

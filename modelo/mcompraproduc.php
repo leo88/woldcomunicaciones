@@ -24,7 +24,7 @@
 		 */
 		function  actualizar_compraproduc($numero_compra,$movimiento, $valor)
 		{
-			$sql = "UPDATE tbcompraxproducto SET valor = '".$valor."' WHERE numero_compra = '".$numero_compra."',movimiento= '".$movimiento."';";
+			$sql = "UPDATE tbcompraxproducto SET valor = '".$valor."' WHERE numero_compra = '".$numero_compra." ,movimiento= ".$movimiento."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -80,7 +80,7 @@
 		 */
 		function sel_movimiento()        
 		{
-            $sql = "SELECT * FROM `tbmovimiento`";
+            $sql = "SELECT * FROM `tbmovimiento` order by idmovimiento desc limit 1";
             return $this->SeleccionDatos($sql);
         }
         /*
