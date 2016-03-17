@@ -24,7 +24,7 @@
 		 */
 		function  actualizar_compraproduc($numero_compra,$movimiento, $valor)
 		{
-			$sql = "UPDATE tbcompraxproducto SET valor = '".$valor."' WHERE numero_compra = '".$numero_compra." ,movimiento= ".$movimiento."';";
+			$sql = "UPDATE tbcompraxproducto SET valor = '".$valor."' WHERE numero_compra = '".$numero_compra."' AND movimiento = '".$movimiento."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -54,9 +54,9 @@
 		/*
     	 *	Función para retornar los datos de la tbcompraxproducto	
          */
-		function consultar_compraproduc_id($numero_compra)
+		function consultar_compraproduc_id($numero_compra, $movimiento)
 		{
-			$sql = "SELECT * FROM tbcompraxproducto WHERE numero_compra = '$numero_compra' ";
+			$sql = "SELECT * FROM tbcompraxproducto WHERE numero_compra = '$numero_compra' AND movimiento = '$movimiento'";
 			return $this -> SeleccionDatos($sql);
 		}
 		 /*

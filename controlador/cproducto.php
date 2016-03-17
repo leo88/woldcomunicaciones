@@ -13,7 +13,7 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idproduc      = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
-
+	
 	if ($referencia && $nombre && $marca && $precio && !$actu) 
 	{
         
