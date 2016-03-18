@@ -2,7 +2,10 @@
 
 <div class="row-fluid">
 	<h1>Editar Compra por Producto</h1>
-
+	<!-- 
+		La variable id sera el identificador del registro que se esta actualizando
+		en este caso id y idm seran las dos llaves primarias de la tabla compraxproducto.
+	 -->
 	<form action="index.php?pag=20&id=<?= $id_compra?>&idm=<?= $id_movi ?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Numero de Compra:</label>

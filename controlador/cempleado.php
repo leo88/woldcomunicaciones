@@ -19,26 +19,36 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idemple       = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
-
+	/*
+		Comprobacion datos para insertar
+	*/
 	if ($idempleado && $nombre && $sueldo && $direccion && $ciudad && $telefono_emple && $telefono_refe && $estado && !$actu) 
 	{
 		$empleado->insertar_empleado($idempleado,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
 	}
-	
+	/*
+		Si el estado es inactivo el sueldo queda con valor "0"
+	*/
 	if($estado=="Inactivo"){
 		$sueldo = "0";
 	}
-
+	/*
+		Comprobacion datos para actualizar
+	*/
 	if ($idempleedit && $nombre && $actu) 
 	{
 		$empleado->actualizar_empleado($idempleedit,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
 	}
-
+	/*
+		Comprobar el id para editar ese unico registro
+	*/
 	if ($idemple) 
 	{
 		$consultaedit = $empleado->consultar_empleado_id($idemple);
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($idempleeli) 
 	{
 		$empleado->eliminar_empleado($idempleeli);

@@ -1,7 +1,7 @@
 <?php include("controlador/cservicioentregado.php"); ?>
 
 <script src="js/jquery-1.9.1.js"></script>
-
+<!-- Script para generar el saldo que queda  por cancelar-->
     <script>
     $(function(){
  	$('#orden').change(function() {

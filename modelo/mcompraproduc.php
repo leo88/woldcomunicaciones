@@ -20,7 +20,7 @@
 			$this -> cons($sql);
 		}
 		/*
-		 *función para la actualización de los datos de la tabla tbcompraxproducto Leo le metio mano a esto REVISAR!!!!!
+		 *función para la actualización de los datos de la tabla tbcompraxproducto 
 		 */
 		function  actualizar_compraproduc($numero_compra,$movimiento,$valor)
 		{
@@ -60,7 +60,7 @@
 			return $this -> SeleccionDatos($sql);
 		}
 		 /*
-		 	Función para la seleccion de la tabla comra
+		 	Función para la seleccion del ultimo registro de la tabla comra
 		 */
 		function sel_numerocompra()        
 		{
@@ -76,7 +76,7 @@
 			return $this->SeleccionDatos($sql);
 		}
 		 /*
-		 	Función para la seleccion de la tabla movimeinto
+		 	Función para la seleccion del ultimo registro de la tabla movimeinto
 		 */
 		function sel_movimiento()        
 		{

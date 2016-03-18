@@ -39,7 +39,7 @@
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
     </form>
-
+<!-- Tabla donde se muestra la informacion ingresada-->
 <?php $consultacompra = $compra->consultar_compra(); ?>
 	<table class="table">
 		<thead>

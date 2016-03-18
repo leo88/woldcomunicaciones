@@ -16,23 +16,31 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idprovee      = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
-
+	/*
+		Comprobacion datos para insertar
+	*/
 	if ($idproveedor&& $nombre && $telefono && $descripcion && !$actu) 
 	{
         
 		$proveedor->insertar_proveedor($idproveedor,$nombre,$contacto,$telefono,$telefono2,$email,$descripcion);
 	}
-
+	/*
+		Comprobacion datos para actualizar
+	*/
 	if ($idproveedit && $nombre && $telefono && $descripcion && $actu) 
 	{
 		$proveedor->actualizar_proveedor($idproveedit,$nombre,$contacto,$telefono,$telefono2,$email,$descripcion);
 	}
-
+	/*
+		Comprobar el id para editar ese unico registro
+	*/
 	if ($idprovee) 
 	{
 		$consultaedit = $proveedor->consultar_proveedor_id($idprovee);
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($idproveeli) 
 	{
 		$proveedor->eliminar_proveedor($idproveeli);

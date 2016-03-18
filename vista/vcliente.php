@@ -22,8 +22,8 @@
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Detalle:</label>
-            <input type=text list=detalle name="detalle">
-                <datalist id=detalle >
+            <input type="text" list="detalle" name="detalle">
+                <datalist id="detalle" >
                    <option> Cliente
                    <option> Traspaso
                 </datalist>       

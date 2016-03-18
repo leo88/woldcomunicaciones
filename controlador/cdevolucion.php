@@ -14,24 +14,36 @@
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$iddevolucion   = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
+	/*
+		Variable para traer los datos del desplegable
+	*/
 	$movimiento2= $devolucion->sel_movimiento();
 
+	/*
+		Comprobacion datos para insertar
+	*/
 	if ($movimiento && $fecha && $numero_compra && $costo && !$actu) 
 	{
         
 		$devolucion->insertar_devolucion($movimiento, $fecha, $motivo, $numero_compra, $costo);
 	}
-
-	if ($iddevoedit  && $fecha && !$actu) 
+	/*
+		Comprobacion datos para actualizar
+	*/
+	if ($iddevoedit  && $fecha && $actu) 
 	{
 		$devolucion->actualizar_devolucion($iddevoedit, $movimiento, $fecha, $motivo,$numero_compra, $costo);
 	}
-
+	/*
+		Comprobar el id para editar ese unico registro
+	*/
 	if ($iddevolucion) 
 	{
 		$consultaedit = $devolucion->consultar_devolucion_id($iddevolucion);
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($iddevoeli) 
 	{
 		$devolucion->eliminar_devolucion($iddevoeli);

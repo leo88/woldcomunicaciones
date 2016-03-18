@@ -14,28 +14,38 @@
 	$id_compra  		= isset($_GET['id']) ? $_GET['id'] : NULL;
 	$id_movi 	 		= isset($_GET['idm']) ? $_GET['idm'] : NULL;
 
-
+	/*
+		Variables para traer los datos de los desplegables en el formulario
+	*/
 	$numero_compra2= $compraproduc->sel_numerocompra();
 	$movimiento2= $compraproduc->sel_movimiento();
-	//echo $idcompraproducedit." ".$idmovimientoedit." ".$valor;
 
+	/*
+		Comprobacion datos para insertar	
+	*/
 	if ($numero_compra && $movimiento && $valor && !$actu) 
 	{
         
 		$compraproduc->insertar_compraproduc($numero_compra, $movimiento, $valor);
 	}
-
+	/*
+		Comprobacion datos para actualizar
+	*/
 	if ($idcompraproducedit && $idmovimientoedit && $valor && $actu) 
 	{
 		$compraproduc->actualizar_compraproduc($idcompraproducedit, $idmovimientoedit, $valor);
 	}
-
+	/*
+		Comprobar las dos llaves primarias para editar ese unico registro
+	*/
 	if ($id_compra && $id_movi) 
 	{
 		$consultaedit = $compraproduc->consultar_compraproduc_id($id_compra, $id_movi);
 		//echo[$consultaedit][0];
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($idcompraproduceli) 
 	{
 		$compraproduc->eliminar_compraproduc($idcompraproduceli);

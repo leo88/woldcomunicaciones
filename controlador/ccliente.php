@@ -14,6 +14,10 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	//$idcliente     = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
+	/*
+		Comprobar si las variables de nombre y detalle tienen datos, de ser asi se procede a enviarle los parametros
+		a la funcion insertar_cliente
+	*/
 	if ($nombre && $detalle && !$actu) 
 	{
 		$cliente->insertar_cliente($nombre, $telefono, $direccion, $email, $detalle);

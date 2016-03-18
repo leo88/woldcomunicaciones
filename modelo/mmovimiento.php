@@ -35,7 +35,7 @@
 			$this -> cons($sql);
 		}	
 		/*
-		 *función para la consulta de los datos de la tabla tbmovimiento
+		 *función para la consulta de los datos de la tabla tbmovimiento con un limite de 10 registros
 		 */
 		function consultar_movimiento()
 		{
@@ -43,7 +43,7 @@
 			 return $this->SeleccionDatos($sql);
 		}
         /*
-		 *función para la consulta de los datos de la tabla tbmovimiento por COMPRA
+		 *función para la consulta de los datos de la tabla tbmovimiento por COMPRA limitandolo a un solo registro
 		 */
 		function consultar_movimiento_c()
 		{

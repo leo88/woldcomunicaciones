@@ -13,23 +13,31 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idproduc      = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
-	
+	/*
+		Comprobacion datos para insertar
+	*/
 	if ($referencia && $nombre && $marca && $precio && !$actu) 
 	{
         
 		$producto->insertar_producto($referencia,$nombre,$marca,$precio);
 	}
-
+	/*
+		Comprobacion datos para actualizar
+	*/
 	if ($idproducedit && $precio && $actu) 
 	{
 		$producto->actualizar_producto($idproducedit,$precio);
 	}
-
+	/*
+		Comprobar el id para editar ese unico registro
+	*/
 	if ($idproduc) 
 	{
 		$consultaedit = $producto->consultar_producto_id($idproduc);
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($idproduceli) 
 	{
 		$producto->eliminar_producto($idproduceli);

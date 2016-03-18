@@ -13,21 +13,30 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idminutos     = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
+	/*
+		Comprobacion datos para insertar
+	*/
 	if ($cantidad && $valor && $descripcion && $fecha && !$actu) 
 	{
 		$minutos->insertar_minutos($cantidad, $valor, $descripcion, $fecha);
 	}
-    
+    /*
+		Comprobacion datos para actualizar
+	*/
     if ($idminutosedit && $cantidad && $valor && $descripcion && $fecha && $actu) 
 	{
 		$minutos->actualizar_minutos($idminutosedit,$cantidad, $valor, $descripcion, $fecha);
 	}
-
+	/*
+		Comprobar el id para editar ese unico registro
+	*/
 	if ($idminutos) 
 	{
 		$consultaedit = $minutos->consultar_minutos_id($idminutos);
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($idminutoseli) 
 	{
 		$minutos->eliminar_minutos($idminutoseli);

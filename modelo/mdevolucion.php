@@ -52,7 +52,7 @@
 			return $this -> SeleccionDatos($sql);
 		}
 		 /*
-		 	Función para la seleccion de la tabla movimiento
+		 	Función para la seleccion del registro mas reciente de la tabla movimiento
 		 */
 		function sel_movimiento()        
 		{

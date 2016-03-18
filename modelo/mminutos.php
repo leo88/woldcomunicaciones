@@ -35,7 +35,7 @@
 			$this -> cons($sql);
 		}	
 		/*
-		 *función para la consulta de los datos de la tabla tbminutos
+		 *función para la consulta del registro mas reciente de la tabla tbminutos
 		 */
 		function consultar_minutos()
 		{

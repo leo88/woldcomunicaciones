@@ -11,24 +11,36 @@
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$numero_compra  = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
+	/*
+		Variable para traer los datos del desplegable
+	*/
 	$proveedor2= $compra->sel_proveedor();
 
+	/*
+		Comprobacion datos para insertar
+	*/
 	if ($proveedor && $fecha && !$actu) 
 	{
         
 		$compra->insertar_compra($proveedor, $fecha);
 	}
-
-	if ($idcompraedit && $proveedor && $fecha && !$actu) 
+	/*
+		Comprobacion datos para actualizar
+	*/
+	if ($idcompraedit && $proveedor && $fecha && $actu) 
 	{
 		$compra->actualizar_compra($idcompraedit, $proveedor, $fecha);
 	}
-
+	/*
+		Comprobar el id para editar ese unico registro
+	*/
 	if ($numero_compra) 
 	{
 		$consultaedit = $compra->consultar_compra_id($numero_compra);
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($idcompraeli) 
 	{
 		$compra->eliminar_compra($idcompraeli);

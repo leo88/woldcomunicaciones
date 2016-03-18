@@ -20,25 +20,37 @@
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$numero_orden   = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
+	/*
+		Variables para traer los datos de los desplegables
+	*/
 	$empleado2= $serviciotecnico->sel_empleado();
 	$cliente2= $serviciotecnico->sel_cliente();
 
+	/*
+		Comprobacion datos para insertar
+	*/
 	if ($nombre && $marca && $referencia && $descripcion_st && $costo_st && $precio_cliente && $fecha && $id_cliente && $empleado && $abono && !$actu) 
 	{
         
 		$serviciotecnico->insertar_serviciotecnico($nombre, $marca, $referencia, $descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
 	}
-
+	/*
+		Comprobacion datos para actualizar
+	*/
 	if ($idservitecedit && $nombre && $marca && $referencia && !$actu) 
 	{
 		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $nombre, $marca, $referencia,$descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
 	}
-
+	/*
+		Comprobar el id para editar ese unico registro
+	*/
 	if ($numero_orden) 
 	{
 		$consultaedit = $serviciotecnico->consultar_serviciotecnico_id($numero_orden);
 	}
-
+	/*
+		Eliminar el registro 
+	*/
 	if ($idserviteceli) 
 	{
 		$serviciotecnico->eliminar_serviciotecnico($idserviteceli);
