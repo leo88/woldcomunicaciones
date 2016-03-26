@@ -26,6 +26,8 @@
 	              <li><a href="index.php?pag=19">Compra</a></li>
 	              <li><a href="index.php?pag=20">Compra por producto</a></li>
 	              <li><a href="index.php?pag=21">Reposcion</a></li>
+	              <li><a href="index.php?pag=24">Venta</a></li>
+	              <li><a href="index.php?pag=26">Venta por Producto</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -122,7 +124,23 @@
 			}
             if ($page == 23) 
 			{
-                include("vista/vactucompraproduc.php");//no esta en uso//
+                include("vista/vactucompraproduc.php");
+			}
+			if ($page == 24) 
+			{
+                include("vista/vventa.php");
+			}
+            if ($page == 25) 
+			{
+                include("vista/vactuventa.php");//no esta creado
+			}
+			if ($page == 26) 
+			{
+                include("vista/vventaproduc.php");
+			}
+            if ($page == 27) 
+			{
+                include("vista/vactuventaproduc.php");
 			}
 		?>
 	</div>

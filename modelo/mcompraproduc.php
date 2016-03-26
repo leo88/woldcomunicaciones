@@ -28,7 +28,7 @@
 			$this -> cons($sql);
 		}
 		/*
-		 *función para la elimnar datos de la tabla tbcompraxproducto
+		 *función para elimnar datos de la tabla tbcompraxproducto
 		 */
 		function eliminar_compraproduc($numero_compra)
 		{
