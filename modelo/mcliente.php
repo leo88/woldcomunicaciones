@@ -21,7 +21,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbcliente
 		 */
-		/*function  actualizar_cliente($idcliente, $nombre, $telefono, $direccion, $email, $detalle)
+		function  actualizar_cliente($idcliente, $nombre, $telefono, $direccion, $email, $detalle)
 		{
 			$sql = "UPDATE tbcliente SET  nombre = '".$nombre."', telefono = '".$telefono."', direccion = '".$direccion."', email = '".$email."', detalle = '".$detalle."' WHERE idcliente = '".$idcliente."';";
 			$this -> cons($sql);
@@ -37,17 +37,17 @@
 		/*
 		 *función para la consulta de los datos de la tabla tbcliente
 		 */
-		/*function consultar_cliente()
+		function consultar_cliente()
 		{
-			$sql = "SELECT * FROM tbcliente";
-			 return $this->SeleccionDatos($sql);
+			$sql = "SELECT * FROM tbcliente ORDER BY idcliente LIMIT 20";
+			return $this->SeleccionDatos($sql);
 		}
 		/*
     	 *	Función para retornar los datos de la tbcliente	
          */
-		/*function consultar_cliente_id($idcliente)
+		function consultar_cliente_id($idcliente)
 		{
 			$sql = "SELECT * FROM tbcliente WHERE idcliente = '$idcliente' ";
 			return $this -> SeleccionDatos($sql);
-		}*/
+		}
 	}

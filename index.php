@@ -120,7 +120,7 @@
 			}
             if ($page == 22) 
 			{
-                include("vista/vactureposicion.php");//no esta en uso//
+                include("vista/vactucliente.php");
 			}
             if ($page == 23) 
 			{
@@ -141,6 +141,10 @@
             if ($page == 27) 
 			{
                 include("vista/vactuventaproduc.php");
+			}
+			if ($page == 28) 
+			{
+                include("vista/vactudevolucion.php");
 			}
 		?>
 	</div>

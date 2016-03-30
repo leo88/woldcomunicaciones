@@ -47,7 +47,7 @@
             <input type=text list=estado name="estado" value="<?= $consultaedit[0]['estado']  ?>"required>
                 <datalist id="estado">
                    <option> Activo </option>
-                   <option> Inactivo
+                   <option> Inactivo </option>
                 </datalist>       
 		</div>
 		<div class="form-group col-lg-6">
