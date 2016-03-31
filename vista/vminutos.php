@@ -29,7 +29,7 @@
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
 	</form>
-</div>
+
 <?php $consultaminutos = $minutos->consultar_minutos(); ?>
 	<table class="table">
 		<thead>
