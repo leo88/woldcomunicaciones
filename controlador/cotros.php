@@ -35,7 +35,7 @@
     /*
 		Comprobacion datos para actualizar
 	*/
-    if ($idreporteedit && $fecha && $descripcion && $salida && $entrada && $actu) 
+    if ($idreporteedit && $fecha && $descripcion && $actu) 
 	{
 		$otros->actualizar_otros($idreporteedit,$fecha, $descripcion, $salida, $entrada);
 	}

@@ -3,7 +3,7 @@
 <div class="row-fluid">
 	<h1>Editar otros</h1>
 
-	<form action="index.php?pag=11&id=<?= $idproduc?>" method="POST">
+	<form action="index.php?pag=11&id=<?= $idreporte?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?= $consultaedit[0]['fecha'] ?>" required>
@@ -17,7 +17,9 @@
 		
 		<div class="form-group col-lg-6">
             <label for="">Valor:</label>
-            <input type="number" class="form-control" name=value="<?= $consultaedit[0]['valor'] ?>" required>       
+            <input type="number" class="form-control" name="valor" value="<?php if($consultaedit[0]['salida_total'] == 0){
+            	echo $consultaedit[0]['entrada_total'];
+            	}else{echo $consultaedit[0]['salida_total']; }?>">       
 		</div>
 		
 		 <div class="form-group col-lg-6">
