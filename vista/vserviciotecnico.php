@@ -105,7 +105,7 @@
 					<td><?= $cliente1[0]['nombre'] ?></td>
 					<td><?= $empleado1[0]['nombre'] ?></td>
 					<td><?= $consultaserviciotecnico[$i]['abono'] ?></td>
-					<td><a href="index.php?pag=4&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
+					<td><a href="index.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idserviteceli" value="<?= $consultaserviciotecnico[$i]['numero_orden'] ?>">
