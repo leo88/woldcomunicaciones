@@ -27,12 +27,12 @@
 	*/
 	if ($idclienteedit && $nombre && $actu) 
 	{
-		$empleado->actualizar_empleado($idclienteedit,$nombre,$telefono,$direccion,$email,$detalle);
+		$cliente->actualizar_cliente($idclienteedit,$nombre,$telefono,$direccion,$email,$detalle);
 	}
 	/*
 		Comprobar el id para editar ese unico registro
 	*/
 	if ($idcliente) 
 	{
-		$consultaedit = $empleado->consultar_cliente_id($idcliente);
+		$consultaedit = $cliente->consultar_cliente_id($idcliente);
 	}

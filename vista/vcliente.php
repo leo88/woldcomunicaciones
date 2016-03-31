@@ -59,7 +59,7 @@
                     <td><?= $consultacliente[$i]['direccion'] ?></td>
                     <td><?= $consultacliente[$i]['email'] ?></td>
                     <td><?= $consultacliente[$i]['detalle'] ?></td>                  
-                    <td><a href="index.php?pag=17&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary">Editar</a></td>
+                    <td><a href="index.php?pag=22&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary">Editar</a></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
