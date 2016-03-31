@@ -22,7 +22,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbdevolucionirregular
 		 */
-		function  actualizar_devolucion($iddevolucion, $movimiento, $motivo, $numero_compra, $costo)
+		function  actualizar_devolucion($iddevolucion, $movimiento,$fecha, $motivo, $numero_compra, $costo)
 		{
 			$sql = "UPDATE tbdevolucionirregular SET movimiento = '".$movimiento."',fecha = '".$fecha."',motivo = '".$motivo."',numero_compra = '".$numero_compra."', costo = '".$costo."' WHERE iddevolucion = '".$iddevolucion."';";
 			$this -> cons($sql);

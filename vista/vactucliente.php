@@ -3,7 +3,7 @@
 <div class="row-fluid">
 	<h1>Editar Cliente</h1>
 
-	<form action="index.php?pag=2&id=<?= $idproduc?>" method="POST">
+	<form action="index.php?pag=2&id=<?= $idcliente?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Nombre:</label>
             <input type="text" class="form-control" name="nombre" value="<?= $consultaedit[0]['nombre'] ?>" required>
@@ -12,19 +12,19 @@
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Telefono:</label>
-            <input type="text" class="form-control" name="telefono" value="<?= $consultaedit[0]['telefono']  ?>" required>
+            <input type="text" class="form-control" name="telefono" value="<?= $consultaedit[0]['telefono']  ?>" >
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Direccion:</label>
-            <input type="text" class="form-control" name="direccion" value="<?= $consultaedit[0]['direccion']  ?>" required>
+            <input type="text" class="form-control" name="direccion" value="<?= $consultaedit[0]['direccion']  ?>" >
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Email:</label>
-            <input type="text" class="form-control" name="email" value="<?= $consultaedit[0]['email']  ?>" required>
+            <input type="text" class="form-control" name="email" value="<?= $consultaedit[0]['email']  ?>" >
 		</div>		
 		<div class="form-group col-lg-6">
 			<label for="">Detalle:</label>
-            <input type=text  list=descripcion name="detalle" value="<?= $consultaedit[0]['detalle'] ?>" required>
+            <input type=text  list=descripcion name="detalle" value="<?= $consultaedit[0]['detalle'] ?>" >
                 <datalist id=descripcion >
                    <option> Cliente</option>
                    <option> Transpaso</option>

@@ -30,7 +30,7 @@
 	/*
 		Comprobacion datos para actualizar
 	*/
-	if ($iddevoedit  && $fecha && $actu) 
+	if ($iddevoedit && $actu) 
 	{
 		$devolucion->actualizar_devolucion($iddevoedit, $movimiento, $fecha, $motivo,$numero_compra, $costo);
 	}
