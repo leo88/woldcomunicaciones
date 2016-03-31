@@ -7,7 +7,7 @@
 	$idcompraedit 	= isset($_POST['numero_compra']) ? $_POST['numero_compra'] : NULL;	
 	$proveedor      = isset($_POST['proveedor']) ? $_POST['proveedor'] : NULL;
 	$fecha          = isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
-	$idcompraeli 	= isset($_POST['idcompraeli']) ? $_POST['idcompraeli'] : NULL;
+	//$idcompraeli 	= isset($_POST['idcompraeli']) ? $_POST['idcompraeli'] : NULL;
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$numero_compra  = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
@@ -41,8 +41,8 @@
 	/*
 		Eliminar el registro 
 	*/
-	if ($idcompraeli) 
+	/*if ($idcompraeli) 
 	{
 		$compra->eliminar_compra($idcompraeli);
 	}
-
+	*/

@@ -61,7 +61,7 @@
 				<th>Fecha</th>
 				<th>Saldo cancelado</th>
 				<th>Edición</th>
-				<th>Eliminación</th>
+				<!--<th>Eliminación</th>-->
 			</tr>
 		</thead>
 		<tbody>
@@ -73,13 +73,13 @@
 					<td><?= $numorden1[0]['numero_orden'] ?></td>
 					<td><?= $consultaservicioentregado[$i]['fecha'] ?></td>
 					<td><?= $consultaservicioentregado[$i]['saldo_cancel'] ?></td>
-					<td><a href="index.php?pag=4&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
+					<!--<td><a href="index.php?pag=4&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idserventeli" value="<?= $consultaservicioentregado[$i]['numero_orden'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>

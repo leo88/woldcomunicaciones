@@ -55,7 +55,7 @@
 				<th>Telefono contacto</th>
 				<th>Email</th>
 				<th>Descripcion</th>
-				<th>Eliminación</th>
+				<th>Edición</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -69,12 +69,12 @@
 					<td><?= $consultaproveedor[$i]['email'] ?></td>
 					<td><?= $consultaproveedor[$i]['descripcion'] ?></td>
 					<td><a href="index.php?pag=8&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
+					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproveeli" value="<?= $consultaproveedor[$i]['idproveedor'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>

@@ -64,12 +64,12 @@
 					<td><?= $consultadevolucion[$i]['numero_compra'] ?></td>
 					<td><?= $consultadevolucion[$i]['costo'] ?></td>
 					<td><a href="index.php?pag=4&id=<?= $consultadevolucion[$i]['iddevolucion'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
+					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="iddevoeli" value="<?= $consultadevolucion[$i]['iddevolucion'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>

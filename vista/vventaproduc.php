@@ -42,6 +42,7 @@
 				<th>ID Venta</th>
 				<th>ID Movimiento</th>
 				<th>Valor Unirario</th>
+				<th>Edición</th>
 		</thead>
 		<tbody>
 			<?php for($i=0;$i<count($consultaventaproduc);$i++): ?>

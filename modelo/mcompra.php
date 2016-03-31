@@ -30,11 +30,11 @@
 		/*
 		 *función para la elimnar datos de la tabla tbcompra
 		 */
-		function eliminar_compra($numero_compra)
+		/*function eliminar_compra($numero_compra)
 		{
 			$sql = "DELETE FROM `tbcompra` WHERE `numero_compra` = '$numero_compra'";
 			$this -> cons($sql);
-		}	
+		}	*/
 		/*
 		 *función para la consulta de los datos de la tabla tbcompra
 		 */

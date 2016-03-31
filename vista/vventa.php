@@ -66,13 +66,13 @@
 					<td><?= $cliente1[0]['nombre'] ?></td>
 					<td><?= $consultaventa[$j]['fecha'] ?></td>
 					<td><?= $empleado1[0]['nombre'] ?></td>
-					<td><a href="index.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></td>
+					<!--<td><a href="index.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idventaeli" value="<?= $consultaventa[$j]['numero_venta'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>

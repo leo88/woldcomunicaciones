@@ -40,12 +40,12 @@
 					<td><?= $consultareposicion[$i]['movimiento'] ?></td>
 					<td><?= $consultareposicion[$i]['numero_compra'] ?></td>					
 					<td><a href="index.php?pag=6&id=<?= $consultareposicion[$i]['idreposicion'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
+					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idreposicioneli" value="<?= $consultareposicion[$i]['idreposicion'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>

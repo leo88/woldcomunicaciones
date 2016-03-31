@@ -37,7 +37,7 @@
 				<th>Marca</th>
 				<th>Precio</th>
 				<th>Edición</th>
-				<th>Eliminación</th>
+				<!--<th>Eliminación</th>-->
 			</tr>
 		</thead>
 		<tbody>
@@ -48,12 +48,12 @@
 					<td><?= $consultaproducto[$i]['marca'] ?></td>
 					<td>$ <?= $consultaproducto[$i]['precio'] ?></td>
 					<td><a href="index.php?pag=4&id=<?= $consultaproducto[$i]['referencia'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
+					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproduceli" value="<?= $consultaproducto[$i]['referencia'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>

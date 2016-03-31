@@ -37,7 +37,7 @@
 				<th>Salida</th>
 				<th>Entrada</th>			
 				<th>Edición</th>
-				<th>Eliminación</th>
+				<!--<th>Eliminación</th>-->
 			</tr>
 		</thead>
 		<tbody>
@@ -49,12 +49,12 @@
 					<td><?= $consultaotros[$i]['salida_total'] ?></td>
 					<td><?= $consultaotros[$i]['entrada_total'] ?></td>					
 					<td><a href="index.php?pag=12&id=<?= $consultaotros[$i]['idreporte'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
+					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idreporteeli" value="<?= $consultaotros[$i]['idreporte'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>

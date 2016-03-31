@@ -59,22 +59,12 @@
 					<td><?= $consultacompra[$j]['numero_compra'] ?></td>
 					<td><?= $proveedor1[0]['nombre'] ?></td>
 					<td><?= $consultacompra[$j]['fecha'] ?></td>
-					<td><a href="index.php?pag=6&idc=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
-						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
-							<input type="hidden" name="idcompraeli" value="<?= $consultacompra[$j]['numero_compra'] ?>">
-							<input type="submit" class="btn btn-danger" value="Eliminar">
-						</form>
-					</td>
+					<!--<td><a href="index.php?pag=6&idc=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary">Editar</a></td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>
 	</table>
-</div>
-	
-		
-			
-				
+</div>		
 						
 <div class="formulario">
 	<h1>Insertar Movimiento</h1>

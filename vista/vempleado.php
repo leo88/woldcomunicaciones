@@ -80,12 +80,12 @@
 					<td><?= $consultaempleado[$i]['fecha_ingreso'] ?></td>
 					<td><?= $consultaempleado[$i]['estado'] ?></td>
 					<td><a href="index.php?pag=10&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
+					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idempleeli" value="<?= $consultaempleado[$i]['idempleado'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">
 						</form>
-					</td>
+					</td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>
