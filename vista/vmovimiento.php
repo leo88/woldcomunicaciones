@@ -41,7 +41,7 @@
 				<th>Referencia</th>
 				<th>Cantidad</th>
 				<th>Edición</th>
-				<th>Eliminación</th>
+				<!--<th>Eliminación</th>-->
 			</tr>
 		</thead>
 		<tbody>

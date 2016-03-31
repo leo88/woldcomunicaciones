@@ -49,7 +49,7 @@
 				<th>Numero de Compra</th>
 				<th>Costo</th>
 				<th>Edición</th>
-				<th>Eliminación</th>
+				<!--<th>Eliminación</th>-->
 			</tr>
 		</thead>
 		<tbody>

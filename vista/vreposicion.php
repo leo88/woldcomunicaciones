@@ -29,8 +29,8 @@
 				<th>ID</th>
 				<th>Movimiento</th>
 				<th>No. Compra</th>				
-				<th>Edición</th>
-				<th>Eliminación</th>
+				<!--<th>Edición</th>
+				<th>Eliminación</th>-->
 			</tr>
 		</thead>
 		<tbody>
@@ -39,8 +39,8 @@
 					<td><?= $consultareposicion[$i]['idreposicion'] ?></td>
 					<td><?= $consultareposicion[$i]['movimiento'] ?></td>
 					<td><?= $consultareposicion[$i]['numero_compra'] ?></td>					
-					<td><a href="index.php?pag=6&id=<?= $consultareposicion[$i]['idreposicion'] ?>" class="btn btn-primary">Editar</a></td>
-					<!--<td>
+					<!--<td><a href="index.php?pag=6&id=<?= $consultareposicion[$i]['idreposicion'] ?>" class="btn btn-primary">Editar</a></td>
+					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idreposicioneli" value="<?= $consultareposicion[$i]['idreposicion'] ?>">
 							<input type="submit" class="btn btn-danger" value="Eliminar">

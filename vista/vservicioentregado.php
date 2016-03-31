@@ -60,8 +60,8 @@
 				<th>No. Orden</th>
 				<th>Fecha</th>
 				<th>Saldo cancelado</th>
-				<th>Edición</th>
-				<!--<th>Eliminación</th>-->
+				<!--<th>Edición</th>
+				<th>Eliminación</th>-->
 			</tr>
 		</thead>
 		<tbody>

@@ -63,7 +63,7 @@
 				<th>Email</th>
 				<th>Fecha</th>
 				<th>Estado</th>
-				<th>Eliminación</th>
+				<th>Edición</th>
 			</tr>
 		</thead>
 		<tbody>

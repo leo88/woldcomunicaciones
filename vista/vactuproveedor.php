@@ -1,7 +1,7 @@
 <?php include("controlador/cproveedor.php"); ?>
 
 <div class="row-fluid">
-	<h1>Editar Producto</h1>
+	<h1>Editar Proveedor</h1>
 
 	<form action="index.php?pag=7&id=<?= $idprovee?>" method="POST">
 		<div class="form-group col-lg-6">
