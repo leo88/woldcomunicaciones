@@ -19,7 +19,7 @@
 	$idserviteceli  = isset($_POST['idserviteceli']) ? $_POST['idserviteceli'] : NULL;
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$numero_orden   = isset($_GET['id']) ? $_GET['id'] : NULL;	
-
+	echo $id_cliente." ".$empleado;
 	/*
 		Variables para traer los datos de los desplegables
 	*/
@@ -37,9 +37,9 @@
 	/*
 		Comprobacion datos para actualizar
 	*/
-	if ($idservitecedit && $nombre && $marca && $referencia && !$actu) 
+	if ($idservitecedit && $nombre && $marca && $referencia && $actu) 
 	{
-		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $nombre, $marca, $referencia,$descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
+		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $nombre, $marca, $referencia,$descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $abono);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

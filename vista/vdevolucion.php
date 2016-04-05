@@ -90,7 +90,7 @@
             <input type="text" class="form-control" name="numero_compra" required > 
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Costo:</label>
+            <label for="">Costo retorno:</label>
             <input type="text" class="form-control" name="costo" required>       
 		</div>
 		 <div class="form-city col-lg-6">
@@ -110,7 +110,7 @@
 				<th>Fecha</th>
 				<th>Motivo</th>
 				<th>Numero de Compra</th>
-				<th>Costo</th>
+				<th>Costo retorno</th>
 				<th>Edición</th>
 				<!--<th>Eliminación</th>-->
 			</tr>
