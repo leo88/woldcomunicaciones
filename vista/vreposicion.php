@@ -73,7 +73,7 @@
         </div>
 	</form>
 </div>
-<?php $consultareposicion = $reposicion->consultar_reposicion(); ?>
+<?php $consultareposicion = $reposicion->consultar_reposicion_u(); ?>
 	<table class="table">
 		<thead>
 			<tr>
