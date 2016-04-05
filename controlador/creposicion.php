@@ -11,6 +11,10 @@
 	$actu             = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idreposicion     = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
+    /*
+		Variables para traer los datos de los desplegables en el formulario
+	*/	
+	$movimiento2= $reposicion->sel_movimiento();
 	/*
 		Comprobacion datos para insertar
 	*/

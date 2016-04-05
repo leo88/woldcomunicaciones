@@ -1,7 +1,7 @@
 <?php
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include_once('controlador/conexion.php');
+	include_once('functions.php');
 
 	class Mreposicion extends Funciones
 	{
@@ -50,4 +50,20 @@
 			$sql = "SELECT * FROM tbreposicion WHERE idreposicion = '$idreposicion' ";
 			return $this -> SeleccionDatos($sql);
 		}
+         /*
+		 	Función para la seleccion del ultimo registro de la tabla movimeinto
+		 */
+		function sel_movimiento()        
+		{
+            $sql = "SELECT * FROM `tbmovimiento` order by idmovimiento desc limit 1";
+            return $this->SeleccionDatos($sql);
+             /*
+		 	Función para la seleccion especifica de los datos de la tabla movimiento
+		 */
+		function sel_movimiento1($idmovimiento)
+		{
+			$sql = "SELECT * FROM tbmovimiento WHERE idmovimiento='".$idmovimiento."';";
+			return $this->SeleccionDatos($sql);
+		}
+        }
 	}

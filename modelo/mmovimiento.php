@@ -50,6 +50,14 @@
 			$sql = "SELECT * FROM `tbmovimiento` WHERE `motivo` = 'Compra' ORDER BY idmovimiento DESC LIMIT 1";
 			 return $this->SeleccionDatos($sql);
 		}
+        /*
+		 *función para la consulta de los datos de la tabla tbmovimiento por REPOSICION limitandolo a un solo registro
+		 */
+		function consultar_movimiento_r()
+		{
+			$sql = "SELECT * FROM `tbmovimiento` WHERE `motivo` = 'Reposición' ORDER BY idmovimiento DESC LIMIT 1";
+			 return $this->SeleccionDatos($sql);
+		}
 		/*
 		 *función para la consulta de los datos de la tabla tbmovimiento por DEVOLUCION limitandolo a un solo registro
 		 */
