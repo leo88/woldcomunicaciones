@@ -5,7 +5,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>Compra</title>
+    <title>Devolucion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">    
     <link rel="stylesheet" href="css/miestilo.css" media="screen">
 
@@ -13,7 +13,7 @@
 
 <body>
 
-<?php include("controlador/cdevolucion.php"); ?>
+
 <?php include('controlador/cmovimiento.php'); ?>
 
 <div class="formulario">
@@ -22,13 +22,13 @@
 		<div class="form-group col-lg-6">
             <input type="hidden" name="motivo" value="Devolución">
             <label for="">Referencia:</label>
-            <input type="text" class="form-control" name="referencia" required>       
+            <input type="text" class="form-control" name="referencia">       
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad" required>       
+            <input type="number" class="form-control" name="cantidad">       
 		</div>		
-		 <div class="form-group col-lg-6">
+		<div class="form-group col-lg-6">
 			<br>            
             <input type="submit" name="Sale" class="btn btn-danger" value="-">
         </div>
@@ -69,16 +69,16 @@
 	</table>
 </div>
 
-   
+<?php include("controlador/cdevolucion.php"); ?>
 
-<div class="container-fluid">
+<div class="formulario">
 	<h1>Insertar Devolucion</h1>
 
 	<form action="" method="POST">
 		
 		<div class="form-group col-lg-6">
             <label for="">Fecha:</label>
-            <input type="date" class="form-control" name="fecha" required>
+            <input type="date" class="form-control" name="fecha">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">
 		</div>
 		<div class="form-group col-lg-6">
@@ -87,11 +87,11 @@
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Número de Compra:</label>
-            <input type="text" class="form-control" name="numero_compra" required > 
+            <input type="text" class="form-control" name="numero_compra" > 
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Costo retorno:</label>
-            <input type="text" class="form-control" name="costo" required>       
+            <input type="text" class="form-control" name="costo">       
 		</div>
 		 <div class="form-city col-lg-6">
 			<br>
@@ -105,8 +105,8 @@
 				<th colspan="3">Devolucion Irregular</th>
 			</tr>
 			<tr>
-				<th>Id Devolucion</th>
-				<th>Id Movimiento</th>
+				<th>Id De</th>
+				<th>Id M</th>
 				<th>Fecha</th>
 				<th>Motivo</th>
 				<th>Numero de Compra</th>
@@ -117,7 +117,7 @@
 		</thead>
 		<tbody>
 			<?php for($i=0;$i<count($consultadevolucion);$i++): 
-				$movimiento1 = $devolucion->sel_movimiento1($consultadevolucion[$i]['movimiento']);
+				//$movimiento1 = $devolucion->sel_movimiento1($consultadevolucion[$i]['movimiento']);
 			?>
 				<tr>
 					<td><?= $consultadevolucion[$i]['iddevolucion'] ?></td>
