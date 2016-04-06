@@ -22,7 +22,7 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($movimiento && $fecha && $numero_compra && $costo && !$actu) 
+	if ($movimiento && $fecha && $numero_compra && !$actu) 
 	{
         
 		$devolucion->insertar_devolucion($movimiento, $fecha, $motivo, $numero_compra, $costo);

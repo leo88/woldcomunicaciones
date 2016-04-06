@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/miestilo.css" media="screen">
 </head>
 <body>
-<?php //include('controlador/cmovimiento.php'); ?>
+<?php include('controlador/cmovimiento.php'); ?>
 <?php include("controlador/cventa.php"); ?>
 
 <div  class="formulario" >
@@ -78,4 +78,117 @@
 		</tbody>
 	</table>
 </div>
-	
+
+<div class="formulario">
+	<h1>Insertar Movimiento</h1>
+	<form action="" method="POST">		
+		<div class="form-group col-lg-6">
+            <input type="hidden" name="motivo" value="Compra" required>
+            <label for="">Referencia:</label>
+            <input type="text" class="form-control" name="referencia" required>       
+		</div>
+		<div class="form-group col-lg-6">
+            <label for="">Cantidad:</label>
+            <input type="number" class="form-control" name="cantidad" required>       
+		</div>		
+		 <div class="form-group col-lg-6">
+			<br>            
+            <input type="submit" name="Entra" class="btn btn-danger" value="+">
+        </div>
+	</form>
+
+<?php $consultamovimiento = $movimiento->consultar_movimiento_v(); ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th colspan="3">movimiento</th>
+			</tr>
+			<tr>
+				<th>ID</th>
+				<th>Motivo</th>
+				<th>Referencia</th>
+				<th>Cantidad</th>
+				<th>Edición</th>
+				<!--<th>Eliminación</th>-->
+			</tr>
+		</thead>
+		<tbody>
+			<?php for($i=0;$i<count($consultamovimiento);$i++): ?>
+				<tr>
+					<td><?= $consultamovimiento[$i]['idmovimiento'] ?></td>
+					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
+					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
+					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>					
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Editar</a></td>
+					<!--<td>
+						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
+							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
+							<input type="submit" class="btn btn-danger" value="Eliminar">
+						</form>
+					</td>-->
+				</tr>
+			<?php endfor; ?>
+		</tbody>
+	</table>
+</div>
+
+<?php include("controlador/cventaproduc.php"); ?>
+
+<div class="formulario">
+	<h1>Venta por producto</h1>
+
+	<form action="" method="POST">
+		<div class="form-group col-lg-6">
+            <label for="">Numero de venta:</label> 
+            <select name="numero_venta" class="form-control" required>
+				<option value=0>Seleccione una opcion</option>
+				<?php for($i=0;$i<count($numero_venta2);$i++): ?>
+					<option value="<?= $numero_venta2[$i]['numero_venta'] ?>"><?= $numero_venta2[$i]['numero_venta'] ?></option>
+				<?php endfor; ?>
+			</select>       
+		</div>
+		<div class="form-group col-lg-6">
+            <label for="">Movimiento:</label> 
+            <select name="movimiento" class="form-control" required>
+				<option value=0>Seleccione movimiento</option>
+				<?php for($i=0;$i<count($movimiento2);$i++): ?>
+					<option value="<?= $movimiento2[$i]['idmovimiento'] ?>"><?= $movimiento2[$i]['idmovimiento'] ?></option>
+				<?php endfor; ?>
+			</select>       
+		</div>
+		<div class="form-group col-lg-6">
+            <label for="">Valor Unitario:</label>
+            <input type="number" class="form-control" name="valor" required>
+            <input type="hidden" name="numero_cventa" value="<?= $numero_venta[0]['numero_venta'] ?>">
+            <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">       
+		</div>
+		 <div class="form-city col-lg-6">
+			<br>
+            <input type="submit" class="btn btn-success" value="Insertar">
+        </div>
+    </form>
+</div>
+<?php $consultaventaproduc = $ventaproduc->consultar_ventaproduc_u(); ?>
+	<table class="table">
+		<thead>
+			<tr>
+				<th colspan="3">Venta</th>
+			</tr>
+			<tr>
+				<th>ID Venta</th>
+				<th>ID Movimiento</th>
+				<th>Valor Unirario</th>
+				<th>Edición</th>
+		</thead>
+		<tbody>
+			<?php for($i=0;$i<count($consultaventaproduc);$i++): ?>
+				<tr>
+					<td><?= $consultaventaproduc[$i]['numero_venta'] ?></td>
+					<td><?= $consultaventaproduc[$i]['movimiento'] ?></td>
+					<td><?= $consultaventaproduc[$i]['precio_venta'] ?></td>
+					<td><a href="index.php?pag=27&id=<?= $consultaventaproduc[$i]['numero_venta'] ?>&idm=<?= $consultaventaproduc[$i]['movimiento']?>" class="btn btn-primary">Editar</a></td>
+				</tr>
+			<?php endfor; ?>
+		</tbody>
+	</table>
+

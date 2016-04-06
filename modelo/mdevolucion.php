@@ -40,7 +40,7 @@
 		 */
 		function consultar_devolucion()
 		{
-			$sql = "SELECT * FROM tbdevolucionirregular";
+			$sql = "SELECT * FROM tbdevolucionirregular ORDER BY iddevolucion DESC LIMIT 5";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

@@ -1,7 +1,7 @@
 <?php
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include_once('controlador/conexion.php');
+	include_once('functions.php');
 
 	class Mventaproduc extends Funciones
 	{

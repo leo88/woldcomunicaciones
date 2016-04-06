@@ -1,7 +1,7 @@
 <?php
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include_once('controlador/conexion.php');
+	include_once('functions.php');
 
 	class Mventa extends Funciones
 	{
@@ -27,7 +27,7 @@
 		/*
 		 *función para la elimnar datos de la tabla
 		 */
-		function eliminar_venta($numero_venta)
+		/*function eliminar_venta($numero_venta)
 		{
 			$sql = "DELETE FROM `tbventa` WHERE `numero_venta` = '$numero_venta'";
 			$this -> cons($sql);

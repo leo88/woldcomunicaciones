@@ -8,7 +8,7 @@
 	$cliente        = isset($_POST['cliente']) ? $_POST['cliente'] : NULL;
 	$fecha          = isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
 	$empleado       = isset($_POST['empleado']) ? $_POST['empleado'] : NULL;
-	$idventaeli 	= isset($_POST['idventaeli']) ? $_POST['idventaeli'] : NULL;
+	//$idventaeli 	= isset($_POST['idventaeli']) ? $_POST['idventaeli'] : NULL;
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$numero_venta   = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
@@ -43,7 +43,8 @@
 	/*
 		Eliminar el registro 
 	*/
-	if ($idventaeli) 
+	/*if ($idventaeli) 
 	{
 		$venta->eliminar_venta($idventaeli);
 	}
+	*/
