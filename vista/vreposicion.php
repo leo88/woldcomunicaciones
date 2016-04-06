@@ -66,7 +66,10 @@
             <label for="">No. Compra:</label>
             <input type="number" class="form-control" name="numero_compra">       
 		</div>	
-				
+		<div class="form-group col-lg-6">
+            <label for="">Fecha:</label>
+            <input type="date" class="form-control" name="fecha">       
+		</div>			
 		 <div class="form-group col-lg-6">
 			<br>
             <input type="submit" class="btn btn-success" value="Insertar">
@@ -82,7 +85,8 @@
 			<tr>
 				<th>ID</th>
 				<th>Movimiento</th>
-				<th>No. Compra</th>				
+				<th>No. Compra</th>	
+				<th>Fecha</th>				
 				<!--<th>Edición</th>
 				<th>Eliminación</th>-->
 			</tr>
@@ -92,7 +96,8 @@
 				<tr>
 					<td><?= $consultareposicion[$i]['idreposicion'] ?></td>
 					<td><?= $consultareposicion[$i]['movimiento'] ?></td>
-					<td><?= $consultareposicion[$i]['numero_compra'] ?></td>					
+					<td><?= $consultareposicion[$i]['numero_compra'] ?></td>
+					<td><?= $consultareposicion[$i]['fecha'] ?></td>					
 					<!--<td><a href="index.php?pag=6&id=<?= $consultareposicion[$i]['idreposicion'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
@@ -105,3 +110,7 @@
 		</tbody>
 	</table>
 
+<div>
+    Si el producto que va a reponer no esta esta en el inventario actualmente, por favor registre la referencia antes de hacer la reposicion
+    <a href="index.php?pag=3">Registrar referencia</a> 
+</div>

@@ -12,18 +12,18 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbreposicion
 		 */
-		function insertar_reposicion($movimiento, $numero_compra)
+		function insertar_reposicion($movimiento, $numero_compra, $fecha)
 		{
-			$sql = "INSERT INTO tbreposicion (movimiento, numero_compra)
-						VALUES ('".$movimiento."','".$numero_compra."');";
+			$sql = "INSERT INTO tbreposicion (movimiento, numero_compra, fecha)
+						VALUES ('".$movimiento."','".$numero_compra."','".$fecha."');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbreposicion
 		 */
-		function  actualizar_reposicion($idreposicion,$movimiento,$numero_compra)
+		function  actualizar_reposicion($idreposicion,$movimiento,$numero_compra,$fecha)
 		{
-			$sql = "UPDATE tbreposicion SET movimiento = '".$movimiento."',numero_compra = '".$numero_compra."' WHERE idreposicion = '".$idreposicion."';";
+			$sql = "UPDATE tbreposicion SET movimiento = '".$movimiento."',numero_compra = '".$numero_compra."',fecha = '".$fecha."' WHERE idreposicion = '".$idreposicion."';";
 			$this -> cons($sql);
 		}
 		/*

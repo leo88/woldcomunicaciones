@@ -58,4 +58,6 @@
 			<?php endfor; ?>
 		</tbody>
 	</table>
+	<a href="index.php?pag=19">Regresar a Compra</a> 
+	<a href="index.php?pag=21">Regresar a Reposicion</a> 
 </div>

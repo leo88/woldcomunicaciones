@@ -7,6 +7,7 @@
 	$idreposicionedit = isset($_POST['idreposicion']) ? $_POST['idreposicion'] : NULL;
 	$movimiento       = isset($_POST['movimiento']) ? $_POST['movimiento'] : NULL;
 	$numero_compra    = isset($_POST['numero_compra']) ? $_POST['numero_compra'] : NULL;
+    $fecha            = isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
 	$idreposicioneli  = isset($_POST['idreposicioneli']) ? $_POST['idreposicioneli'] : NULL;
 	$actu             = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idreposicion     = isset($_GET['id']) ? $_GET['id'] : NULL;	
@@ -18,16 +19,16 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($movimiento && $numero_compra && !$actu) 
+	if ($movimiento && $numero_compra && $fecha && !$actu) 
 	{
-		$reposicion->insertar_reposicion($movimiento, $numero_compra);
+		$reposicion->insertar_reposicion($movimiento, $numero_compra, $fecha);
 	}
     /*
 		Comprobacion datos para actualizar
 	*/
-    if ($idreposicionedit && $movimiento && $numero_compra && $actu) 
+    if ($idreposicionedit && $movimiento && $numero_compra && $fecha && $actu) 
 	{
-		$reposicion->actualizar_reposicion($idreposicionedit,$movimiento, $numero_compra);
+		$reposicion->actualizar_reposicion($idreposicionedit,$movimiento, $numero_compra, $fecha);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

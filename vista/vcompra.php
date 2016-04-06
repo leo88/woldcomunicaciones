@@ -160,7 +160,10 @@
 		</tbody>
 	</table>
 </div>
-
+<div>
+    Si el producto que va a comprar no esta esta en el inventario actualmente, por favor registre la referencia antes de hacer la compra
+    <a href="index.php?pag=3">Registrar referencia</a> 
+</div>
 </body>
 
 </html>
