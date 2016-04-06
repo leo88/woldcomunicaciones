@@ -83,7 +83,7 @@
 	<h1>Insertar Movimiento</h1>
 	<form action="" method="POST">		
 		<div class="form-group col-lg-6">
-            <input type="hidden" name="motivo" value="Compra" required>
+            <input type="hidden" name="motivo" value="Venta" required>
             <label for="">Referencia:</label>
             <input type="text" class="form-control" name="referencia" required>       
 		</div>
@@ -93,7 +93,7 @@
 		</div>		
 		 <div class="form-group col-lg-6">
 			<br>            
-            <input type="submit" name="Entra" class="btn btn-danger" value="+">
+            <input type="submit" name="Sale" class="btn btn-danger" value="-">
         </div>
 	</form>
 
@@ -139,27 +139,9 @@
 
 	<form action="" method="POST">
 		<div class="form-group col-lg-6">
-            <label for="">Numero de venta:</label> 
-            <select name="numero_venta" class="form-control" required>
-				<option value=0>Seleccione una opcion</option>
-				<?php for($i=0;$i<count($numero_venta2);$i++): ?>
-					<option value="<?= $numero_venta2[$i]['numero_venta'] ?>"><?= $numero_venta2[$i]['numero_venta'] ?></option>
-				<?php endfor; ?>
-			</select>       
-		</div>
-		<div class="form-group col-lg-6">
-            <label for="">Movimiento:</label> 
-            <select name="movimiento" class="form-control" required>
-				<option value=0>Seleccione movimiento</option>
-				<?php for($i=0;$i<count($movimiento2);$i++): ?>
-					<option value="<?= $movimiento2[$i]['idmovimiento'] ?>"><?= $movimiento2[$i]['idmovimiento'] ?></option>
-				<?php endfor; ?>
-			</select>       
-		</div>
-		<div class="form-group col-lg-6">
             <label for="">Valor Unitario:</label>
             <input type="number" class="form-control" name="valor" required>
-            <input type="hidden" name="numero_cventa" value="<?= $numero_venta[0]['numero_venta'] ?>">
+            <input type="hidden" name="numero_venta" value="<?= $numero_venta2[0]['numero_venta'] ?>">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">       
 		</div>
 		 <div class="form-city col-lg-6">

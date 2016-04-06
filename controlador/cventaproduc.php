@@ -19,7 +19,6 @@
 	*/
 	$numero_venta2	= $ventaproduc->sel_numeroventa();
 	$movimiento2	= $ventaproduc->sel_movimiento();
-	echo $valor_unitario." ".$idventaproducedit." ".$idmovimientoedit;
 	/*
 		Comprobacion datos para insertar	
 	*/
