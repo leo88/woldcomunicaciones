@@ -34,11 +34,7 @@
 			$sql = "DELETE FROM `tbreposicion` WHERE `idreposicion` = '$idreposicion'";
 			$this -> cons($sql);
 		}
-         /*
-		 */
-		{
-			 return $this->SeleccionDatos($sql);
-		}
+         
 		/*
 		 *función para la consulta de los datos de la tabla tbreposicion
 		 */
@@ -47,9 +43,10 @@
 			$sql = "SELECT * FROM `tbreposicion`";
 			 return $this->SeleccionDatos($sql);
 		}
-		/*
+        /*
     	 *	Función para retornar los datos de la tbreposicion	
          */
+        
 		function consultar_reposicion_id($idreposicion)
 		{
 			$sql = "SELECT * FROM tbreposicion WHERE idreposicion = '$idreposicion' ";
