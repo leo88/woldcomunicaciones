@@ -40,7 +40,7 @@
 		 */
 		function consultar_serviciotecnico()
 		{
-			$sql = "SELECT * FROM tbserviciotecnico";
+			$sql = "SELECT * FROM tbserviciotecnico ORDER BY numero_orden DESC";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

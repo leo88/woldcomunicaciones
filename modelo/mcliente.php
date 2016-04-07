@@ -39,7 +39,7 @@
 		 */
 		function consultar_cliente()
 		{
-			$sql = "SELECT * FROM tbcliente ORDER BY idcliente LIMIT 20";
+			$sql = "SELECT * FROM tbcliente ORDER BY idcliente DESC";
 			return $this->SeleccionDatos($sql);
 		}
 		/*

@@ -39,7 +39,7 @@
 		 */
 		function consultar_empleado()
 		{
-			$sql = "SELECT * FROM tbempleado";
+			$sql = "SELECT * FROM tbempleado ORDER BY idempleado DESC";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

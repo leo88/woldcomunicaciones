@@ -39,7 +39,7 @@
 		 */
 		function consultar_otros()
 		{
-			$sql = "SELECT * FROM tbotros";
+			$sql = "SELECT * FROM tbotros ORDER BY idreporte DESC";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

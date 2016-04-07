@@ -39,7 +39,7 @@
 		 */
 		function consultar_servicioentregado()
 		{
-			$sql = "SELECT * FROM tbservicioentregado";
+			$sql = "SELECT * FROM tbservicioentregado ORDER BY numero_orden DESC";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

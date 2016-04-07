@@ -39,7 +39,7 @@
 		 */
 		function consultar_proveedor()
 		{
-			$sql = "SELECT * FROM tbproveedor";
+			$sql = "SELECT * FROM tbproveedor ORDER BY idproveedor DESC";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*
