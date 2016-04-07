@@ -4,28 +4,34 @@
 
 	$minutos = new Mminutos();
 
-	$idminutosedit = isset($_POST['idminutos']) ? $_POST['idminutos'] : NULL;
-	$cantidad      = isset($_POST['cantidad']) ? $_POST['cantidad'] : NULL;
-	$valor         = isset($_POST['valor']) ? $_POST['valor'] : NULL;
-	$descripcion   = isset($_POST['descripcion']) ? $_POST['descripcion'] : NULL;
-    $fecha         = isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
-	$idminutoseli  = isset($_POST['idminutoseli']) ? $_POST['idminutoseli'] : NULL;
-	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
-	$idminutos     = isset($_GET['id']) ? $_GET['id'] : NULL;	
+	$idminutosedit 	= isset($_POST['idminutos']) ? $_POST['idminutos'] : NULL;
+	$fecha      	= isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
+	$compra         = isset($_POST['compra']) ? $_POST['compra'] : NULL;
+	$venta   		= isset($_POST['venta']) ? $_POST['venta'] : NULL;
+    $utilidad       = isset($_POST['utilidad']) ? $_POST['utilidad'] : NULL;
+	$idminutoseli  	= isset($_POST['idminutoseli']) ? $_POST['idminutoseli'] : NULL;
+	$actu          	= isset($_POST['actu']) ? $_POST['actu'] : NULL;
+	$idminutos     	= isset($_GET['id']) ? $_GET['id'] : NULL;	
+
+	/*
+		Variables para traer los datos de los desplegables
+	*/
+	$compra2= $minutos->consultar_minutos_costo();
+	$valor2= $minutos->consultar_minutos_valor();
 
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($cantidad && $valor && $descripcion && $fecha && !$actu) 
+	if ($fecha && $compra && $venta && $utilidad && !$actu) 
 	{
-		$minutos->insertar_minutos($cantidad, $valor, $descripcion, $fecha);
+		$minutos->insertar_minutos($fecha, $compra, $venta, $utilidad);
 	}
     /*
 		Comprobacion datos para actualizar
 	*/
-    if ($idminutosedit && $cantidad && $valor && $descripcion && $fecha && $actu) 
+    if ($idminutosedit && $fecha && $compra && $venta && $utilidad && $actu) 
 	{
-		$minutos->actualizar_minutos($idminutosedit,$cantidad, $valor, $descripcion, $fecha);
+		$minutos->actualizar_minutos($idminutosedit,$fecha, $compra, $venta, $utilidad);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

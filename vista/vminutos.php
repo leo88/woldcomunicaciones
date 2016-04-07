@@ -5,24 +5,24 @@
 
 	<form action="" method="POST">
 		<div class="form-group col-lg-6">
-            <label for="">Cantidad minutos:</label>
-            <input type="number" class="form-control" name="cantidad">       
+            <label for="">Fecha:</label>
+            <input type="date" class="form-control" name="fecha">       
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Total Valor Minutos:</label>
-            <input type="number" class="form-control" name="valor">       
+            <label for="">Total compra Minutos:</label>
+            <input type="number" value="<?= $compra2[0]['costo_compra']?>" class="form-control" name="compra"> 
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Descripción:</label>
-            <input type=text list=descripcion name="descripcion">
-                <datalist id=descripcion >
+            <label for="">Total venta Minutos:</label>
+            <input type=text list=venta name="venta">
+                <datalist id=venta >
                    <option> Minutos
                    <option> Recargas
                 </datalist>       
 		</div>
 		<div class="form-group col-lg-6">
-            <label for="">Fecha:</label>
-            <input type="date" class="form-control" name="fecha">       
+            <label for="">utilidad:</label>
+            <input type="number" class="form-control" name="utilidad"> 
 		</div>
 		 <div class="form-group col-lg-6">
 			<br>
@@ -38,10 +38,10 @@
 			</tr>
 			<tr>
 				<th>ID</th>
-				<th>Cantidad Minutos</th>
-				<th>Valor total</th>
-				<th>Descripcion</th>
-				<th>Fecha</th>
+				<th>fecha Minutos</th>
+				<th>compra total</th>
+				<th>venta</th>
+				<th>utilidad</th>
 				<th>Edición</th>
 				<!--<th>Eliminación</th>-->
 			</tr>
@@ -50,10 +50,10 @@
 			<?php for($i=0;$i<count($consultaminutos);$i++): ?>
 				<tr>
 					<td><?= $consultaminutos[$i]['idminutos'] ?></td>
-					<td><?= $consultaminutos[$i]['cantidad_min'] ?></td>
-					<td><?= $consultaminutos[$i]['valor_min'] ?></td>
-					<td><?= $consultaminutos[$i]['descripcion'] ?></td>
-					<td><?= $consultaminutos[$i]['fecha'] ?></td>
+					<td><?= $consultaminutos[$i]['fecha_min'] ?></td>
+					<td><?= $consultaminutos[$i]['compra_min'] ?></td>
+					<td><?= $consultaminutos[$i]['venta'] ?></td>
+					<td><?= $consultaminutos[$i]['utilidad'] ?></td>
 					<td><a href="index.php?pag=6&id=<?= $consultaminutos[$i]['idminutos'] ?>" class="btn btn-primary">Editar</a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
