@@ -5,7 +5,13 @@
 		<div class="form-group col-lg-6">
             <input type="hidden" name="motivo" value="Reposición" required>
             <label for="">Referencia:</label>
-            <input type="text" class="form-control" name="referencia" required>       
+            <select name="referencia" class="form-control">
+				<option value=0>Seleccione producto</option>
+				<?php for($i=0;$i<count($referencia2);$i++): ?>
+					<option value="<?= $referencia2[$i]['referencia'] ?>">
+					<?= $referencia2[$i]['referencia'] ?></option>
+				<?php endfor; ?>
+			</select>      
 		</div>
 		<div class="form-group col-lg-6">
             <label for="">Cantidad:</label>

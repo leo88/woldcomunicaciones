@@ -82,4 +82,20 @@
 			$sql = "SELECT * FROM tbmovimiento WHERE idmovimiento = '$idmovimiento' ";
 			return $this -> SeleccionDatos($sql);
 		}
+		 /*
+		 	Función para la seleccion del registro mas reciente de la tabla producto
+		 */
+		function sel_producto()        
+		{
+            $sql = "SELECT * FROM `tbproducto`";
+            return $this->SeleccionDatos($sql);
+        }
+        /*
+		 	Función para la seleccion especifica de los datos de la tabla producto
+		 */
+		function sel_producto1($referencia)
+		{
+			$sql = "SELECT * FROM tbproducto WHERE referencia='".$referencia."';";
+			return $this->SeleccionDatos($sql);
+		}
 	}

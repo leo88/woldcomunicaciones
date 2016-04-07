@@ -13,6 +13,11 @@
 	$idmovimiento     = isset($_GET['id']) ? $_GET['id'] : NULL;
 
 	/*
+		Variables para traer los datos del desplegable
+	*/
+	$referencia2= $movimiento->sel_producto();
+
+	/*
 		Se evalua el boton de envio desde el formulario, para las salidas la cantidad sera negativa
 		mientras que para las entradas la cantidad sera positiva
 	*/

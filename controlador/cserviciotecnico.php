@@ -19,7 +19,7 @@
 	$idserviteceli  = isset($_POST['idserviteceli']) ? $_POST['idserviteceli'] : NULL;
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$numero_orden   = isset($_GET['id']) ? $_GET['id'] : NULL;	
-	echo $id_cliente." ".$empleado;
+	
 	/*
 		Variables para traer los datos de los desplegables
 	*/
