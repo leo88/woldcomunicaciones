@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-03-2016 a las 15:55:07
+-- Tiempo de generación: 07-04-2016 a las 18:05:24
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -100,16 +100,6 @@ CREATE TABLE IF NOT EXISTS `csdiatotaldevo` (
 -- --------------------------------------------------------
 
 --
--- Estructura Stand-in para la vista `csdiatotalmin`
---
-CREATE TABLE IF NOT EXISTS `csdiatotalmin` (
-`fecha` date
-,`SumaDevalor_min` decimal(32,0)
-);
-
--- --------------------------------------------------------
-
---
 -- Estructura Stand-in para la vista `csdiatotalotros`
 --
 CREATE TABLE IF NOT EXISTS `csdiatotalotros` (
@@ -171,17 +161,6 @@ CREATE TABLE IF NOT EXISTS `csmestotalentra` (
 `Mes` int(2)
 ,`Año` int(4)
 ,`TOTALMESENTRA` decimal(65,0)
-);
-
--- --------------------------------------------------------
-
---
--- Estructura Stand-in para la vista `csmestotalmin`
---
-CREATE TABLE IF NOT EXISTS `csmestotalmin` (
-`Mes` int(2)
-,`Año` int(4)
-,`TOTALMESMIN` decimal(54,0)
 );
 
 -- --------------------------------------------------------
@@ -405,8 +384,8 @@ CREATE TABLE IF NOT EXISTS `tbcliente` (
 --
 
 INSERT INTO `tbcliente` (`idcliente`, `nombre`, `telefono`, `direccion`, `email`, `detalle`) VALUES
-(1, 'Anonimo', NULL, NULL, NULL, 'No aplica'),
-(2, 'pedro torres', '6469639', 'cra 5', 'pedro@gamil.com', 'Cliente'),
+(1, 'Anonimo', '', '', '', 'No aplica'),
+(2, 'pedro torres', '6469639', 'cra 10', 'pedro@gamil.com', 'Cliente'),
 (3, 'alan brito', '3131666', 'calle 4', 'alan@gamil.com', 'Cliente'),
 (4, 'gina gomez', '6334996', 'cra 8', 'gina@gamil.com', 'Cliente'),
 (5, 'Chia1', '9445321', 'calle 3', 'chia1@gamil.com', 'Traspaso'),
@@ -422,7 +401,7 @@ CREATE TABLE IF NOT EXISTS `tbcompra` (
   `numero_compra` int(11) NOT NULL,
   `proveedor` varchar(12) NOT NULL,
   `fecha` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbcompra`
@@ -433,7 +412,14 @@ INSERT INTO `tbcompra` (`numero_compra`, `proveedor`, `fecha`) VALUES
 (16, '002', '2015-05-28'),
 (17, '001', '2015-06-24'),
 (18, '002', '2015-06-24'),
-(19, '002', '2015-07-14');
+(19, '002', '2015-07-14'),
+(20, '002', '2016-03-10'),
+(21, '003', '2016-03-09'),
+(22, '004', '2016-03-09'),
+(24, '004', '2016-03-16'),
+(25, '003', '2016-04-05'),
+(26, '001', '2016-04-06'),
+(27, '002', '2016-04-07');
 
 -- --------------------------------------------------------
 
@@ -464,7 +450,16 @@ INSERT INTO `tbcompraxproducto` (`numero_compra`, `movimiento`, `valor`) VALUES
 (17, 45, 8000),
 (17, 46, 4900),
 (18, 47, 170000),
-(18, 48, 180000);
+(18, 48, 180000),
+(20, 63, 2400),
+(21, 64, 200000),
+(21, 65, 220000),
+(24, 66, 9000),
+(24, 67, 200000),
+(24, 68, 6000),
+(25, 75, 180000),
+(26, 81, 170000),
+(27, 87, 100000);
 
 -- --------------------------------------------------------
 
@@ -479,15 +474,21 @@ CREATE TABLE IF NOT EXISTS `tbdevolucionirregular` (
   `motivo` varchar(50) DEFAULT NULL,
   `numero_compra` int(11) NOT NULL,
   `costo` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbdevolucionirregular`
 --
 
 INSERT INTO `tbdevolucionirregular` (`iddevolucion`, `movimiento`, `fecha`, `motivo`, `numero_compra`, `costo`) VALUES
-(3, 59, '2015-07-01', 'no prenden', 15, 180000),
-(4, 60, '2015-07-01', 'rayadas', 16, 9000);
+(3, 59, '2015-07-01', 'no prenden', 15, 20000),
+(4, 60, '0000-00-00', 'rayadas las pantallas', 16, 15000),
+(5, 71, '2016-03-31', 'no funciona la pantalla', 17, 0),
+(6, 72, '2016-04-06', 'no se sabe', 18, 180000),
+(7, 73, '2016-04-07', 'klhljkj', 18, 170000),
+(8, 75, '2016-04-07', 'roto', 18, 170000),
+(9, 80, '2016-04-06', 'daÃ±ado', 18, 170500),
+(10, 82, '2016-04-06', 'sssss', 18, 0);
 
 -- --------------------------------------------------------
 
@@ -525,36 +526,6 @@ INSERT INTO `tbempleado` (`idempleado`, `nombre`, `sueldo`, `direccion`, `ciudad
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbminutos`
---
-
-CREATE TABLE IF NOT EXISTS `tbminutos` (
-  `idminutos` int(11) NOT NULL,
-  `cantidad_min` int(11) NOT NULL,
-  `valor_min` int(11) NOT NULL,
-  `descripcion` varchar(10) NOT NULL,
-  `fecha` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
-
---
--- Volcado de datos para la tabla `tbminutos`
---
-
-INSERT INTO `tbminutos` (`idminutos`, `cantidad_min`, `valor_min`, `descripcion`, `fecha`) VALUES
-(1, 20, 1000, 'Minutos', '2015-06-10'),
-(2, 20, 10000, 'Recargas', '2015-06-10'),
-(3, 50, 2500, 'Minutos', '2015-06-11'),
-(4, 50, 30000, 'Recargas', '2015-07-01'),
-(5, 20, 20000, 'Minutos', '2015-08-03'),
-(6, 20, 20000, 'Minutos', '2015-08-03'),
-(7, 20, 20000, 'Minutos', '2015-08-03'),
-(8, 30, 10000, 'Recargas', '2015-08-03'),
-(9, 10, 30000, 'Minutos', '2015-08-04'),
-(11, 34, 21000, 'Minutos', '2015-08-04');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `tbmovimiento`
 --
 
@@ -563,7 +534,7 @@ CREATE TABLE IF NOT EXISTS `tbmovimiento` (
   `motivo` varchar(30) NOT NULL,
   `referencia` varchar(20) NOT NULL,
   `cantidad` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbmovimiento`
@@ -595,7 +566,29 @@ INSERT INTO `tbmovimiento` (`idmovimiento`, `motivo`, `referencia`, `cantidad`) 
 (59, 'Devolucion', 'a100', -4),
 (60, 'Devolucion', 'c200', -2),
 (61, 'VENTA', 'c100', -2),
-(62, 'VENTA', 'b200', -2);
+(62, 'VENTA', 'b200', 2),
+(63, 'Compra', 'b100', 6),
+(64, 'Compra', 'c100', 2),
+(65, 'Compra', 'a200', 2),
+(66, 'Compra', 'a200', 1),
+(67, 'Compra', 'c100', 1),
+(68, 'Compra', 'b200', 2),
+(71, 'DevoluciÃ³n', 'b100', -2),
+(72, 'DevoluciÃ³n', 'c100', -1),
+(73, 'DevoluciÃ³n', 'c100', -2),
+(74, 'DevoluciÃ³n', 'c100', -4),
+(75, 'Compra', 'c100', 2),
+(76, 'DevoluciÃ³n', 'c100', -1),
+(77, 'DevoluciÃ³n', 'b100', -2),
+(78, 'DevoluciÃ³n', 'b100', -1),
+(79, 'DevoluciÃ³n', 'b100', -1),
+(80, 'DevoluciÃ³n', 'b100', -1),
+(81, 'Compra', 'b100', 2),
+(82, 'DevoluciÃ³n', 'b100', -1),
+(83, 'Compra', 'b100', 2),
+(84, 'Venta', 'b100', -1),
+(85, 'Venta', 'b200', -2),
+(87, 'Compra', 'b100', 2);
 
 -- --------------------------------------------------------
 
@@ -609,7 +602,7 @@ CREATE TABLE IF NOT EXISTS `tbotros` (
   `descripcion` varchar(100) NOT NULL,
   `salida_total` int(11) NOT NULL,
   `entrada_total` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbotros`
@@ -622,8 +615,10 @@ INSERT INTO `tbotros` (`idreporte`, `fecha`, `descripcion`, `salida_total`, `ent
 (4, '2015-07-01', 'cortada de sim card', 0, 8000),
 (5, '2015-06-10', 'apertura de bandas', 0, 15000),
 (6, '2015-07-01', 'reparacion vitrina', 10000, 0),
-(7, '2015-07-01', 'compra productos aseo', 20000, 0),
-(8, '2015-08-11', ' compra de vidrio', 0, 0);
+(7, '2015-07-01', 'compra productos aseo', 21000, 0),
+(8, '2015-08-11', ' compra de vidrio', 0, 11000),
+(9, '2016-03-31', ' Reparacion de pc', 40000, 0),
+(10, '2016-03-31', ' asasd', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -686,7 +681,8 @@ INSERT INTO `tbproveedor` (`idproveedor`, `nombre`, `contacto`, `telefono`, `tel
 CREATE TABLE IF NOT EXISTS `tbreposicion` (
   `idreposicion` int(11) NOT NULL,
   `movimiento` int(11) NOT NULL,
-  `numero_compra` int(11) NOT NULL
+  `numero_compra` int(11) NOT NULL,
+  `fecha` date NOT NULL COMMENT 'fecha en la cual se hizo la reposiciòn'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -740,7 +736,7 @@ INSERT INTO `tbserviciotecnico` (`numero_orden`, `nombre`, `marca`, `referencia`
 (2, 'Tablet', 'Lanix', 'c20-23', 'puerto', 'forro', 10000, 15000, '2015-06-27', 2, '02', 15000),
 (3, 'Portatil', 'toshiba', 'C85d', 'teclado da', 'traia caragador', 20000, 28000, '2015-07-01', 1, '01', 12000),
 (4, 'celular', 'nokia', 'a600', 'apertura de bandas', '', 10000, 12000, '2015-07-01', 2, '01', 12000),
-(5, 'tablet', 'samsung', 'u-900', 'display roto', '', 30000, 38000, '2015-07-07', 3, '02', 10000);
+(5, 'Tablet', 'Nokia', 'lumia 400', ' teclado no sirve', 'protector rayado', 30000, 40000, '2016-04-05', 4, '01', 25000);
 
 -- --------------------------------------------------------
 
@@ -765,7 +761,7 @@ CREATE TABLE IF NOT EXISTS `tbventa` (
   `idcliente` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `idempleado` varchar(10) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `tbventa`
@@ -778,7 +774,9 @@ INSERT INTO `tbventa` (`numero_venta`, `idcliente`, `fecha`, `idempleado`) VALUE
 (13, 1, '2015-07-01', '03'),
 (14, 1, '2015-06-28', '02'),
 (15, 3, '2015-07-30', '02'),
-(16, 3, '2015-08-01', '02');
+(16, 3, '2015-08-01', '02'),
+(17, 3, '2016-04-06', '03'),
+(18, 1, '2016-04-07', '02');
 
 -- --------------------------------------------------------
 
@@ -807,7 +805,9 @@ INSERT INTO `tbventaxproducto` (`numero_venta`, `movimiento`, `precio_venta`) VA
 (13, 57, 12000),
 (14, 58, 230000),
 (15, 61, 250000),
-(16, 62, 5000);
+(16, 62, 5000),
+(18, 84, 3000),
+(18, 85, 100000);
 
 -- --------------------------------------------------------
 
@@ -843,7 +843,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `csdevolucion`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csdevolucion` AS select `tbdevolucionirregular`.`iddevolucion` AS `iddevolucion`,`tbmovimiento`.`referencia` AS `referencia`,`tbdevolucionirregular`.`fecha` AS `fecha`,`tbdevolucionirregular`.`motivo` AS `motivo`,`tbdevolucionirregular`.`numero_compra` AS `numero_compra`,`tbcompra`.`fecha` AS `fecha_compra`,`tbmovimiento`.`cantidad` AS `cantidad`,`tbdevolucionirregular`.`costo` AS `costo`,(`tbdevolucionirregular`.`costo` * -(`tbmovimiento`.`cantidad`)) AS `TOTAL_DEVOLUCION` from ((`tbmovimiento` join `tbdevolucionirregular` on((`tbmovimiento`.`idmovimiento` = `tbdevolucionirregular`.`movimiento`))) join `tbcompra` on((`tbdevolucionirregular`.`numero_compra` = `tbcompra`.`numero_compra`)));
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csdevolucion` AS select `tbdevolucionirregular`.`iddevolucion` AS `iddevolucion`,`tbmovimiento`.`referencia` AS `referencia`,`tbdevolucionirregular`.`fecha` AS `fecha`,`tbdevolucionirregular`.`motivo` AS `motivo`,`tbdevolucionirregular`.`numero_compra` AS `numero_compra`,`tbcompra`.`fecha` AS `fecha_compra`,`tbmovimiento`.`cantidad` AS `cantidad`,`tbdevolucionirregular`.`costo` AS `costo`,(`tbdevolucionirregular`.`costo` * `tbmovimiento`.`cantidad`) AS `TOTAL_DEVOLUCION` from ((`tbmovimiento` join `tbdevolucionirregular` on((`tbmovimiento`.`idmovimiento` = `tbdevolucionirregular`.`movimiento`))) join `tbcompra` on((`tbdevolucionirregular`.`numero_compra` = `tbcompra`.`numero_compra`)));
 
 -- --------------------------------------------------------
 
@@ -862,15 +862,6 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `csdiatotaldevo`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csdiatotaldevo` AS select `tbdevolucionirregular`.`fecha` AS `fecha`,sum(`tbdevolucionirregular`.`costo`) AS `SumaDecosto` from `tbdevolucionirregular` group by `tbdevolucionirregular`.`fecha`;
-
--- --------------------------------------------------------
-
---
--- Estructura para la vista `csdiatotalmin`
---
-DROP TABLE IF EXISTS `csdiatotalmin`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csdiatotalmin` AS select `tbminutos`.`fecha` AS `fecha`,sum(`tbminutos`.`valor_min`) AS `SumaDevalor_min` from `tbminutos` group by `tbminutos`.`fecha`;
 
 -- --------------------------------------------------------
 
@@ -925,15 +916,6 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 DROP TABLE IF EXISTS `csmestotalentra`;
 
 CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csmestotalentra` AS select month(`cstotalentradia`.`fecha`) AS `Mes`,year(`cstotalentradia`.`fecha`) AS `Año`,sum(`cstotalentradia`.`VAL_POSITIVO`) AS `TOTALMESENTRA` from `cstotalentradia` group by month(`cstotalentradia`.`fecha`),year(`cstotalentradia`.`fecha`);
-
--- --------------------------------------------------------
-
---
--- Estructura para la vista `csmestotalmin`
---
-DROP TABLE IF EXISTS `csmestotalmin`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csmestotalmin` AS select month(`csdiatotalmin`.`fecha`) AS `Mes`,year(`csdiatotalmin`.`fecha`) AS `Año`,sum(`csdiatotalmin`.`SumaDevalor_min`) AS `TOTALMESMIN` from `csdiatotalmin` group by month(`csdiatotalmin`.`fecha`),year(`csdiatotalmin`.`fecha`);
 
 -- --------------------------------------------------------
 
@@ -1032,7 +1014,7 @@ CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW 
 --
 DROP TABLE IF EXISTS `csuniondiaentra`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csuniondiaentra` AS select `tbotros`.`fecha` AS `fecha`,sum(`tbotros`.`entrada_total`) AS `DIAENTRA` from `tbotros` group by `tbotros`.`fecha` union all select `tbserviciotecnico`.`fecha` AS `fecha`,sum(`tbserviciotecnico`.`abono`) AS `SumaDeabono` from `tbserviciotecnico` group by `tbserviciotecnico`.`fecha` union all select `tbservicioentregado`.`fecha` AS `fecha`,sum(`tbservicioentregado`.`saldo_cancel`) AS `SumaDesaldo_cancel` from `tbservicioentregado` group by `tbservicioentregado`.`fecha` union all select `csventatotal`.`fecha` AS `fecha`,sum(`csventatotal`.`SumaDeSUBTOTAL`) AS `SumaDeSumaDeSUBTOTAL` from `csventatotal` group by `csventatotal`.`fecha` union all select `tbminutos`.`fecha` AS `fecha`,sum(`tbminutos`.`valor_min`) AS `SumaDevalor_min` from `tbminutos` group by `tbminutos`.`fecha` order by `fecha` desc;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `csuniondiaentra` AS select `tbotros`.`fecha` AS `fecha`,sum(`tbotros`.`entrada_total`) AS `DIAENTRA` from `tbotros` group by `tbotros`.`fecha` union all select `tbserviciotecnico`.`fecha` AS `fecha`,sum(`tbserviciotecnico`.`abono`) AS `SumaDeabono` from `tbserviciotecnico` group by `tbserviciotecnico`.`fecha` union all select `tbservicioentregado`.`fecha` AS `fecha`,sum(`tbservicioentregado`.`saldo_cancel`) AS `SumaDesaldo_cancel` from `tbservicioentregado` group by `tbservicioentregado`.`fecha` union all select `csventatotal`.`fecha` AS `fecha`,sum(`csventatotal`.`SumaDeSUBTOTAL`) AS `SumaDeSumaDeSUBTOTAL` from `csventatotal` group by `csventatotal`.`fecha` order by `fecha` desc;
 
 -- --------------------------------------------------------
 
@@ -1123,12 +1105,6 @@ ALTER TABLE `tbempleado`
   ADD PRIMARY KEY (`idempleado`);
 
 --
--- Indices de la tabla `tbminutos`
---
-ALTER TABLE `tbminutos`
-  ADD PRIMARY KEY (`idminutos`);
-
---
 -- Indices de la tabla `tbmovimiento`
 --
 ALTER TABLE `tbmovimiento`
@@ -1201,27 +1177,22 @@ ALTER TABLE `tbcliente`
 -- AUTO_INCREMENT de la tabla `tbcompra`
 --
 ALTER TABLE `tbcompra`
-  MODIFY `numero_compra` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=20;
+  MODIFY `numero_compra` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT de la tabla `tbdevolucionirregular`
 --
 ALTER TABLE `tbdevolucionirregular`
-  MODIFY `iddevolucion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
---
--- AUTO_INCREMENT de la tabla `tbminutos`
---
-ALTER TABLE `tbminutos`
-  MODIFY `idminutos` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+  MODIFY `iddevolucion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `tbmovimiento`
 --
 ALTER TABLE `tbmovimiento`
-  MODIFY `idmovimiento` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=63;
+  MODIFY `idmovimiento` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=88;
 --
 -- AUTO_INCREMENT de la tabla `tbotros`
 --
 ALTER TABLE `tbotros`
-  MODIFY `idreporte` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `idreporte` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT de la tabla `tbreposicion`
 --
@@ -1241,7 +1212,7 @@ ALTER TABLE `tbusuario`
 -- AUTO_INCREMENT de la tabla `tbventa`
 --
 ALTER TABLE `tbventa`
-  MODIFY `numero_venta` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+  MODIFY `numero_venta` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
 --
 -- Restricciones para tablas volcadas
 --
