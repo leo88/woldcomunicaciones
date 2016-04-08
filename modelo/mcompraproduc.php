@@ -48,7 +48,7 @@
 		 */
 		function consultar_compraproduc()
 		{
-			$sql = "SELECT * FROM tbcompraxproducto";
+			$sql = "SELECT * FROM tbcompraxproducto ORDER BY numero_compra DESC";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

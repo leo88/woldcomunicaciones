@@ -14,14 +14,14 @@
 	        
 
 	        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+            
 	        <link rel="stylesheet" href="css/normalize.css">
 	        <link rel="stylesheet" href="css/main.css">
 	        <link rel="stylesheet" href="css/bootstrap.css"/>
 	        <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
-	        
+	        <link rel="stylesheet" href="css/estilo.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -47,18 +47,37 @@ google_ad_height = 60;
 </script>
 <script type="text/javascript"
 src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
-        
+</script>  
         
 		    <div class="container-fluid">
-
+              
+<!-- inicio barra navegacion -->
+<div id="menu"> 
+  <button type="button" class="btn btn-info m"><a href="index.php">Inicio</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=2">Cliente</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=3">Producto</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=5">Minutos</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=7">Proveedor</a></button> 
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=9">Empleado</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=11">Otros</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=13">Servicio Tecnico</a></button>  
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=15">Servicio T. Entregado</a></button>  
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=16">Movimiento</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=18">Devolucion</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=19">Compra</a></button>
+  <button type="button" class="btn btn-info m active"><a href="#">Compra Producto</a></button> 
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=21">Reposicion</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=24">Venta</a></button>
+  <button type="button" class="btn btn-info m"><a href="index.php?pag=26">Venta Producto</a></button> 
+</div>
+<!-- final barra navegacion -->
+          
 		      <div class="row-fluid">
 		        
 		        <div class="span12">
 		      
 <?php include("controlador/ccompraproduc.php"); ?>
-   
+
 
 <div class="container-fluid">
 	<h1>Insertar Compra por producto</h1>
