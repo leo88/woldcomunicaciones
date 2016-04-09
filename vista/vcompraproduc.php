@@ -53,22 +53,22 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
               
 <!-- inicio barra navegacion -->
 <div id="menu"> 
-  <button type="button" class="btn btn-info m"><a href="index.php">Inicio</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=2">Cliente</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=3">Producto</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=5">Minutos</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=7">Proveedor</a></button> 
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=9">Empleado</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=11">Otros</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=13">Servicio Tecnico</a></button>  
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=15">Servicio T. Entregado</a></button>  
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=16">Movimiento</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=18">Devolucion</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=19">Compra</a></button>
-  <button type="button" class="btn btn-info m active"><a href="#">Compra Producto</a></button> 
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=21">Reposicion</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=24">Venta</a></button>
-  <button type="button" class="btn btn-info m"><a href="index.php?pag=26">Venta Producto</a></button> 
+  <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
+  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
+  <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
+  <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
+  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
+  <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
+  <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
+  <a href="index.php?pag=13"><button type="button" class="btn btn-info m">Servicio Tecnico</button></a>
+  <a href="index.php?pag=15"><button type="button" class="btn btn-info m">Servicio T. Entregado</button></a>  
+  <a href="index.php?pag=16"><button type="button" class="btn btn-info m">Movimiento</button></a>
+  <a href="index.php?pag=18"><button type="button" class="btn btn-info m">Devolucion</button></a>
+  <a href="index.php?pag=19"><button type="button" class="btn btn-info m">Compra</button></a>
+  <a href=""><button type="button" class="btn btn-info m active">Compra Producto</button></a> 
+  <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
+  <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
+  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a> 
 </div>
 <!-- final barra navegacion -->
           
