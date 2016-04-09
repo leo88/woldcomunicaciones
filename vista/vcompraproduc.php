@@ -9,7 +9,7 @@
 	        <meta charset="utf-8">
 	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <title>datatable ejemplo filtrar tabla html</title>
+	        <title>Compra por producto</title>
 	        <meta name="description" content="??">
 	        
 
@@ -79,11 +79,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <?php include("controlador/ccompraproduc.php"); ?>
 
 
-<div class="container-fluid">
-	<h1>Insertar Compra por producto</h1>
+<div class="container-fluid lol">
+<div class="eti">Insertar Compra por producto</div>
+	
 
-	<form action="" method="POST">
-		<div class="form-group col-lg-6">
+	<form class="form-horizontal" action="" method="POST">
+		<div class="form-group campo">
             <label for="">Numero de compra:</label> 
             <select name="numero_compra" class="form-control" required>
 				<option value=0>Seleccione una opcion</option>
@@ -92,7 +93,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<?php endfor; ?>
 			</select>       
 		</div>
-		<div class="form-group col-lg-6">
+		<div class="form-group campo">
             <label for="">Movimiento:</label> 
             <select name="movimiento" class="form-control" required>
 				<option value=0>Seleccione movimiento</option>
@@ -101,12 +102,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<?php endfor; ?>
 			</select>       
 		</div>
-		<div class="form-group col-lg-6">
+		<div class="form-group campo">
             <label for="">Valor Unitario:</label>
             <input type="number" class="form-control" name="valor" required>       
 		</div>
-		 <div class="form-city col-lg-6">
-			<br>
+		 <div class="form-group campo"> <br>			
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
     </form>

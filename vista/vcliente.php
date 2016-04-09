@@ -9,7 +9,7 @@
 	        <meta charset="utf-8">
 	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <title>datatable ejemplo filtrar tabla html</title>
+	        <title>Clientes</title>
 	        <meta name="description" content="??">
 	        
 
@@ -79,27 +79,27 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <?php include('controlador/ccliente.php'); ?>
 
 
-<div class="container-fluid">
-	<h1>Insertar Cliente</h1>
+<div class="container-fluid lol">
+<div class="eti">Insertar Cliente</div>
 
 	<form action="" method="POST">
-		<div class="form-group col-lg-4">
+		<div class="form-group campo">
             <label for="">Nombre Cliente:</label>
             <input type="text" class="form-control" name="nombre">       
 		</div>
-		<div class="form-group col-lg-6">
+		<div class="form-group campo">
             <label for="">Teléfono:</label>
             <input type="text" class="form-control" name="telefono">       
 		</div>
-		<div class="form-group col-lg-6">
+		<div class="form-group campo">
             <label for="">Dirección:</label>
             <input type="text" class="form-control" name="direccion">       
 		</div>
-		<div class="form-group col-lg-6">
+		<div class="form-group campo">
             <label for="">Email:</label>
             <input type="text" class="form-control" name="email">       
 		</div>
-		<div class="form-group col-lg-6">
+		<div class="form-group campo">
             <label for="">Detalle:</label>
             <input type="text" list="detalle" name="detalle">
                 <datalist id="detalle" >
@@ -107,8 +107,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                    <option> Traspaso </option>
                 </datalist>       
 		</div>
-		 <div class="form-city col-lg-6">
-			<br>
+		 <div class="form-group campo"> <br>          		
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
 	</form>
