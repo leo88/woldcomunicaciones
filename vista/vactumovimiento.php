@@ -6,7 +6,7 @@
 	<form action="index.php?pag=16&id=<?= $idproduc?>" method="POST">
 	    <div class="form-group col-lg-6">
 			<label for="">Motivo:</label>
-            <input type=text  list=descripcion name="motivo" value="<?= $consultaedit[0]['motivo'] ?>" required>
+            <input type=text  list=descripcion name="motivo" value="<?= $consultaedit[0]['motivo'] ?>" readonly>
                 <datalist id=descripcion >
                    <option> Compra
                    <option> Venta
