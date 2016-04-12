@@ -171,7 +171,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				        "bPaginate": true,
 				        "bLengthChange": true,
 				        "bFilter": true,
-				        "bSort": true,
+				        "bSort": false,
 				        "bInfo": true,
 				        "bAutoWidth": true
 				    } );

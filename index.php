@@ -145,6 +145,10 @@
 			{
                 include("vista/vactudevolucion.php");
 			}
+			if ($page == 29) 
+			{
+                include("vista/vactuminutosvalor.php");
+			}
 		?>
 	</div>
 </body>
