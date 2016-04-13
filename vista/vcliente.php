@@ -74,7 +74,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
           
 		      <div class="row-fluid">
 		        
-		        <div class="span12">
+		        <div class="span12">	      
 		      
 <?php include('controlador/ccliente.php'); ?>
 
@@ -117,7 +117,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 						<table class="table table-bordered table-hover" id="example">
 				  <thead>
             <tr>
-                <th colspan="3">Cliente</th>
+                <th colspan="3">Listado de Clientes</th>
             </tr>
             <tr>
                 <th>ID</th>
@@ -185,4 +185,4 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			</script>	
 
 		</body>
-	</html>	
+	</html>

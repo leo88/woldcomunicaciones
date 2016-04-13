@@ -1,5 +1,5 @@
 div.dataTables_length label {
-    width: 460px;
+    width: auto;
     float: left;
     text-align: left;
 }
@@ -10,7 +10,7 @@ div.dataTables_length select {
  
 div.dataTables_filter label {
     float: right;
-    width: 460px;
+    width: auto;
 }
  
 div.dataTables_info {

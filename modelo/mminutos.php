@@ -39,7 +39,7 @@
 		 */
 		function consultar_minutos()
 		{
-			$sql = "SELECT * FROM `tbminutos` ORDER BY idminutos DESC LIMIT 10";
+			$sql = "SELECT * FROM `tbminutos` ORDER BY idminutos DESC";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

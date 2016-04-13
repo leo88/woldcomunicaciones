@@ -39,7 +39,7 @@
 		 */
 		function consultar_movimiento()
 		{
-			$sql = "SELECT * FROM `tbmovimiento` ORDER BY idmovimiento DESC LIMIT 10";
+			$sql = "SELECT * FROM `tbmovimiento` ORDER BY idmovimiento DESC";
 			 return $this->SeleccionDatos($sql);
 		}
         /*

@@ -40,7 +40,7 @@
 		 */
 		function consultar_reposicion()
 		{
-			$sql = "SELECT * FROM `tbreposicion`";
+			$sql = "SELECT * FROM `tbreposicion` ORDER BY idreposicion DESC";
 			 return $this->SeleccionDatos($sql);
 		}
         /*
