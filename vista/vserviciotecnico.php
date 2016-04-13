@@ -21,6 +21,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -183,7 +184,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td data-title='ID Cliente'><?= $cliente1[0]['nombre'] ?></td>
 					<td data-title='ID Empleado'><?= $empleado1[0]['nombre'] ?></td>
 					<td data-title='Abono'><?= "$ ".$consultaserviciotecnico[$i]['abono'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
+					<td data-title='Edición'><a href="index.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary"><span class="icon-pencil"></span></a></td>
 					<td data-title='Eliminación'>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idserviteceli" value="<?= $consultaserviciotecnico[$i]['numero_orden'] ?>">

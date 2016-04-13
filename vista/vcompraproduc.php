@@ -131,7 +131,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<tr>
 					<td data-title='ID Compra'><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
 					<td data-title='ID Movimiento'><?= $consultacompraproduc[$i]['movimiento'] ?></td>
-					<td data-title='Valor Unirario'><?= $consultacompraproduc[$i]['valor'] ?></td>
+					<td data-title='Valor Unirario'><?= "$ ".$consultacompraproduc[$i]['valor'] ?></td>
 					<td data-title='Edición'><a href="index.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary">Editar</a></td>
 				</tr>
 			<?php endfor; ?>
