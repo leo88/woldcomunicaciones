@@ -27,6 +27,7 @@
 	              <li><a href="index.php?pag=21">Reposcion</a></li>
 	              <li><a href="index.php?pag=24">Venta</a></li>
 	              <li><a href="index.php?pag=26">Venta por Producto</a></li>
+	              <li><a href="index.php?pag=29">Minutos valor</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -146,6 +147,10 @@
                 include("vista/vactudevolucion.php");
 			}
 			if ($page == 29) 
+			{
+                include("vista/vminutosvalor.php");
+			}
+			if ($page == 30) 
 			{
                 include("vista/vactuminutosvalor.php");
 			}

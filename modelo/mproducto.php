@@ -21,9 +21,9 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbproducto
 		 */
-		function  actualizar_producto($referencia,$precio)
+		function  actualizar_producto($referencia,$nombre,$marca,$precio)
 		{
-			$sql = "UPDATE tbproducto SET precio = '".$precio."' WHERE referencia = '".$referencia."';";
+			$sql = "UPDATE tbproducto SET nombre = '".$nombre."', marca = '".$marca."',precio = '".$precio."' WHERE referencia = '".$referencia."';";
 			$this -> cons($sql);
 		}
 		/*

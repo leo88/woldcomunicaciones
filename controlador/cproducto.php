@@ -26,7 +26,7 @@
 	*/
 	if ($idproducedit && $precio && $actu) 
 	{
-		$producto->actualizar_producto($idproducedit,$precio);
+		$producto->actualizar_producto($idproducedit,$nombre,$marca,$precio);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

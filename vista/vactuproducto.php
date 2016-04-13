@@ -12,15 +12,15 @@
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Clase:</label>
-			<input type="text" class="form-control" name="nombre" value="<?= $consultaedit[0]['nombre']  ?>" readonly>
+			<input type="text" class="form-control" name="nombre" value="<?= $consultaedit[0]['nombre']  ?>" >
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Marca:</label>
-			<input type="text" class="form-control" name="marca" value="<?= $consultaedit[0]['marca'] ?>" readonly>
+			<input type="text" class="form-control" name="marca" value="<?= $consultaedit[0]['marca'] ?>" >
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Precio:</label>
-			<input type="number" class="form-control" name="precio" value="<?= $consultaedit[0]['precio']  ?>" required>
+			<input type="number" class="form-control" name="precio" value="<?= $consultaedit[0]['precio']  ?>" >
 		</div>
 		<div class="form-group col-lg-6">
             <input type="submit" class="btn btn-success" value="Editar">

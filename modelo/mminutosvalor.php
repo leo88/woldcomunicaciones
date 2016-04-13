@@ -10,60 +10,44 @@
 
 		}
         /*
-		 *función para el ingreso de los datos de la tabla tbminutosvalor
+		 *función para el ingreso de los datos de la tabla tbminutosvalorvalor
 		 
 		function insertar_minutos($costo_compra, $cantidad, $compra, $venta, $utilidad)
 		{
-			$sql = "INSERT INTO tbminutos (costo_compra, cantidad, compra, venta, utilidad)
+			$sql = "INSERT INTO tbminutosvalor (costo_compra, cantidad, compra, venta, utilidad)
 						VALUES ('".$costo_compra."','".$cantidad."','".$compra."','".$venta."','".$utilidad."');";
 			$this -> cons($sql);
 		}
 		/*
-		 *función para la actualización de los datos de la tabla tbminutos
+		 *función para la actualización de los datos de la tabla tbminutosvalor
 		 */
-		function  actualizar_minutos_val($idminutosvalor,$costo_compra,$valor_venta)
+		function  actualizar_minutosvalor($idminutosvalor,$costo_compra,$valor_venta)
 		{
-			$sql = "UPDATE tbminutosvalor SET costo_compra = '".$costo_compra."',cantidad = '".$cantidad."',compra = '".$compra."',venta = '".$venta."',utilidad = '".$utilidad."' WHERE idminutos = '".$idminutos."';";
+			$sql = "UPDATE tbminutosvalor SET costo_compra = '".$costo_compra."',valor_venta = '".$valor_venta."' WHERE idminutosvalor = '".$idminutosvalor."';";
 			$this -> cons($sql);
 		}
 		/*
-		 *función para la elimnar datos de la tabla tbminutos
+		 *función para la elimnar datos de la tabla tbminutosvalor
 		 
 		function eliminar_minutos($idminutos)
 		{
-			$sql = "DELETE FROM `tbminutos` WHERE `idminutos` = '$idminutos'";
+			$sql = "DELETE FROM `tbminutosvalor` WHERE `idminutos` = '$idminutos'";
 			$this -> cons($sql);
 		}	
 		/*
-		 *función para la consulta del registro mas reciente de la tabla tbminutos
+		 *función para la consulta del registro mas reciente de la tabla tbminutosvalor
 		 */
-		function consultar_minutos_val()
+		function consultar_minutosvalor()
 		{
-			$sql = "SELECT * FROM `tbminutos` ORDER BY idminutos DESC LIMIT 10";
+			$sql = "SELECT * FROM `tbminutosvalor`";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*
-    	 *	Función para retornar los datos de la tbminutos	
+    	 *	Función para retornar los datos de la tbminutosvalor	
          */
-		function consultar_minutos_id($idminutos)
+		function consultar_minutosvalor_id($idminutosvalor)
 		{
-			$sql = "SELECT * FROM tbminutos WHERE idminutos = '$idminutos' ";
+			$sql = "SELECT * FROM tbminutosvalor WHERE idminutosvalor = '$idminutosvalor' ";
 			return $this -> SeleccionDatos($sql);
-		}
-		/*
-		 *función para la consulta del registro mas reciente de la tabla tbminutosvalor
-		 */
-		function consultar_minutos_costo()
-		{
-			$sql = "SELECT `costo_compra` FROM `tbminutosvalor`";
-			 return $this->SeleccionDatos($sql);
-		}
-		/*
-		 *función para la consulta del registro mas reciente de la tabla tbminutosvalor
-		 */
-		function consultar_minutos_valor()
-		{
-			$sql = "SELECT `valor_venta` FROM `tbminutosvalor`";
-			 return $this->SeleccionDatos($sql);
 		}
 	}
