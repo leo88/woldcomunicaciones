@@ -18,12 +18,15 @@
 	/*
 		Variables para traer los datos de los desplegables
 	*/
-	$compra2= $minutos->consultar_minutos_costo();
-	$venta2= $minutos->consultar_minutos_valor();
+	$compra2	= $minutos->consultar_minutos_costo();
+	$venta2		= $minutos->consultar_minutos_valor();
 
-	$totalcompra = $compra*$cantidad;
-	$totalventa = $venta*$cantidad;
-	$utilidad = $totalventa	- $totalcompra;
+	/*
+		Operaciones para sacar la utilidad de acuerdo a el valor del minuto y la cantidad
+	*/
+	$totalcompra 	= $compra * $cantidad;
+	$totalventa 	= $venta * $cantidad;
+	$utilidad 		= $totalventa - $totalcompra;
 
 	/*
 		Comprobacion datos para insertar
