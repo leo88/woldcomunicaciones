@@ -184,11 +184,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td data-title='ID Cliente'><?= $cliente1[0]['nombre'] ?></td>
 					<td data-title='ID Empleado'><?= $empleado1[0]['nombre'] ?></td>
 					<td data-title='Abono'><?= "$ ".$consultaserviciotecnico[$i]['abono'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary"><span class="icon-pencil"></span></a></td>
+					<td data-title='Edición'><a href="index.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<td data-title='Eliminación'>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idserviteceli" value="<?= $consultaserviciotecnico[$i]['numero_orden'] ?>">
-							<input type="submit" class="btn btn-danger" value="Eliminar">
+							<button type="submit" class="btn btn-danger" value="Eliminar"><span class="icon-bin"></span></button>
 						</form>
 					</td>
 				</tr>
