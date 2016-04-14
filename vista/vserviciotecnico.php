@@ -84,7 +84,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 	<form action="" method="POST">
 		<div class="form-group campo">
-            <label for="">Nombre:</label>
+            <label for="">Tipo de Dispositivo:</label>
             <input type="text" class="form-control" name="nombre" required>      
 		</div>
 		<div class="form-group campo">
@@ -137,8 +137,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
            <label for="">Abono:</label>
             <input type="number" class="form-control" name="abono" required >       
 		</div>
-		 <div class="form-group campo"> <br>          		
-            <input type="submit" class="btn btn-success" value="Insertar">
+		 <div class="form-group campo"> <br>  
+            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         </div>
 	</form>
 </div>
@@ -151,7 +151,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             </tr>
             <tr>
                 <th>No. Orden</th>
-				<th>Nombre</th>
+				<th>Dispositivo</th>
 				<th>Marca</th>
 				<th>Referencia</th>
 				<th>Descripcion</th>
@@ -173,7 +173,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			?>
 				<tr>
 					<td data-title='No. Orden'><?= $consultaserviciotecnico[$i]['numero_orden'] ?></td>
-					<td data-title='Nombre'><?= $consultaserviciotecnico[$i]['nombre'] ?></td>
+					<td data-title='Dispositivo'><?= $consultaserviciotecnico[$i]['nombre'] ?></td>
 					<td data-title='Marca'><?= $consultaserviciotecnico[$i]['marca'] ?></td>
 					<td data-title='Referencia'><?= $consultaserviciotecnico[$i]['referencia'] ?></td>
 					<td data-title='Descripcion'><?= $consultaserviciotecnico[$i]['descripcion_st'] ?></td>
