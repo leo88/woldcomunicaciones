@@ -23,12 +23,14 @@
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
 	        <link rel="stylesheet" href="fonts/style.css">
+	        <link rel="stylesheet" href="css/chosen.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	        <script src="js/bootstrap.js"></script>
 	        <script src="js/bootstrap-tab.js"></script>
 	        <script src="js/jquery-datatable.js"></script>
+	        <script src="js/chosen.jquery.js"></script>
 	        
 	    </head>	
 	
@@ -85,7 +87,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         <form action="" method="POST">
 		<div class="form-group campo">
             <label for="">Cliente:</label> 
-            <select name="cliente" class="form-control" >
+            <select name="cliente" class="chzn-select" >
 				<option value=0>Seleccione cliente</option>
 				<?php for($j=0;$j<count($cliente2);$j++): ?>
 					<option value="<?= $cliente2[$j]['idcliente'] ?>"><?= $cliente2[$j]['nombre'] ?></option>
@@ -307,6 +309,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				    } );
 				} );	
 			</script>	
+
+			<script type="text/javascript">
+				$(function() {
+    				$(".chzn-select").chosen();
+				});
+			</script>
 
 		</body>
 	</html>

@@ -21,56 +21,45 @@
 	        <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
+	        <link rel="stylesheet" href="css/chosen.css">
+	        <link rel="stylesheet" href="css/chosen-bootstrap.css">
 	        <link rel="stylesheet" href="css/estilo.css">
+
 	        
-	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
+	        <script src="js/jquery-1.9.1.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 	        <script src="js/bootstrap.js"></script>
 	        <script src="js/bootstrap-tab.js"></script>
 	        <script src="js/jquery-datatable.js"></script>
-	        
+	        <script src="js/chosen.jquery.js"></script>
+	        <script src="js/script.js"></script>
+
 	    </head>	
 	
-	
-	
-	
-		<body >
-
-
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>  
+		<body> 
         
 		    <div class="container-fluid">
               
-<!-- inicio barra navegacion -->
-<div id="menu"> 
-  <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
-  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
-  <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
-  <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
-  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
-  <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
-  <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
-  <a href="index.php?pag=13"><button type="button" class="btn btn-info m">Servicio Tecnico</button></a>
-  <a href="index.php?pag=15"><button type="button" class="btn btn-info m">Servicio T. Entregado</button></a>  
-  <a href=""><button type="button" class="btn btn-info m active">Movimiento</button></a>
-  <a href="index.php?pag=18"><button type="button" class="btn btn-info m">Devolucion</button></a>
-  <a href="index.php?pag=19"><button type="button" class="btn btn-info m">Compra</button></a>
-  <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
-  <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
-  <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
-  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a> 
-</div>
-<!-- final barra navegacion -->
+				<!-- inicio barra navegacion -->
+				<div id="menu"> 
+				  <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
+				  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
+				  <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
+				  <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
+				  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
+				  <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
+				  <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
+				  <a href="index.php?pag=13"><button type="button" class="btn btn-info m">Servicio Tecnico</button></a>
+				  <a href="index.php?pag=15"><button type="button" class="btn btn-info m">Servicio T. Entregado</button></a>  
+				  <a href=""><button type="button" class="btn btn-info m active">Movimiento</button></a>
+				  <a href="index.php?pag=18"><button type="button" class="btn btn-info m">Devolucion</button></a>
+				  <a href="index.php?pag=19"><button type="button" class="btn btn-info m">Compra</button></a>
+				  <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
+				  <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
+				  <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
+				  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a> 
+				</div>
+				<!-- final barra navegacion -->
           
 		      <div class="row-fluid">
 		        
@@ -85,8 +74,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	<form action="" method="POST">
 		<div class="form-group campo">
             <label for="">Motivo:</label>
-            <input type=text list=descripcion name="motivo" required>
-                <datalist id=descripcion >
+            <input type="text" list="descripcion" name="motivo" required>
+                <datalist id="descripcion" >
                    <option> Compra
                    <option> Venta
                    <option> Devolución
@@ -95,7 +84,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</div>
 		<div class="form-group campo">
             <label for="">Referencia:</label>
-            <select name="referencia" class="form-control">
+            <select name="referencia" class="chzn-select form-control">
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($referencia2);$i++): ?>
 					<option value="<?= $referencia2[$i]['referencia'] ?>">
@@ -174,19 +163,19 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </script>
 
 -->
-			<script type="text/javascript">
-				//para buscar en las tablas
-				$(document).ready(function() {
-				    $('#example').dataTable( {
-				        "bPaginate": true,
-				        "bLengthChange": true,
-				        "bFilter": true,
-				        "bSort": false,
-				        "bInfo": true,
-				        "bAutoWidth": true
-				    } );
-				} );	
-			</script>	
+		<script type="text/javascript">
+			//para buscar en las tablas
+			$(document).ready(function() {
+			    $('#example').dataTable( {
+			        "bPaginate": true,
+			        "bLengthChange": true,
+			        "bFilter": true,
+			        "bSort": false,
+			        "bInfo": true,
+			        "bAutoWidth": true
+			    } );
+			} );	
+		</script>	
 
-		</body>
-	</html>
+	</body>
+</html>
