@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Prueba_cs</title>	
-	<link rel="stylesheet" href="css/miestilo.css">
 </head>
 <body>
 	<div class="container">

@@ -29,7 +29,7 @@
 	/*
 		Si el estado es inactivo el sueldo queda con valor "0"
 	*/
-	if($estado=="Inactivo"){
+	if($estado=="Inactivo" || $estado=="inactivo"){
 		$sueldo = "0";
 	}
 	/*
