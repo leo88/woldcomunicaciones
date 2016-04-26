@@ -118,7 +118,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
         <table class="table">
 		<thead>
 			<tr>
-				<th>Ultima venta</th>
+				<th colspan="12">Ultima venta</th>
 			</tr>
 			<tr>
 				<th>ID</th>
@@ -186,7 +186,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 						<table class="table table-bordered table-hover" id="example">
 				  <thead>
             <tr>
-                <th colspan="3">Ultimo movimiento por venta</th>
+                <th colspan="12">Ultimo movimiento por venta</th>
             </tr>
             <tr>
                 <th>ID</th>
@@ -301,10 +301,10 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				$(document).ready(function() {
 				    $('#example').dataTable( {
 				        "bPaginate": false,
-				        "bLengthChange": false,
+				        "bLengthChange" true,
 				        "bFilter": false,
 				        "bSort": false,
-				        "bInfo": false,
+				        "bInfo": true,
 				        "bAutoWidth": true
 				    } );
 				} );	

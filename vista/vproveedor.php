@@ -9,7 +9,7 @@
 	        <meta charset="utf-8">
 	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <title>Clientes</title>
+	        <title>Proveedores</title>
 	        <meta name="description" content="??">
 	        
 
@@ -31,16 +31,34 @@
 	        <script src="js/jquery-datatable.js"></script>
 	        
 	    </head>	
-		<body >        
+	
+	
+	
+	
+		<body >
+
+
+<script type="text/javascript"><!--
+google_ad_client = "ca-pub-2988710215164311";
+/* acaxaomx_main_Blog1_468x60_as */
+google_ad_slot = "7358473375";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>  
+        
 		    <div class="container-fluid">
               
 <!-- inicio barra navegacion -->
 <div id="menu"> 
   <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
-  <a href=""><button type="button" class="btn btn-info m active">Cliente</button></a>
+  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
   <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
   <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
-  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
+  <a href=""><button type="button" class="btn btn-info m active">Proveedor</button></a> 
   <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
   <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
   <a href="index.php?pag=13"><button type="button" class="btn btn-info m">Servicio Tecnico</button></a>
@@ -57,73 +75,89 @@
           
 		      <div class="row-fluid">
 		        
-		        <div class="span12">	      
+		        <div class="span12">
 		      
-<?php include('controlador/ccliente.php'); ?>
+<?php include("controlador/cproveedor.php"); ?>
 
 
 <div class="container-fluid lol">
-<div class="eti">Insertar Cliente</div>
+<div class="eti">Insertar Proveedor</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
-            <label for="">Nombre Cliente:</label>
-            <input type="text" class="form-control" name="nombre">       
+            <label for="">Identificacion proveedor:</label>
+            <input type="text" class="form-control" name="idproveedor" required>    
 		</div>
 		<div class="form-group campo">
-            <label for="">Teléfono:</label>
-            <input type="text" class="form-control" name="telefono">       
+            <label for="">Nombre proveedor:</label>
+            <input type="text" class="form-control" name="nombre" required>        
 		</div>
 		<div class="form-group campo">
-            <label for="">Dirección:</label>
-            <input type="text" class="form-control" name="direccion">       
+            <label for="">contacto:</label>
+            <input type="text" class="form-control" name="contacto">        
+		</div>
+		<div class="form-group campo">
+            <label for="">Telefono proveedor:</label>
+            <input type="number" class="form-control" name="telefono" required >          
+		</div>
+		<div class="form-group campo">
+            <label for="">Telefono contacto:</label>
+            <input type="number" class="form-control" name="telefono2">          
 		</div>
 		<div class="form-group campo">
             <label for="">Email:</label>
-            <input type="text" class="form-control" name="email">       
+            <input type="email" class="form-control" name="email">          
 		</div>
 		<div class="form-group campo">
-            <label for="">Detalle:</label>
-            <input type="text" list="detalle" name="detalle">
-                <datalist id="detalle" >
-                   <option> Cliente </option>
-                   <option> Traspaso </option>
-                </datalist>       
+             <label for="">Descripcion:</label>
+            <input type=text list=descripcion name="descripcion" required>
+                <datalist id=descripcion >
+                   <option> Local
+                   <option> Proveedor
+                </datalist>        
 		</div>
 		 <div class="form-group campo"> <br>          		
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
 	</form>
 </div>
-<?php $consultacliente = $cliente->consultar_cliente(); ?>
+<?php $consultaproveedor = $proveedor->consultar_proveedor(); ?>
 					<div id='no-more-tables'>
 						<table class="table table-bordered table-hover" id="example">
 				  <thead>
             <tr>
-                <th colspan="3">Listado de Clientes</th>
+                <th colspan="3">Listado de Proveedores</th>
             </tr>
             <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th>Teléfono</th>
-                <th>Dirección</th>
-                <th>E-mail</th>
-                <th>Detalle</th>
-                <th>Edición</th>
+                <th>Identificacion proveeedor</th>
+				<th>Nombre proveedor</th>
+				<th>Contacto</th>
+				<th>Telefono proveedor</th>
+				<th>Telefono contacto</th>
+				<th>Email</th>
+				<th>Descripcion</th>
+				<th>Edición</th>
             </tr>
         </thead>
         <tbody>
-            <?php for($i=0;$i<count($consultacliente);$i++): ?>
-                <tr>
-                    <td data-title='ID'><?= $consultacliente[$i]['idcliente'] ?></td>
-                    <td data-title='Nombre'><?= $consultacliente[$i]['nombre'] ?></td>
-                    <td data-title='Teléfono'><?= $consultacliente[$i]['telefono'] ?></td>
-                    <td data-title='Dirección'><?= $consultacliente[$i]['direccion'] ?></td>
-                    <td data-title='E-mail'><?= $consultacliente[$i]['email'] ?></td>
-                    <td data-title='Detalle'><?= $consultacliente[$i]['detalle'] ?></td>                  
-                    <td data-title='Edición'><a href="index.php?pag=22&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
-                </tr>
-            <?php endfor; ?>
+            <?php for($i=0;$i<count($consultaproveedor);$i++): ?>
+				<tr>
+					<td data-title='Identificacion proveeedor'><?= $consultaproveedor[$i]['idproveedor'] ?></td>
+					<td data-title='Nombre proveedor'><?= $consultaproveedor[$i]['nombre'] ?></td>
+					<td data-title='Contacto'><?= $consultaproveedor[$i]['contacto'] ?></td>
+					<td data-title='Telefono proveedor'><?= $consultaproveedor[$i]['telefono'] ?></td>
+					<td data-title='Telefono contacto'><?= $consultaproveedor[$i]['telefono2'] ?></td>
+					<td data-title='Email'><?= $consultaproveedor[$i]['email'] ?></td>
+					<td data-title='Descripcion'><?= $consultaproveedor[$i]['descripcion'] ?></td>
+					<td data-title='Edición'><a href="index.php?pag=8&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></a></td>
+					<!--<td>
+						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
+							<input type="hidden" name="idproveeli" value="<?= $consultaproveedor[$i]['idproveedor'] ?>">
+							<input type="submit" class="btn btn-danger" value="Eliminar">
+						</form>
+					</td>-->
+				</tr>
+			<?php endfor; ?>
         </tbody>
 						</table>
 					</div>
