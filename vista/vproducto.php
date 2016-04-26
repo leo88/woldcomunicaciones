@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -132,7 +133,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td data-title='Clase'><?= $consultaproducto[$i]['nombre'] ?></td>
 					<td data-title='Marca'><?= $consultaproducto[$i]['marca'] ?></td>
 					<td data-title='Precio'>$ <?= $consultaproducto[$i]['precio'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=4&id=<?= $consultaproducto[$i]['referencia'] ?>" class="btn btn-primary">Editar</a></td>
+					<td data-title='Edición'><a href="index.php?pag=4&id=<?= $consultaproducto[$i]['referencia'] ?>" class="btn btn-primary"><span class="icon-pencil2"></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idproduceli" value="<?= $consultaproducto[$i]['referencia'] ?>">

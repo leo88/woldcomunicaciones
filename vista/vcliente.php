@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -30,25 +31,7 @@
 	        <script src="js/jquery-datatable.js"></script>
 	        
 	    </head>	
-	
-	
-	
-	
-		<body >
-
-
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>  
-        
+		<body >        
 		    <div class="container-fluid">
               
 <!-- inicio barra navegacion -->
@@ -138,7 +121,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                     <td data-title='Dirección'><?= $consultacliente[$i]['direccion'] ?></td>
                     <td data-title='E-mail'><?= $consultacliente[$i]['email'] ?></td>
                     <td data-title='Detalle'><?= $consultacliente[$i]['detalle'] ?></td>                  
-                    <td data-title='Edición'><a href="index.php?pag=22&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary">Editar</a></td>
+                    <td data-title='Edición'><a href="index.php?pag=22&id=<?= $consultacliente[$i]['idcliente'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
                 </tr>
             <?php endfor; ?>
         </tbody>

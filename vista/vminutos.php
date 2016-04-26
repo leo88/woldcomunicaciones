@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -125,7 +126,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td data-title='compra'><?= "$ ".$consultaminutos[$i]['compra'] ?></td>
 					<td data-title='venta'><?= "$ ".$consultaminutos[$i]['venta'] ?></td>
 					<td data-title='Utilidad'><?= "$ ".$consultaminutos[$i]['utilidad'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=6&id=<?= $consultaminutos[$i]['idminutos'] ?>" class="btn btn-primary">Editar</a></td>
+					<td data-title='Edición'><a href="index.php?pag=6&id=<?= $consultaminutos[$i]['idminutos'] ?>" class="btn btn-primary"><span class="icon-pencil2"></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idminutoseli" value="<?= $consultaminutos[$i]['idminutos'] ?>">
