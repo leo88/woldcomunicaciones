@@ -48,7 +48,8 @@
                 <datalist id="estado">
                    <option> Activo </option>
                    <option> Inactivo </option>
-                </datalist>       
+                </datalist> 
+                Escribir Inactivo en caso de que el empleado no este laborando      
 		</div>
 		<div class="form-group col-lg-6">
             <input type="submit" class="btn btn-success" value="Editar">

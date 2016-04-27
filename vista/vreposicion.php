@@ -102,6 +102,10 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <input type="submit" name="Sale" class="btn btn-danger" value="-"> 
         </div>
 	</form>	
+    <div class="campo">
+                Si el producto que va a reponer no esta esta en el inventario actualmente, por favor registre la referencia antes de hacer la reposicion
+                <a href="index.php?pag=3">Registrar referencia</a> 
+            </div>
     </div>
     <?php $consultamovimiento = $movimiento->consultar_movimiento_r(); ?>
     <div class="table-responsive">
@@ -163,11 +167,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		 <div class="form-group campo"> <br>          		
             <input type="submit" class="btn btn-success" value="Insertar">
         </div>
-	</form>	
-            <div class="campo">
-                Si el producto que va a reponer no esta esta en el inventario actualmente, por favor registre la referencia antes de hacer la reposicion
-                <a href="index.php?pag=3">Registrar referencia</a> 
-            </div>
+	</form>	           
 </div>
 <?php $consultareposicion = $reposicion->consultar_reposicion(); ?>
 					<div id='no-more-tables'>

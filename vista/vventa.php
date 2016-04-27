@@ -83,7 +83,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <div class="span4">	
   <?php include("controlador/cventa.php"); ?>
     <div class="container-fluid lol">
-        <div class="eti">Insertar Venta</div>
+        <div class="eti">Registrar Venta</div>
         <form action="" method="POST">
 		<div class="form-group campo">
             <label for="">Cliente:</label> 
@@ -157,7 +157,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <?php include('controlador/cmovimiento.php'); ?>
     
 <div class="container-fluid lol">
-<div class="eti">Insertar Movimiento</div>
+<div class="eti">Registrar Movimiento</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
@@ -182,8 +182,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 </div>
 <?php $consultamovimiento = $movimiento->consultar_movimiento_v(); ?>                
                 
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
+					<div id=''>
+						<table class="table">
 				  <thead>
             <tr>
                 <th colspan="12">Ultimo movimiento por venta</th>
@@ -225,7 +225,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <?php include("controlador/cventaproduc.php"); ?>
     
 <div class="container-fluid lol">
-<div class="eti">Insertar Valor</div>
+<div class="eti">Registrar Valor</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
@@ -237,17 +237,18 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		 <div class="form-group campo"><br> 
             <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"></span></button>
         </div>
-	</form>	
+	</form>
+	<br><br><br>		 
 </div>
 <?php $consultaventaproduc = $ventaproduc->consultar_ventaproduc_u(); ?>
                 
-                <br><br><br>
                 
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
+                
+					<div id='margentabla'>
+						<table class="table">
 				  <thead>
             <tr>
-                <th colspan="3">Ultimo Valor</th>
+                <th colspan="12">Ultimo Valor</th>
             </tr>
             <tr>
                 <th>ID Venta</th>
@@ -281,8 +282,22 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<br/><br/>    
 
 		    </div><!--container-fluid-->
-
-
+<div class="row-fluid"><!--spoiler de informacion-->
+    <input type="checkbox"  id="spoiler2" /> 
+      <label for="spoiler2" >Acerca de la venta</label>
+    <div class="spoiler">
+      <div class="info">
+              <h5>¿Como realizo una venta?</h5>
+               <ul>
+                   <li>Ingresar los datos de la venta (Cliente, Fecha y Empleado) y registrarlos con el boton <span class="icon-checkmark tama"></span> este paso se realiza una vez por cada venta</li>
+                   <li>Ingresar los datos del movimiento (Referencia y Cantidad) y registrarlos con el boton <span class="icon-minus tama2"></span> este paso se puede repetir varias veces por cada venta</li>
+                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-checkmark tama"></span>  este paso se puede repetir varias veces por cada venta</li>
+               </ul>
+        <span style="font-weight: bold">Nota:</span> No intente registrar todos los movimentos uno tras otro y luego todos los valores correspondientes a estos, asegurese de registrar un formulario a la vez ya que siempre debe registrar el valor despues de haber registrado el movimiento. 
+      </div>
+    </div>
+</div>
+<br><br>
 <!--<script type="text/javascript">
 google_ad_client = "ca-pub-2988710215164311";
 /* acaxaomx_main_Blog1_468x60_as */
@@ -301,11 +316,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				$(document).ready(function() {
 				    $('#example').dataTable( {
 				        "bPaginate": false,
-				        "bLengthChange" true,
+				        "bLengthChange" false,
 				        "bFilter": false,
 				        "bSort": false,
-				        "bInfo": true,
-				        "bAutoWidth": true
+				        "bInfo": false,
+				        "bAutoWidth": false
 				    } );
 				} );	
 			</script>	
