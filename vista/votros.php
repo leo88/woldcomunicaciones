@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -37,17 +38,6 @@
 		<body >
 
 
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>  
         
 		    <div class="container-fluid">
               
@@ -80,7 +70,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 <div class="container-fluid lol">
-<div class="eti">Insertar Otros</div>
+<div class="eti">Ingresos y Egresos varios</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
@@ -89,7 +79,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</div>
 		<div class="form-group campo">
             <label for="">Descripción:</label>
-            <textarea name="descripcion" rows="4" cols="30"> </textarea>   
+            <textarea name="descripcion" rows="1" cols="30"> </textarea>   
 		</div>
 		<div class="form-group campo">
            <label for="">Valor:</label>
@@ -106,7 +96,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 						<table class="table table-bordered table-hover" id="example">
 				  <thead>
             <tr>
-                <th colspan="3">Listado de Otros</th>
+                <th colspan="3">Listado de los registros</th>
             </tr>
             <tr>
                 <th>ID Reporte</th>
@@ -124,8 +114,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td data-title='ID Reporte'><?= $consultaotros[$i]['idreporte'] ?></td>
 					<td data-title='Fecha'><?= $consultaotros[$i]['fecha'] ?></td>					
 					<td data-title='Descripcion'><?= $consultaotros[$i]['descripcion'] ?></td>
-					<td data-title='Salida'><?= "$ ".$consultaotros[$i]['salida_total'] ?></td>
-					<td data-title='Entrada'><?= "$ ".$consultaotros[$i]['entrada_total'] ?></td>					
+					<td data-title='Salida'>$ <?= number_format($consultaotros[$i]['salida_total']) ?></td>
+					<td data-title='Entrada'>$ <?= number_format($consultaotros[$i]['entrada_total']) ?></td>					
 					<td data-title='Edición'><a href="index.php?pag=12&id=<?= $consultaotros[$i]['idreporte'] ?>" class="btn btn-primary">Editar</a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

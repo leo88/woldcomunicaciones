@@ -20,6 +20,7 @@
 	        <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
+	        <link rel="stylesheet" href="css/chosen.css">
 	        <link rel="stylesheet" href="css/estilo.css">
 	        <link rel="stylesheet" href="fonts/style.css">
 	        
@@ -28,26 +29,14 @@
 	        <script src="js/bootstrap.js"></script>
 	        <script src="js/bootstrap-tab.js"></script>
 	        <script src="js/jquery-datatable.js"></script>
+	        <script src="js/chosen.jquery.js"></script>
 	        
 	    </head>	
 	
 	
 	
 	
-		<body >
-
-
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>  
+		<body>
         
 		    <div class="container-fluid">
               
@@ -68,7 +57,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
   <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
   <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
   <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
-  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a> 
+  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a>
+  <a href="index.php?pag=31"><button type="button" class="btn btn-info m">Recargas</button></a> 
 </div>
 <!-- final barra navegacion -->
           
@@ -80,7 +70,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 <div class="container-fluid lol">
-<div class="eti">Insertar Servicio Tecnico</div>
+<div class="eti">Servicio Tecnico</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
@@ -97,7 +87,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</div>
 		<div class="form-group campo">
              <label for="">Descripcion del servicio:</label>
-            <textarea name="descripcion_st" rows="4" cols="30" required> </textarea>     
+            <textarea name="descripcion_st" rows="1" cols="30" required> </textarea>     
 		</div>
 		<div class="form-group campo">
              <label for="">Observacion:</label>
@@ -116,8 +106,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <input type="date" class="form-control" name="fecha" required >  
 		</div>
 		<div class="form-group campo">
-            <label for="">ID del cliente:</label>
-            <select name="id_cliente" class="form-control" required>
+            <label for="">Cliente:</label>
+            <select name="id_cliente" class="chzn-select form-control" required>
 				<option value=0>Seleccione empleado</option>
 				<?php for($i=0;$i<count($cliente2);$i++): ?>
 					<option value="<?= $cliente2[$i]['idcliente'] ?>"><?= $cliente2[$i]['nombre'] ?></option>
@@ -126,7 +116,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</div>
 		<div class="form-group campo">
             <label for="">Empleado:</label>
-            <select name="empleado" class="form-control" required>
+            <select name="empleado" class="chzn-select form-control" required>
 				<option value=0>Seleccione empleado</option>
 				<?php for($i=0;$i<count($empleado2);$i++): ?>
 					<option value="<?= $empleado2[$i]['idempleado'] ?>"><?= $empleado2[$i]['nombre'] ?></option>
@@ -158,12 +148,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<th>Observacion</th>
 				<th>Costo Servicio</th>
 				<th>Precio Cliente</th>
-				<th>Fecha</th>
+				<th>Fecha Recibido</th>
 				<th>ID Cliente</th>
 				<th>ID Empleado</th>
-				<th>Abono</th>
+				<th>Abono Cliente</th>
 				<th>Edición</th>
-				<th>Eliminación</th>
+				<th>Borrar</th>
             </tr>
         </thead>
         <tbody>
@@ -178,12 +168,12 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td data-title='Referencia'><?= $consultaserviciotecnico[$i]['referencia'] ?></td>
 					<td data-title='Descripcion'><?= $consultaserviciotecnico[$i]['descripcion_st'] ?></td>
 					<td data-title='Observacion'><?= $consultaserviciotecnico[$i]['observacion'] ?></td>
-					<td data-title='Costo Servicio'><?= "$ ".$consultaserviciotecnico[$i]['costo_st'] ?></td>
-					<td data-title='Precio Cliente'><?= "$ ".$consultaserviciotecnico[$i]['precio_cliente'] ?></td>
+					<td data-title='Costo Servicio'>$ <?= number_format($consultaserviciotecnico[$i]['costo_st']) ?></td>
+					<td data-title='Precio Cliente'>$ <?= number_format($consultaserviciotecnico[$i]['precio_cliente']) ?></td>
 					<td data-title='Fecha'><?= $consultaserviciotecnico[$i]['fecha'] ?></td>
 					<td data-title='ID Cliente'><?= $cliente1[0]['nombre'] ?></td>
 					<td data-title='ID Empleado'><?= $empleado1[0]['nombre'] ?></td>
-					<td data-title='Abono'><?= "$ ".$consultaserviciotecnico[$i]['abono'] ?></td>
+					<td data-title='Abono'>$ <?= number_format($consultaserviciotecnico[$i]['abono']) ?></td>
 					<td data-title='Edición'><a href="index.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<td data-title='Eliminación'>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
@@ -208,20 +198,6 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		    </div><!--container-fluid-->
 
 
-
-<!--<script type="text/javascript">
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-<!--</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
--->
 			<script type="text/javascript">
 				//para buscar en las tablas
 				$(document).ready(function() {
@@ -236,5 +212,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				} );	
 			</script>	
 
+			<script type="text/javascript">
+				$(function() {
+    				$(".chzn-select").chosen();
+				});
+			</script>
+			
 		</body>
 	</html>

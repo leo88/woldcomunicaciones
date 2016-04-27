@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -36,19 +37,6 @@
 	
 		<body >
 
-
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>  
-        
 		    <div class="container-fluid">
               
 <!-- inicio barra navegacion -->
@@ -80,7 +68,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 <div class="container-fluid lol">
-<div class="eti">Insertar Empleado</div>
+<div class="eti">Empleado</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
@@ -121,7 +109,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <input type="date" class="form-control" name="fecha">    
 		</div>
 		 <div class="form-group campo"> <br>          		
-            <input type="submit" class="btn btn-success" value="Insertar">
+            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         </div>
 	</form>
 </div>

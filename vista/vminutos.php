@@ -58,7 +58,7 @@
 		        <?php include('controlador/cminutos.php'); ?>
 
 			<div class="container-fluid lol">
-				<div class="eti">Insertar Minutos</div>
+				<div class="eti">Minutos</div>
 				<form action="" method="POST">
 					<div class="form-group campo">
 				        <label for="">Fecha:</label>
@@ -71,7 +71,7 @@
 				        <input type="hidden" value="<?= $venta2[0]['valor_venta']?>" class="form-control" name="venta">      
 					</div>
 					<div class="form-group campo"> <br>          		
-				        <input type="submit" class="btn btn-success" value="Insertar">
+				        <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
 				    </div>
 				</form>
 			</div>

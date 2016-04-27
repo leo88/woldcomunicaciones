@@ -56,7 +56,7 @@
 		        <div class="span12">
 				<?php include("controlador/cproducto.php"); ?>
 				<div class="container-fluid lol">
-				<div class="eti">Insertar Producto</div>
+				<div class="eti">Producto</div>
 				
 					<form action="" method="POST">
 						<div class="form-group campo">
@@ -76,7 +76,7 @@
 				            <input type="number" class="form-control" name="precio" required >     
 						</div>		
 						 <div class="form-group campo"> <br>          		
-				            <input type="submit" class="btn btn-success" value="Insertar">
+				            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
 				        </div>
 					</form>
 				         <div class="btn-toolbar campo" role="toolbar">             

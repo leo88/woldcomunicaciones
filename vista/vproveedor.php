@@ -58,7 +58,7 @@
 		     	<?php include("controlador/cproveedor.php"); ?>
 
 				<div class="container-fluid lol">
-					<div class="eti">Insertar Proveedor</div>
+					<div class="eti">Proveedor</div>
     				<form action="" method="POST">
 						<div class="form-group campo">
     				        <label for="">Identificacion proveedor:</label>
@@ -93,7 +93,7 @@
     				            </datalist>        
 						</div>
 		 				<div class="form-group campo"> <br>          		
-            				<input type="submit" class="btn btn-success" value="Insertar">
+            				<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         				</div>
 					</form>
 				</div>

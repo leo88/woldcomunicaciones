@@ -21,6 +21,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -29,124 +30,92 @@
 	        <script src="js/jquery-datatable.js"></script>
 	        
 	    </head>	
-	<body >
-
+		<body >
 		        
-		<div class="container-fluid">
+			<div class="container-fluid">
     	          
-		<!-- inicio barra navegacion -->
-		<div id="menu"> 
-		  <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
-		  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
-		  <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
-		  <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
-		  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
-		  <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
-		  <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
-		  <a href="index.php?pag=13"><button type="button" class="btn btn-info m">Servicio Tecnico</button></a>
-		  <a href="index.php?pag=15"><button type="button" class="btn btn-info m">Servicio T. Entregado</button></a>  
-		  <a href="index.php?pag=16"><button type="button" class="btn btn-info m">Movimiento</button></a>
-		  <a href="index.php?pag=18"><button type="button" class="btn btn-info m">Devolucion</button></a>
-		  <a href="index.php?pag=19"><button type="button" class="btn btn-info m">Compra</button></a>
-		  <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
-		  <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
-		  <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
-		  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a>
-		  <a href=""><button type="button" class="btn btn-info m active">Recargas</button></a>  
-		</div>
-		<!-- final barra navegacion -->
-          
-		<div class="row-fluid">
-		        
-		<div class="span12">
+			<!-- inicio barra navegacion -->
+			<div id="menu"> 
+			  	<a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
+			  	<a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
+			  	<a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
+			  	<a href="index.php?pag=5"><button type="button" class="btn btn-info m">recargas</button></a>
+			  	<a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
+			  	<a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
+			  	<a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
+			  	<a href="index.php?pag=13"><button type="button" class="btn btn-info m">Servicio Tecnico</button></a>
+			  	<a href="index.php?pag=15"><button type="button" class="btn btn-info m">Servicio T. Entregado</button></a>  
+			  	<a href="index.php?pag=16"><button type="button" class="btn btn-info m">Movimiento</button></a>
+			  	<a href="index.php?pag=18"><button type="button" class="btn btn-info m">Devolucion</button></a>
+			  	<a href="index.php?pag=19"><button type="button" class="btn btn-info m">Compra</button></a>
+			  	<a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
+			  	<a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
+			  	<a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
+			  	<a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a>
+			  	<a href=""><button type="button" class="btn btn-info m active">Recargas</button></a>  
+			</div>
+			<!-- final barra navegacion -->
+			<div class="row-fluid">
+			<div class="span12">
 		      
-<?php include('controlador/cminutos.php'); ?>
+				<?php include('controlador/crecargas.php'); ?>
 
+				<div class="container-fluid lol">
+				<div class="eti">Recargas</div>
 
-<div class="container-fluid lol">
-<div class="eti">Insertar Recargas</div>
+					<form action="" method="POST">
+						<div class="form-group campo">
+    				        <label for="">Fecha:</label>
+    				        <input type="date" class="form-control" name="fecha">
+						</div>
+						<div class="form-group campo">
+    				        <label for="">Valor de la venta:</label>
+    				        <input type="number" class="form-control" name="venta_recarga">
+						</div>
+						 <div class="form-group campo"> <br>          		
+    				        <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+    				    </div>
+					</form>
+				</div>
+				<?php $consultarecargas = $recargas->consultar_recargas(); ?>
+				<div id='no-more-tables'>
+					<table class="table table-bordered table-hover" id="example">
+				 		<thead>
+            				<tr>
+            				    <th colspan="3">Listado de Registros</th>
+            				</tr>
+            				<tr>
+            				    <th>ID</th>
+								<th>Fecha recargas</th>
+								<th>Valor de la venta</th>
+								<th>Utilidad</th>
+								<th>Edición</th>
+            				</tr>
+        				</thead>
+        				<tbody>
+            				<?php for($i=0;$i<count($consultarecargas);$i++): ?>
+							<tr>
+								<td data-title='ID'><?= $consultarecargas[$i]['idrecarga'] ?></td>
+								<td data-title='Fecha recargas'><?= $consultarecargas[$i]['fecha'] ?></td>
+								<td data-title='valor venta'>$ <?= number_format($consultarecargas[$i]['venta_recarga']) ?></td>
+								<td data-title='Utilidad'>$ <?= number_format($consultarecargas[$i]['utilidad']) ?></td>
+								<td data-title='Edición'><a href="index.php?pag=32&id=<?= $consultarecargas[$i]['idrecarga'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+								<!--<td>
+									<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
+										<input type="hidden" name="idrecargaseli" value="<?= $consultarecargas[$i]['idrecargas'] ?>">
+										<input type="submit" class="btn btn-danger" value="Eliminar">
+									</form>
+								</td>-->
+							</tr>
+							<?php endfor; ?>
+        				</tbody>
+					</table>
+				</div>
+		    </div><!--/span-->
+			</div><!--/row-->
+			<br/><br/>    
+		</div><!--container-fluid-->
 
-	<form action="" method="POST">
-		<div class="form-group campo">
-            <label for="">Fecha:</label>
-            <input type="date" class="form-control" name="fecha">           
-		</div>
-		<div class="form-group campo">
-            <label for="">Valor de la venta:</label>
-            <input type="number" class="form-control" name="cantidad">
-            <input type="hidden" value="<?= $compra2[0]['costo_compra']?>" class="form-control" name="compra">
-            <input type="hidden" value="<?= $venta2[0]['valor_venta']?>" class="form-control" name="venta">      
-		</div>
-		 <div class="form-group campo"> <br>          		
-            <input type="submit" class="btn btn-success" value="Insertar">
-        </div>
-	</form>
-</div>
-<?php $consultaminutos = $minutos->consultar_minutos(); ?>
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
-				  <thead>
-            <tr>
-                <th colspan="3">Listado de Minutos</th>
-            </tr>
-            <tr>
-                <th>ID</th>
-				<th>Fecha Minutos</th>
-				<th>Cantidad</th>
-				<th>compra</th>
-				<th>venta</th>
-				<th>Utilidad</th>
-				<th>Edición</th>
-				<!--<th>Eliminación</th>-->
-            </tr>
-        </thead>
-        <tbody>
-            <?php for($i=0;$i<count($consultaminutos);$i++): ?>
-				<tr>
-					<td data-title='ID'><?= $consultaminutos[$i]['idminutos'] ?></td>
-					<td data-title='Fecha Minutos'><?= $consultaminutos[$i]['fecha'] ?></td>
-					<td data-title='Cantidad'><?= $consultaminutos[$i]['cantidad'] ?></td>
-					<td data-title='compra'><?= "$ ".$consultaminutos[$i]['compra'] ?></td>
-					<td data-title='venta'><?= "$ ".$consultaminutos[$i]['venta'] ?></td>
-					<td data-title='Utilidad'><?= "$ ".$consultaminutos[$i]['utilidad'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=6&id=<?= $consultaminutos[$i]['idminutos'] ?>" class="btn btn-primary">Editar</a></td>
-					<!--<td>
-						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
-							<input type="hidden" name="idminutoseli" value="<?= $consultaminutos[$i]['idminutos'] ?>">
-							<input type="submit" class="btn btn-danger" value="Eliminar">
-						</form>
-					</td>-->
-				</tr>
-			<?php endfor; ?>
-        </tbody>
-		</table>
-		</div>
-
-
-
-		        </div><!--/span-->
-
-		      </div><!--/row-->
-
-				<br/><br/>    
-
-		    </div><!--container-fluid-->
-
-
-
-<!--<script type="text/javascript">
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-<!--</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
--->
 			<script type="text/javascript">
 				//para buscar en las tablas
 				$(document).ready(function() {

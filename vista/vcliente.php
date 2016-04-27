@@ -51,7 +51,8 @@
   <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
   <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
   <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
-  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a> 
+  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a>
+  <a href="index.php?pag=31"><button type="button" class="btn btn-info m">Recargas</button></a>  
 </div>
 <!-- final barra navegacion -->
           
@@ -63,7 +64,7 @@
 
 
 <div class="container-fluid lol">
-<div class="eti">Insertar Cliente</div>
+<div class="eti">Cliente</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
@@ -91,7 +92,7 @@
                 </datalist>       
 		</div>
 		 <div class="form-group campo"> <br>          		
-            <input type="submit" class="btn btn-success" value="Insertar">
+            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         </div>
 	</form>
 </div>
@@ -117,7 +118,7 @@
                 <tr>
                     <td data-title='ID'><?= $consultacliente[$i]['idcliente'] ?></td>
                     <td data-title='Nombre'><?= $consultacliente[$i]['nombre'] ?></td>
-                    <td data-title='Teléfono'><?= $consultacliente[$i]['telefono'] ?></td>
+                    <td data-title='Teléfono'><?= $cliente->formato_telefono_general($consultacliente[$i]['telefono']) ?></td>
                     <td data-title='Dirección'><?= $consultacliente[$i]['direccion'] ?></td>
                     <td data-title='E-mail'><?= $consultacliente[$i]['email'] ?></td>
                     <td data-title='Detalle'><?= $consultacliente[$i]['detalle'] ?></td>                  

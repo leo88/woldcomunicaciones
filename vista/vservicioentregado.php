@@ -49,18 +49,6 @@
 
     </script>
 
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script> 
- 
         
 		    <div class="container-fluid">
               
@@ -93,7 +81,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 <div class="container-fluid lol">
-<div class="eti">Insertar Servicio Tecnico Entregado</div>
+<div class="eti">Servicio Tecnico Entregado</div>
 
 	<form action="" method="POST">
 		<div class="form-group campo">
@@ -149,7 +137,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<tr>
 					<td data-title='No. Orden'><?= $numorden1[0]['numero_orden'] ?></td>
 					<td data-title='Fecha'><?= $consultaservicioentregado[$i]['fecha'] ?></td>
-					<td data-title='Saldo Cancelado'><?= "$ ".$consultaservicioentregado[$i]['saldo_cancel'] ?></td>
+					<td data-title='Saldo Cancelado'>$ <?= number_format($consultaservicioentregado[$i]['saldo_cancel']) ?></td>
 					<!--<td><a href="index.php?pag=4&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
@@ -175,20 +163,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 
 
-<!--<script type="text/javascript">
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-<!--</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
--->
-			<script type="text/javascript">
+	<script type="text/javascript">
 				//para buscar en las tablas
 				$(document).ready(function() {
 				    $('#example').dataTable( {
