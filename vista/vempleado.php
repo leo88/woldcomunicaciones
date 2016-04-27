@@ -135,9 +135,9 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <tr>
                 <th>Cedula</th>
 				<th>Nombre</th>
-				<th>Sueldo</th>
+				<th>Sueldo Mensual</th>
 				<th>Direccion</th>
-				<th>Ciudad de residencia</th>
+				<th>Residencia</th>
 				<th>Teléfono</th>
 				<th>Teléfono de referencia</th>
 				<th>Email</th>
@@ -151,11 +151,11 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<tr>
 					<td data-title='Cedula'><?= $consultaempleado[$i]['idempleado'] ?></td>
 					<td data-title='Nombre'><?= $consultaempleado[$i]['nombre'] ?></td>
-					<td data-title='Sueldo'><?= "$ ".$consultaempleado[$i]['sueldo'] ?></td>
+					<td data-title='Sueldo'>$ <?= number_format($consultaempleado[$i]['sueldo']) ?></td>
 					<td data-title='Direccion'><?= $consultaempleado[$i]['direccion'] ?></td>
 					<td data-title='Ciudad de residencia'><?= $consultaempleado[$i]['ciudad'] ?></td>
-					<td data-title='Teléfono'><?= $consultaempleado[$i]['telefono_emple'] ?></td>
-					<td data-title='Teléfono de referencia'><?= $consultaempleado[$i]['telefono_refe'] ?></td>
+					<td data-title='Teléfono'><?= $empleado->formato_telefono_general($consultaempleado[$i]['telefono_emple']) ?></td>
+					<td data-title='Teléfono de referencia'><?= $empleado->formato_telefono_general($consultaempleado[$i]['telefono_refe']) ?></td>
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
 					<td data-title='Fecha Ingreso'><?= $consultaempleado[$i]['fecha_ingreso'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>

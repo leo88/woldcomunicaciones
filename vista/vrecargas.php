@@ -39,7 +39,7 @@
 		  <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
 		  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
 		  <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
-		  <a href=""><button type="button" class="btn btn-info m  active">Minutos</button></a>
+		  <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
 		  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
 		  <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
 		  <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
@@ -51,7 +51,8 @@
 		  <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
 		  <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
 		  <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
-		  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a> 
+		  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a>
+		  <a href=""><button type="button" class="btn btn-info m active">Recargas</button></a>  
 		</div>
 		<!-- final barra navegacion -->
           

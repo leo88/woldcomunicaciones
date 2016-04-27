@@ -25,4 +25,16 @@
                 $datos = $conexionBD -> ejeCon($consulta, 0);
                 return $datos;
         } 
+        function formato_telefono_general($tel)
+        {
+                $tel = preg_replace('/[^0-9]/', '', $tel);
+                if(strlen($tel) == 7){
+                        $tel = preg_replace('/([0-9]{2})([0-9]{2})([0-9]{3})/', '$1 $2 $3', $tel);
+                }
+                 elseif(strlen($tel) == 10){
+                        $tel = preg_replace('/([0-9]{3})([0-9]{3})([0-9]{4})/', '$1 $2 $3', $tel);
+                }
+                        
+                return $tel;
+        }
 }

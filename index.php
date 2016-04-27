@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Prueba_cs</title>	
+	<title>Wold Comunicaciones</title>	
 </head>
 <body>
 	<div class="container">
@@ -27,6 +27,7 @@
 	              <li><a href="index.php?pag=24">Venta</a></li>
 	              <li><a href="index.php?pag=26">Venta por Producto</a></li>
 	              <li><a href="index.php?pag=29">Minutos valor</a></li>
+	              <li><a href="index.php?pag=31">Recargas</a></li>
 	            </ul>
 	           
 	          </div><!--/.nav-collapse -->
@@ -152,6 +153,14 @@
 			if ($page == 30) 
 			{
                 include("vista/vactuminutosvalor.php");
+			}
+			if ($page == 31) 
+			{
+                include("vista/vrecargas.php");
+			}
+			if ($page == 32) 
+			{
+                include("vista/vacturecargas.php");
 			}
 		?>
 	</div>
