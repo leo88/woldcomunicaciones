@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -109,8 +110,8 @@
             <label for="">Saldo Pendiente:</label>
             <input type="text" class="form-control" name="saldo_cancel" id="saldo" readonly >       
 		</div>
-		 <div class="form-group campo"> <br>          		
-            <input type="submit" class="btn btn-success" value="Insertar">
+		 <div class="form-group campo"> <br>
+              <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkbox-checked"></span></button>
         </div>
 	</form>
 </div>

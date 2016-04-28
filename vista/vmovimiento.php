@@ -24,7 +24,7 @@
 	        <link rel="stylesheet" href="css/chosen.css">
 	        <link rel="stylesheet" href="css/chosen-bootstrap.css">
 	        <link rel="stylesheet" href="css/estilo.css">
-
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/jquery-1.9.1.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -125,7 +125,7 @@
 					<td data-title='Motivo'><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td data-title='Referencia'><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td data-title='Cantidad'><?= $consultamovimiento[$i]['cantidad'] ?></td>					
-					<td data-title='Edición'><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Editar</a></td>
+					<td data-title='Edición'><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">

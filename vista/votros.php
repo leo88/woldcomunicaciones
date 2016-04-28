@@ -116,7 +116,7 @@
 					<td data-title='Descripcion'><?= $consultaotros[$i]['descripcion'] ?></td>
 					<td data-title='Salida'>$ <?= number_format($consultaotros[$i]['salida_total']) ?></td>
 					<td data-title='Entrada'>$ <?= number_format($consultaotros[$i]['entrada_total']) ?></td>					
-					<td data-title='Edición'><a href="index.php?pag=12&id=<?= $consultaotros[$i]['idreporte'] ?>" class="btn btn-primary">Editar</a></td>
+                    <td data-title='Edición'><a href="index.php?pag=12&id=<?= $consultaotros[$i]['idreporte'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idreporteeli" value="<?= $consultaotros[$i]['idreporte'] ?>">

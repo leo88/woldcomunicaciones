@@ -93,7 +93,7 @@
     				            </datalist>        
 						</div>
 		 				<div class="form-group campo"> <br>          		
-            				<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+            				<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkbox-checked"></span></button>
         				</div>
 					</form>
 				</div>
@@ -127,7 +127,7 @@
 									<td data-title='Telefono contacto'><?= $proveedor->formato_telefono_general($consultaproveedor[$i]['telefono2']) ?></td>
 									<td data-title='Email'><?= $consultaproveedor[$i]['email'] ?></td>
 									<td data-title='Descripcion'><?= $consultaproveedor[$i]['descripcion'] ?></td>
-									<td data-title='Edición'><a href="index.php?pag=8&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></a></td>
+                                    <td data-title='Edición'><a href="index.php?pag=8&id=<?= $consultaproveedor[$i]['idproveedor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 									<!--<td>
 										<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 											<input type="hidden" name="idproveeli" value="<?= $consultaproveedor[$i]['idproveedor'] ?>">

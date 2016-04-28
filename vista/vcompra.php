@@ -98,7 +98,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <input type="date" class="form-control" name="fecha" >         
 		</div>
         <div class="form-group campo"> <br>
-              <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"></span></button>
+              <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkbox-checked"></span></button>
         </div>
 	</form>	
     </div>
@@ -185,7 +185,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>					
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Editar</a></td>
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -216,7 +216,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">     
 		</div>
 		 <div class="form-group campo"><br>
-            <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"></span></button>
+            <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-credit"></span></button>
         </div>
         <div class="campo">
          Si el producto que va a comprar no esta esta en el inventario actualmente, antes de hacer la compra <a href="index.php?pag=3">Registre la referencia</a> 
@@ -246,7 +246,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
 					<td><?= $consultacompraproduc[$i]['movimiento'] ?></td>
 					<td><?= $consultacompraproduc[$i]['valor'] ?></td>
-					<td><a href="index.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary">Editar</a></td>
+					<td><a href="index.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 				</tr>
 			<?php endfor; ?>
         </tbody>
@@ -274,7 +274,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
                <ul>
                    <li>Ingresar los datos de la compra (Proveedor y Fecha) y registrarlos con el boton <span class="icon-checkmark tama"></span> este paso se realiza una vez por cada compra</li>
                    <li>Ingresar los datos del movimiento (Referencia y Cantidad) y registrarlos con el boton <span class="icon-plus tama2"></span> este paso se puede repetir varias veces por cada compra</li>
-                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-checkmark tama"></span>  este paso se puede repetir varias veces por cada compra</li>
+                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-coin-dollar tama"></span>  este paso se puede repetir varias veces por cada compra</li>
                </ul>
         <span style="font-weight: bold">Nota:</span> No intente registrar todos los movimentos uno tras otro y luego todos los valores correspondientes a estos, asegurese de registrar un formulario a la vez ya que siempre debe registrar el valor despues de haber registrado el movimiento. 
       </div>

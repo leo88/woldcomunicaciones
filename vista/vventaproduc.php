@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -105,8 +106,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
            <label for="">Valor Unitario:</label>
             <input type="number" class="form-control" name="valor" required>  
 		</div>	
-		 <div class="form-group campo"> <br>          		
-            <input type="submit" class="btn btn-success" value="Insertar">
+		 <div class="form-group campo"> <br> 
+           <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkbox-checked"></span></button>
         </div>
 	</form>
 </div>
@@ -130,7 +131,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td data-title='ID Venta'><?= $consultaventaproduc[$i]['numero_venta'] ?></td>
 					<td data-title='ID Movimiento'><?= $consultaventaproduc[$i]['movimiento'] ?></td>
 					<td data-title='Valor Unirario'><?= "$ ".$consultaventaproduc[$i]['precio_venta'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=27&id=<?= $consultaventaproduc[$i]['numero_venta'] ?>&idm=<?= $consultaventaproduc[$i]['movimiento']?>" class="btn btn-primary">Editar</a></td>
+					<td data-title='Edición'><a href="index.php?pag=27&id=<?= $consultaventaproduc[$i]['numero_venta'] ?>&idm=<?= $consultaventaproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 				</tr>
 			<?php endfor; ?>
         </tbody>

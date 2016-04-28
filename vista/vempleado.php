@@ -109,7 +109,7 @@
             <input type="date" class="form-control" name="fecha">    
 		</div>
 		 <div class="form-group campo"> <br>          		
-            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkbox-checked"></span></button>
         </div>
 	</form>
 </div>
@@ -147,7 +147,7 @@
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
 					<td data-title='Fecha Ingreso'><?= $consultaempleado[$i]['fecha_ingreso'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>
-					<td data-title='Edición'><a href="index.php?pag=10&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary">Editar</a></td>
+                    <td data-title='Edición'><a href="index.php?pag=10&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idempleeli" value="<?= $consultaempleado[$i]['idempleado'] ?>">

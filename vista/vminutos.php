@@ -71,7 +71,7 @@
 				        <input type="hidden" value="<?= $venta2[0]['valor_venta']?>" class="form-control" name="venta">      
 					</div>
 					<div class="form-group campo"> <br>          		
-				        <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
+				        <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkbox-checked"></span></button>
 				    </div>
 				</form>
 			</div>

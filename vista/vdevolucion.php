@@ -22,6 +22,7 @@
 	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
 	        <link rel="stylesheet" href="css/datatable.css"/>
 	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">
 	        
 	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
 	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -125,7 +126,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>					
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary">Editar</a></td>
+					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -165,8 +166,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
              <label for="">Costo retorno:</label>
             <input type="text" class="form-control" name="costo">    
 		</div>
-		 <div class="form-group campo"> <br>          		
-            <input type="submit" class="btn btn-success" value="Insertar">
+		 <div class="form-group campo"> <br> 
+           <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkbox-checked"></span></button> 
         </div>
 	</form>
 </div>
@@ -199,7 +200,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td><?= $consultadevolucion[$i]['motivo'] ?></td>
 					<td><?= $consultadevolucion[$i]['numero_compra'] ?></td>
 					<td><?= "$ ".$consultadevolucion[$i]['costo'] ?></td>
-					<td><a href="index.php?pag=28&id=<?= $consultadevolucion[$i]['iddevolucion'] ?>" class="btn btn-primary">Editar</a></td>
+					<td><a href="index.php?pag=28&id=<?= $consultadevolucion[$i]['iddevolucion'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="iddevoeli" value="<?= $consultadevolucion[$i]['iddevolucion'] ?>">
