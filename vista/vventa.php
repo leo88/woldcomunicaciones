@@ -333,5 +333,3 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 		</body>
 	</html>
-            
-            

@@ -54,6 +54,14 @@
 .info {
     width: 100%;
 }
+.fondo {
+    background-color: #4DB2C6;
+}
+.edit {
+    text-align: center;
+    margin-top: 10%;
+    color: #FFF;
+}
 /*spoiler*/
 
 input[id^="spoiler"]{
