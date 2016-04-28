@@ -1,7 +1,30 @@
+	<!DOCTYPE html>
+		<html lang="es">		
+	    <head>
+	        <meta charset="utf-8">
+	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	        <title>Editar Devolucion</title>
+	        <meta name="description" content="??">
+            
+	        <link rel="stylesheet" href="css/normalize.css">
+	        <link rel="stylesheet" href="css/main.css">
+	        <link rel="stylesheet" href="css/bootstrap.css"/>
+	        <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
+	        <link rel="stylesheet" href="css/datatable.css"/>
+	        <link rel="stylesheet" href="css/estilo.css">
+	        <link rel="stylesheet" href="fonts/style.css">	       
+	       
+	    </head>	
+		<body class="fondo">        
+		    <div class="container-fluid"> 
+                <div class="row-fluid">		        
+		            <div class="span12">
+                      <div class="edit">
+                        	
 <?php include("controlador/cdevolucion.php"); ?>
-
-<div class="row-fluid">
-	<h1>Editar Devoluciòn</h1>
+	<h3>Editar Devolucion</h3>
 
 	<form action="index.php?pag=18&id=<?= $iddevolucion?>" method="POST">
 		<div class="form-group col-lg-6">
@@ -25,5 +48,10 @@
 			<a href="index.php?pag=18" class="btn btn-success">Volver</a>
         </div>
 	</form>
-	
-</div>
+                      </div> 		                 
+		            </div>
+		        </div><!--/row-->	
+		   </div><!--container-fluid-->
+
+		</body>
+	</html>

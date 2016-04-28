@@ -1,4 +1,3 @@
-	
 	<!DOCTYPE html>
 		<html lang="es">		
 	    <head>
@@ -25,7 +24,6 @@
                       <div class="edit">
                         	
 <?php include("controlador/ccliente.php"); ?>
-
 	<h3>Editar Cliente</h3>
 
 	<form action="index.php?pag=2&id=<?= $idcliente?>" method="POST">
