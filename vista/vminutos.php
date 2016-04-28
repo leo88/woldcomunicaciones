@@ -62,7 +62,7 @@
 				<form action="" method="POST">
 					<div class="form-group campo">
 				        <label for="">Fecha:</label>
-				        <input type="date" class="form-control" name="fecha">           
+				        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">           
 					</div>
 					<div class="form-group campo">
 				        <label for="">Cantidad:</label>

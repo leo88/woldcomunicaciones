@@ -95,7 +95,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</div>
 		<div class="form-group campo">
            <label for="">Fecha:</label>
-            <input type="date" class="form-control" name="fecha" >         
+            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">         
 		</div>
         <div class="form-group campo"> <br>
               <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkbox-checked"></span></button>
