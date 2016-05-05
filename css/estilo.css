@@ -62,6 +62,9 @@
     margin-top: 10%;
     color: #FFF;
 }
+.blanco {
+    color: #FFF;
+}
 /*spoiler*/
 
 input[id^="spoiler"]{

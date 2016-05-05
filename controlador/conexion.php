@@ -6,22 +6,22 @@
 		function conexion() {} // Constructor para inicializar clase
 		function conectarBD() {
 			include("configuracion.php");
-			$this -> link = mysql_connect ($serv_bd, $usu_bd, $pass_bd);
+			$this -> link = mysqli_connect ($serv_bd, $usu_bd, $pass_bd);
 			if(!$this -> link) {
 				die("<h4> No se logro conectar</h4>");
 			}
-			$bd2 = mysql_select_db($bd);
+			$bd2 = mysqli_select_db($this->link,$bd);
 			if(!$bd2) {
 				echo "No se puede conectar a la BD";
 			}
 		}
 		function desconectarBD() {
-			mysql_close($this -> link);
+			mysqli_close($this -> link);
 		}
 		function ejeCon($con, $op) {
-			$this -> resultado = mysql_query($con) or die("La consulta fallo: ". mysql_error());
+			$this -> resultado = mysqli_query($this->link,$con) or die("La consulta fallo: ". mysqli_error($this->link));
 			if($op == 0) {
-				while ($linea = mysql_fetch_array($this -> resultado)) {
+				while ($linea = mysqli_fetch_array($this -> resultado)) {
 					$arrayResultado[] = $linea;
 				}
 			} else {

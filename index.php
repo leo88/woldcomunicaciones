@@ -1,168 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Wold Comunicaciones</title>	
-</head>
-<body>
-	<div class="container">
-		<nav class="navbar navbar-default">
-	        <div class="container-fluid">
-	          <div id="navbar" class="navbar-collapse collapse">
-	            <ul class="nav navbar-nav">
-	              <li class="active"><a href="index.php">Home</a></li>
-	              <li><a href="index.php?pag=2">clientes</a></li>
-	              <li><a href="index.php?pag=3">producto</a></li>
-	              <li><a href="index.php?pag=5">minutos</a></li>
-	              <li><a href="index.php?pag=7">proveedor</a></li>
-	              <li><a href="index.php?pag=9">Empleado</a></li>
-	              <li><a href="index.php?pag=11">Otros</a></li>
-	              <li><a href="index.php?pag=13">Servivcio Tecnico</a></li>
-	              <li><a href="index.php?pag=15">Servivcio Tecnico Entregado</a></li>
-	              <li><a href="index.php?pag=16">Movimiento</a></li>
-	              <li><a href="index.php?pag=18">Devolucion Irregular</a></li>
-	              <li><a href="index.php?pag=19">Compra</a></li>
-	              <li><a href="index.php?pag=20">Compra por producto</a></li>
-	              <li><a href="index.php?pag=21">Reposcion</a></li>
-	              <li><a href="index.php?pag=24">Venta</a></li>
-	              <li><a href="index.php?pag=26">Venta por Producto</a></li>
-	              <li><a href="index.php?pag=29">Minutos valor</a></li>
-	              <li><a href="index.php?pag=31">Recargas</a></li>
-	            </ul>
-	           
-	          </div><!--/.nav-collapse -->
-	        </div><!--/.container-fluid -->
-      	</nav>	
-    </div>
-    <div class="container">  		
-		<h1>Wold comunicaciones</h1>
-		<?php
-			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
-			if ($page == 2) 
-			{
-                include("vista/vcliente.php");
-			}
-            if ($page == 3) 
-			{
-                include("vista/vproducto.php");
-			}
-            if ($page == 4) 
-			{
-                include("vista/vactuproducto.php");
-			}
-            if ($page == 5) 
-			{
-                include("vista/vminutos.php");
-			}
-            if ($page == 6) 
-			{
-                include("vista/vactuminutos.php");
-			}
-            if ($page == 7) 
-			{
-                include("vista/vproveedor.php");
-			}
-            if ($page == 8) 
-			{
-                include("vista/vactuproveedor.php");
-			}
-            if ($page == 9) 
-			{
-                include("vista/vempleado.php");
-			}
-            if ($page == 10) 
-			{
-                include("vista/vactuempleado.php");
-			}
-             if ($page == 11) 
-			{
-                include("vista/votros.php");
-			}
-            if ($page == 12) 
-			{
-                include("vista/vactuotros.php");
-			}
-            if ($page == 13) 
-			{
-                include("vista/vserviciotecnico.php");
-			}
-            if ($page == 14) 
-			{
-                include("vista/vactuserviciotecnico.php");
-			}
-            if ($page == 15) 
-			{
-                include("vista/vservicioentregado.php");
-			}
-            if ($page == 16) 
-			{
-                include("vista/vmovimiento.php");
-			}			
-            if ($page == 17) 
-			{
-                include("vista/vactumovimiento.php");
-			}
-            if ($page == 18) 
-			{
-                include("vista/vdevolucion.php");
-			}
-			 if ($page == 19) 
-			{
-                include("vista/vcompra.php");
-			}
-            if ($page == 20) 
-			{
-                include("vista/vcompraproduc.php");
-			}
-            if ($page == 21) 
-			{
-                include("vista/vreposicion.php");
-			}
-            if ($page == 22) 
-			{
-                include("vista/vactucliente.php");
-			}
-            if ($page == 23) 
-			{
-                include("vista/vactucompraproduc.php");
-			}
-			if ($page == 24) 
-			{
-                include("vista/vventa.php");
-			}
-            if ($page == 25) 
-			{
-                include("vista/vactuventa.php");//no esta creado
-			}
-			if ($page == 26) 
-			{
-                include("vista/vventaproduc.php");
-			}
-            if ($page == 27) 
-			{
-                include("vista/vactuventaproduc.php");
-			}
-			if ($page == 28) 
-			{
-                include("vista/vactudevolucion.php");
-			}
-			if ($page == 29) 
-			{
-                include("vista/vminutosvalor.php");
-			}
-			if ($page == 30) 
-			{
-                include("vista/vactuminutosvalor.php");
-			}
-			if ($page == 31) 
-			{
-                include("vista/vrecargas.php");
-			}
-			if ($page == 32) 
-			{
-                include("vista/vacturecargas.php");
-			}
-		?>
-	</div>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="shortcut icon" href="img/icono4.png">
+    <title>Wold Comunicaciones</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+    <!-- Custom styles for this template -->
+    <link href="css/signin.css" rel="stylesheet">
+
+    <!-- Google fonts-->
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Montserrat:400,700' />
+
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <h1>WOLD</h1>
+              <h5>COMUNICACIONES</h5>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="main">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <h2>Modulo de Ingreso</h2>
+            </div>
+          </div>
+        <div class="row">
+           <form class="form" method="POST" action="modelo/mcontrol.php">
+            <h4 class="heading">Por favor ingrese los datos</h4>
+            <div class="col-xs-12 col-md-12">
+                <p>Nombre de Usuario:</p>
+            </div>
+            <div class="col-xs-12 col-md-12">
+              <input id="ingreso" type="text" name="user" placeholder="Username" required></input>
+            </div>
+            <div class="col-xs-12 col-md-12">
+                <p>Clave de Acceso:</p>
+            </div>
+            <div class="col-xs-12 col-md-12">
+              <input id="ingreso" type="password" name="pass" placeholder="Password" required></input>
+            </div>
+            <div class="col-xs-12 col-md-12">
+              <button type="submit" class="btn" value="Ingresar">Ingresar</button>
+            </div>
+             <div>
+                <?php
+                    $erroring = isset($_GET['errorusuario']) ? $_GET['errorusuario']:NULL;
+                    if(strcmp($erroring, "si")==0)
+                    {
+                        echo "<script>alert('Datos incorrectos, verifique e intente de nuevo!')</script>";
+                    }
+                ?>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>   
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+            
+            </div>
+          </div>
+        </div>
+    </footer>
+     <!-- jQuery -->
+    <script src="js/jquery-1.9.1.js"></script>
+
+  </body>
 </html>

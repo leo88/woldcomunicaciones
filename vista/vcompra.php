@@ -1,83 +1,5 @@
-<!DOCTYPE html>
-		<html lang="es">
-		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->	
-	    <head>
-	        <meta charset="utf-8">
-	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <title>Compra</title>
-	        <meta name="description" content="??">
-	        
 
-	        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-            
-	        <link rel="stylesheet" href="css/normalize.css">
-	        <link rel="stylesheet" href="css/main.css">
-	        <link rel="stylesheet" href="css/bootstrap.css"/>
-	        <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
-	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
-	        <link rel="stylesheet" href="css/datatable.css"/>
-	        <link rel="stylesheet" href="css/estilo.css">
-	        <link rel="stylesheet" href="fonts/style.css">
-	        <link rel="stylesheet" href="css/chosen.css">
-	        
-	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
-	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	        <script src="js/bootstrap.js"></script>
-	        <script src="js/bootstrap-tab.js"></script>
-	        <script src="js/jquery-datatable.js"></script>
-	        <script src="js/chosen.jquery.js"></script>
-	        
-	    </head>	
-	
-	
-	
-	
-		<body >
-
-
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>  
-        
-		    <div class="container-fluid">
-              
-<!-- inicio barra navegacion -->
-<div id="menu"> 
-  <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
-  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
-  <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
-  <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
-  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
-  <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
-  <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
-  <a href="index.php?pag=13"><button type="button" class="btn btn-info m">Servicio Tecnico</button></a>
-  <a href="index.php?pag=15"><button type="button" class="btn btn-info m">Servicio T. Entregado</button></a>  
-  <a href="index.php?pag=16"><button type="button" class="btn btn-info m">Movimiento</button></a>
-  <a href="index.php?pag=18"><button type="button" class="btn btn-info m">Devolucion</button></a>
-  <a href=""><button type="button" class="btn btn-info m active">Compra</button></a>
-  <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
-  <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
-  <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
-  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a> 
-</div>
-<!-- final barra navegacion -->
-          
-		      <div class="row-fluid">
-		        
-		        	        
-		      
+<div class="row-fluid">
 <!-- inicio compra -->
 <div class="span4">	
  <?php include("controlador/ccompra.php"); ?>
@@ -98,7 +20,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">         
 		</div>
         <div class="form-group campo"> <br>
-              <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkbox-checked"></span></button>
+              <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"></span></button>
         </div>
 	</form>	
     </div>
@@ -124,7 +46,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 				<td><?= $consultacompra[$j]['numero_compra'] ?></td>
 					<td><?= $proveedor1[0]['nombre'] ?></td>
 					<td><?= $consultacompra[$j]['fecha'] ?></td>
-					<!--<td><a href="index.php?pag=6&idc=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary">Editar</a></td>-->
+					<!--<td><a href="home.php?pag=6&idc=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary">Editar</a></td>-->
 				</tr>
 			<?php endfor; ?>
 		</tbody>
@@ -154,7 +76,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</div>
 		<div class="form-group campo">
             <label for="">Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad" required>       
+            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,6}" title="Solo validos numeros" required>        
 		</div>
         <div class="form-group campo"><br>         
            <button type="submit" name="Entra" class="btn btn-warning" value="+"><span class="icon-plus"></span></button>
@@ -185,7 +107,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>					
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -211,7 +133,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 	<form action="" method="POST">
 		<div class="form-group campo">
             <label for="">Valor Unitario:</label>
-            <input type="number" class="form-control" name="valor" required> 
+            <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required> 
             <input type="hidden" name="numero_compra" value="<?= $numero_compra2[0]['numero_compra'] ?>">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">     
 		</div>
@@ -219,8 +141,8 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-credit"></span></button>
         </div>
         <div class="campo">
-         Si el producto que va a comprar no esta esta en el inventario actualmente, antes de hacer la compra <a href="index.php?pag=3">Registre la referencia</a> 
-         </div>   
+         Si el producto que va a comprar no esta esta en el inventario actualmente, antes de hacer la compra <a href="home.php?pag=3">Registre la referencia</a> 
+         </div>  
 	</form>			 
 </div>
 <?php $consultacompraproduc = $compraproduc->consultar_compraproduc_u(); ?>
@@ -246,7 +168,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 					<td><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
 					<td><?= $consultacompraproduc[$i]['movimiento'] ?></td>
 					<td><?= $consultacompraproduc[$i]['valor'] ?></td>
-					<td><a href="index.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td><a href="home.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 				</tr>
 			<?php endfor; ?>
         </tbody>
@@ -264,57 +186,20 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 
 				<br/><br/>    
 
-		    </div><!--container-fluid-->
 <div class="row-fluid"><!--spoiler de informacion-->
-    <input type="checkbox"  id="spoiler2" /> 
-      <label for="spoiler2" >Acerca de la compra</label>
-    <div class="spoiler">
+<input type="checkbox"  id="spoiler2" /> 
+<label for="spoiler2" >Acerca de la compra</label>
+<div class="spoiler">
       <div class="info">
               <h5>¿Como realizo una compra?</h5>
                <ul>
                    <li>Ingresar los datos de la compra (Proveedor y Fecha) y registrarlos con el boton <span class="icon-checkmark tama"></span> este paso se realiza una vez por cada compra</li>
                    <li>Ingresar los datos del movimiento (Referencia y Cantidad) y registrarlos con el boton <span class="icon-plus tama2"></span> este paso se puede repetir varias veces por cada compra</li>
-                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-coin-dollar tama"></span>  este paso se puede repetir varias veces por cada compra</li>
+                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-credit tama"></span>  este paso se puede repetir varias veces por cada compra</li>
                </ul>
         <span style="font-weight: bold">Nota:</span> No intente registrar todos los movimentos uno tras otro y luego todos los valores correspondientes a estos, asegurese de registrar un formulario a la vez ya que siempre debe registrar el valor despues de haber registrado el movimiento. 
       </div>
     </div>
 </div>
 <br><br>
-<!--<script type="text/javascript">
-google_ad_client = "ca-pub-2988710215164311";
-/* acaxaomx_main_Blog1_468x60_as */
-google_ad_slot = "7358473375";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-<!--</script>
-<script type="text/javascript"
-src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
-
--->
-			<script type="text/javascript">
-				//para buscar en las tablas
-				$(document).ready(function() {
-				    $('#example').dataTable( {
-				        "bPaginate": false,
-				        "bLengthChange" false,
-				        "bFilter": false,
-				        "bSort": false,
-				        "bInfo": false,
-				        "bAutoWidth": false
-				    } );
-				} );	
-			</script>	
-
-			<script type="text/javascript">
-				$(function() {
-    				$(".chzn-select").chosen();
-				});
-			</script>
-
-		</body>
-	</html>
-
 
