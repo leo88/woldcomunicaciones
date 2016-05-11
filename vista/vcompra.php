@@ -5,7 +5,7 @@
  <?php include("controlador/ccompra.php"); ?>
     <div class="container-fluid lol">
         <div class="eti">Registrar Compra</div>
-        <form action="" method="POST">
+        <form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for="">Proveedor:</label> 
             <select name="proveedor" class="form-control" >
@@ -62,7 +62,7 @@
 <div class="container-fluid lol">
 <div class="eti">Registrar Movimiento</div>
 
-	<form action="" method="POST">
+	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
            <input type="hidden" name="motivo" value="Compra" required>
             <label for="">Referencia:</label>
@@ -130,7 +130,7 @@
 <div class="container-fluid lol">
 <div class="eti">Registrar Valor</div>
 
-	<form action="" method="POST">
+	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for="">Valor Unitario:</label>
             <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required> 

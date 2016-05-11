@@ -6,7 +6,7 @@
 <div class="eti">Insertar Compra por producto</div>
 	
 
-	<form action="" method="POST">
+	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for="">Numero de compra:</label> 
             <select name="numero_compra" class="form-control" required>
@@ -30,7 +30,7 @@
             <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required>       
 		</div>
 		 <div class="form-group campo"> <br>
-           <button  type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checked"></span></button>
+           <button  type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         </div>
     </form>
 </div>
