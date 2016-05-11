@@ -4,7 +4,7 @@
   <?php include("controlador/cventa.php"); ?>
     <div class="container-fluid lol">
         <div class="eti">Registrar Venta</div>
-        <form action="" method="POST">
+        <form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for="">Cliente:</label> 
             <select name="cliente" class="chzn-select form-control" >
@@ -57,7 +57,7 @@
 					<td><?= $cliente1[0]['nombre'] ?></td>
 					<td><?= $consultaventa[$j]['fecha'] ?></td>
 					<td><?= $empleado1[0]['nombre'] ?></td>
-					<!--<td><a href="index.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></td>
+					<!--<td><a href="home.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idventaeli" value="<?= $consultaventa[$j]['numero_venta'] ?>">
@@ -79,7 +79,7 @@
 <div class="container-fluid lol">
 <div class="eti">Registrar Movimiento</div>
 
-	<form action="" method="POST">
+	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
           <input type="hidden" name="motivo" value="Venta" required>
             <label for="">Referencia:</label>
@@ -93,7 +93,7 @@
 		</div>
 		<div class="form-group campo">
            <label for="">Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad" required>  
+            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" title="Solo validos numeros" required>  
 		</div>
         <div class="form-group campo"><br> 
            <button type="submit" name="Sale" class="btn btn-warning" value="-"><span class="icon-minus"></span></button>
@@ -124,7 +124,7 @@
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>					
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -147,15 +147,15 @@
 <div class="container-fluid lol">
 <div class="eti">Registrar Valor</div>
 
-	<form action="" method="POST">
+	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for="">Valor Unitario:</label>
-            <input type="number" class="form-control" name="valor" required>
+            <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required> 
             <input type="hidden" name="numero_venta" value="<?= $numero_venta2[0]['numero_venta'] ?>">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">    
 		</div>
 		 <div class="form-group campo"><br> 
-            <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"></span></button>
+            <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-credit"></span></button>
         </div>
 	</form>
 	<br><br><br>		 
@@ -182,8 +182,8 @@
 				<tr>
 					<td><?= $consultaventaproduc[$i]['numero_venta'] ?></td>
 					<td><?= $consultaventaproduc[$i]['movimiento'] ?></td>
-					<td><?= $consultaventaproduc[$i]['precio_venta'] ?></td>
-					<td><a href="index.php?pag=27&id=<?= $consultaventaproduc[$i]['numero_venta'] ?>&idm=<?= $consultaventaproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td><?= "$ ".number_format($consultaventaproduc[$i]['precio_venta']) ?></td>
+					<td><a href="home.php?pag=27&id=<?= $consultaventaproduc[$i]['numero_venta'] ?>&idm=<?= $consultaventaproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 				</tr>
 			<?php endfor; ?>
         </tbody>
@@ -211,7 +211,7 @@
                <ul>
                    <li>Ingresar los datos de la venta (Cliente, Fecha y Empleado) y registrarlos con el boton <span class="icon-checkmark tama"></span> este paso se realiza una vez por cada venta</li>
                    <li>Ingresar los datos del movimiento (Referencia y Cantidad) y registrarlos con el boton <span class="icon-minus tama2"></span> este paso se puede repetir varias veces por cada venta</li>
-                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-checkmark tama"></span>  este paso se puede repetir varias veces por cada venta</li>
+                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-credit tama"></span>  este paso se puede repetir varias veces por cada venta</li>
                </ul>
         <span style="font-weight: bold">Nota:</span> No intente registrar todos los movimentos uno tras otro y luego todos los valores correspondientes a estos, asegurese de registrar un formulario a la vez ya que siempre debe registrar el valor despues de haber registrado el movimiento. 
       </div>

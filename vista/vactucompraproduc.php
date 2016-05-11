@@ -28,5 +28,5 @@
 			<a href="home.php?pag=20" class="btn btn-success">Volver</a>
         </div>
 	</form>
-                      </div> 		                 
+  </div> 		                 
 </body>

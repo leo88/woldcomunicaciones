@@ -76,7 +76,7 @@
 		</div>
 		<div class="form-group campo">
             <label for="">Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,6}" title="Solo validos numeros" required>        
+            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" title="Solo validos numeros" required>        
 		</div>
         <div class="form-group campo"><br>         
            <button type="submit" name="Entra" class="btn btn-warning" value="+"><span class="icon-plus"></span></button>
@@ -167,7 +167,7 @@
 				<tr>
 					<td><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
 					<td><?= $consultacompraproduc[$i]['movimiento'] ?></td>
-					<td><?= $consultacompraproduc[$i]['valor'] ?></td>
+					<td><?= "$ ".number_format($consultacompraproduc[$i]['valor']) ?></td>
 					<td><a href="home.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 				</tr>
 			<?php endfor; ?>

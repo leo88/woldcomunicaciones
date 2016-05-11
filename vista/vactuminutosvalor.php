@@ -1,10 +1,9 @@
+<body class="fondo">       
+<div class="edit">
 <?php include("controlador/cminutosvalor.php"); ?>
+	<h1>Editar valores de minuto</h1>
 
-
-<div class="row-fluid">
-	<h1>Editar minutos valor</h1>
-
-	<form action="index.php?pag=29&id=<?= $idminutosvalor?>" method="POST">
+	<form action="home.php?pag=29&id=<?= $idminutosvalor?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Costo compra:</label>
             <input type="number" class="form-control" name="costo_compra" value="<?= $consultaedit[0]['costo_compra'] ?>" required>
@@ -17,6 +16,8 @@
 		</div>
 		<div class="form-group col-lg-6">
             <input type="submit" class="btn btn-success" value="Editar">
+            <a href="home.php?pag=29" class="btn btn-success">Volver</a>
         </div>
 	</form>
 </div>
+</body>

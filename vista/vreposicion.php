@@ -30,7 +30,7 @@
 	</form>	
     <div class="campo">
                 Si el producto que va a reponer no esta esta en el inventario actualmente, por favor registre la referencia antes de hacer la reposicion
-                <a href="index.php?pag=3">Registrar referencia</a> 
+                <a href="home.php?pag=3">Registrar referencia</a> 
             </div>
     </div>
     <?php $consultamovimiento = $movimiento->consultar_movimiento_r(); ?>
@@ -56,7 +56,7 @@
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>					
-					<td><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -118,7 +118,7 @@
 					<td data-title='Movimiento'><?= $consultareposicion[$i]['movimiento'] ?></td>
 					<td data-title='No. Compra'><?= $consultareposicion[$i]['numero_compra'] ?></td>
 					<td data-title='Fecha'><?= $consultareposicion[$i]['fecha'] ?></td>					
-					<!--<td><a href="index.php?pag=6&id=<?= $consultareposicion[$i]['idreposicion'] ?>" class="btn btn-primary">Editar</a></td>
+					<!--<td><a href="home.php?pag=6&id=<?= $consultareposicion[$i]['idreposicion'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idreposicioneli" value="<?= $consultareposicion[$i]['idreposicion'] ?>">

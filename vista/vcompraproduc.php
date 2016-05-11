@@ -9,7 +9,7 @@
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for="">Numero de compra:</label> 
-            <select name="numero_compra" class="form-control" required>
+            <select name="numero_compra" class="form-control" pattern="[0-9]{1,10}" title="Solo validos numeros" required>
 				<option value=0>Seleccione una opcion</option>
 				<?php for($i=0;$i<count($numero_compra2);$i++): ?>
 					<option value="<?= $numero_compra2[$i]['numero_compra'] ?>"><?= $numero_compra2[$i]['numero_compra'] ?></option>
@@ -54,10 +54,12 @@
 				<tr>
 					<td data-title='ID Compra'><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
 					<td data-title='ID Movimiento'><?= $consultacompraproduc[$i]['movimiento'] ?></td>
-					<td data-title='Valor Unirario'><?= "$ ".$consultacompraproduc[$i]['valor'] ?></td>
+					<td data-title='Valor Unirario'><?= "$ ".number_format($consultacompraproduc[$i]['valor']) ?></td>
 					<td data-title='Edición'><a href="home.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 				</tr>
 			<?php endfor; ?>
 		</tbody>
 						</table>
 					</div>
+
+<br><br>

@@ -128,7 +128,7 @@
 					<td><?= $consultadevolucion[$i]['fecha'] ?></td>
 					<td><?= $consultadevolucion[$i]['motivo'] ?></td>
 					<td><?= $consultadevolucion[$i]['numero_compra'] ?></td>
-					<td><?= "$ ".$consultadevolucion[$i]['costo'] ?></td>
+					<td><?= "$ ".number_format($consultadevolucion[$i]['costo']) ?></td>
 					<td><a href="home.php?pag=28&id=<?= $consultadevolucion[$i]['iddevolucion'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
