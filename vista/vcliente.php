@@ -8,7 +8,7 @@
 	<form class="blanco" action="" method="POST">
 		<div class="form-group campo">
             <label for="">Nombre Cliente:</label>
-            <input type="text" class="form-control" name="nombre" required>       
+            <input type="text" class="form-control" name="nombre" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>       
 		</div>
 		<div class="form-group campo">
             <label for="">Teléfono:</label>

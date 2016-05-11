@@ -2,12 +2,12 @@
 <div class="edit">
                         	
 <?php include("controlador/ccliente.php"); ?>
-	<h3>Editar Cliente</h3>
+	<div class="eti">Editar Cliente</div>
 
 	<form action="home.php?pag=2&id=<?= $idcliente?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Nombre:</label>
-            <input type="text" class="form-control" name="nombre" value="<?= $consultaedit[0]['nombre'] ?>" required>
+            <input type="text" class="form-control" name="nombre" value="<?= $consultaedit[0]['nombre'] ?>" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>
 			<input type="hidden" name="idcliente" value="<?= $idcliente ?>">
             <input type="hidden" name="actu" value="actu">
 		</div>

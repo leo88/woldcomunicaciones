@@ -25,6 +25,9 @@
                 $datos = $conexionBD -> ejeCon($consulta, 0);
                 return $datos;
         } 
+        /*
+         * Función para dar el formato de telefono
+         */
         function formato_telefono_general($tel)
         {
                 $tel = preg_replace('/[^0-9]/', '', $tel);
@@ -37,4 +40,18 @@
                         
                 return $tel;
         }
-}
+        /*
+         * Función de utilidad para la sentencia de consulta SQL (SELECT)
+         */
+        function sentence_case($string) 
+        { 
+            $sentences = preg_split('/([.?! ]+)/', $string, -1, PREG_SPLIT_NO_EMPTY|PREG_SPLIT_DELIM_CAPTURE); 
+            $new_string = ''; 
+            foreach ($sentences as $key => $sentence) { 
+                $new_string .= ($key & 1) == 0? 
+                    ucfirst(strtolower(trim($sentence))) : 
+                    $sentence.' '; 
+            } 
+            return trim($new_string); 
+        } 
+    }
