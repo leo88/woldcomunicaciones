@@ -14,6 +14,9 @@
 	$actu          = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idcliente     = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
+	/*
+		Variables para aplicar el formato de Mayusculas y minusculas
+	*/
 	$newName = $cliente->sentence_case($nombre);
 	$newDir = $cliente->sentence_case($direccion);
 

@@ -68,6 +68,7 @@
         </tbody>
     </table>	
     </div>
-<br><br/>
+    </div><!--/row-->
+<br/><br/>  
 
 		    

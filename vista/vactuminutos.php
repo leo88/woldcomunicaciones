@@ -2,9 +2,9 @@
 	<div class="edit">
                         	
 	<?php include("controlador/cminutos.php"); ?>
-	<h3>Editar minutos</h3>
+	<div class="eti">Editar minutos</div>
 
-	<form action="index.php?pag=5&id=<?= $idminutos?>" method="POST">
+	<form action="home.php?pag=5&id=<?= $idminutos?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Cantidad minutos:</label>
             <input type="number" class="form-control" name="cantidad" value="<?= $consultaedit[0]['cantidad'] ?>" required>
@@ -14,9 +14,10 @@
             <input type="hidden" value="<?= $venta2[0]['valor_venta']?>" class="form-control" name="venta">
             <input type="hidden" name="actu" value="actu">
 		</div>
-		<div class="form-group col-lg-6">
+		<br>
+		<div class="form-group col-lg-6">	
             <input type="submit" class="btn btn-success" value="Editar">
-			<a href="index.php?pag=5" class="btn btn-success">Volver</a>
+			<a href="home.php?pag=5" class="btn btn-success">Volver</a>
         </div>
 	</form>
   	</div><!--container-fluid-->

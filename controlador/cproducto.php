@@ -14,19 +14,25 @@
 	$idproduc      = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
 	/*
+		Variables para aplicar el formato de Mayusculas y minusculas
+	*/
+	$newName = $producto->sentence_case($nombre);
+	$newMarca = $producto->sentence_case($marca);
+
+	/*
 		Comprobacion datos para insertar
 	*/
 	if ($referencia && $nombre && $marca && $precio && !$actu) 
 	{
         
-		$producto->insertar_producto($referencia,$nombre,$marca,$precio);
+		$producto->insertar_producto($referencia,$newName,$newMarca,$precio);
 	}
 	/*
 		Comprobacion datos para actualizar
 	*/
 	if ($idproducedit && $precio && $actu) 
 	{
-		$producto->actualizar_producto($idproducedit,$nombre,$marca,$precio);
+		$producto->actualizar_producto($idproducedit,$newName,$newMarca,$precio);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

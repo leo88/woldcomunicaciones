@@ -3,7 +3,7 @@
     <div class="edit">
                         	
   		<?php include("controlador/cproducto.php"); ?>
-		<h3>Editar Producto</h3>
+		<div class="eti">Editar Producto</div>
 
 		<form action="home.php?pag=3&id=<?= $idproduc?>" method="POST">
 			<div class="form-group col-lg-6">

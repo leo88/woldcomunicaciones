@@ -3,17 +3,17 @@
 	<div class="container-fluid lol">
 		<div class="eti">Minutos</div>
 		<form class="blanco" action="" method="POST">
-			<div class="form-group campo">
+			<div class="form-group col-md-6 col-lg-4">
 		        <label for="">Fecha:</label>
-		        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">           
+		        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" required>           
 			</div>
-			<div class="form-group campo">
+			<div class="form-group col-md-6 col-lg-4">
 		        <label for="">Cantidad:</label>
-		        <input type="number" class="form-control" name="cantidad">
+		        <input type="number" class="form-control" name="cantidad" required>
 		        <input type="hidden" value="<?= $compra2[0]['costo_compra']?>" class="form-control" name="compra">
 		        <input type="hidden" value="<?= $venta2[0]['valor_venta']?>" class="form-control" name="venta">      
 			</div>
-			<div class="form-group campo"> <br>          		
+			<div class="form-group col-lg-4"> <br>          		
 		        <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
 		    </div>
 		</form>
