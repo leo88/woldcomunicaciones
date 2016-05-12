@@ -10,7 +10,7 @@
         <form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <input type="hidden" name="motivo" value="Reposición" required>
-            <label for="">Referencia:</label>
+            <label for=""><span style="color:red;">* </span>Referencia:</label>
             <select name="referencia" class="form-control">
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($referencia2);$i++): ?>
@@ -20,7 +20,7 @@
 			</select>   
 		</div>
 		<div class="form-group campo">
-          <label for="">Cantidad:</label>
+          <label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,6}" title="Solo validos numeros" required>      
 		</div>
 		 <div class="form-group campo"> <br>  
@@ -83,11 +83,11 @@
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">
 		</div>
 		<div class="form-group campo">
-           <label for="">No. Compra:</label>
+           <label for=""><span style="color:red;">* </span>No. Compra:</label>
             <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,6}" title="Solo validos numeros" required>       
 		</div>
 		<div class="form-group campo">
-            <label for="">Fecha:</label>
+            <label for=""><span style="color:red;">* </span>Fecha:</label>
             <input type="date" class="form-control" name="fecha">        
 		</div>
 		 <div class="form-group campo"> <br>

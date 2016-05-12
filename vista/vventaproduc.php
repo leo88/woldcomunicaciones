@@ -3,12 +3,12 @@
 <?php include("controlador/cventaproduc.php"); ?>
 
 
-<div class="container-fluid lol">
+<!--<div class="container-fluid lol">
 <div class="eti">Insertar Venta por producto</div>
 
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
-            <label for="">Numero de venta:</label> 
+            <label for=""><span style="color:red;">* </span>Numero de venta:</label> 
             <select name="numero_venta" class="form-control" required>
 				<option value=0>Seleccione una opcion</option>
 				<?php for($i=0;$i<count($numero_venta2);$i++): ?>
@@ -17,7 +17,7 @@
 			</select>       
 		</div>
 		<div class="form-group campo">
-            <label for="">Movimiento:</label> 
+            <label for=""><span style="color:red;">* </span>Movimiento:</label> 
             <select name="movimiento" class="form-control" required>
 				<option value=0>Seleccione movimiento</option>
 				<?php for($i=0;$i<count($movimiento2);$i++): ?>
@@ -26,20 +26,20 @@
 			</select>       
 		</div>
 		<div class="form-group campo">
-           <label for="">Valor Unitario:</label>
+           <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
             <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required>  
 		</div>	
 		 <div class="form-group campo"> <br> 
            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         </div>
 	</form>
-</div>
+</div>-->
 <?php $consultaventaproduc = $ventaproduc->consultar_ventaproduc(); ?>
 					<div id='no-more-tables'>
 						<table class="table table-bordered table-hover" id="example">
 				  <thead>
             <tr>
-                <th colspan="3">Listado de Ventas por Producto</th>
+                <th colspan="12">Listado de Ventas por Producto</th>
             </tr>
             <tr>
                 <th>ID Venta</th>

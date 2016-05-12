@@ -11,10 +11,10 @@
    <?php include('controlador/cmovimiento.php'); ?>
     <div class="container-fluid lol">
         <div class="eti">Insertar Movimiento</div>
-        <form action="" method="POST">
+        <form action="" method="POST" class="blanco">
 		<div class="form-group campo">
              <input type="hidden" name="motivo" value="Devolución">
-            <label for="">Referencia:</label>
+            <label for=""><span style="color:red;">* </span>Referencia:</label>
             <select name="referencia" class="form-control">
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($referencia2);$i++): ?>
@@ -24,7 +24,7 @@
 			</select>    
 		</div>
 		<div class="form-group campo">
-            <label for="">Cantidad:</label>
+            <label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad">       
 		</div>
 		 <div class="form-group campo"> <br>  
@@ -77,9 +77,9 @@
 <div class="container-fluid lol">
 <div class="eti">Insertar Devolucion</div>
 
-	<form action="" method="POST">
+	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
-            <label for="">Fecha:</label>
+            <label for=""><span style="color:red;">* </span>Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?= date('Y-m-d') ?>">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">
 		</div>
@@ -88,16 +88,18 @@
             <textarea class="form-control" name="motivo" rows="1" cols="24" maxlength="100"></textarea>
 		</div>
 		<div class="form-group campo">
-             <label for="">Número de Compra:</label>
+             <label for=""><span style="color:red;">* </span>Número de Compra:</label>
             <input type="text" class="form-control" name="numero_compra" pattern="[0-9]{1,10}" title="Solo validos numeros">    
 		</div>
 		<div class="form-group campo">
-             <label for="">Costo retorno:</label>
-            <input type="text" class="form-control" name="costo">    
-		</div>
+             <label for=""><span style="color:red;">* </span>Costo retorno:</label>
+            <input  type="text" class="form-control" name="costo">
+            </div>
 		 <div class="form-group campo"> <br> 
            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button> 
         </div>
+        
+        
 	</form>
 </div>
 <?php $consultadevolucion = $devolucion->consultar_devolucion(); ?>

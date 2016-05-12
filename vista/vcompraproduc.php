@@ -2,13 +2,13 @@
 <?php include("controlador/ccompraproduc.php"); ?>
 
 
-<div class="container-fluid lol">
+<!--<div class="container-fluid lol">
 <div class="eti">Insertar Compra por producto</div>
 	
 
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
-            <label for="">Numero de compra:</label> 
+            <label for=""><span style="color:red;">* </span>Numero de compra:</label> 
             <select name="numero_compra" class="form-control" pattern="[0-9]{1,10}" title="Solo validos numeros" required>
 				<option value=0>Seleccione una opcion</option>
 				<?php for($i=0;$i<count($numero_compra2);$i++): ?>
@@ -17,7 +17,7 @@
 			</select>       
 		</div>
 		<div class="form-group campo">
-            <label for="">Movimiento:</label> 
+            <label for=""><span style="color:red;">* </span>Movimiento:</label> 
             <select name="movimiento" class="form-control" required>
 				<option value=0>Seleccione movimiento</option>
 				<?php for($i=0;$i<count($movimiento2);$i++): ?>
@@ -26,14 +26,14 @@
 			</select>       
 		</div>
 		<div class="form-group campo">
-            <label for="">Valor Unitario:</label>
+            <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
             <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required>       
 		</div>
 		 <div class="form-group campo"> <br>
            <button  type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
         </div>
     </form>
-</div>
+</div>-->
 <?php $consultacompraproduc = $compraproduc->consultar_compraproduc(); ?>
 
 					<div id='no-more-tables'>

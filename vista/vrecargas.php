@@ -3,13 +3,13 @@
 				<div class="container-fluid lol">
 				<div class="eti">Recargas</div>
 
-					<form action="" method="POST">
+					<form action="" method="POST" class="blanco">
 						<div class="form-group campo">
-    				        <label for="">Fecha:</label>
+    				        <label for=""><span style="color:red;">* </span>Fecha:</label>
     				        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">
 						</div>
 						<div class="form-group campo">
-    				        <label for="">Valor de la venta:</label>
+    				        <label for=""><span style="color:red;">* </span>Valor de la venta:</label>
     				        <input type="number" class="form-control" name="venta_recarga" pattern="[0-9]{1,9}" title="Solo validos numeros" required>
 						</div>
 						 <div class="form-group campo"> <br>          		

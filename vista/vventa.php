@@ -6,7 +6,7 @@
         <div class="eti">Registrar Venta</div>
         <form action="" method="POST" class="blanco">
 		<div class="form-group campo">
-            <label for="">Cliente:</label> 
+            <label for=""><span style="color:red;">* </span>Cliente:</label> 
             <select name="cliente" class="chzn-select form-control" >
 				<option value=0>Seleccione cliente</option>
 				<?php for($j=0;$j<count($cliente2);$j++): ?>
@@ -15,11 +15,11 @@
 			</select>      
 		</div>
 		<div class="form-group campo">
-           <label for="">Fecha:</label>
+           <label for=""><span style="color:red;">* </span>Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">          
 		</div>
 		<div class="form-group campo">
-           <label for="">Empleado:</label> 
+           <label for=""><span style="color:red;">* </span>Empleado:</label> 
             <select name="empleado" class="form-control" >
 				<option value=0>Seleccione empleado</option>
 				<?php for($j=0;$j<count($empleado2);$j++): ?>
@@ -82,7 +82,7 @@
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
           <input type="hidden" name="motivo" value="Venta" required>
-            <label for="">Referencia:</label>
+            <label for=""><span style="color:red;">* </span>Referencia:</label>
             <select name="referencia" class="form-control">
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($referencia2);$i++): ?>
@@ -92,7 +92,7 @@
 			</select>  
 		</div>
 		<div class="form-group campo">
-           <label for="">Cantidad:</label>
+           <label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" title="Solo validos numeros" required>  
 		</div>
         <div class="form-group campo"><br> 
@@ -149,7 +149,7 @@
 
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
-            <label for="">Valor Unitario:</label>
+            <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
             <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required> 
             <input type="hidden" name="numero_venta" value="<?= $numero_venta2[0]['numero_venta'] ?>">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">    

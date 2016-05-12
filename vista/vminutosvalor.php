@@ -16,8 +16,8 @@
 			<?php for($i=0;$i<count($consultaminutosvalor);$i++): ?>
 				<tr>
 					<td><?= $consultaminutosvalor[$i]['idminutosvalor'] ?></td>
-					<td><?= $consultaminutosvalor[$i]['costo_compra'] ?></td>
-					<td><?= $consultaminutosvalor[$i]['valor_venta'] ?></td>
+					<td><?= "$ ".number_format($consultaminutosvalor[$i]['costo_compra']) ?></td>
+					<td><?= "$ ".number_format($consultaminutosvalor[$i]['valor_venta']) ?></td>
 					<td><a href="home.php?pag=30&id=<?= $consultaminutosvalor[$i]['idminutosvalor'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 				</tr>
 			<?php endfor; ?>

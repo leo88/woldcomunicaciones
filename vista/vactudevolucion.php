@@ -2,8 +2,7 @@
 		    <div class="edit">
                         	
 <?php include("controlador/cdevolucion.php"); ?>
-	<h3>Editar Devolucion</h3>
-
+	<div class="eti">Editar Devolucion</div>
 	<form action="home.php?pag=18&id=<?= $iddevolucion?>" method="POST">
 		<div class="form-group col-lg-6">
             <label for="">Motivo:</label>
@@ -14,11 +13,11 @@
             <input type="hidden" name="actu" value="actu">
 		</div>
 		<div class="form-group col-lg-6">
-			<label for="">Numero de Compra:</label>
+			<label for=""><span style="color:red;">* </span>Numero de Compra:</label>
             <input type="text" class="form-control" name="numero_compra" value="<?= $consultaedit[0]['numero_compra']  ?>" >
 		</div>
 		<div class="form-group col-lg-6">
-			<label for="">Costo:</label>
+			<label for=""><span style="color:red;">* </span>Costo:</label>
             <input type="text" class="form-control" name="costo" value="<?= $consultaedit[0]['costo']  ?>" >
 		</div>
 		<div class="form-group col-lg-6"><br>
