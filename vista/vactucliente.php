@@ -26,7 +26,7 @@
 		<div class="form-group col-lg-6">
 			<label for="">Detalle:</label>
             <input class="form-control" type=text  list=descripcion name="detalle" value="<?= $consultaedit[0]['detalle'] ?>" placeholder="Se define si es cliente">
-                <datalist id=descripcion >
+                <datalist id="descripcion">
                    <option> Cliente</option>
                    <option> Transpaso</option>
                 </datalist>        

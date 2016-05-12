@@ -20,11 +20,18 @@
 	$idemple       = isset($_GET['id']) ? $_GET['id'] : NULL;	
 
 	/*
+		Variables para aplicar el formato de Mayusculas y minusculas
+	*/
+	$newName = $empleado->sentence_case($nombre);
+	$newDir = $empleado->sentence_case($direccion);
+	$newCity = $empleado->sentence_case($ciudad);
+
+	/*
 		Comprobacion datos para insertar
 	*/
 	if ($idempleado && $nombre && $sueldo && $direccion && $ciudad && $telefono_emple && $telefono_refe && $estado && !$actu) 
 	{
-		$empleado->insertar_empleado($idempleado,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
+		$empleado->insertar_empleado($idempleado,$newName,$sueldo,$newDir,$newCity,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
 	}
 	/*
 		Si el estado es inactivo el sueldo queda con valor "0"
@@ -37,7 +44,7 @@
 	*/
 	if ($idempleedit && $nombre && $actu) 
 	{
-		$empleado->actualizar_empleado($idempleedit,$nombre,$sueldo,$direccion,$ciudad,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
+		$empleado->actualizar_empleado($idempleedit,$newName,$sueldo,$newDir,$newCity,$telefono_emple,$telefono_refe,$email,$estado,$fecha);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

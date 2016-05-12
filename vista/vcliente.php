@@ -7,7 +7,7 @@
 
 	<form class="blanco" action="" method="POST">
 		<div class="form-group campo">
-            <label for="">Nombre Cliente:</label>
+            <label for=""><span style="color:red;">* </span>Nombre Cliente:</label>
             <input type="text" class="form-control" name="nombre" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>       
 		</div>
 		<div class="form-group campo">
@@ -23,7 +23,7 @@
             <input type="text" class="form-control" name="email" maxlength="30">       
 		</div>
 		<div class="form-group campo">
-            <label for="">Detalle:</label>
+            <label for=""><span style="color:red;">* </span>Detalle:</label>
             <input class="form-control" type="text" list="detalle" name="detalle" placeholder="Se define si es cliente" required>
                 <datalist id="detalle" >
                    <option> Cliente </option>
