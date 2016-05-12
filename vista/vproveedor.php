@@ -4,11 +4,11 @@
 	<div class="eti">Proveedor</div>
    	<form class="blanco" action="" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Identificacion proveedor:</label>
+   	        <label for=""><span style="color:red;">* </span>Identificacion proveedor:</label>
    	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>    
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Nombre proveedor:</label>
+   	        <label for=""><span style="color:red;">* </span>Nombre proveedor:</label>
    	        <input type="text" class="form-control" name="nombre" maxlength="50" required>        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
@@ -28,7 +28,7 @@
    	        <input type="email" class="form-control" name="email" maxlength="50">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
-   	        <label for="">Descripcion:</label>
+   	        <label for=""><span style="color:red;">* </span>Descripcion:</label>
    	        <input type=text list=descripcion name="descripcion" class="form-control" required>
    	            <datalist id="descripcion" >
    	               <option> Local </option>

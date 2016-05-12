@@ -6,19 +6,19 @@
 
 	<form class="blanco" action="" method="POST">
 		<div class="form-group campo">
-			<label for="">Referencia:</label>
+			<label for=""><span style="color:red;">* </span>Referencia:</label>
 			<input type="text" class="form-control" name="referencia" maxlength="100" required>      
 		</div>
 		<div class="form-group campo">
-			<label for="">Clase del producto:</label>
+			<label for=""><span style="color:red;">* </span>Clase del producto:</label>
 				<input type="text" class="form-control" name="nombre" placeholder="Que tipo es el producto" pattern="[A-z ]{2,40}" title="Solo se permiten letras máximo 40 caracteres" required>     
 		</div>
 		<div class="form-group campo">
-			<label for="">Marca:</label>
+			<label for=""><span style="color:red;">* </span>Marca:</label>
 			<input type="text" class="form-control" name="marca" pattern="[A-z ]{2,20}" title="Solo se permiten letras máximo 20 caracteres" required >         
 		</div>
 		<div class="form-group campo">
-			<label for="">Precio:</label>
+			<label for=""><span style="color:red;">* </span>Precio:</label>
 			<input type="number" class="form-control" name="precio" required >     
 		</div>		
 		<div class="form-group campo"> <br>          		

@@ -1,111 +1,44 @@
-<!DOCTYPE html>
-		<html lang="es">
-		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-		<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-		<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->	
-	    <head>
-	        <meta charset="utf-8">
-	        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	        <title>Servicio Tecnico</title>
-	        <meta name="description" content="??">
-	        
 
-	        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-            
-	        <link rel="stylesheet" href="css/normalize.css">
-	        <link rel="stylesheet" href="css/main.css">
-	        <link rel="stylesheet" href="css/bootstrap.css"/>
-	        <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
-	        <link rel="stylesheet" href="css/tablaResponsive.css"/>
-	        <link rel="stylesheet" href="css/datatable.css"/>
-	        <link rel="stylesheet" href="css/chosen.css">
-	        <link rel="stylesheet" href="css/estilo.css">
-	        <link rel="stylesheet" href="fonts/style.css">
-	        
-	        <script src="js/vendor/jquery-1.10.1.min.js"></script>
-	        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-	        <script src="js/bootstrap.js"></script>
-	        <script src="js/bootstrap-tab.js"></script>
-	        <script src="js/jquery-datatable.js"></script>
-	        <script src="js/chosen.jquery.js"></script>
-	        
-	    </head>	
-	
-	
-	
-	
-		<body>
-        
-		    <div class="container-fluid">
-              
-<!-- inicio barra navegacion -->
-<div id="menu"> 
-  <a href="index.php"><button type="button" class="btn btn-info m">Inicio</button></a>
-  <a href="index.php?pag=2"><button type="button" class="btn btn-info m">Cliente</button></a>
-  <a href="index.php?pag=3"><button type="button" class="btn btn-info m">Producto</button></a>
-  <a href="index.php?pag=5"><button type="button" class="btn btn-info m">Minutos</button></a>
-  <a href="index.php?pag=7"><button type="button" class="btn btn-info m">Proveedor</button></a> 
-  <a href="index.php?pag=9"><button type="button" class="btn btn-info m">Empleado</button></a>
-  <a href="index.php?pag=11"><button type="button" class="btn btn-info m">Otros</button></a>
-  <a href=""><button type="button" class="btn btn-info m active">Servicio Tecnico</button></a>
-  <a href="index.php?pag=15"><button type="button" class="btn btn-info m">Servicio T. Entregado</button></a>  
-  <a href="index.php?pag=16"><button type="button" class="btn btn-info m">Movimiento</button></a>
-  <a href="index.php?pag=18"><button type="button" class="btn btn-info m">Devolucion</button></a>
-  <a href="index.php?pag=19"><button type="button" class="btn btn-info m">Compra</button></a>
-  <a href="index.php?pag=20"><button type="button" class="btn btn-info m">Compra Producto</button></a> 
-  <a href="index.php?pag=21"><button type="button" class="btn btn-info m">Reposicion</button></a>
-  <a href="index.php?pag=24"><button type="button" class="btn btn-info m">Venta</button></a>
-  <a href="index.php?pag=26"><button type="button" class="btn btn-info m">Venta Producto</button></a>
-  <a href="index.php?pag=31"><button type="button" class="btn btn-info m">Recargas</button></a> 
-</div>
-<!-- final barra navegacion -->
-          
-		      <div class="row-fluid">
-		        
-		        <div class="span12">
-		      
 <?php include("controlador/cserviciotecnico.php"); ?>
 
 
 <div class="container-fluid lol">
 <div class="eti">Servicio Tecnico</div>
 
-	<form action="" method="POST">
-		<div class="form-group campo">
+	<form class="blanco" action="" method="POST">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
             <label for="">Tipo de Dispositivo:</label>
             <input type="text" class="form-control" name="nombre" required>      
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
              <label for="">Marca:</label>
             <input type="text" class="form-control" name="marca" required>     
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
             <label for="">Referencia:</label>
             <input type="text" class="form-control" name="referencia" required >           
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
              <label for="">Descripcion del servicio:</label>
-            <textarea name="descripcion_st" rows="1" cols="30" required> </textarea>     
+            <textarea name="descripcion_st" class="form-control" rows="1" cols="30" required> </textarea>     
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
              <label for="">Observacion:</label>
             <input type="text" class="form-control" name="observacion">           
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 ccol-md-4 ol-lg-4">
            <label for="">Costo del servicio:</label>
             <input type="number" class="form-control" name="costo_st" required >        
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 -lg-4">
              <label for="">Precio al cliente:</label>
             <input type="number" class="form-control" name="precio_cliente" required >     
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
            <label for="">Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" required >  
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
             <label for="">Cliente:</label>
             <select name="id_cliente" class="chzn-select form-control" required>
 				<option value=0>Seleccione empleado</option>
@@ -114,7 +47,7 @@
 				<?php endfor; ?>
 			</select>            
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
             <label for="">Empleado:</label>
             <select name="empleado" class="chzn-select form-control" required>
 				<option value=0>Seleccione empleado</option>
@@ -123,12 +56,12 @@
 				<?php endfor; ?>
 			</select>         
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-4">
            <label for="">Abono:</label>
             <input type="number" class="form-control" name="abono" required >       
 		</div>
-		 <div class="form-group campo"> <br>  
-            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkbox-checked"></span></button>
+		 <div class="form-group col-sm-6 col-md-4 col-lg-4"> <br>  
+            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-ok"></span></button>
         </div>
 	</form>
 </div>
