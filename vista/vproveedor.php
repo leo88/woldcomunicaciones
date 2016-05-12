@@ -9,25 +9,25 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Nombre proveedor:</label>
-   	        <input type="text" class="form-control" name="nombre" required>        
+   	        <input type="text" class="form-control" name="nombre" maxlength="50" required>        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">contacto:</label>
-   	        <input type="text" class="form-control" name="contacto">        
+   	        <input type="text" class="form-control" name="contacto" maxlength="50">        
 		</div>
-		<div class="form-group col-md-4 ">
+		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Telefono proveedor:</label>
-   	        <input type="number" class="form-control" name="telefono" required >          
+   	        <input type="number" class="form-control" name="telefono" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">          
 		</div>
-		<div class="form-group col-md-4 ">
+		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Telefono contacto:</label>
-   	        <input type="number" class="form-control" name="telefono2">          
+   	        <input type="number" class="form-control" name="telefono2" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">          
 		</div>
-		<div class="form-group col-md-4 ">
+		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Email:</label>
-   	        <input type="email" class="form-control" name="email">          
+   	        <input type="email" class="form-control" name="email" maxlength="50">          
 		</div>
-		<div class="form-group col-md-4">
+		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Descripcion:</label>
    	        <input type=text list=descripcion name="descripcion" class="form-control" required>
    	            <datalist id="descripcion" >
@@ -35,7 +35,7 @@
    	               <option> Proveedor </option>
    	            </datalist>        
 		</div>
-			<div class="form-group col-md-8"> <br>          		
+			<div class="form-group col-md-6"> <br>          		
          			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
       		</div>
 	</form>

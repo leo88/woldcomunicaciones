@@ -9,7 +9,7 @@
 	<!--<link rel="shortcut icon" href="imagen/icono4.png">-->
 	
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>  	
-  	<link rel="stylesheet" href="css/bootstrap-responsive.css"/>
+  <link rel="stylesheet" href="css/bootstrap-responsive.css"/>
 	<link rel="stylesheet" href="css/tablaResponsive.css"/>
 	<link rel="stylesheet" href="css/datatable.css"/>
 	<link rel="stylesheet" href="css/estilo.css">
@@ -17,9 +17,9 @@
 	<link rel="stylesheet" href="css/chosen.css">
 	<link rel="stylesheet" href="css/chosen-bootstrap.css">
 	<script src="js/chosen.jquery.js"></script>
-    <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
 	<script src="js/jquery-1.12.3.min.js"></script>
-  	<script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 	<script src="js/bootstrap-tab.js"></script>
 	<script src="js/jquery-datatable.js"></script>
   	
@@ -107,7 +107,7 @@
       						<li><a href="home.php?pag=31">Servicio Técnico</a></li>
       					</ul>
       				</li> 
-      				<li><a href="#">Page 1</a></li>
+      				<li><a href="vista/vcreditos"><span class="glyphicon glyphicon-fire"></a></li>
     			</ul>
     			<ul class="nav navbar-nav navbar-right">
     				<div class="navbar-brand"><small><strong><?php echo ucfirst($usuario); ?></strong></small></div>

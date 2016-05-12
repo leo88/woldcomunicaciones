@@ -9,4 +9,5 @@
 		header("Location: index.php");
 		exit();
 	}
+	date_default_timezone_set('America/Bogota');
 ?>
