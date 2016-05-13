@@ -12,28 +12,21 @@
             <tr>
                 <th>ID</th>
                 <th>Nombre</th>
-                <th>Teléfono</th>
-                <th>Dirección</th>
-                <th>E-mail</th>
-                <th>Detalle</th>
-                <th>Edición</th>
+                <th>Marca</th>
+                <th>Cantidad</th>
+                <th>Precio</th>                
             </tr>
         </thead>
         <tbody>
-            <?php for($i=0;$i<count($consultacliente);$i++): ?>
+            <?php while($row=$resultado->fetch_assoc()){ ?>
                 <tr>
-                    <td data-title='ID'></td>
-                    <td data-title='ID'></td>
-                    <td data-title='ID'></td>
-                    <td data-title='ID'></td>
-                    <td data-title='ID'></td>
-                    <td data-title='ID'></td>
-                    <td data-title='ID'></td>
-                                
-                   
+                    <td data-title='ID'><?php echo $row['referencia'];?></td>
+                    <td data-title='Nombre'><?php echo $row['nombre'];?></td>
+                    <td data-title='Marca'><?php echo $row['marca'];?></td>
+                    <td data-title='Cantidad'><?php echo $row['SumaDecantidad'];?></td>
+                    <td data-title='Precio'><?php echo $row['precio'];?></td> 
                 </tr>
-            <?php endfor; ?>
-            
+           <?php } ?>            
         </tbody>
     </table>	
     </div>
