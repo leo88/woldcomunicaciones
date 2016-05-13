@@ -10,7 +10,7 @@
 			<input type="text" class="form-control" name="referencia" maxlength="100" required>      
 		</div>
 		<div class="form-group campo">
-			<label for=""><span style="color:red;">* </span>Clase del producto:</label>
+			<label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
 				<input type="text" class="form-control" name="nombre" placeholder="Que tipo es el producto" pattern="[A-z ]{2,40}" title="Solo se permiten letras máximo 40 caracteres" required>     
 		</div>
 		<div class="form-group campo">

@@ -27,19 +27,25 @@
 	$cliente2= $serviciotecnico->sel_cliente();
 
 	/*
+		Variables para aplicar el formato de Mayusculas y minusculas
+	*/
+	$newName = $serviciotecnico->sentence_case($nombre);
+	$newMarca = $serviciotecnico->sentence_case($marca);
+
+	/*
 		Comprobacion datos para insertar
 	*/
 	if ($nombre && $marca && $referencia && $descripcion_st && $costo_st && $precio_cliente && $fecha && $id_cliente && $empleado && $abono && !$actu) 
 	{
         
-		$serviciotecnico->insertar_serviciotecnico($nombre, $marca, $referencia, $descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
+		$serviciotecnico->insertar_serviciotecnico($newName, $newMarca, $referencia, $descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
 	}
 	/*
 		Comprobacion datos para actualizar
 	*/
 	if ($idservitecedit && $nombre && $marca && $referencia && $actu) 
 	{
-		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $nombre, $marca, $referencia,$descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $abono);
+		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $newName, $newMarca, $referencia,$descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $abono);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

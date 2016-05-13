@@ -7,19 +7,19 @@
 
 	<form class="blanco" action="" method="POST">
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-            <label for="">Tipo de Dispositivo:</label>
-            <input type="text" class="form-control" name="nombre" required>      
+            <label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
+            <input type="text" class="form-control" name="nombre" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>      
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-             <label for="">Marca:</label>
-            <input type="text" class="form-control" name="marca" required>     
+             <label for=""><span style="color:red;">* </span>Marca:</label>
+            <input type="text" class="form-control" name="marca" pattern="[A-z ]{2,20}" title="Solo se permiten letras máximo 20 caracteres" required>     
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-            <label for="">Referencia:</label>
-            <input type="text" class="form-control" name="referencia" required >           
+            <label for=""><span style="color:red;">* </span>Referencia:</label>
+            <input type="text" class="form-control" name="referencia" maxlength="20" required >           
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-             <label for="">Descripcion del servicio:</label>
+             <label for=""><span style="color:red;">* </span>Descripcion del servicio:</label>
             <textarea name="descripcion_st" class="form-control" rows="1" cols="30" required> </textarea>     
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
@@ -27,28 +27,28 @@
             <input type="text" class="form-control" name="observacion">           
 		</div>
 		<div class="form-group col-sm-6 col-md-4 ccol-md-4 ol-lg-4">
-           <label for="">Costo del servicio:</label>
-            <input type="number" class="form-control" name="costo_st" required >        
+           <label for=""><span style="color:red;">* </span>Costo del servicio:</label>
+            <input type="number" class="form-control" name="costo_st" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" required>        
 		</div>
 		<div class="form-group col-sm-6 col-md-4 -lg-4">
-             <label for="">Precio al cliente:</label>
-            <input type="number" class="form-control" name="precio_cliente" required >     
+             <label for=""><span style="color:red;">* </span>Precio al cliente:</label>
+            <input type="number" class="form-control" name="precio_cliente" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" required >     
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-           <label for="">Fecha:</label>
+           <label for=""><span style="color:red;">* </span>Fecha:</label>
             <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" required >  
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-            <label for="">Cliente:</label>
+            <label for=""><span style="color:red;">* </span>Cliente:</label>
             <select name="id_cliente" class="chzn-select form-control" required>
-				<option value=0>Seleccione empleado</option>
+				<option value=0>Seleccione cliente</option>
 				<?php for($i=0;$i<count($cliente2);$i++): ?>
 					<option value="<?= $cliente2[$i]['idcliente'] ?>"><?= $cliente2[$i]['nombre'] ?></option>
 				<?php endfor; ?>
 			</select>            
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-            <label for="">Empleado:</label>
+            <label for=""><span style="color:red;">* </span>Empleado:</label>
             <select name="empleado" class="chzn-select form-control" required>
 				<option value=0>Seleccione empleado</option>
 				<?php for($i=0;$i<count($empleado2);$i++): ?>
@@ -57,8 +57,8 @@
 			</select>         
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-           <label for="">Abono:</label>
-            <input type="number" class="form-control" name="abono" required >       
+           <label for=""><span style="color:red;">* </span>Abono:</label>
+            <input type="number" class="form-control" name="abono" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" required >       
 		</div>
 		 <div class="form-group col-sm-6 col-md-4 col-lg-4"> <br>  
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-ok"></span></button>
@@ -66,9 +66,9 @@
 	</form>
 </div>
 <?php $consultaserviciotecnico = $serviciotecnico->consultar_serviciotecnico(); ?>
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
-				  <thead>
+<div id='no-more-tables'>
+	<table class="table table-bordered table-hover" id="example">
+		<thead>
             <tr>
                 <th colspan="3">Listado de Servicio Tecnico</th>
             </tr>
@@ -107,7 +107,7 @@
 					<td data-title='ID Cliente'><?= $cliente1[0]['nombre'] ?></td>
 					<td data-title='ID Empleado'><?= $empleado1[0]['nombre'] ?></td>
 					<td data-title='Abono'>$ <?= number_format($consultaserviciotecnico[$i]['abono']) ?></td>
-					<td data-title='Edición'><a href="index.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td data-title='Edición'><a href="home.php?pag=14&id=<?= $consultaserviciotecnico[$i]['numero_orden'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<td data-title='Eliminación'>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idserviteceli" value="<?= $consultaserviciotecnico[$i]['numero_orden'] ?>">
@@ -117,39 +117,6 @@
 				</tr>
 			<?php endfor; ?>
         </tbody>
-						</table>
-					</div>
-
-
-
-		        </div><!--/span-->
-
-		      </div><!--/row-->
-
-				<br/><br/>    
-
-		    </div><!--container-fluid-->
-
-
-			<script type="text/javascript">
-				//para buscar en las tablas
-				$(document).ready(function() {
-				    $('#example').dataTable( {
-				        "bPaginate": true,
-				        "bLengthChange": true,
-				        "bFilter": true,
-				        "bSort": false,
-				        "bInfo": true,
-				        "bAutoWidth": true
-				    } );
-				} );	
-			</script>	
-
-			<script type="text/javascript">
-				$(function() {
-    				$(".chzn-select").chosen();
-				});
-			</script>
-			
-		</body>
-	</html>
+	</table>
+</div>
+<br></br>
