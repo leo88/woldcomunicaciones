@@ -3,11 +3,11 @@
 	
 		session_start();
 		$usuario = $_POST['user'];
-		$pass = $_POST['pass'];
-
-		usuario($usuario,$pass);
+		$pass = sha1($_POST['pass']);
+		//echo $usuario." ".$pass;
+		verUsuario($usuario,$pass);
 	
-		function usuario($usuario,$pass)
+		function verUsuario($usuario,$pass)
 		{
 			$sql = "SELECT * FROM tbusuario WHERE username ='".$usuario."' AND password = '".$pass."';";
 			$conexionBD = new conexion();

@@ -112,7 +112,7 @@
     			<ul class="nav navbar-nav navbar-right">
     				<div class="navbar-brand"><small><strong><?php echo ucfirst($usuario); ?></strong></small></div>
                     <?php if ($perfil=='Administrador'): ?>
-      				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Nuevo</a></li>
+      				<li><a href="home.php?pag=33"><span class="glyphicon glyphicon-user"></span> Nuevo</a></li>
       				<?php endif ?>
      				<li><a href="vista/vsalir.php"><span class="glyphicon glyphicon-log-out"></span> Salir</a></li>
    				</ul>
@@ -275,6 +275,10 @@
 			{
                 include("vista/vacturecargas.php");
 			}
+      if ($page == 33) 
+      {
+                include("vista/vusuario.php");
+      }
 		?>
     </div>
     <!--Script para control de la tabla-->

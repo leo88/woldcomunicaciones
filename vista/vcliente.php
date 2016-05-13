@@ -1,7 +1,6 @@
 
 <?php include('controlador/ccliente.php'); ?>
 
-
 <div class="container-fluid lol">
 <div class="eti">Cliente</div>
 

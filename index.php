@@ -79,7 +79,7 @@
         </div>
     </footer>
      <!-- jQuery -->
-    <script src="js/jquery-1.9.1.js"></script>
+    <script src="js/jquery-1.12.3.min.js"></script>
 
   </body>
 </html>
