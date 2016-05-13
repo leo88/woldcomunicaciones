@@ -6,7 +6,7 @@
         <div class="eti">Registrar Venta</div>
         <form action="" method="POST" class="blanco">
 		<div class="form-group campo">
-            <label for=""><span style="color:red;">* </span>Cliente:</label> 
+            <label for=""><span style="color:red;">* </span>Cliente:</label><br> 
             <select name="cliente" class="chzn-select form-control" >
 				<option value=0>Seleccione cliente</option>
 				<?php for($j=0;$j<count($cliente2);$j++): ?>
@@ -82,8 +82,8 @@
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
           <input type="hidden" name="motivo" value="Venta" required>
-            <label for=""><span style="color:red;">* </span>Referencia:</label>
-            <select name="referencia" class="form-control">
+            <label for=""><span style="color:red;">* </span>Referencia:</label><br>
+            <select name="referencia" class="chzn-select form-control">
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($referencia2);$i++): ?>
 					<option value="<?= $referencia2[$i]['referencia'] ?>">

@@ -1,21 +1,15 @@
-	
-	
-		      
-		          
-		      <div class="row-fluid">
-		        
-		        	        
-		      
+<div class="row-fluid">		      
 <!-- inicio movimiento -->
 <div class="span6">	
    <?php include('controlador/cmovimiento.php'); ?>
-    <div class="container-fluid lol">
+    <div class="container-fluid lol">    
+       
         <div class="eti">Insertar Movimiento</div>
         <form action="" method="POST" class="blanco">
 		<div class="form-group campo">
              <input type="hidden" name="motivo" value="Devolución">
-            <label for=""><span style="color:red;">* </span>Referencia:</label>
-            <select name="referencia" class="form-control">
+            <label for=""><span style="color:red;">* </span>Referencia:</label><br>
+            <select name="referencia" class="chzn-select form-control">
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($referencia2);$i++): ?>
 					<option value="<?= $referencia2[$i]['referencia'] ?>">
@@ -92,7 +86,21 @@
             <input type="text" class="form-control" name="numero_compra" pattern="[0-9]{1,10}" title="Solo validos numeros">    
 		</div>
 		<div class="form-group campo">
-             <label for=""><span style="color:red;">* </span>Costo retorno:</label>
+            <!--inicio modal mensaje-->
+             <div class="cajaexterna">
+              <div class="cajainterna animated">
+                <div class="cajacentrada">                  
+                  <p>Si el dinero de la referencia es regresado por el proveedor en su totalidad o parcialmente ingrese la cantidad en Costo retorno, de lo contrario si el dinero no es regresado ingrese 0 </p>
+                  <div class="cierramodal">
+                   <a href="#" class="cerrarmodal">cerrar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--final modal mensaje-->
+             <label for=""><span style="color:red;">* </span>Costo retorno:</label><a href="#" class="mostrarmodal">&nbsp;<span class="glyphicon glyphicon-exclamation-sign"></span></a>            
+           
+             
             <input  type="text" class="form-control" name="costo">
             </div>
 		 <div class="form-group campo"> <br> 
