@@ -36,9 +36,9 @@
 	</form>
 </div>-->
 <?php $consultamovimiento = $movimiento->consultar_movimiento(); ?>
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
-				  <thead>
+<div id='no-more-tables'>
+	<table class="table table-bordered table-hover" id="example">
+		<thead>
             <tr>
                 <th colspan="12">Listado de Movimientos</th>
             </tr>
@@ -58,7 +58,7 @@
 					<td data-title='Motivo'><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td data-title='Referencia'><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td data-title='Cantidad'><?= $consultamovimiento[$i]['cantidad'] ?></td>					
-					<td data-title='Edición'><a href="index.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td data-title='Edición'><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
@@ -68,13 +68,6 @@
 				</tr>
 			<?php endfor; ?>
         </tbody>
-						</table>
-					</div>
-
-
-
-		        </div><!--/span-->
-
-		      </div><!--/row-->
-
-				<br/><br/>    
+	</table>
+</div>
+<br/><br/>    

@@ -19,12 +19,12 @@
             <input type="text" class="form-control" name="referencia" maxlength="20" required >           
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
-             <label for=""><span style="color:red;">* </span>Descripcion del servicio:</label>
-            <textarea name="descripcion_st" class="form-control" rows="1" cols="30" required> </textarea>     
+            <label for=""><span style="color:red;">* </span>Descripcion del servicio:</label>
+            <textarea name="descripcion_st" class="form-control" rows="1" cols="30" maxlength="100" required> </textarea>     
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
              <label for="">Observacion:</label>
-            <input type="text" class="form-control" name="observacion">           
+            <input type="text" class="form-control" name="observacion" maxlength="50">           
 		</div>
 		<div class="form-group col-sm-6 col-md-4 ccol-md-4 ol-lg-4">
            <label for=""><span style="color:red;">* </span>Costo del servicio:</label>
