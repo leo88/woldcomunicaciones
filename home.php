@@ -103,7 +103,7 @@
       						<li><a href="home.php?pag=29">Devolucion y reposición</a></li>
       						<li><a href="home.php?pag=29">Contabilidad</a></li>
       						<?php endif ?> 
-      						<li><a href="home.php?pag=5">Existencia</a></li>
+      						<li><a href="home.php?pag=34">Existencia</a></li>
       						<li><a href="home.php?pag=31">Servicio Técnico</a></li>
       					</ul>
       				</li> 
@@ -119,35 +119,6 @@
    			</div>
   		</div>
 	</nav>
-	<div class="container">
-		<nav class="navbar navbar-default">
-	        <div class="container-fluid">
-	          <div id="navbar" class="navbar-collapse collapse">
-	            <ul class="nav navbar-nav">
-	              <li class="active"><a href="home.php">Home</a></li>
-	              <li><a href="home.php?pag=2">clientes</a></li>
-	              <li><a href="home.php?pag=3">producto</a></li>
-	              <li><a href="home.php?pag=5">minutos</a></li>
-	              <li><a href="home.php?pag=7">proveedor</a></li>
-	              <li><a href="home.php?pag=9">Empleado</a></li>
-	              <li><a href="home.php?pag=11">Otros</a></li>
-	              <li><a href="home.php?pag=13">Servivcio Tecnico</a></li>
-	              <li><a href="home.php?pag=15">Servivcio Tecnico Entregado</a></li>
-	              <li><a href="home.php?pag=16">Movimiento</a></li>
-	              <li><a href="home.php?pag=18">Devolucion Irregular</a></li>
-	              <li><a href="home.php?pag=19">Compra</a></li>
-	              <li><a href="home.php?pag=20">Compra por producto</a></li>
-	              <li><a href="home.php?pag=21">Reposcion</a></li>
-	              <li><a href="home.php?pag=24">Venta</a></li>
-	              <li><a href="home.php?pag=26">Venta por Producto</a></li>
-	              <li><a href="home.php?pag=29">Minutos valor</a></li>
-	              <li><a href="home.php?pag=31">Recargas</a></li>
-	            </ul>
-	           
-	          </div><!--/.nav-collapse -->
-	        </div><!--/.container-fluid -->
-      	</nav>	
-    </div>
     <div class="container">  		
 		<?php
 			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
@@ -278,6 +249,10 @@
       if ($page == 33) 
       {
                 include("vista/vusuario.php");
+      }
+      if ($page == 34) 
+      {
+                include("vista/vcsexistencia.php");
       }
 		?>
     </div>
