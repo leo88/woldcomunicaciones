@@ -16,7 +16,7 @@
 		</div>
 		<div class="form-group campo">
            <label for=""><span style="color:red;">* </span>Valor:</label>
-            <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" title="Solo se permiten valores reales" required>            
+            <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten valores reales" required>            
 		</div>		
 		 <div class="form-group campo"> <br>
            <button type="submit" name="Entra" class="btn btn-success" value="Entra"><span class="glyphicon glyphicon-plus"></span></button>     		

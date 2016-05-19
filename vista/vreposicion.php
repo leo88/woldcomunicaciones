@@ -18,7 +18,7 @@
 		</div>
 		<div class="form-group campo">
           <label for=""><span style="color:red;">* </span>Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,6}" title="Solo validos numeros" required>      
+            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros" required>      
 		</div>
 		 <div class="form-group campo"> <br>  
            <button type="submit" name="Sale" class="btn btn-danger" value="-"><span class="icon-minus"></span></button>  
@@ -81,11 +81,11 @@
 		</div>
 		<div class="form-group campo">
            <label for=""><span style="color:red;">* </span>No. Compra:</label>
-            <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,6}" title="Solo validos numeros" required>       
+            <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros" required>       
 		</div>
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Fecha:</label>
-            <input type="date" class="form-control" name="fecha">        
+            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">        
 		</div>
 		 <div class="form-group campo"> <br>
            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>  

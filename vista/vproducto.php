@@ -19,7 +19,7 @@
 		</div>
 		<div class="form-group campo">
 			<label for=""><span style="color:red;">* </span>Precio:</label>
-			<input type="number" class="form-control" name="precio" required >     
+			<input type="number" class="form-control" name="precio" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros" required >     
 		</div>		
 		<div class="form-group campo"> <br>          		
 			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>

@@ -19,7 +19,7 @@
 		</div>
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad">       
+            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros">       
 		</div>
 		 <div class="form-group campo"> <br>  
            <button type="submit" name="Sale" class="btn btn-danger" value="-"><span class="icon-minus"></span></button>  
@@ -83,7 +83,7 @@
 		</div>
 		<div class="form-group campo">
              <label for=""><span style="color:red;">* </span>Número de Compra:</label>
-            <input type="text" class="form-control" name="numero_compra" pattern="[0-9]{1,10}" title="Solo validos numeros">    
+            <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros">    
 		</div>
 		<div class="form-group campo">
             <!--inicio modal mensaje-->
@@ -98,10 +98,8 @@
               </div>
             </div>
             <!--final modal mensaje-->
-             <label for=""><span style="color:red;">* </span>Costo retorno:</label><a href="#" class="mostrarmodal">&nbsp;<span class="glyphicon glyphicon-exclamation-sign"></span></a>            
-           
-             
-            <input  type="text" class="form-control" name="costo">
+             <label for=""><span style="color:red;">* </span>Costo retorno:</label><a href="#" class="mostrarmodal">&nbsp;<span class="glyphicon glyphicon-exclamation-sign"></span></a> 
+            <input  type="number" class="form-control" name="costo" pattern="[0-9]{1,9}" title="Solo validos numeros" min="0" required>
             </div>
 		 <div class="form-group campo"> <br> 
            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button> 

@@ -9,7 +9,7 @@
 			</div>
 			<div class="form-group col-md-6 col-lg-4">
 		        <label for=""><span style="color:red;">* </span>Cantidad:</label>
-		        <input type="number" class="form-control" name="cantidad" required>
+		        <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros" required>
 		        <input type="hidden" value="<?= $compra2[0]['costo_compra']?>" class="form-control" name="compra">
 		        <input type="hidden" value="<?= $venta2[0]['valor_venta']?>" class="form-control" name="venta">      
 			</div>
