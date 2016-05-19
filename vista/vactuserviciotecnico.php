@@ -29,11 +29,11 @@
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Costo del servicio:</label>
-			<input type="number" class="form-control" name="costo_st" value="<?= $consultaedit[0]['costo_st']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" required>
+			<input type="number" class="form-control" name="costo_st" value="<?= $consultaedit[0]['costo_st']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" min="0" required>
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Precio Cliente:</label>
-			<input type="number" class="form-control" name="precio_cliente" value="<?= $consultaedit[0]['precio_cliente']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" required>
+			<input type="number" class="form-control" name="precio_cliente" value="<?= $consultaedit[0]['precio_cliente']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" min="0" required>
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Fecha:</label>
@@ -43,7 +43,7 @@
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Abono:</label>
-			<input type="number" class="form-control" name="abono" value="<?= $consultaedit[0]['abono']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" required>
+			<input type="number" class="form-control" name="abono" value="<?= $consultaedit[0]['abono']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" min="0" required>
 		</div>
 		<div class="form-group col-lg-6"><br>
             <input type="submit" class="btn btn-success" value="Editar">

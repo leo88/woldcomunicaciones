@@ -14,11 +14,11 @@
 		</div>
 		<div class="form-group col-lg-6">
 			<label for=""><span style="color:red;">* </span>Numero de Compra:</label>
-            <input type="text" class="form-control" name="numero_compra" value="<?= $consultaedit[0]['numero_compra']  ?>" >
+            <input type="text" class="form-control" name="numero_compra" value="<?= $consultaedit[0]['numero_compra']  ?>" pattern="[0-9]{1,11}" min="0" title="Solo validos numeros" required>
 		</div>
 		<div class="form-group col-lg-6">
 			<label for=""><span style="color:red;">* </span>Costo:</label>
-            <input type="text" class="form-control" name="costo" value="<?= $consultaedit[0]['costo']  ?>" >
+            <input type="number" class="form-control" name="costo" value="<?= $consultaedit[0]['costo']  ?>" pattern="[0-9]{1,11}" min="0" title="Solo validos numeros" required>
 		</div>
 		<div class="form-group col-lg-6"><br>
             <input type="submit" class="btn btn-success" value="Editar">

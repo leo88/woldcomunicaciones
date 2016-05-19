@@ -18,11 +18,11 @@
 			</div>
 			<div class="form-group col-md-6 col-lg-6">
 				<label for=""><span style="color:red;">* </span>Marca:</label>
-				<input type="text" class="form-control" name="marca" value="<?= $consultaedit[0]['marca'] ?>" required>
+				<input type="text" class="form-control" name="marca" value="<?= $consultaedit[0]['marca'] ?>" pattern="[A-z ]{2,20}" title="Solo se permiten letras máximo 20 caracteres" required>
 			</div>
 			<div class="form-group col-md-6 col-lg-6">
 				<label for=""><span style="color:red;">* </span>Precio:</label>
-				<input type="number" class="form-control" name="precio" value="<?= $consultaedit[0]['precio']  ?>" required>
+				<input type="number" class="form-control" name="precio" value="<?= $consultaedit[0]['precio']  ?>" pattern="[0-9]{1,11}" min="0" title="Solo validos numeros" required>
 			</div>
 			<div class="form-group col-md-12 col-lg-12">
         	    <input type="submit" class="btn btn-success" value="Editar">

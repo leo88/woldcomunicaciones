@@ -20,7 +20,7 @@
 		</div>
 		<div class="form-group col-lg-6">
 			<label for=""><span style="color:red;">* </span>Valor:</label>
-            <input type="number" class="form-control" name="valor" value="<?= $consultaedit[0]['valor'] ?>" required>                  
+            <input type="number" class="form-control" name="valor" value="<?= $consultaedit[0]['valor'] ?>" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros" required>                  
 		</div>
 		
 		<div class="form-group col-lg-6"><br>

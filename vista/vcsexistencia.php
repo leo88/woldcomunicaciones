@@ -1,5 +1,6 @@
 
 <?php 
+    include('estilos.php'); 
     include('modelo/mconsulta.php'); 
     $existencia = new Mconsulta();
 ?>
@@ -8,11 +9,10 @@
 
 </div>
 <?php $consultexistencia = $existencia->consultar_existencia(); ?>
-	<div id='no-more-tables'>
-		<table class="table table-bordered table-hover" id="example">
+	<table id="" class="display" cellspacing="0" width="100%">
 	   <thead>
             <tr>
-                <th colspan="3">Existencias</th>
+                <th colspan="12">Existencias</th>
             </tr>
             <tr>
                 <th>Referencia</th>
@@ -33,9 +33,6 @@
                 </tr>
             <?php endfor; ?>
         </tbody>
-    </table>	
-    </div>
-    </div><!--/row-->
-<br/><br/>  
+    </table> 
 
 		    

@@ -76,7 +76,7 @@
 		</div>
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" title="Solo validos numeros" required>        
+            <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>        
 		</div>
         <div class="form-group campo"><br>         
            <button type="submit" name="Entra" class="btn btn-warning" value="+"><span class="icon-plus"></span></button>
@@ -133,7 +133,7 @@
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
-            <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" required> 
+            <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros" required> 
             <input type="hidden" name="numero_compra" value="<?= $numero_compra2[0]['numero_compra'] ?>">
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">     
 		</div>

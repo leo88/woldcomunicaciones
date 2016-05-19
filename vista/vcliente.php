@@ -23,11 +23,11 @@
 		</div>
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Detalle:</label>
-            <input class="form-control" type="text" list="detalle" name="detalle" placeholder="Se define si es cliente" required>
-                <datalist id="detalle" >
-                   <option> Cliente </option>
-                   <option> Traspaso </option>
-                </datalist>       
+            <select name="detalle" class="form-control" required>
+                    <option value="Cliente">Seleccione una Opción</option>
+                    <option value="Cliente">Cliente</option>
+                    <option value="Traspaso">Traspaso</option>
+            </select>         
 		</div>
 		 <div class="form-group campo"> <br>          		
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>

@@ -7,7 +7,7 @@
 	<form action="home.php?pag=5&id=<?= $idminutos?>" method="POST">
 		<div class="form-group col-sm-6 col-md-6 col-lg-6">
             <label for=""><span style="color:red;">* </span>Cantidad minutos:</label>
-            <input type="number" class="form-control" name="cantidad" value="<?= $consultaedit[0]['cantidad'] ?>" required>
+            <input type="number" class="form-control" name="cantidad" value="<?= $consultaedit[0]['cantidad'] ?>" pattern="[0-9]{1,11}" min="0" title="Solo validos numeros" required>
 			<input type="hidden" name="idminutos" value="<?= $idminutos ?>">
 			<input type="hidden" name="fecha" value="<?= $consultaedit[0]['fecha'] ?>">
 			<input type="hidden" value="<?= $compra2[0]['costo_compra']?>" class="form-control" name="compra">

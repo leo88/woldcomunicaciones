@@ -7,7 +7,7 @@
 	<form action="home.php?pag=31&id=<?= $idrecarga?>" method="POST">
 		<div class="form-group col-lg-6">
             <label><span style="color:red;">* </span>Venta Recargas:</label>
-            <input type="number" class="form-control" name="venta_recarga" value="<?= $consultaedit[0]['venta_recarga'] ?>" required>
+            <input type="number" class="form-control" name="venta_recarga" value="<?= $consultaedit[0]['venta_recarga'] ?>" pattern="[0-9]{1,11}" min="0" title="Solo validos numeros" required>
 			<input type="hidden" name="idrecarga" value="<?= $idrecarga ?>">
 			<input type="hidden" name="fecha" value="<?= $consultaedit[0]['fecha'] ?>">
             <input type="hidden" name="actu" value="actu">
