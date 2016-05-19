@@ -29,7 +29,7 @@
                     <td data-title='Tipo de Dispositivo'><?= $consultexistencia[$i]['nombre'] ?></td>
                     <td data-title='Marca'><?= $consultexistencia[$i]['marca'] ?></td>
                     <td data-title='Cantidad'><?= $consultexistencia[$i]['SumaDecantidad'] ?></td>
-                    <td data-title='Precio'><?= $consultexistencia[$i]['precio'] ?></td>
+                    <td data-title='Precio'>$ <?= number_format($consultexistencia[$i]['precio']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>

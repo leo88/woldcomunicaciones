@@ -30,7 +30,7 @@
 		 */
 		function consultar_st()
 		{
-			$sql = "SELECT * FROM csst";
+			$sql = "SELECT * FROM csst ORDER BY numero_orden desc";
 			return $this->SeleccionDatos($sql);
 		}
 		/*
@@ -38,7 +38,7 @@
 		 */
 		function consultar_stentregado()
 		{
-			$sql = "SELECT * FROM csdiatotalstentreg";
+			$sql = "SELECT * FROM tbservicioentregado ORDER BY numero_orden DESC";
 			return $this->SeleccionDatos($sql);
 		}
 		/*

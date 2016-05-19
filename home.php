@@ -74,8 +74,8 @@
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Servicio Técnico
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
-      						<li><a href="home.php?pag=16">Registro del Servicio</a></li>
-      						<li><a href="home.php?pag=25">Servicio Tecnico Entregado</a></li>
+      						<li><a href="home.php?pag=13">Registro del Servicio</a></li>
+      						<li><a href="home.php?pag=15">Servicio Tecnico Entregado</a></li>
       					</ul>
       				</li>
       				<?php if ($perfil=='Administrador'): ?>
@@ -104,7 +104,7 @@
       						<li><a href="home.php?pag=29">Contabilidad</a></li>
       						<?php endif ?> 
       						<li><a href="home.php?pag=34">Existencia</a></li>
-      						<li><a href="home.php?pag=31">Servicio Técnico</a></li>
+      						<li><a href="home.php?pag=35">Servicio Técnico</a></li>
       					</ul>
       				</li> 
       				<li><a href="vista/vcreditos"><span class="glyphicon glyphicon-fire"></a></li>
@@ -254,6 +254,10 @@
       {
                 include("vista/vcsexistencia.php");
       }
+      if ($page == 35) 
+      {
+                include("vista/vcsst.php");
+      }
 		?>
     </div>
     <!--Script para control de la tabla-->
@@ -270,5 +274,26 @@
 				    } );
 				} );	
 			</script>	
+
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $('table.display').DataTable({
+            responsive: true,
+            "language": {
+            "lengthMenu": "Mostrar _MENU_ registros por página",
+            "zeroRecords": "No hay registros",
+            "info": "Mostrando Página _PAGE_ de _PAGES_",
+            "infoEmpty": "No existen registros para mostrar",
+            "search": "Buscar:",
+            "paginate": {
+              "first": "Primero",
+              "last": "Ultimo",
+              "next": "Siguiente",
+              "previous": "Anterior"
+             }
+           }
+          });
+        } );
+      </script>
 </body>
 </html>
