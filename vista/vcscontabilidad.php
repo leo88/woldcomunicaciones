@@ -88,6 +88,7 @@
            <?php for($i=0;$i<count($consultadiasale);$i++): ?>
                 <tr>
                     <td data-title='Fecha'><?= $consultadiasale[$i]['fecha'] ?></td>
+                    <td data-title='Costo Servicio Técnico'><?= number_format($consultadiasale[$i]['VAL_NEGATIVO']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
