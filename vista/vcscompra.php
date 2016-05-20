@@ -51,8 +51,8 @@ $consultacompratotal = $compra->consultar_compratotal();
          
 <!--Inicio Compra por Producto-->
 <div class="row-fluid">
-<input type="checkbox"  id="spoiler2" /> 
-<label for="spoiler2" >Compra por Producto</label>
+<input type="checkbox"  id="spoiler3" /> 
+<label for="spoiler3" >Compra por Producto</label>
 <div class="spoiler">
 <div class="info"> 
             
@@ -92,14 +92,10 @@ $consultacompratotal = $compra->consultar_compratotal();
  
 <!--Inicio Compra Total-->
 <div class="row-fluid">
-<input type="checkbox"  id="spoiler2" /> 
-<label for="spoiler2" >Compra Total</label>
+<input type="checkbox"  id="spoiler4" /> 
+<label for="spoiler4" >Compra Total</label>
 <div class="spoiler">
-<div class="info">       
-    
-<div class="container-fluid lol">
-<div class="eti">Compra Total</div>
-</div>  
+<div class="info">  
 
 	<table id="" class="display" cellspacing="0" width="100%">
 	   <thead>
