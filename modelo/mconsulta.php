@@ -190,7 +190,7 @@
 		 */
 		function consultar_ventaproducto()
 		{
-			$sql = "SELECT * FROM csventaproducto";
+			$sql = "SELECT * FROM csventaproductos";
 			return $this->SeleccionDatos($sql);
 		}
 		/*

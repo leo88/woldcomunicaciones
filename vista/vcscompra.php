@@ -13,7 +13,7 @@ $consultacompratotal = $compra->consultar_compratotal();
 <!--Inicio Compra-->
 <div class="row-fluid">
 <input type="checkbox"  id="spoiler2" /> 
-<label for="spoiler2" >Compra</label>
+<label for="spoiler2" >Informe Compra</label>
 <div class="spoiler">
 <div class="info">
 
@@ -52,14 +52,14 @@ $consultacompratotal = $compra->consultar_compratotal();
 <!--Inicio Compra por Producto-->
 <div class="row-fluid">
 <input type="checkbox"  id="spoiler3" /> 
-<label for="spoiler3" >Compra por Producto</label>
+<label for="spoiler3" >Informe Compra por Producto</label>
 <div class="spoiler">
 <div class="info"> 
             
 <table id="" class="display" cellspacing="0" width="100%">
 	   <thead>
             <tr>
-                <th colspan="12">Compra por Producto</th>
+                <th colspan="12">Compras por Producto</th>
             </tr>
             <tr>
                 <th>No. Compra</th>
@@ -77,9 +77,9 @@ $consultacompratotal = $compra->consultar_compratotal();
                     <td data-title='No. Compra'><?= $consultacompraproductos[$i]['numero_compra'] ?></td>
                     <td data-title='Referencia'><?= $consultacompraproductos[$i]['referencia'] ?></td>
                     <td data-title='Nombre'><?= $consultacompraproductos[$i]['nombre'] ?></td>
-                    <td data-title='Valor'><?= $consultacompraproductos[$i]['valor'] ?></td>
+                    <td data-title='Valor'>$ <?= number_format($consultacompraproductos[$i]['valor']) ?></td>
                     <td data-title='Cantidad'><?= $consultacompraproductos[$i]['cantidad'] ?></td>
-                    <td data-title='Subtotal'><?= $consultacompraproductos[$i]['SUBTOTAL'] ?></td>
+                    <td data-title='Subtotal'>$ <?= number_format($consultacompraproductos[$i]['SUBTOTAL']) ?></td>
                     <td data-title='Moviento'><?= $consultacompraproductos[$i]['idmovimiento'] ?></td>
                 </tr>
             <?php endfor; ?>
@@ -93,19 +93,19 @@ $consultacompratotal = $compra->consultar_compratotal();
 <!--Inicio Compra Total-->
 <div class="row-fluid">
 <input type="checkbox"  id="spoiler4" /> 
-<label for="spoiler4" >Compra Total</label>
+<label for="spoiler4" >Informe Total Compra</label>
 <div class="spoiler">
 <div class="info">  
 
 	<table id="" class="display" cellspacing="0" width="100%">
 	   <thead>
             <tr>
-                <th colspan="12">Compra Total</th>
+                <th colspan="12">Compras Totales</th>
             </tr>
             <tr>
                 <th>No. Compra</th>
                 <th>Fecha</th>
-                <th>Proveedor</th>
+                <th>Total</th>
             </tr>
         </thead>
         <tbody>
@@ -113,7 +113,7 @@ $consultacompratotal = $compra->consultar_compratotal();
                 <tr>
                     <td data-title='No. Compra'><?= $consultacompratotal[$i]['numero_compra'] ?></td>
                     <td data-title='Fecha'><?= $consultacompratotal[$i]['fecha'] ?></td>
-                    <td data-title='Proveedor'><?= $consultacompratotal[$i]['SumaDeSUBTOTAL'] ?></td>
+                    <td data-title='Total'>$ <?= number_format($consultacompratotal[$i]['SumaDeSUBTOTAL']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>

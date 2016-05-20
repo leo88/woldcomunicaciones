@@ -4,10 +4,9 @@
     include('modelo/mconsulta.php'); 
     $existencia = new Mconsulta();
 ?>
-<div class="container-fluid lol">
-<div class="eti">Existencia</div>
 
-</div>
+<div class="etinfo">Informe Existencia</div>
+
 <?php $consultexistencia = $existencia->consultar_existencia(); ?>
 	<table id="" class="display" cellspacing="0" width="100%">
 	   <thead>

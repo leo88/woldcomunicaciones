@@ -11,7 +11,7 @@
     margin-bottom: 2px;
     margin-top: 2px;
 }
-.eti {
+.eti, .etinfo {
     width: 100%;
     text-align: center;
     color: #FFF;
@@ -19,6 +19,12 @@
     font-weight: bolder;  
     margin-bottom: 3%;
     border-radius: 12px;
+}
+.etinfo {  
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background-color: #4DB2C6;
+    border-radius: 0px;
 }
 .lol {
     background-color: #4DB2C6;

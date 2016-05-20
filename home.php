@@ -100,7 +100,7 @@
       						<?php if ($perfil=='Administrador'): ?>
       						<li><a href="home.php?pag=36">Compras</a></li>
       						<li><a href="home.php?pag=37">Ventas</a></li>
-      						<li><a href="home.php?pag=38">Devolucion y reposición</a></li>
+      						<li><a href="home.php?pag=38">Devolucion</a></li>
       						<li><a href="home.php?pag=39">Contabilidad</a></li>
       						<?php endif ?> 
       						<li><a href="home.php?pag=34">Existencia</a></li>
@@ -268,7 +268,7 @@
       }
       if ($page == 38) 
       {
-                include("vista/vcsdevorepo.php");
+                include("vista/vcsdevolucion.php");
       }
       if ($page == 39) 
       {
