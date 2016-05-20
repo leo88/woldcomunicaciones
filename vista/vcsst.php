@@ -7,7 +7,8 @@
 <div class="eti">Servicio Técnico</div>
 </div>
 <?php $consultast = $st->consultar_st(); 
-    $consultaservicioentregado = $st->consultar_stentregado(); 
+    $consultaservicioentregado = $st->consultar_stentregado();
+    $consultasstdia = $st->consultar_stdia(); 
 ?>
     <table id="" class="display" cellspacing="0" width="100%">
 	    <thead>
@@ -67,7 +68,57 @@
             <?php endfor; ?>
         </tbody>
 
-    </table>    
+    </table>
+<div class="container-fluid lol">
+<div class="eti">Servicio Técnico Total por Día</div>
+</div>
+     <table id="" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="12">Listado de Servicio Técnico por Día</th>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <th>Costo Servico Técnico</th>
+                <th>Abono</th>
+            </tr>
+        </thead>
+        <tbody>
+           <?php for($i=0;$i<count($consultasstdia);$i++): ?>
+                <tr>
+                    <td data-title='Fecha'><?= $consultasstdia[$i]['fecha'] ?></td>
+                    <td data-title='Costo Servicio Técnico'><?= number_format($consultasstdia[$i]['costo_st']) ?></td>
+                    <td data-title='Abono'>$ <?= $consultasstdia[$i]['abono'] ?></td>
+                </tr>
+            <?php endfor; ?>
+        </tbody>
+
+    </table>      
+<div class="container-fluid lol">
+<div class="eti">Servicio Técnico Entregado Total por Día</div>
+</div>
+     <table id="" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="12">Listado de Servicio Técnico Entregado por Día</th>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <th>Costo Servico Técnico</th>
+                <th>Abono</th>
+            </tr>
+        </thead>
+        <tbody>
+           <?php for($i=0;$i<count($consultasstdia);$i++): ?>
+                <tr>
+                    <td data-title='Fecha'><?= $consultasstdia[$i]['fecha'] ?></td>
+                    <td data-title='Costo Servicio Técnico'><?= number_format($consultasstdia[$i]['costo_st']) ?></td>
+                    <td data-title='Abono'>$ <?= $consultasstdia[$i]['abono'] ?></td>
+                </tr>
+            <?php endfor; ?>
+        </tbody>
+
+    </table>          
     </div>
 
     </div><!--/row-->
