@@ -84,10 +84,41 @@
 		/*
 		 *función para la consulta de los datos de la consulta otros por dia
 		 */
-		function consultar_cdiatotalotros()
+		function consultar_diatotalotros()
 		{
 			$sql = "SELECT * FROM csdiatotalotros";
 			return $this->SeleccionDatos($sql);
 		}
-		
+		/*
+		 *función para la consulta de los datos de la consulta servico tecnico por dia
+		 */
+		function consultar_diatotalst()
+		{
+			$sql = "SELECT * FROM csdiatotalst";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la consulta servico tecnico entregado por dia
+		 */
+		function consultar_diatotalstentreg()
+		{
+			$sql = "SELECT * FROM csdiatotalstentreg";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la consulta servico tecnico por mes
+		 */
+		function consultar_mestotalst()
+		{
+			$sql = "SELECT * FROM csmestotalst";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la consulta servico tecnico entregado por mes
+		 */
+		function consultar_mestotalstentreg()
+		{
+			$sql = "SELECT * FROM csmestotalstentreg";
+			return $this->SeleccionDatos($sql);
+		}
 	}
