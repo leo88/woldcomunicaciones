@@ -98,7 +98,7 @@
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
       						<?php if ($perfil=='Administrador'): ?>
-      						<li><a href="home.php?pag=9">Compras</a></li>
+      						<li><a href="home.php?pag=36">Compras</a></li>
       						<li><a href="home.php?pag=9">Ventas</a></li>
       						<li><a href="home.php?pag=29">Devolucion y reposición</a></li>
       						<li><a href="home.php?pag=29">Contabilidad</a></li>
@@ -246,10 +246,10 @@
 			{
                 include("vista/vacturecargas.php");
 			}
-      if ($page == 33) 
-      {
+            if ($page == 33) 
+            {
                 include("vista/vusuario.php");
-      }
+            }
       if ($page == 34) 
       {
                 include("vista/vcsexistencia.php");
@@ -257,6 +257,10 @@
       if ($page == 35) 
       {
                 include("vista/vcsst.php");
+      }
+      if ($page == 36) 
+      {
+                include("vista/vcscompra.php");
       }
 		?>
     </div>
