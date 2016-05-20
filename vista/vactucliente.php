@@ -12,11 +12,11 @@
             <input type="hidden" name="actu" value="actu">
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
-			<label for="">Telefono:</label>
+			<label for="">Teléfono:</label>
             <input type="text" class="form-control" name="telefono" value="<?= $consultaedit[0]['telefono']  ?>" pattern="[0-9]{7,20}" title="Solo se permiten telefonos validos, minimo desde 7 numeros y máximo 20 caracteres">
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
-			<label for="">Direccion:</label>
+			<label for="">Dirección:</label>
             <input type="text" class="form-control" name="direccion" value="<?= $consultaedit[0]['direccion']  ?>" maxlength="50">
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
@@ -25,11 +25,11 @@
 		</div>		
 		<div class="form-group col-md-6 col-lg-6">
 			<label for=""><span style="color:red;">* </span>Detalle:</label>
-            <input class="form-control" type=text  list=descripcion name="detalle" value="<?= $consultaedit[0]['detalle'] ?>" placeholder="Se define si es cliente">
-                <datalist id="descripcion">
-                   <option> Cliente</option>
-                   <option> Transpaso</option>
-                </datalist>        
+            <select name="detalle" class="form-control" required>
+                    <option value="<?= $consultaedit[0]['detalle'] ?>" selected><?= $consultaedit[0]['detalle'] ?></option>
+                    <option value="1">Cliente</option>
+                    <option value="2">Local</option>
+            </select>        
 		</div>	
 		<div class="form-group col-md-6 col-lg-6"><br>
             <input type="submit" class="btn btn-success" value="Editar">

@@ -20,7 +20,7 @@
             <label for=""><span style="color:red;">* </span>Valor:</label>
             <input type="number" class="form-control" name="valor" value="<?php if($consultaedit[0]['salida_total'] == 0){
             	echo $consultaedit[0]['entrada_total'];
-            	}else{echo $consultaedit[0]['salida_total']; }?>" pattern="[0-9]{0,11}" title="Solo se permiten valores reales" required>       
+            	}else{echo $consultaedit[0]['salida_total']; }?>" pattern="[0-9]{0,11}" min="0" title="Solo se permiten valores reales" required>       
 		</div>
 		
 		 <div class="form-group col-sm-6 col-md-6 col-lg-6">

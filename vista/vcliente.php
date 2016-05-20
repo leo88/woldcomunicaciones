@@ -26,7 +26,7 @@
             <select name="detalle" class="form-control" required>
                     <option value="">Seleccione una Opción</option>
                     <option value="1" selected>Cliente</option>
-                    <option value="2">Traspaso</option>
+                    <option value="2">Local</option>
             </select>         
 		</div>
 		 <div class="form-group campo"> <br>          		
