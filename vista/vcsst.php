@@ -3,16 +3,19 @@
     include('modelo/mconsulta.php'); 
     $st = new Mconsulta();
 ?>
-<div class="container-fluid lol">
-<div class="eti">Servicio Técnico</div>
-</div>
-<?php $consultast = $st->consultar_st(); 
-    $consultaservicioentregado = $st->consultar_stentregado();
-    $consultasstdia = $st->consultar_diatotalst();
-    $consultasstentregadodia = $st->consultar_diatotalstentreg(); 
-    $consultasstmes = $st->consultar_mestotalst(); 
-    $consultasstentregadomes = $st->consultar_mestotalstentreg();
+<?php $consultast               = $st->consultar_st(); 
+    $consultaservicioentregado  = $st->consultar_stentregado();
+    $consultasstdia             = $st->consultar_diatotalst();
+    $consultasstentregadodia    = $st->consultar_diatotalstentreg(); 
+    $consultasstmes             = $st->consultar_mestotalst(); 
+    $consultasstentregadomes    = $st->consultar_mestotalstentreg();
 ?>
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler2" /> 
+<label for="spoiler2" >Informe Servicio técnico</label>
+<div class="spoiler">
+<div class="info">
+
     <table id="" class="display" cellspacing="0" width="100%">
 	    <thead>
             <tr>
@@ -47,13 +50,19 @@
             <?php endfor; ?>
         </tbody>
     </table>	
-<div class="container-fluid lol">
-<div class="eti">Servicio Técnico Entregado</div>
 </div>
+</div>
+</div>
+
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler3" /> 
+<label for="spoiler3" >Informe Servicio Técnico Entregado</label>
+<div class="spoiler">
+<div class="info"> 
      <table id="" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
-                <th colspan="3">Listado de Servicio T. Entregado</th>
+                <th colspan="12">Listado de Servicio T. Entregado</th>
             </tr>
             <tr>
                 <th>No. Orden</th>
@@ -72,9 +81,15 @@
         </tbody>
 
     </table>
-<div class="container-fluid lol">
-<div class="eti">Servicio Técnico Total por Día</div>
 </div>
+</div>
+</div>
+
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler4" /> 
+<label for="spoiler4" >Informe Servicio Técnico por Día</label>
+<div class="spoiler">
+<div class="info">  
      <table id="" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -91,15 +106,20 @@
                 <tr>
                     <td data-title='Fecha'><?= $consultasstdia[$i]['fecha'] ?></td>
                     <td data-title='Costo Servicio Técnico'><?= number_format($consultasstdia[$i]['costo_st']) ?></td>
-                    <td data-title='Abono'>$ <?= $consultasstdia[$i]['abono'] ?></td>
+                    <td data-title='Abono'>$ <?= number_format($consultasstdia[$i]['abono'] )?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
-
-    </table>      
-<div class="container-fluid lol">
-<div class="eti">Servicio Técnico Entregado Total por Día</div>
+    </table>  
 </div>
+</div>
+</div>   
+
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler5" /> 
+<label for="spoiler5" >Informe Servicio Técnico Entregado por Día</label>
+<div class="spoiler">
+<div class="info">  
      <table id="" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -118,11 +138,16 @@
                 </tr>
             <?php endfor; ?>
         </tbody>
-
-    </table>          
-<div class="container-fluid lol">
-<div class="eti">Servicio Técnico Total por Mes</div>
+    </table>  
 </div>
+</div>
+</div>  
+
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler6" /> 
+<label for="spoiler6" >Informe Servicio Técnico por Mes</label>
+<div class="spoiler">
+<div class="info">
      <table id="" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -145,11 +170,16 @@
                 </tr>
             <?php endfor; ?>
         </tbody>
-
     </table> 
-<div class="container-fluid lol">
-<div class="eti">Servicio Técnico Entregado Total por Mes</div>
 </div>
+</div>
+</div>
+
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler7" /> 
+<label for="spoiler7" >Informe Servicio Técnico Entregado por Mes</label>
+<div class="spoiler">
+<div class="info">  
      <table id="" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
@@ -170,9 +200,7 @@
                 </tr>
             <?php endfor; ?>
         </tbody>
-
     </table>                   
-    </div>
-
-    </div><!--/row-->
-<br/><br/>
+</div>
+</div>
+</div>     
