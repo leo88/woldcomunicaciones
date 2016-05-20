@@ -24,9 +24,9 @@
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Detalle:</label>
             <select name="detalle" class="form-control" required>
-                    <option value="Cliente">Seleccione una Opción</option>
-                    <option value="Cliente">Cliente</option>
-                    <option value="Traspaso">Traspaso</option>
+                    <option value="">Seleccione una Opción</option>
+                    <option value="1" selected>Cliente</option>
+                    <option value="2">Traspaso</option>
             </select>         
 		</div>
 		 <div class="form-group campo"> <br>          		
