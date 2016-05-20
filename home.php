@@ -99,9 +99,9 @@
       					<ul class="dropdown-menu">
       						<?php if ($perfil=='Administrador'): ?>
       						<li><a href="home.php?pag=36">Compras</a></li>
-      						<li><a href="home.php?pag=9">Ventas</a></li>
-      						<li><a href="home.php?pag=29">Devolucion y reposición</a></li>
-      						<li><a href="home.php?pag=29">Contabilidad</a></li>
+      						<li><a href="home.php?pag=37">Ventas</a></li>
+      						<li><a href="home.php?pag=38">Devolucion y reposición</a></li>
+      						<li><a href="home.php?pag=39">Contabilidad</a></li>
       						<?php endif ?> 
       						<li><a href="home.php?pag=34">Existencia</a></li>
       						<li><a href="home.php?pag=35">Servicio Técnico</a></li>
@@ -261,6 +261,18 @@
       if ($page == 36) 
       {
                 include("vista/vcscompra.php");
+      }
+      if ($page == 37) 
+      {
+                include("vista/vcsventa.php");
+      }
+      if ($page == 38) 
+      {
+                include("vista/vcsdevorepo.php");
+      }
+      if ($page == 39) 
+      {
+                include("vista/vcscontabilidad.php");
       }
 		?>
     </div>
