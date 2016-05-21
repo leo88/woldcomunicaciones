@@ -3,12 +3,14 @@
     include('modelo/mconsulta.php'); 
     $contabilidad = new Mconsulta();
 ?>
-<?php $consultadiaotros = $contabilidad->consultar_diatotalotros(); 
-    $consultadiaentra   = $contabilidad->consultar_totalentradia();
-    $consultadiasale    = $contabilidad->consultar_totalsaledia();
-    $consultamesotros   = $contabilidad->consultar_mestotalotros(); 
-    $consultamesentra   = $contabilidad->consultar_mestotalentra(); 
-    $consultamessale    = $contabilidad->consultar_mestotalsale();
+<?php $consultadiaotros     = $contabilidad->consultar_diatotalotros(); 
+    $consultadiaentra       = $contabilidad->consultar_totalentradia();
+    $consultadiasale        = $contabilidad->consultar_totalsaledia();
+    $consultadiautilidad    = $contabilidad->consultar_utilidadtotaldia(); 
+    $consultamesotros       = $contabilidad->consultar_mestotalotros(); 
+    $consultamesentra       = $contabilidad->consultar_mestotalentra(); 
+    $consultamessale        = $contabilidad->consultar_mestotalsale();
+    $consultamesutilidad    = $contabilidad->consultar_utilidadtotalmes();
 ?>
 <div class="row-fluid">
 <input type="checkbox"  id="spoiler2" /> 
@@ -88,7 +90,7 @@
            <?php for($i=0;$i<count($consultadiasale);$i++): ?>
                 <tr>
                     <td data-title='Fecha'><?= $consultadiasale[$i]['fecha'] ?></td>
-                    <td data-title='Costo Servicio Técnico'><?= number_format($consultadiasale[$i]['VAL_NEGATIVO']) ?></td>
+                    <td data-title='Costo Servicio Técnico'>$ <?= number_format($consultadiasale[$i]['VAL_NEGATIVO']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
@@ -99,7 +101,35 @@
 
 <div class="row-fluid">
 <input type="checkbox"  id="spoiler5" /> 
-<label for="spoiler5" >Informe Ingresos y Egresos varios por Mes</label>
+<label for="spoiler5" >Informe Utilidad por Día</label>
+<div class="spoiler">
+<div class="info">  
+     <table id="" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="12">Listado de la Utilidad por Día</th>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <th>Utilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+           <?php for($i=0;$i<count($consultadiautilidad);$i++): ?>
+                <tr>
+                    <td data-title='Fecha'><?= $consultadiautilidad[$i]['fecha'] ?></td>
+                    <td data-title='Utilidad'>$ <?= number_format($consultadiautilidad[$i]['UTILIDADDIA']) ?></td>
+                </tr>
+            <?php endfor; ?>
+        </tbody>
+    </table>                   
+</div>
+</div>
+</div>     
+
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler6" /> 
+<label for="spoiler6" >Informe Ingresos y Egresos varios por Mes</label>
 <div class="spoiler">
 <div class="info">  
      <table id="" class="display" cellspacing="0" width="100%">
@@ -119,8 +149,8 @@
                 <tr>
                     <td data-title='Mes'><?= $consultamesotros[$i]['Mes'] ?></td>
                     <td data-title='Año'><?= $consultamesotros[$i]['year'] ?></td>
-                    <td data-title='Egresos'><?= number_format($consultamesotros[$i]['MESTOTALSALIDA']) ?></td>
-                    <td data-title='Ingresos'><?= number_format($consultamesotros[$i]['MESTOTALENTRA']) ?></td>
+                    <td data-title='Egresos'>$ <?= number_format($consultamesotros[$i]['MESTOTALSALIDA']) ?></td>
+                    <td data-title='Ingresos'>$ <?= number_format($consultamesotros[$i]['MESTOTALENTRA']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
@@ -130,8 +160,8 @@
 </div>  
 
 <div class="row-fluid">
-<input type="checkbox"  id="spoiler6" /> 
-<label for="spoiler6" >Informe Ingresos totales por Mes</label>
+<input type="checkbox"  id="spoiler7" /> 
+<label for="spoiler7" >Informe Ingresos totales por Mes</label>
 <div class="spoiler">
 <div class="info">
      <table id="" class="display" cellspacing="0" width="100%">
@@ -150,7 +180,7 @@
                 <tr>
                     <td data-title='Mes'><?= $consultamesentra[$i]['Mes'] ?></td>
                     <td data-title='Año'><?= $consultamesentra[$i]['year'] ?></td>
-                    <td data-title='Ingresos'><?= number_format($consultamesentra[$i]['TOTALMESENTRA']) ?></td>
+                    <td data-title='Ingresos'>$ <?= number_format($consultamesentra[$i]['TOTALMESENTRA']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
@@ -160,8 +190,8 @@
 </div>
 
 <div class="row-fluid">
-<input type="checkbox"  id="spoiler7" /> 
-<label for="spoiler7" >Informe Egresos totales por Mes</label>
+<input type="checkbox"  id="spoiler8" /> 
+<label for="spoiler8" >Informe Egresos totales por Mes</label>
 <div class="spoiler">
 <div class="info">  
      <table id="" class="display" cellspacing="0" width="100%">
@@ -180,7 +210,7 @@
                 <tr>
                     <td data-title='Mes'><?= $consultamessale[$i]['Mes'] ?></td>
                     <td data-title='Año'><?= $consultamessale[$i]['year'] ?></td>
-                    <td data-title='Costo Servico'><?= number_format($consultamessale[$i]['TOTALMESSALE']) ?></td>
+                    <td data-title='Costo Servico'>$ <?= number_format($consultamessale[$i]['TOTALMESSALE']) ?></td>
                 </tr>
             <?php endfor; ?>
         </tbody>
@@ -188,3 +218,33 @@
 </div>
 </div>
 </div>     
+
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler9" /> 
+<label for="spoiler9" >Informe Utilidad total por Mes</label>
+<div class="spoiler">
+<div class="info">
+     <table id="" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="12">Listado Utilidad total por Mes</th>
+            </tr>
+            <tr>
+                <th>Mes</th>
+                <th>Año</th>
+                <th>Utilidad</th>
+            </tr>
+        </thead>
+        <tbody>
+           <?php for($i=0;$i<count($consultamesutilidad);$i++): ?>
+                <tr>
+                    <td data-title='Mes'><?= $consultamesutilidad[$i]['Mes'] ?></td>
+                    <td data-title='Año'><?= $consultamesutilidad[$i]['year'] ?></td>
+                    <td data-title='Ingresos'>$ <?= number_format($consultamesutilidad[$i]['UTILIDADTOTALMES']) ?></td>
+                </tr>
+            <?php endfor; ?>
+        </tbody>
+    </table> 
+</div>
+</div>
+</div>

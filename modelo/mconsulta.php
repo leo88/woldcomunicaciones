@@ -201,4 +201,20 @@
 			$sql = "SELECT * FROM csventatotal";
 			return $this->SeleccionDatos($sql);
 		}
+		/*
+		 *función para la consulta de los datos de la consulta Utilidad por dia
+		 */
+		function consultar_utilidadtotaldia()
+		{
+			$sql = "SELECT * FROM csutilidadtotaldia";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la consulta Utilidad por mes
+		 */
+		function consultar_utilidadtotalmes()
+		{
+			$sql = "SELECT * FROM csutilidadtotalmes";
+			return $this->SeleccionDatos($sql);
+		}
 	}
