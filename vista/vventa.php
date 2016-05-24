@@ -58,9 +58,6 @@
 					<td><?= $consultaventa[$j]['fecha'] ?></td>
 					<td><?= $empleado1[0]['nombre'] ?></td>
 					<!--<td><a href="home.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></td>-->
-					<td method="POST">
-						<a href="home.php?pag=40&idprint=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Imprimir <span class="glyphicon glyphicon-print"></span></a>
-					</td>
 				</tr>
 			<?php endfor; ?>
 		</tbody>
@@ -186,8 +183,8 @@
         </tbody>
 						</table>
 					</div>
-		<div class="col-lg-3 col-md-offset-8">
-			<a href="home.php?pag=34&idprint=<?= $consultaventaproduc[$i]['numero_venta'] ?>&idprint=<?= $consultaventa[$j]['numero_venta']?>" class="btn btn-primary">Imprimir <span class="glyphicon glyphicon-print"></span></a>
+		<div class="col-lg-3 col-md-offset-6">
+			<a href="home.php?pag=40" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
 		</div>
 		        </div>
 <!-- final ventaxproducto -->	           	        	        
