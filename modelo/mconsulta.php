@@ -217,4 +217,28 @@
 			$sql = "SELECT * FROM csutilidadtotalmes";
 			return $this->SeleccionDatos($sql);
 		}
+		/*
+		 *función para la consulta de los datos de la tbventa
+		 */
+		function consultar_venta_id()
+		{
+			$sql = "SELECT * FROM csventa ORDER BY numero_venta desc limit 1";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la tbventa productos
+		 */
+		function consultar_ventaproducto_id($idventa)
+		{
+			$sql = "SELECT * FROM csventaproductos WHERE numero_venta = '$idventa'";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la tbventa total
+		 */
+		function consultar_ventatotal_id($idventa)
+		{
+			$sql = "SELECT * FROM csventatotal WHERE numero_venta = '$idventa'";
+			return $this->SeleccionDatos($sql);
+		}
 	}

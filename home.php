@@ -274,6 +274,10 @@
       {
                 include("vista/vcscontabilidad.php");
       }
+      if ($page == 40) 
+      {
+                include("vista/vrecibo.php");
+      }
 		?>
     </div>
     <!--Script para control de la tabla-->
