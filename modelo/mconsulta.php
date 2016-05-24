@@ -241,4 +241,17 @@
 			$sql = "SELECT * FROM csventatotal WHERE numero_venta = '$idventa'";
 			return $this->SeleccionDatos($sql);
 		}
+		/*
+		 *función para la consulta de los datos Servicio tecnico y st entregado
+		 */
+		function consultar_stcomparativo()
+		{
+			$sql = "SELECT tbserviciotecnico.numero_orden AS `numero_orden`, tbserviciotecnico.nombre AS `nombre`,tbserviciotecnico.marca AS `marca`,
+			tbserviciotecnico.referencia AS `referencia`, tbserviciotecnico.descripcion_st AS `descripcion_st`,tbserviciotecnico.observacion AS 
+			`observacion`,tbserviciotecnico.precio_cliente AS `precio_cliente`,tbserviciotecnico.fecha AS `fecha`,tbserviciotecnico.id_cliente AS 
+			`id_cliente`,tbserviciotecnico.empleado AS `empleado`,tbserviciotecnico.abono AS `abono`,(tbserviciotecnico.precio_cliente - tbserviciotecnico.abono) 
+			AS `saldo_pendiente`, tbservicioentregado.fecha AS fecha_cancel, tbservicioentregado.saldo_cancel AS saldo_cancelado from tbserviciotecnico LEFT JOIN 
+			tbservicioentregado ON tbserviciotecnico.numero_orden = tbservicioentregado.numero_orden ORDER BY tbserviciotecnico.numero_orden";
+			return $this->SeleccionDatos($sql);
+		}
 	}

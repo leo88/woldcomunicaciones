@@ -3,8 +3,7 @@
     include('modelo/mconsulta.php'); 
     $st = new Mconsulta();
 ?>
-<?php $consultast               = $st->consultar_st(); 
-    $consultaservicioentregado  = $st->consultar_stentregado();
+<?php $consultast               = $st->consultar_stcomparativo(); 
     $consultasstdia             = $st->consultar_diatotalst();
     $consultasstentregadodia    = $st->consultar_diatotalstentreg(); 
     $consultasstmes             = $st->consultar_mestotalst(); 
@@ -29,9 +28,11 @@
                 <th>Descripción</th>
                 <th>Observación</th>
                 <th>Precio Cliente</th>
-                <th>Fecha</th>
+                <th>Fecha Recibido</th>
                 <th>Abono</th>
                 <th>Saldo Pendiente</th>
+                <th>Fecha Despachado</th>
+                <th>Saldo Cancelado</th>
             </tr>
         </thead>
         <tbody>
@@ -46,41 +47,12 @@
                     <td data-title='Precio al cliente'>$ <?= number_format($consultast[$i]['precio_cliente']) ?></td>
                     <td data-title='Fecha'><?= $consultast[$i]['fecha'] ?></td>
                     <td data-title='Abono'>$ <?= number_format($consultast[$i]['abono']) ?></td>
-                    <td data-title='Saldo pendiente'>$ <?= number_format($consultast[$i]['SALDO_PENDIENTE']) ?></td>
+                    <td data-title='Saldo pendiente'>$ <?= number_format($consultast[$i]['saldo_pendiente']) ?></td>
+                    <td data-title='Fecha'><?= $consultast[$i]['fecha_cancel'] ?></td>
+                    <td data-title='Saldo cancelado'>$ <?= number_format($consultast[$i]['saldo_cancelado']) ?></td>
             <?php endfor; ?>
         </tbody>
     </table>	
-</div>
-</div>
-</div>
-
-<div class="row-fluid">
-<input type="checkbox"  id="spoiler3" /> 
-<label for="spoiler3" >Informe Servicio Técnico Entregado</label>
-<div class="spoiler">
-<div class="info"> 
-     <table id="" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th colspan="12">Listado de Servicio T. Entregado</th>
-            </tr>
-            <tr>
-                <th>No. Orden</th>
-                <th>Fecha</th>
-                <th>Saldo Cancelado</th>
-            </tr>
-        </thead>
-        <tbody>
-           <?php for($i=0;$i<count($consultaservicioentregado);$i++): ?>
-                <tr>
-                    <td data-title='No. Orden'><?= $consultaservicioentregado[$i]['numero_orden'] ?></td>
-                    <td data-title='Fecha'><?= $consultaservicioentregado[$i]['fecha'] ?></td>
-                    <td data-title='Saldo Cancelado'>$ <?= number_format($consultaservicioentregado[$i]['saldo_cancel']) ?></td>
-                </tr>
-            <?php endfor; ?>
-        </tbody>
-
-    </table>
 </div>
 </div>
 </div>
