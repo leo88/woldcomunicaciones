@@ -1,7 +1,7 @@
 <?php
 
 	/*  
-        *   @Version: V3 20/05/16
+        *   @Version: V4 25/05/16
     */
 
 	include('controlador/conexion.php');
@@ -252,6 +252,14 @@
 			`id_cliente`,tbserviciotecnico.empleado AS `empleado`,tbserviciotecnico.abono AS `abono`,(tbserviciotecnico.precio_cliente - tbserviciotecnico.abono) 
 			AS `saldo_pendiente`, tbservicioentregado.fecha AS fecha_cancel, tbservicioentregado.saldo_cancel AS saldo_cancelado from tbserviciotecnico LEFT JOIN 
 			tbservicioentregado ON tbserviciotecnico.numero_orden = tbservicioentregado.numero_orden ORDER BY tbserviciotecnico.numero_orden";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la tbservicio tecnico
+		 */
+		function consultar_st_id()
+		{
+			$sql = "SELECT * FROM csst ORDER BY numero_orden desc limit 1";
 			return $this->SeleccionDatos($sql);
 		}
 	}

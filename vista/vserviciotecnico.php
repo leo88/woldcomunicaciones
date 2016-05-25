@@ -62,6 +62,7 @@
 		</div>
 		 <div class="form-group col-sm-6 col-md-4 col-lg-4"> <br>  
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-ok"></span></button>
+            <a href="home.php?pag=43" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
         </div>
 	</form>
 </div>

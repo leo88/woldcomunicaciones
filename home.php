@@ -286,6 +286,10 @@
       {
                 include("vista/prosesbarcode.php");
       }
+      if ($page == 43) 
+      {
+                include("vista/vtiquete.php");
+      }
 		?>
     </div>
     <!--Script para control de la tabla-->
