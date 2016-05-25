@@ -2,20 +2,19 @@
     include('modelo/mconsulta.php'); 
     $venta = new Mconsulta();
 ?>
-
+<link rel="stylesheet" href="css/impreso.css"/>
+<link rel="stylesheet" href="css/impreso.css" media="print"/>
 <?php 
 $consultaventa          = $venta->consultar_venta_id();
 $idprint                = $consultaventa[0]['numero_venta'];
 $consultaventaproducto  = $venta->consultar_ventaproducto_id($idprint);
 $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
-echo $idprint;
+//echo $idprint;
 
 ?>
-    <table id=""  cellspacing="0" width="100%">
-       <thead>
-            <tr>
-                <th colspan="12">Ventas</th>
-            </tr>
+   <div id="logo">WOLD COMUNICACIONES</div>
+    <table id="encabezado"  cellspacing="0" width="100%">
+       <!-- <thead>
             <tr>
                 <th>No. venta</th>
                 <th>Fecha</th>
@@ -23,21 +22,21 @@ echo $idprint;
                 <th>Cliente</th>
                 <th>Detalle</th>
             </tr>
-        </thead>
+        </thead>-->
         <tbody>
             <?php for($i=0;$i<count($consultaventa);$i++): ?>
                 <tr>
-                    <td data-title='No. venta'><?= $consultaventa[$i]['numero_venta'] ?></td>
-                    <td data-title='Fecha'><?= $consultaventa[$i]['fecha'] ?></td>
-                    <td data-title='Empleado'><?= $consultaventa[$i]['empleado'] ?></td>
-                    <td data-title='Cliente'><?= $consultaventa[$i]['nombre'] ?></td>
-                    <td data-title='Detalle'><?= $consultaventa[$i]['detalle'] ?></td>                    
+                    <td>No. venta: <br><?= $consultaventa[$i]['numero_venta'] ?></td>
+                    <td>Fecha: <br><?= $consultaventa[$i]['fecha'] ?></td>
+                    <td>Empleado: <br><?= $consultaventa[$i]['empleado'] ?></td>
+                    <td>Cliente: <br><?= $consultaventa[$i]['nombre'] ?></td>
+                    <td>Detalle: <br><?= $consultaventa[$i]['detalle'] ?></td>                    
                 </tr>
             <?php endfor; ?>
         </tbody>
     </table>
 
-    <table id=""  cellspacing="0" width="100%">
+    <table id="recibo"  cellspacing="0" width="100%">
        <thead>
             <tr>
                 <th>Referencia</th>
@@ -54,14 +53,14 @@ echo $idprint;
                     <td data-title='nombre'><?= $consultaventaproducto[$i]['nombre'] ?></td>
                     <td data-title='precio'>$ <?= number_format($consultaventaproducto[$i]['precio_venta']) ?></td>
                     <td data-title='cantidad'><?= $consultaventaproducto[$i]['cantidad']*(-1) ?></td> 
-                    <td data-title='subtotal'>$ <?= number_format($consultaventaproducto[$i]['SUBTOTAL']) ?></td>                    
+                    <td data-title='subtotal'>$ <?= number_format($consultaventaproducto[$i]['SUBTOTAL']) ?></td>    
                 </tr>
-            <?php endfor; ?>
+            <?php endfor; ?>        
+                <tr> 
+                    <th colspan="3" > </th>
+                    <th id="der">Valor Total</th>   
+                    <th>$ <?= number_format($consultaventatotal[0]['SumaDeSUBTOTAL']) ?> </th>
+                </tr>
         </tbody>
-        <tr>
-            <th>____________________ </th>
-        </tr>
-        <tr>
-            <td>$ <?= number_format($consultaventatotal[0]['SumaDeSUBTOTAL']) ?> </td>
-        </tr>
-    </table>  
+    </table> 
+<button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Imprimir</span></button> 
