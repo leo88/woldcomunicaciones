@@ -278,6 +278,14 @@
       {
                 include("vista/vrecibo.php");
       }
+      if ($page == 41) 
+      {
+                include("vista/vcodigo.php");
+      }
+      if ($page == 42) 
+      {
+                include("vista/prosesbarcode.php");
+      }
 		?>
     </div>
     <!--Script para control de la tabla-->

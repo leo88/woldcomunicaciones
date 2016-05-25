@@ -36,6 +36,7 @@
 				<th>ID</th>
 				<th>Proveedor</th>
 				<th>Fecha</th>
+				<th>Codigo</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -46,7 +47,7 @@
 				<td><?= $consultacompra[$j]['numero_compra'] ?></td>
 					<td><?= $proveedor1[0]['nombre'] ?></td>
 					<td><?= $consultacompra[$j]['fecha'] ?></td>
-					<!--<td><a href="home.php?pag=6&idc=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary">Editar</a></td>-->
+					<td><a href="home.php?pag=41&id=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary"><span class="glyphicon glyphicon-barcode"></span></a></td>
 				</tr>
 			<?php endfor; ?>
 		</tbody>
