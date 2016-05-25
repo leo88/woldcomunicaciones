@@ -13,12 +13,14 @@ $idprint             = $consultast[0]['numero_orden'];
    <div id="logo">WOLD
    <div id="logob">COMUNICACIONES</div>
    <div id="nit">Nit. 81.720.483-8</div>
-   </div>
-   
+   </div>    
     <table id="encabezado"  cellspacing="0" width="100%">
       <thead>
             <tr>
                 <th>Wilson Diaz Tecnico Profecional <br> woldcomunicaciones@hotmail.com</th>              
+            </tr>
+            <tr>
+               <th><div id="logob">ORDEN DE SERVICIO TECNICO</div></th>
             </tr>
         </thead>
         <tbody>
@@ -52,9 +54,8 @@ $idprint             = $consultast[0]['numero_orden'];
     y automaticamente al mismo procedera a rematarlo, para poder recuperar el costo de revision, reparacion y repuestos. WOLD Comunicaciones NO ofrece ninguna clase de garantia por repuestos, ya que estos se compran sin garantia. La garantia solo incluye 
     la mano de obra y el tiempo estipulado por el tecnico. WOLD Comunicaciones NO responde por perdidas ocasionales causadas por incendios o casos fortuitos. Este recibo se asimila en todos sus efectos a una letra de cambio (segun Art. 3 y 2057 del Codigo de Comercio) 
 </div>
-<div id="pie">
-    Cra 13 No. 10-110 <br>
-    Tel. 861 25 05 <br>
-    Cel. 313 382 32 55
+<div id="pie">    
+     Tel. 861 25 05 - Cel. 313 382 32 55<br>    
+    Cra 13 No. 10-110 
 </div>
 <button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Imprimir</span></button> 

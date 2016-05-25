@@ -12,17 +12,16 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
 //echo $idprint;
 
 ?>
-   <div id="logo">  WOLD <div id="logob"> COMUNICACIONES</div></div>
+   <div id="logo">WOLD 
+   <div id="logob"> COMUNICACIONES</div>
+   <div id="nit">Nit. 81.720.483-8</div>
+   </div>
     <table id="encabezado"  cellspacing="0" width="100%">
-       <!-- <thead>
+       <thead>
             <tr>
-                <th>No. venta</th>
-                <th>Fecha</th>
-                <th>Empleado</th>
-                <th>Cliente</th>
-                <th>Detalle</th>
+               <th><div id="logob">RECIBO DE VENTA</div></th>
             </tr>
-        </thead>-->
+        </thead>
         <tbody>
             <?php for($i=0;$i<count($consultaventa);$i++): ?>
                 <tr>
@@ -64,5 +63,9 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
                     <th colspan="3">Valor Total: &nbsp;&nbsp;&nbsp;&nbsp;$ <?= number_format($consultaventatotal[0]['SumaDeSUBTOTAL']) ?> </th>
                 </tr>
         </tbody>
-    </table> 
+    </table>
+    <div id="pie">    
+     Tel. 861 25 05 - Cel. 313 382 32 55<br>    
+    Cra 13 No. 10-110 
+</div> 
 <button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Imprimir</span></button> 
