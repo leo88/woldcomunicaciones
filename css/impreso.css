@@ -1,7 +1,7 @@
 #logo {
     font-size: 1cm;
     color: #000;
-    width: 5.7cm;
+    width: 7cm;
     font-weight: bold;
     text-align: center;
 }
@@ -12,7 +12,7 @@
 }
 #encabezado {
     font-size: 12px;
-	width: 5.7cm;	
+	width: 7cm;	
 	border-bottom: 1px solid #000;
 }
 #encabezado th {
@@ -29,7 +29,7 @@
 #recibo {
     font-size: 8px;
 	background: #fff;
-	width: 5.7cm;
+	width: 7cm;
 	border-collapse: collapse;   
 }
 #recibo th {
@@ -48,6 +48,20 @@
 }
 # der{
     text-align: right;
+}
+#nit {
+    text-align: center; 
+    font-size: 10px;
+}
+#clausula {
+    width: 7cm;
+    text-align: justify;
+    font-size: 6px;
+}
+#pie {
+    width: 7cm;
+    text-align: center;
+    font-size: 10px;
 }
 @media print{
     #boton {   

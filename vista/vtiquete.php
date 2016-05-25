@@ -10,119 +10,51 @@ $idprint             = $consultast[0]['numero_orden'];
 //echo $idprint;
 
 ?>
-   <div id="logo">WOLD COMUNICACIONES</div>
+   <div id="logo">WOLD
+   <div id="logob">COMUNICACIONES</div>
+   <div id="nit">Nit. 81.720.483-8</div>
+   </div>
+   
     <table id="encabezado"  cellspacing="0" width="100%">
-       <!-- <thead>
+      <thead>
             <tr>
-                <th>No. venta</th>
-                <th>Fecha</th>
-                <th>Empleado</th>
-                <th>Cliente</th>
-                <th>Detalle</th>
+                <th>Wilson Diaz Tecnico Profecional <br> woldcomunicaciones@hotmail.com</th>              
             </tr>
-        </thead>-->
+        </thead>
         <tbody>
             <?php for($i=0;$i<count($consultast);$i++): ?>
                 <tr>
-                    <td>No. Orden: <br><?= $consultast[$i]['numero_orden'] ?></td>
-                    <td>Fecha: <br><?= $consultast[$i]['fecha'] ?></td>
-                    <td>Tipo Dispositivo: <br><?= $consultast[$i]['nombre'] ?></td>
-                    <td>Marca: <br><?= $consultast[$i]['marca'] ?></td>
-                    <td>Referencia: <br><?= $consultast[$i]['referencia'] ?></td> 
-                    <td>Descripcion: <br><?= $consultast[$i]['descripcion_st'] ?></td>
-                    <td>Observacion: <br><?= $consultast[$i]['observacion'] ?></td>
-                    <td>Costo: <br><?= number_format($consultast[$i]['precio_cliente']) ?></td>
-                    <td>Abono: <br><?= number_format($consultast[$i]['abono']) ?></td>
-                    <td>Saldo: <br><?= number_format($consultast[$i]['SALDO_PENDIENTE']) ?></td>                    
+                    <td>No. Orden: <?= $consultast[$i]['numero_orden'] ?></td>
+                </tr><tr>    
+                    <td>Fecha: <?= $consultast[$i]['fecha'] ?></td>
+                </tr><tr>
+                    <td>Tipo Dispositivo: <?= $consultast[$i]['nombre'] ?></td>
+                </tr><tr>
+                    <td>Marca: <?= $consultast[$i]['marca'] ?></td>
+                </tr><tr>
+                    <td>Referencia: <?= $consultast[$i]['referencia'] ?></td> 
+                </tr><tr>
+                    <td>Descripcion: <?= $consultast[$i]['descripcion_st'] ?></td>
+                </tr><tr>
+                    <td>Observacion: <?= $consultast[$i]['observacion'] ?></td>
+                </tr><tr>
+                    <td>Costo: <?= number_format($consultast[$i]['precio_cliente']) ?></td>
+                </tr><tr>
+                    <td>Abono: <?= number_format($consultast[$i]['abono']) ?></td>
+                </tr><tr>
+                    <td>Saldo: <?= number_format($consultast[$i]['SALDO_PENDIENTE']) ?></td>                    
                 </tr>
             <?php endfor; ?>
         </tbody>
     </table>
-
-    <table id="recibo"  cellspacing="0" width="100%">
-       <thead>
-            <tr>
-                <th>Referencia</th>
-                <th>Tipo de Dispositivo</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php for($i=0;$i<count($consultastproducto);$i++): ?>
-                <tr>
-                    <td data-title='referencia'><?= $consultastproducto[$i]['referencia'] ?></td>
-                    <td data-title='nombre'><?= $consultastproducto[$i]['nombre'] ?></td>
-                    <td data-title='precio'>$ <?= number_format($consultastproducto[$i]['precio_venta']) ?></td>
-                    <td data-title='cantidad'><?= $consultastproducto[$i]['cantidad']*(-1) ?></td> 
-                    <td data-title='subtotal'>$ <?= number_format($consultastproducto[$i]['SUBTOTAL']) ?></td>    
-                </tr>
-            <?php endfor; ?>        
-                <tr> 
-                    <th colspan="3" > </th>
-                    <th id="der">Valor Total</th>   
-                    <th>$ <?= number_format($consultasttotal[0]['SumaDeSUBTOTAL']) ?> </th>
-                </tr>
-        </tbody>
-    </table> 
+<div id="clausula">
+    Nota: Después de 30 días WOLD Comunicaciones cobrará $200 diarios por bodegaje y NO se hace responsable por ningún aparato
+    y automaticamente al mismo procedera a rematarlo, para poder recuperar el costo de revision, reparacion y repuestos. WOLD Comunicaciones NO ofrece ninguna clase de garantia por repuestos, ya que estos se compran sin garantia. La garantia solo incluye 
+    la mano de obra y el tiempo estipulado por el tecnico. WOLD Comunicaciones NO responde por perdidas ocasionales causadas por incendios o casos fortuitos. Este recibo se asimila en todos sus efectos a una letra de cambio (segun Art. 3 y 2057 del Codigo de Comercio) 
+</div>
+<div id="pie">
+    Cra 13 No. 10-110 <br>
+    Tel. 861 25 05 <br>
+    Cel. 313 382 32 55
+</div>
 <button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Imprimir</span></button> 
-
-<?php 
-    include('estilos.php'); 
-    include('modelo/mconsulta.php'); 
-    $st = new Mconsulta();
-?>
-<?php $consultast               = $st->consultar_stcomparativo(); 
-    $consultasstdia             = $st->consultar_diatotalst();
-    $consultasstentregadodia    = $st->consultar_diatotalstentreg(); 
-    $consultasstmes             = $st->consultar_mestotalst(); 
-    $consultasstentregadomes    = $st->consultar_mestotalstentreg();
-?>
-<div class="row-fluid">
-<input type="checkbox"  id="spoiler2" /> 
-<label for="spoiler2" >Informe Servicio técnico</label>
-<div class="spoiler">
-<div class="info">
-
-    <table id="" class="display" cellspacing="0" width="100%">
-	    <thead>
-            <tr>
-                <th colspan="12">Servicio Técnico</th>
-            </tr>
-            <tr>
-                <th>Número Orden</th>
-                <th>Tipo de dispositivo</th>
-                <th>Marca</th>
-                <th>Referencia</th>
-                <th>Descripción</th>
-                <th>Observación</th>
-                <th>Precio Cliente</th>
-                <th>Fecha Recibido</th>
-                <th>Abono</th>
-                <th>Saldo Pendiente</th>
-                <th>Fecha de Entrega</th>
-                <th>Saldo Cancelado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php for($i=0;$i<count($consultast);$i++): ?>
-                <tr>
-                    <td data-title='Orden'><?= $consultast[$i]['numero_orden'] ?></td>
-                    <td data-title='Tipo de Dispositivo'><?= $consultast[$i]['nombre'] ?></td>
-                    <td data-title='Marca'><?= $consultast[$i]['marca'] ?></td>
-                    <td data-title='Referencia'><?= $consultast[$i]['referencia'] ?></td>
-                    <td data-title='Descripción'><?= $consultast[$i]['descripcion_st'] ?></td>
-                    <td data-title='Observación'><?= $consultast[$i]['observacion'] ?></td>
-                    <td data-title='Precio al cliente'>$ <?= number_format($consultast[$i]['precio_cliente']) ?></td>
-                    <td data-title='Fecha'><?= $consultast[$i]['fecha'] ?></td>
-                    <td data-title='Abono'>$ <?= number_format($consultast[$i]['abono']) ?></td>
-                    <td data-title='Saldo pendiente'>$ <?= number_format($consultast[$i]['saldo_pendiente']) ?></td>
-                    <td data-title='Fecha'><?= $consultast[$i]['fecha_cancel'] ?></td>
-                    <td data-title='Saldo cancelado'>$ <?= number_format($consultast[$i]['saldo_cancelado']) ?></td>
-            <?php endfor; ?>
-        </tbody>
-    </table>	
-</div>
-</div>
-</div>
