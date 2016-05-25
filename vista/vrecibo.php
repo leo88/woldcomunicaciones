@@ -12,7 +12,7 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
 //echo $idprint;
 
 ?>
-   <div id="logo">WOLD COMUNICACIONES</div>
+   <div id="logo">  WOLD <div id="logob"> COMUNICACIONES</div></div>
     <table id="encabezado"  cellspacing="0" width="100%">
        <!-- <thead>
             <tr>
@@ -26,12 +26,15 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
         <tbody>
             <?php for($i=0;$i<count($consultaventa);$i++): ?>
                 <tr>
-                    <td>No. venta: <br><?= $consultaventa[$i]['numero_venta'] ?></td>
-                    <td>Fecha: <br><?= $consultaventa[$i]['fecha'] ?></td>
-                    <td>Empleado: <br><?= $consultaventa[$i]['empleado'] ?></td>
-                    <td>Cliente: <br><?= $consultaventa[$i]['nombre'] ?></td>
-                    <td>Detalle: <br><?= $consultaventa[$i]['detalle'] ?></td>                    
-                </tr>
+                    <td>No. venta: <?= $consultaventa[$i]['numero_venta'] ?></td>                    
+                    <td>Fecha: <?= $consultaventa[$i]['fecha'] ?></td>
+                    </tr><tr> 
+                    <td colspan="3">Empleado: <?= $consultaventa[$i]['empleado'] ?></td>
+                    
+                    </tr>
+                    </tr><tr>                                       
+                    <td colspan="3">Cliente: <?= $consultaventa[$i]['nombre'] ?></td>                   
+                    </tr>
             <?php endfor; ?>
         </tbody>
     </table>
@@ -39,27 +42,26 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
     <table id="recibo"  cellspacing="0" width="100%">
        <thead>
             <tr>
-                <th>Referencia</th>
-                <th>Tipo de Dispositivo</th>
-                <th>Precio</th>
-                <th>Cantidad</th>
-                <th>Subtotal</th>
+                <!--<th>Referencia</th>-->
+                <td>Desc.</td>
+                <td>Valor Uni.</td>
+                <td>Cant.</td>
+                <td>Subtotal Venta</td>
             </tr>
         </thead>
         <tbody>
             <?php for($i=0;$i<count($consultaventaproducto);$i++): ?>
                 <tr>
-                    <td data-title='referencia'><?= $consultaventaproducto[$i]['referencia'] ?></td>
+                    <!--<td data-title='referencia'><?= $consultaventaproducto[$i]['referencia'] ?></td>-->
                     <td data-title='nombre'><?= $consultaventaproducto[$i]['nombre'] ?></td>
                     <td data-title='precio'>$ <?= number_format($consultaventaproducto[$i]['precio_venta']) ?></td>
                     <td data-title='cantidad'><?= $consultaventaproducto[$i]['cantidad']*(-1) ?></td> 
                     <td data-title='subtotal'>$ <?= number_format($consultaventaproducto[$i]['SUBTOTAL']) ?></td>    
                 </tr>
             <?php endfor; ?>        
-                <tr> 
-                    <th colspan="3" > </th>
-                    <th id="der">Valor Total</th>   
-                    <th>$ <?= number_format($consultaventatotal[0]['SumaDeSUBTOTAL']) ?> </th>
+                <tr id="der">
+                    <th></th> 
+                    <th colspan="3">Valor Total: &nbsp;&nbsp;&nbsp;&nbsp;$ <?= number_format($consultaventatotal[0]['SumaDeSUBTOTAL']) ?> </th>
                 </tr>
         </tbody>
     </table> 
