@@ -6,7 +6,7 @@
 					<form action="" method="POST" class="blanco">
 						<div class="form-group campo">
     				        <label for=""><span style="color:red;">* </span>Fecha:</label>
-    				        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">
+    				        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly re	uired>
 						</div>
 						<div class="form-group campo">
     				        <label for=""><span style="color:red;">* </span>Valor de la venta:</label>

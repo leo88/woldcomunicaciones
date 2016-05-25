@@ -40,7 +40,7 @@
 		</div>
 		<div class="form-group col-sm-12 col-md-12 col-lg-4">
             <label for=""><span style="color:red;">* </span>Fecha de Ingreso:</label>
-            <input type="date" class="form-control" name="fecha" value="<?= date('Y-m-d'); ?>" required>    
+            <input type="date" class="form-control" name="fecha" value="<?= date('Y-m-d'); ?>" readonly required>    
 		</div>
 		 <div class="form-group col-xs-4 col-xs-offset-4 col-sm-6 col-md-6 col-lg-4 col-lg-offset-5"> <br>          		
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>

@@ -85,7 +85,7 @@
 		</div>
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Fecha:</label>
-            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>">        
+            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>"readonly required>        
 		</div>
 		 <div class="form-group campo"> <br>
            <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>  

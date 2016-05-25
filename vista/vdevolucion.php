@@ -74,7 +74,7 @@
 	<form action="" method="POST" class="blanco">
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Fecha:</label>
-            <input type="date" class="form-control" name="fecha" value="<?= date('Y-m-d') ?>">
+            <input type="date" class="form-control" name="fecha" value="<?= date('Y-m-d') ?>" readonly>
             <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">
 		</div>
 		<div class="form-group campo">

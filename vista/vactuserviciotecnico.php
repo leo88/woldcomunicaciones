@@ -37,7 +37,7 @@
 		</div>
 		<div class="form-group col-lg-6">
 			<label for="">Fecha:</label>
-            <input type="date" class="form-control" name="fecha" value="<?= $consultaedit[0]['fecha']  ?>" required>
+            <input type="date" class="form-control" name="fecha" value="<?= $consultaedit[0]['fecha']  ?>" required readonly>
             <input type="hidden" class="form-control" name="id_cliente" value="<?= $consultaedit[0]['id_cliente']  ?>">
             <input type="hidden" class="form-control" name="empleado" value="<?= $consultaedit[0]['empleado']  ?>">
 		</div>

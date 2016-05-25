@@ -5,7 +5,7 @@
 		<form class="blanco" action="" method="POST">
 			<div class="form-group col-md-6 col-lg-4">
 		        <label for=""><span style="color:red;">* </span>Fecha:</label>
-		        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" required>           
+		        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly required>           
 			</div>
 			<div class="form-group col-md-6 col-lg-4">
 		        <label for=""><span style="color:red;">* </span>Cantidad:</label>
