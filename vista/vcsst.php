@@ -31,7 +31,7 @@
                 <th>Fecha Recibido</th>
                 <th>Abono</th>
                 <th>Saldo Pendiente</th>
-                <th>Fecha Despachado</th>
+                <th>Fecha de Entrega</th>
                 <th>Saldo Cancelado</th>
             </tr>
         </thead>
