@@ -30,10 +30,11 @@
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Descripcion:</label>
    	        <input type=text list=descripcion name="descripcion" class="form-control" required>
-   	            <datalist id="descripcion" >
-   	               <option> Local </option>
-   	               <option> Proveedor </option>
-   	            </datalist>        
+   	            <select name="descripcion" class="form-control" required>
+                    <option value="">Seleccione una Opción</option>
+                    <option value="1" selected>Proveedor</option>
+                    <option value="2">Local</option>
+            	</select>        
 		</div>
 			<div class="form-group col-md-6"> <br>          		
          			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
