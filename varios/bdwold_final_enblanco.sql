@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-05-2016 a las 16:57:10
+-- Tiempo de generación: 26-05-2016 a las 17:15:55
 -- Versión del servidor: 5.6.24
 -- Versión de PHP: 5.6.8
 
@@ -449,7 +449,14 @@ CREATE TABLE IF NOT EXISTS `tbminutosvalor` (
   `idminutosvalor` int(11) NOT NULL,
   `costo_compra` int(11) NOT NULL,
   `valor_venta` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `tbminutosvalor`
+--
+
+INSERT INTO `tbminutosvalor` (`idminutosvalor`, `costo_compra`, `valor_venta`) VALUES
+(1, 50, 100);
 
 -- --------------------------------------------------------
 
@@ -1003,7 +1010,7 @@ ALTER TABLE `tbminutos`
 -- AUTO_INCREMENT de la tabla `tbminutosvalor`
 --
 ALTER TABLE `tbminutosvalor`
-  MODIFY `idminutosvalor` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idminutosvalor` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `tbmovimiento`
 --
