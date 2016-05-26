@@ -28,8 +28,7 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
                     <td>No. venta: <?= $consultaventa[$i]['numero_venta'] ?></td>                    
                     <td>Fecha: <?= $consultaventa[$i]['fecha'] ?></td>
                     </tr><tr> 
-                    <td colspan="3">Empleado: <?= $consultaventa[$i]['empleado'] ?></td>
-                    
+                    <td colspan="3">Atendido por: <?= $consultaventa[$i]['empleado'] ?></td>                    
                     </tr>
                     </tr><tr>                                       
                     <td colspan="3">Cliente: <?= $consultaventa[$i]['nombre'] ?></td>                   
