@@ -1,5 +1,4 @@
-<?php
-	session_start();
+<?php session_start();
 	$autenticado = isset($_SESSION['autenticado']) ? $_SESSION['autenticado']:NULL;
 	
 	//Comprobar que el usuario este autenticado
@@ -9,5 +8,4 @@
 		header("Location: index.php");
 		exit();
 	}
-	date_default_timezone_set('America/Bogota');
-?>
+	date_default_timezone_set('America/Bogota');?>

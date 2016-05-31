@@ -1,5 +1,4 @@
-
-<?php  include("modelo/mseguridad.php"); ?>
+<?php include("modelo/mseguridad.php");?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -18,6 +18,7 @@
 	width: 7cm;	
     border-bottom-style: double; 
     border-bottom-width: 4px;
+    font-family: 'BenchNine', sans-serif;
 }
 #encabezado th {
 	font-size: 12px;	
@@ -35,7 +36,8 @@
     font-size: 9px;
 	background: #fff;
 	width: 7cm;
-	border-collapse: collapse;   
+	border-collapse: collapse; 
+    font-family: 'BenchNine', sans-serif;
 }
 #recibo th {
 	font-size: 9px;

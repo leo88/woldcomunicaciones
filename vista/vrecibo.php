@@ -4,6 +4,7 @@
 ?>
 <link rel="stylesheet" href="css/impreso.css"/>
 <link rel="stylesheet" href="css/impreso.css" media="print"/>
+<link href='https://fonts.googleapis.com/css?family=BenchNine:400,700' rel='stylesheet' type='text/css'>
 <?php 
 $consultaventa          = $venta->consultar_venta_id();
 $idprint                = $consultaventa[0]['numero_venta'];
