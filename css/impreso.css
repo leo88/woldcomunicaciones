@@ -6,7 +6,6 @@
     text-align: center;
     border-bottom-style: dashed;    
     border-bottom-width: 1.8px;
-    
 }
 #logob {
     font-size: 0.32cm;
@@ -14,33 +13,33 @@
     font-weight: bold;    
 }
 #encabezado {
-    font-size: 12px;
+    font-size: 14px;    
 	width: 7cm;	
     border-bottom-style: double; 
     border-bottom-width: 4px;
     font-family: 'BenchNine', sans-serif;
 }
 #encabezado th {
-	font-size: 12px;	
+	font-size: 16px;	
 	padding: 4px;	
 	color: #000;
     text-align: center;
 }
 #encabezado td {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 16px;
 	padding: 4px;	
 	color: #000;
 }
 #recibo {
-    font-size: 9px;
+    font-size: 16px;
 	background: #fff;
 	width: 7cm;
 	border-collapse: collapse; 
     font-family: 'BenchNine', sans-serif;
 }
 #recibo th {
-	font-size: 9px;
+	font-size: 16px;
 	color: #000;
 	padding: 10px 8px;	
     text-align: center;
@@ -48,7 +47,7 @@
     border-bottom-width: 4px;
 }
 #recibo td {
-    font-size: 9px;
+    font-size: 16px;
 	border-bottom: 1px solid #ccc;
 	color: #000;
 	padding: 6px 8px;
@@ -59,7 +58,7 @@
 }
 #nit {
     text-align: center; 
-    font-size: 10px;
+    font-size: 16px;
     margin-bottom: 6px;
 }
 #clausula {
@@ -74,6 +73,11 @@
     text-align: center;
     font-size: 10px;
     font-weight: bold;
+    font-family: 'BenchNine', sans-serif;
+}
+#margen {
+    margin-left: 0px;
+    padding-right: 0.8cm;
 }
 #boton {
     margin-top: 30px;

@@ -13,6 +13,7 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
 //echo $idprint;
 
 ?>
+  <div id="margen">
    <div id="logo">WOLD 
    <div id="logob"> COMUNICACIONES</div>
    <div id="nit">Nit. 81.720.483-8</div>
@@ -68,4 +69,5 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
      Tel. 861 25 05 - Cel. 313 382 32 55<br>    
     Cra 13 No. 10-110 
 </div> 
+</div><!--cierre div margen-->
 <button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Imprimir</span></button> 
