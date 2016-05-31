@@ -19,7 +19,7 @@
 		function consultar_existencia()
 		{
 
-			$sql = "SELECT `bdwold`.`tbproducto`.`referencia` AS `referencia`,`bdwold`.`tbproducto`.`nombre` AS `nombre`,`bdwold`.`tbproducto`.`marca` AS `marca`,sum(`bdwold`.`tbmovimiento`.`cantidad`) AS `SumaDecantidad`,`bdwold`.`tbproducto`.`precio` AS `precio` from (`bdwold`.`tbproducto` join `bdwold`.`tbmovimiento` on((`bdwold`.`tbproducto`.`referencia` = `bdwold`.`tbmovimiento`.`referencia`))) group by `bdwold`.`tbproducto`.`referencia`,`bdwold`.`tbproducto`.`nombre`,`bdwold`.`tbproducto`.`marca`,`bdwold`.`tbproducto`.`precio`";
+			$sql = "SELECT tbproducto.referencia AS referencia,tbproducto.nombre AS nombre,tbproducto.marca AS marca,sum(tbmovimiento.cantidad) AS SumaDecantidad,tbproducto.precio AS precio from (tbproducto join tbmovimiento on((tbproducto.referencia = tbmovimiento.referencia))) group by tbproducto.referencia,tbproducto.nombre,tbproducto.marca,tbproducto.precio";
 			return $this->SeleccionDatos($sql);
 
 			/*$sql = "SELECT * FROM csexistencia";
