@@ -4,6 +4,7 @@
 ?>
 <link rel="stylesheet" href="css/impreso.css"/>
 <link rel="stylesheet" href="css/impreso.css" media="print"/>
+<link href='https://fonts.googleapis.com/css?family=BenchNine:400,700' rel='stylesheet' type='text/css'>
 <?php 
 $consultast          = $st->consultar_st_id();
 $idprint             = $consultast[0]['numero_orden'];
@@ -17,34 +18,33 @@ $idprint             = $consultast[0]['numero_orden'];
     <table id="encabezado"  cellspacing="0" width="100%">
       <thead>
             <tr>
-                <th>Wilson Diaz Tecnico Profecional <br> woldcomunicaciones@hotmail.com</th>              
+                <th colspan="2">Wilson Diaz Tecnico Profecional <br> woldcomunicaciones@hotmail.com</th>              
             </tr>
             <tr>
-               <th><div id="logob">ORDEN DE SERVICIO TECNICO</div></th>
+               <th colspan="2"><div id="logob">ORDEN DE SERVICIO TECNICO</div></th>
             </tr>
         </thead>
         <tbody>
             <?php for($i=0;$i<count($consultast);$i++): ?>
                 <tr>
-                    <td>No. Orden: <?= $consultast[$i]['numero_orden'] ?></td>
-                </tr><tr>    
+                    <td>No. Orden:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['numero_orden'] ?></td>                  
                     <td>Fecha: <?= $consultast[$i]['fecha'] ?></td>
                 </tr><tr>
                     <td>Tipo Dispositivo: <?= $consultast[$i]['nombre'] ?></td>
                 </tr><tr>
-                    <td>Marca: <?= $consultast[$i]['marca'] ?></td>
+                    <td>Marca:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['marca'] ?></td>
                 </tr><tr>
-                    <td>Referencia: <?= $consultast[$i]['referencia'] ?></td> 
+                    <td>Referencia:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['referencia'] ?></td> 
                 </tr><tr>
-                    <td>Descripcion: <?= $consultast[$i]['descripcion_st'] ?></td>
+                    <td>Descripcion:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['descripcion_st'] ?></td>
                 </tr><tr>
-                    <td>Observacion: <?= $consultast[$i]['observacion'] ?></td>
+                    <td>Observacion:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['observacion'] ?></td>
                 </tr><tr>
-                    <td>Costo: <?= number_format($consultast[$i]['precio_cliente']) ?></td>
+                    <td>Costo:&nbsp;&nbsp;&nbsp; <?= number_format($consultast[$i]['precio_cliente']) ?></td>
                 </tr><tr>
-                    <td>Abono: <?= number_format($consultast[$i]['abono']) ?></td>
+                    <td>Abono:&nbsp;&nbsp;&nbsp; <?= number_format($consultast[$i]['abono']) ?></td>
                 </tr><tr>
-                    <td>Saldo: <?= number_format($consultast[$i]['SALDO_PENDIENTE']) ?></td>                    
+                    <td>Saldo:&nbsp;&nbsp;&nbsp; <?= number_format($consultast[$i]['SALDO_PENDIENTE']) ?></td>                    
                 </tr>
             <?php endfor; ?>
         </tbody>

@@ -60,8 +60,8 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
                 </tr>
             <?php endfor; ?>        
                 <tr id="der">
-                    <th></th> 
-                    <th colspan="3">Valor Total: &nbsp;&nbsp;&nbsp;&nbsp;$ <?= number_format($consultaventatotal[0]['SumaDeSUBTOTAL']) ?> </th>
+                    <th colspan="2"></th> 
+                    <th colspan="2">Valor Total: &nbsp;&nbsp;&nbsp;$ <?= number_format($consultaventatotal[0]['SumaDeSUBTOTAL']) ?> </th>
                 </tr>
         </tbody>
     </table>

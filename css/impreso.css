@@ -1,3 +1,7 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
 #logo {
     font-size: 1cm;
     color: #000;
@@ -6,11 +10,16 @@
     text-align: center;
     border-bottom-style: dashed;    
     border-bottom-width: 1.8px;
+    font-size: 36px;
+    font-family: 'BenchNine', sans-serif;
+    font-weight: bold;
 }
 #logob {
     font-size: 0.32cm;
     color: #000;    
-    font-weight: bold;    
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'BenchNine', sans-serif;
 }
 #encabezado {
     font-size: 14px;    
@@ -55,11 +64,13 @@
 }
 #der{
     text-align: right;
+    padding-right: 0px;
 }
 #nit {
     text-align: center; 
     font-size: 16px;
     margin-bottom: 6px;
+    font-weight: bold;
 }
 #clausula {
     width: 7cm;
@@ -70,8 +81,9 @@
 #pie {
     padding-top: 6px;
     width: 7cm;
+    font-weight: bold;
     text-align: center;
-    font-size: 10px;
+    font-size: 16px;
     font-weight: bold;
     font-family: 'BenchNine', sans-serif;
 }
