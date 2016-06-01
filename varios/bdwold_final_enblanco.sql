@@ -511,7 +511,7 @@ CREATE TABLE IF NOT EXISTS `tbproveedor` (
   `telefono` varchar(20) DEFAULT NULL,
   `telefono2` varchar(20) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
-  `descripcion` varchar(10) NOT NULL
+  `descripcion` enum('Proveedor','Local') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
