@@ -44,7 +44,7 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
     			<ul class="nav navbar-nav">
       				<li class="active"><a href="home.php">Home</a></li>
-      				<li class="dropdown">
+      				<li class="dropdown" id="registrar">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Registrar
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
@@ -58,7 +58,7 @@
       						<li><a href="home.php?pag=2">Clientes</a></li>
       					</ul>
       				</li>
-      				<li class="dropdown">
+      				<li class="dropdown" id="venta">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Venta
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
@@ -69,7 +69,7 @@
       						<li><a href="home.php?pag=24">Ventas</a></li>
       					</ul>
       				</li>
-      				<li class="dropdown">
+      				<li class="dropdown" id="st">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Servicio Técnico
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
@@ -78,7 +78,7 @@
       					</ul>
       				</li>
       				<?php if ($perfil=='Administrador'): ?>
-      				<li class="dropdown">
+      				<li class="dropdown" id="producto">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Productos
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">
@@ -92,7 +92,7 @@
       					</ul>
       				</li>
       				<?php endif ?>
-      				<li class="dropdown">
+      				<li class="dropdown" id="consulta">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Informes
       					<span class="caret"></span></a>
       					<ul class="dropdown-menu">

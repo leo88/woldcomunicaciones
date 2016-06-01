@@ -62,3 +62,10 @@
 					</div>
 </div><!--/row-->
 <br/><br/>   
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".nav li").removeClass("active");//this will remove the active class from  
+                                            //previously active menu item 
+        $('#venta').addClass('active');
+    });
+</script>

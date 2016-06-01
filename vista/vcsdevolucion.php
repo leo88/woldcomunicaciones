@@ -44,3 +44,10 @@ $consultadevolucion = $devolucion->consultar_devolucion();
             <?php endfor; ?>
         </tbody>
     </table>   
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".nav li").removeClass("active");//this will remove the active class from  
+                                            //previously active menu item 
+        $('#consulta').addClass('active');
+    });
+</script>

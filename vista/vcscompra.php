@@ -122,3 +122,10 @@ $consultacompratotal = $compra->consultar_compratotal();
 </div>
 </div>
 </div>	    
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".nav li").removeClass("active");//this will remove the active class from  
+                                            //previously active menu item 
+        $('#consulta').addClass('active');
+    });
+</script>

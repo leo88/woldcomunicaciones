@@ -13,7 +13,7 @@
 	$actu          	= isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idminutos     	= isset($_GET['id']) ? $_GET['id'] : NULL;	
 
-	echo "Compra: ".$compra." Venta: ".$venta." Fecha: ".$fecha;
+	//echo "Compra: ".$compra." Venta: ".$venta." Fecha: ".$fecha;
 
 	/*
 		Variables para traer los datos de los desplegables
