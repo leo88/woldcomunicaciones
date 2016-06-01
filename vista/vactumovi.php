@@ -3,7 +3,7 @@
    	<?php include("controlador/cmovimiento.php"); ?>
 
 	<div class="eti">Editar Movimiento</div>
-	<form action="home.php?pag=16&id=<?= $idproduc?>" method="POST">
+	<form action="home.php?pag=44&id=<?= $idmovimiento?>" method="POST">
 	    <div class="form-group col-sm-6 col-md-6 col-lg-6">
 			<label for=""><span style="color:red;">* </span>Motivo:</label>
             <input type="text"  list="descripcion" class="form-control" name="motivo" value="<?= $consultaedit[0]['motivo'] ?>" readonly>
@@ -22,7 +22,7 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-6">
 			<label for=""><span style="color:red;">* </span>Cantidad:</label>
-            <input type="number" class="form-control" name="cantidad" value="<?= $consultaedit[0]['cantidad']  ?>" required>
+            <input type="number" class="form-control" name="cantidad" value="<?= $consultaedit[0]['cantidad']  ?>" pattern="[0-9]{1,11}" max="0" title="Solo validos numeros"required>
 		</div>		
 		<div class="form-group col-sm-6 col-md-6 col-lg-6"><br>
             <input type="submit" class="btn btn-success" value="Editar">
@@ -31,4 +31,3 @@
 	</form>                     	
 	</div> 
 </body>
-	

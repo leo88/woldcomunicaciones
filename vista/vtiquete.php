@@ -40,11 +40,11 @@ $idprint             = $consultast[0]['numero_orden'];
                 </tr><tr>
                     <td>Observacion:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['observacion'] ?></td>
                 </tr><tr>
-                    <td>Costo:&nbsp;&nbsp;&nbsp; <?= number_format($consultast[$i]['precio_cliente']) ?></td>
+                    <td>Costo:&nbsp;&nbsp;&nbsp; $ <?= number_format($consultast[$i]['precio_cliente']) ?></td>
                 </tr><tr>
-                    <td>Abono:&nbsp;&nbsp;&nbsp; <?= number_format($consultast[$i]['abono']) ?></td>
+                    <td>Abono:&nbsp;&nbsp;&nbsp; $ <?= number_format($consultast[$i]['abono']) ?></td>
                 </tr><tr>
-                    <td>Saldo:&nbsp;&nbsp;&nbsp; <?= number_format($consultast[$i]['SALDO_PENDIENTE']) ?></td>                    
+                    <td>Saldo:&nbsp;&nbsp;&nbsp; $ <?= number_format($consultast[$i]['SALDO_PENDIENTE']) ?></td>                    
                 </tr>
             <?php endfor; ?>
         </tbody>

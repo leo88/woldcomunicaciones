@@ -75,8 +75,9 @@ body {
 #clausula {
     width: 7cm;
     text-align: justify;
-    font-size: 6px;
+    font-size: 8px;
     padding-bottom: 8px;
+    font-weight: bold;
 }
 #pie {
     padding-top: 6px;

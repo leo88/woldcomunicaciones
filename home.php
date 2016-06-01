@@ -67,6 +67,9 @@
       						<li><a href="home.php?pag=26">Venta por Producto</a></li>
       						<?php endif ?> 
       						<li><a href="home.php?pag=24">Ventas</a></li>
+                  <?php if ($perfil=='Vendedor'): ?>
+                  <li><a href="home.php?pag=44">Movimiento</a></li>
+                  <?php endif ?>
       					</ul>
       				</li>
       				<li class="dropdown" id="st">
@@ -106,7 +109,7 @@
       						<li><a href="home.php?pag=35">Servicio Técnico</a></li>
       					</ul>
       				</li> 
-      				<li><a href="vista/vcreditos"><span class="glyphicon glyphicon-fire"></a></li>
+      				<li><a href="vista/vcreditos.php"><span class="glyphicon glyphicon-fire"></a></li>
     			</ul>
     			<ul class="nav navbar-nav navbar-right">
     				<div class="navbar-brand"><small><strong><?php echo ucfirst($usuario); ?></strong></small></div>
@@ -288,6 +291,14 @@
       if ($page == 43) 
       {
                 include("vista/vtiquete.php");
+      }
+      if ($page == 44) 
+      {
+                include("vista/vmovi.php");
+      }
+      if ($page == 45) 
+      {
+                include("vista/vactumovi.php");
       }
 		?>
     </div>

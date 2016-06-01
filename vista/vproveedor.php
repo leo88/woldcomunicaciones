@@ -45,7 +45,7 @@
 			<table class="table table-bordered table-hover" id="example">
 	  		<thead>
           		<tr>
-          		    <th colspan="3">Listado de Proveedores</th>
+          		    <th colspan="12">Listado de Proveedores</th>
           		</tr>
           		<tr>
           		    <th>Identificacion proveeedor</th>

@@ -42,6 +42,14 @@
 			$sql = "SELECT * FROM `tbmovimiento` ORDER BY idmovimiento DESC";
 			 return $this->SeleccionDatos($sql);
 		}
+		/*
+		 *función para la consulta de los datos de la tabla tbmovimiento con un limite de venta
+		 */
+		function consultar_movimiento_venta()
+		{
+			$sql = "SELECT * FROM `tbmovimiento` WHERE motivo = 'Venta' ORDER BY idmovimiento DESC";
+			 return $this->SeleccionDatos($sql);
+		}
         /*
 		 *función para la consulta de los datos de la tabla tbmovimiento por COMPRA limitandolo a un solo registro
 		 */
