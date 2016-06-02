@@ -84,12 +84,10 @@
 		top: 0;
 		z-index: 1000;        
 }
-	.cajainterna {
-		background: #4DB2C6;
-		margin: 6em auto 0;
+	.cajainterna {		
+		margin: 2em auto 0;
 		position: relative;
-		width: 90%;
-        border-radius: 12px;
+		width: 90%;        
 	}
 	.cajacentrada {
 		margin: 0 auto;
