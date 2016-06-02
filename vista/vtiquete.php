@@ -64,3 +64,35 @@ $idprint             = $consultast[0]['numero_orden'];
     Cra 13 No. 10-110 
 </div>
 <button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Imprimir</span></button> 
+<div id="prueba">
+<table id="prueba2">
+<tbody>
+            <?php for($i=0;$i<count($consultast);$i++): ?>
+                <tr>
+                    <td>No. Orden:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['numero_orden'] ?></td>                  
+                    <td>Fecha: <?= $consultast[$i]['fecha'] ?></td>
+                </tr>
+                 <tr>
+                    <td>Recibido Por:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['empleado'] ?></td>                  
+                    <td>Cliente: <?= $consultast[$i]['id_cliente'] ?></td>
+                </tr>
+                <tr>
+                    <td>Descripcion:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['descripcion_st'] ?></td>
+                </tr>
+            <?php endfor; ?>
+        </tbody>
+</table>
+</div>
+<script type="text/javascript">
+function printDiv(prueba) {
+     var printContents = document.getElementById(prueba).innerHTML;
+     var originalContents = document.body.innerHTML;
+
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
+<button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="printDiv('prueba')"> Imprimir</span></button> 
