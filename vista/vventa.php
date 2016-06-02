@@ -208,6 +208,21 @@
                    <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-credit tama"></span>  este paso se puede repetir varias veces por cada venta</li>
                </ul>
         <span style="font-weight: bold">Nota:</span> No intente registrar todos los movimentos uno tras otro y luego todos los valores correspondientes a estos, asegurese de registrar un formulario a la vez ya que siempre debe registrar el valor despues de haber registrado el movimiento. 
+        <br><br>
+        <!--inicio modal mensaje-->
+        <a href="#" class="mostrarmodal btn btn-primary"><span class="icon-film"></span> VER VIDEO</a>  
+             <div class="cajaexterna">
+              <div class="cajainterna animated">
+                <div class="cajacentrada">                                 
+                   <video src="videos/venta.mp4" controls width="60%" height="cover" autoplay preload>Tu navegador no implementa el video <code>video</code></video> 
+                    <br> 
+                   <div class="cierramodal">
+                   <a href="#" class="cerrarmodal btn btn-danger">CERRAR</a>
+                  </div>                
+                </div>
+              </div>
+            </div>
+         <!--final modal mensaje-->  
       </div>
     </div>
 </div>

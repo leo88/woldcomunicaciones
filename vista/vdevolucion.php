@@ -86,19 +86,7 @@
             <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros">    
 		</div>
 		<div class="form-group campo">
-            <!--inicio modal mensaje-->
-             <div class="cajaexterna">
-              <div class="cajainterna animated">
-                <div class="cajacentrada">                  
-                  <p>Si el dinero de la referencia es regresado por el proveedor en su totalidad o parcialmente ingrese la cantidad en Costo retorno, de lo contrario si el dinero no es regresado ingrese 0 </p>
-                  <div class="cierramodal">
-                   <a href="#" class="cerrarmodal">cerrar</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!--final modal mensaje-->
-             <label for=""><span style="color:red;">* </span>Costo retorno:</label><a href="#" class="mostrarmodal">&nbsp;<span class="glyphicon glyphicon-exclamation-sign"></span></a> 
+             <label for=""><span style="color:red;">* </span>Costo retorno:</label>
             <input  type="number" class="form-control" name="costo" pattern="[0-9]{1,9}" title="Solo validos numeros" min="0" required>
             </div>
 		 <div class="form-group campo"> <br> 
@@ -165,7 +153,23 @@
               <ul>
                   <li>Una Devolucion se realiza cuando una referencia es regresada al proveedor, o se asume como tal si el producto no es apto para la venta</li>
                   <li>El seguimiento al proveedor se hace mediante el codigo de barras generado en el numero de compra</li>
+                  <li>Si el dinero de la referencia es regresado por el proveedor en su totalidad o parcialmente ingrese la cantidad en Costo retorno, de lo contrario si el dinero no es regresado ingrese 0</li>
               </ul>
+               <br>
+        <!--inicio modal mensaje-->
+        <a href="#" class="mostrarmodal btn btn-primary"><span class="icon-film"></span> VER VIDEO</a>  
+             <div class="cajaexterna">
+              <div class="cajainterna animated">
+                <div class="cajacentrada">                                 
+                   <video src="videos/devolucion.mp4" controls width="60%" height="cover" autoplay preload>Tu navegador no implementa el video <code>video</code></video> 
+                    <br> 
+                   <div class="cierramodal">
+                   <a href="#" class="cerrarmodal btn btn-danger">CERRAR</a>
+                  </div>                
+                </div>
+              </div>
+            </div>
+         <!--final modal mensaje-->  
       </div>
     </div>
 </div>

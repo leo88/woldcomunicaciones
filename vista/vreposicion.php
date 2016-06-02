@@ -97,7 +97,7 @@
 						<table class="table table-bordered table-hover" id="example">
 				  <thead>
             <tr>
-                <th colspan="3">Listado de Reposiciones</th>
+                <th colspan="12">Listado de Reposiciones</th>
             </tr>
             <tr>
                 <th>ID</th>
@@ -144,6 +144,21 @@
                   <li>Una Reposicion se realiza cuando se hace un cambio de una referencia que se compro a un proveedor por otra distinta</li>
                   <li>Si la referencia que ingresa tiene un valor diferente a la retornada al proveedor puede hacer el ajuste de caja en <a href="home.php?pag=11" class="btn btn-default btn-xs">Ingresos y Egresos Varios</a> justificando dicha diferencia</li>
               </ul>
+               <br>
+        <!--inicio modal mensaje-->
+        <a href="#" class="mostrarmodal btn btn-primary"><span class="icon-film"></span> VER VIDEO</a>  
+             <div class="cajaexterna">
+              <div class="cajainterna animated">
+                <div class="cajacentrada">                                 
+                   <video src="videos/reposicion.mp4" controls width="60%" height="cover" autoplay preload>Tu navegador no implementa el video <code>video</code></video> 
+                    <br> 
+                   <div class="cierramodal">
+                   <a href="#" class="cerrarmodal btn btn-danger">CERRAR</a>
+                  </div>                
+                </div>
+              </div>
+            </div>
+         <!--final modal mensaje-->  
       </div>
     </div>
 </div>

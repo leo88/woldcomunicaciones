@@ -52,7 +52,7 @@
 	<table class="table table-bordered table-hover" id="example">
 		<thead>
             <tr>
-                <th colspan="3">Listado de Empleados</th>
+                <th colspan="12">Listado de Empleados</th>
             </tr>
             <tr>
                 <th>Cedula</th>
