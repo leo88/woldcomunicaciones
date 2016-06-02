@@ -29,7 +29,12 @@ $idprint             = $consultast[0]['numero_orden'];
                 <tr>
                     <td>No. Orden:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['numero_orden'] ?></td>                  
                     <td>Fecha: <?= $consultast[$i]['fecha'] ?></td>
-                </tr><tr>
+                </tr>
+                 <tr>
+                    <td>Recibido Por:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['empleado'] ?></td>                  
+                    <td>Cliente: <?= $consultast[$i]['id_cliente'] ?></td>
+                </tr>
+                <tr>
                     <td>Tipo Dispositivo: <?= $consultast[$i]['nombre'] ?></td>
                 </tr><tr>
                     <td>Marca:&nbsp;&nbsp;&nbsp; <?= $consultast[$i]['marca'] ?></td>

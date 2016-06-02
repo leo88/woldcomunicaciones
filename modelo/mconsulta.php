@@ -246,12 +246,7 @@
 		 */
 		function consultar_stcomparativo()
 		{
-			$sql = "SELECT tbserviciotecnico.numero_orden AS `numero_orden`, tbserviciotecnico.nombre AS `nombre`,tbserviciotecnico.marca AS `marca`,
-			tbserviciotecnico.referencia AS `referencia`, tbserviciotecnico.descripcion_st AS `descripcion_st`,tbserviciotecnico.observacion AS 
-			`observacion`,tbserviciotecnico.precio_cliente AS `precio_cliente`,tbserviciotecnico.fecha AS `fecha`,tbserviciotecnico.id_cliente AS 
-			`id_cliente`,tbserviciotecnico.empleado AS `empleado`,tbserviciotecnico.abono AS `abono`,(tbserviciotecnico.precio_cliente - tbserviciotecnico.abono) 
-			AS `saldo_pendiente`, tbservicioentregado.fecha AS fecha_cancel, tbservicioentregado.saldo_cancel AS saldo_cancelado from tbserviciotecnico LEFT JOIN 
-			tbservicioentregado ON tbserviciotecnico.numero_orden = tbservicioentregado.numero_orden ORDER BY tbserviciotecnico.numero_orden";
+			$sql = "SELECT st.numero_orden, st.nombre,st.marca,st.referencia, st.descripcion_st,st.observacion,st.precio_cliente,st.fecha,cl.nombre,emp.nombre, st.abono,(st.precio_cliente - st.abono) AS `saldo_pendiente`, sten.fecha AS fecha_cancel, sten.saldo_cancel AS saldo_cancelado from tbserviciotecnico as st INNER JOIN tbcliente as cl ON cl.idcliente = st.id_cliente INNER JOIN tbempleado as emp ON emp.idempleado = st.empleado LEFT JOIN tbservicioentregado as sten ON st.numero_orden = sten.numero_orden";
 			return $this->SeleccionDatos($sql);
 		}
 		/*
