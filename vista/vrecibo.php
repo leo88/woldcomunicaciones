@@ -70,9 +70,17 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
     Cra 13 No. 10-110 
 </div> 
 </div><!--cierre div margen-->
+<div> <p>esto no se debe imprimir</p> </div>
+<button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="printDiv('margen')"> Imprimir</span></button> 
 <script type="text/javascript">
-function imprSelec(margen)
-{var ficha=document.getElementById(margen);var ventimp=window.open(' ','popimpr');ventimp.document.write(ficha.innerHTML);ventimp.document.close();ventimp.print();ventimp.close();}
-</script>
-<a  href="javascript:imprSelec('muestra')">Imprimir</a>
+function printDiv(margen) {
+     var printContents = document.getElementById(margen).innerHTML;
+     var originalContents = document.body.innerHTML;
 
+     document.body.innerHTML = printContents;
+
+     window.print();
+
+     document.body.innerHTML = originalContents;
+}
+</script>
