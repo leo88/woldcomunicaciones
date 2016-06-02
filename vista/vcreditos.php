@@ -5,8 +5,8 @@
         <p>Sistema de Manejo de Inventario y Contabilidad</p>
         <p>-------------------------------------------------------------------------- </p>         
           
-        <p>Desarrado por:</p>              
-        <p>Diego Monrroy<br>Cel: 312 584 14 55<br>Email: difemo91@gmail.com</p>
+        <p>Desarrollado por:</p>
+        <p>Diego Monroy<br>Cel: 312 584 14 55<br>Email: difemo91@gmail.com</p>
         <p>Leonardo Triana<br>Cel: 321 922 18 64<br>Email: dtgrafos@gmail.com</p>   
         <p>-------------------------------------------------------------------------- 
         <br><br>
@@ -18,7 +18,6 @@
         <p>-------------------------------------------------------------------------- </p>  
         </div>       
     </div>
-    
 </body>
 <script type="text/javascript">
     $(document).ready(function () {

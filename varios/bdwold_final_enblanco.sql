@@ -15,7 +15,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
-
+CREATE DATABASE IF NOT EXISTS bdwold COLLATE = 'utf8_general_ci';
+USE bdwold;
 --
 -- Base de datos: `bdwold`
 --
