@@ -122,7 +122,15 @@
    			</div>
   		</div>
 	</nav>
-    <div class="container">  		
+    <div class="container"> 
+    	 <?php 
+          if ($perfil=='Administrador'){
+            include 'vista/vvideosadmin.php';
+          }
+          else{
+            include 'vista/videosvende.php';
+          }
+        ?>
 		<?php
 			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
 			if ($page == 2) 
