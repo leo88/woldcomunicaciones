@@ -134,7 +134,20 @@
 
 		      </div><!--/row-->
 
-				<br/><br/>    
+				<div class="row-fluid"><!--spoiler de informacion--> <br>
+<input type="checkbox"  id="spoiler2" /> 
+<label for="spoiler2" >Acerca de la Reposicion</label>
+<div class="spoiler">
+      <div class="info">
+              <h5>¿Cuando realizo una Reposicion?</h5>
+              <ul>
+                  <li>Una Reposicion se realiza cuando se hace un cambio de una referencia que se compro a un proveedor por otra distinta</li>
+                  <li>Si la referencia que ingresa tiene un valor diferente a la retornada al proveedor puede hacer el ajuste de caja en <a href="home.php?pag=11" class="btn btn-default btn-xs">Ingresos y Egresos Varios</a> justificando dicha diferencia</li>
+              </ul>
+      </div>
+    </div>
+</div>
+<br><br>    
 <script type="text/javascript">
     $(document).ready(function () {
         $(".nav li").removeClass("active");//this will remove the active class from  
