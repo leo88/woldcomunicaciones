@@ -15,7 +15,6 @@
 	<link rel="stylesheet" href="fonts/style.css">        
 	<link rel="stylesheet" href="css/chosen.css">
 	<link rel="stylesheet" href="css/chosen-bootstrap.css">
-	<link rel="stylesheet" href="css/animate.css">
 	<script src="js/jquery-1.12.3.min.js"></script>
   <script src="js/chosen.jquery.js"></script>
   <script src="js/script.js"></script>
@@ -110,7 +109,7 @@
       						<li><a href="home.php?pag=35">Servicio Técnico</a></li>
       					</ul>
       				</li> 
-      				<li><a href="home.php?pag=46"><span class="glyphicon glyphicon-eye-open"></a></li>
+      				<li><a href="vista/vcreditos.php"><span class="glyphicon glyphicon-fire"></a></li>
     			</ul>
     			<ul class="nav navbar-nav navbar-right">
     				<div class="navbar-brand"><small><strong><?php echo ucfirst($usuario); ?></strong></small></div>
@@ -300,10 +299,6 @@
       if ($page == 45) 
       {
                 include("vista/vactumovi.php");
-      }
-       if ($page == 46) 
-      {
-                include("vista/vcreditos.php");
       }
 		?>
     </div>

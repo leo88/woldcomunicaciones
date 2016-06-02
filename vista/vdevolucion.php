@@ -156,20 +156,7 @@
 
 		      </div><!--/row-->
 
-				<div class="row-fluid"><!--spoiler de informacion--> <br>
-<input type="checkbox"  id="spoiler2" /> 
-<label for="spoiler2" >Acerca de la Devolucion</label>
-<div class="spoiler">
-      <div class="info">
-              <h5>¿Cuando realizo una Devolucion?</h5>
-              <ul>
-                  <li>Una Devolucion se realiza cuando una referencia es regresada al proveedor, o se asume como tal si el producto no es apto para la venta</li>
-                  <li>El seguimiento al proveedor se hace mediante el codigo de barras generado en el numero de compra</li>
-              </ul>
-      </div>
-    </div>
-</div>
-<br><br>
+				<br/><br/> 
 <script type="text/javascript">
     $(document).ready(function () {
         $(".nav li").removeClass("active");//this will remove the active class from  
