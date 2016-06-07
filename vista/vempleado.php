@@ -16,7 +16,7 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Sueldo:</label>
-            <input type="number" class="form-control" name="sueldo" maxlength="11" required>       
+            <input type="number" class="form-control" name="sueldo" min="0" maxlength="11" required>       
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Dirección del empleado:</label>

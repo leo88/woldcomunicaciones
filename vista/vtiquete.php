@@ -18,7 +18,7 @@ $idprint             = $consultast[0]['numero_orden'];
     <table id="encabezado"  cellspacing="0" width="100%">
       <thead>
             <tr>
-                <th colspan="2">Wilson Diaz Tecnico Profecional <br> woldcomunicaciones@hotmail.com</th>              
+                <th colspan="2">Wilson Diaz Tecnico Profesional <br> woldcomunicaciones@hotmail.com</th>              
             </tr>
             <tr>
                <th colspan="2"><div id="logob">ORDEN DE SERVICIO TECNICO</div></th>

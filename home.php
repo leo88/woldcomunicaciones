@@ -37,14 +37,13 @@
         			<span class="icon-bar"></span>
         			<span class="icon-bar"></span>                        
       			</button>
-      			<a class="navbar-brand" href="home.php">Wold Comunicaciones</a>
+      			<a class="navbar-brand active" href="home.php">Wold Comunicaciones</a>
     		</div>
     		<?php 
     			$perfilusuario = isset($_SESSION["perfil"]) ? $_SESSION["perfil"]:NULL;
 			?>	
 			<div class="collapse navbar-collapse" id="myNavbar">
     			<ul class="nav navbar-nav">
-      				<li class="active"><a href="home.php">Home</a></li>
       				<li class="dropdown" id="registrar">
       					<a class="dropdown-toggle" data-toggle="dropdown" href="">Registrar
       					<span class="caret"></span></a>
@@ -125,6 +124,9 @@
     <div class="container"> 
 		<?php
 			$page = isset($_GET['pag']) ? $_GET['pag'] : NULL;
+      if($page == null){
+          include("vista/vhome.php");
+      }
 			if ($page == 2) 
 			{
                 include("vista/vcliente.php");
@@ -304,6 +306,10 @@
        if ($page == 46) 
       {
                 include("vista/vcreditos.php");
+      }
+      if ($page == 47) 
+      {
+                include("vista/prosesbarcode.php");
       }
 		?>
     </div>
