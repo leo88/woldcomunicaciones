@@ -1,7 +1,7 @@
 <?php
 
-	include_once('controlador/conexion.php');
-	include_once('functions.php');
+	include_once 'controlador/conexion.php';
+	include_once 'functions.php';
 
 	class Mmovimiento extends Funciones
 	{

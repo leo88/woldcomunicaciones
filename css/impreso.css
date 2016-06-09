@@ -95,6 +95,16 @@ body {
 #boton {
     margin-top: 30px;
 }
+#barra1{
+    margin-left: 0px;
+    text-align: left;
+}
+.barra2{
+    width: 100px;
+}
+.barra3{
+    height: 10px;
+}
 @media print{
     #boton {   
         visibility: hidden;
