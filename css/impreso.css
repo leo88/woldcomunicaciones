@@ -100,10 +100,13 @@ body {
     text-align: left;
 }
 .barra2{
-    width: 100px;
+    width: 80px;
 }
 .barra3{
-    height: 10px;
+    width: 80px;
+}
+.barra4{
+    margin-left: 10px;
 }
 @media print{
     #boton {   
