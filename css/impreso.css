@@ -108,11 +108,20 @@ body {
 .barra4{
     margin-left: 10px;
 }
+
 @media print{
     #boton {   
         visibility: hidden;
     }
+    #prueba {   
+        visibility: hidden;
+    }
     #prueba2 {   
         visibility: hidden;
+    }
+   #pin {
+        border: 1px solid #000;
+        width: 230px;
+        height: 30px;        
     }
 }

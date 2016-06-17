@@ -71,6 +71,38 @@
 .blanco {
     color: #FFF;
 }
+
+/*HOME*/
+.fondo_home{  
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top;
+    background-clip: border-box;
+}
+.subcontenedor {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3eccd1+0,02a2ce+100 */
+background: #3eccd1; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #3eccd1 0%, #02a2ce 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  #3eccd1 0%,#02a2ce 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  #3eccd1 0%,#02a2ce 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eccd1', endColorstr='#02a2ce',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    
+  border-radius: 50px;
+  width: 70%;
+  margin: auto;
+  position: relative;
+  height: auto;
+  animation: 3s linear infinite;
+  -webkit-animation: 3s linear infinite;
+  color: #FFF;
+  font-weight: bold;
+}
+.titulo_a{
+    font-size: 400%;
+    text-align: center;
+}
 /*modal*/
 
 	.cajaexterna {

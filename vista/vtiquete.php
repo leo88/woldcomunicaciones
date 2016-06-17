@@ -82,7 +82,8 @@ $idprint             = $consultast[0]['numero_orden'];
             <?php endfor; ?>
         </tbody>
 </table>
-<img src="img/circles3.png">
+<img src="img/circles3.png"><br>
+<img src="img/rectangulo.jpg">
 </div>
 <script type="text/javascript">
 function printDiv(prueba) {
