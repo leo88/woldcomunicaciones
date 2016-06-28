@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mrecargas.php');
+	include 'modelo/mrecargas.php';
 
 	$recargas = new Mrecargas();
 

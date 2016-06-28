@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mproducto.php');
+	include 'modelo/mproducto.php';
 
 	$producto = new Mproducto();
 
@@ -16,8 +16,8 @@
 	/*
 		Variables para aplicar el formato de Mayusculas y minusculas
 	*/
-	$newName = $producto->sentence_case($nombre);
-	$newMarca = $producto->sentence_case($marca);
+	$newName = $producto->sentence_case_test($nombre);
+	$newMarca = $producto->sentence_case_test($marca);
 
 	/*
 		Comprobacion datos para insertar

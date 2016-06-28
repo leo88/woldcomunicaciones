@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mreposicion.php');
+	include 'modelo/mreposicion.php';
 
 	$reposicion = new Mreposicion();
 

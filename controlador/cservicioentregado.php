@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mservicioentregado.php');
+	include 'modelo/mservicioentregado.php';
 
 	$servicioentregado = new Mservicioentregado();
 

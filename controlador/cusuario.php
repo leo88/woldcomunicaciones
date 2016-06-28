@@ -1,10 +1,10 @@
 <?php
 	
 	/*  
-        *   @Version: V1 13/05/16
+        *   @Version: V1 28/06/16
     */
 
-	include('modelo/musuario.php');
+	include 'modelo/musuario.php';
 
 	$usuario = new Musuario();
 

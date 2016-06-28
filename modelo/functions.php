@@ -53,5 +53,13 @@
                     $sentence.' '; 
             } 
             return trim($new_string); 
-        } 
+        }
+        /*
+         * Función de utilidad para formato de nombres
+         */
+        function sentence_case_test($string) 
+        { 
+            $foo = ucwords(strtolower($string));
+            return $foo; 
+        }
     }

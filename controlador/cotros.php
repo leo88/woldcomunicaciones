@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/motros.php');
+	include 'modelo/motros.php';
 
 	$otros = new Motros();
 

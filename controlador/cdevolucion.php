@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mdevolucion.php');
+	include 'modelo/mdevolucion.php';
 
 	$devolucion = new Mdevolucion();
 

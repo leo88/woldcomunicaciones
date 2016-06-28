@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mempleado.php');
+	include 'modelo/mempleado.php';
 
 	$empleado = new Mempleado();
 
@@ -22,9 +22,9 @@
 	/*
 		Variables para aplicar el formato de Mayusculas y minusculas
 	*/
-	$newName = $empleado->sentence_case($nombre);
-	$newDir = $empleado->sentence_case($direccion);
-	$newCity = $empleado->sentence_case($ciudad);
+	$newName = $empleado->sentence_case_test($nombre);
+	$newDir = $empleado->sentence_case_test($direccion);
+	$newCity = $empleado->sentence_case_test($ciudad);
 
 	/*
 		Comprobacion datos para insertar

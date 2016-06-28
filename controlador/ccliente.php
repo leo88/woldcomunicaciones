@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mcliente.php');
+	include 'modelo/mcliente.php';
 
 	$cliente = new Mcliente();
 
@@ -17,8 +17,8 @@
 	/*
 		Variables para aplicar el formato de Mayusculas y minusculas
 	*/
-	$newName = $cliente->sentence_case($nombre);
-	$newDir = $cliente->sentence_case($direccion);
+	$newName = $cliente->sentence_case_test($nombre);
+	$newDir = $cliente->sentence_case_test($direccion);
 
 	/*
 		Comprobar si las variables de nombre y detalle tienen datos, de ser asi se procede a enviarle los parametros

@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mminutos.php');
+	include 'modelo/mminutos.php';
 
 	$minutos = new Mminutos();
 

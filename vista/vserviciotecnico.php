@@ -28,11 +28,17 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-4 ccol-md-4 ol-lg-4">
            <label for=""><span style="color:red;">* </span>Costo del servicio:</label>
-            <input type="number" class="form-control" name="costo_st" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>        
+           <div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" class="form-control" name="costo_st" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+			</div>      
 		</div>
 		<div class="form-group col-sm-6 col-md-4 -lg-4">
              <label for=""><span style="color:red;">* </span>Precio al cliente:</label>
-            <input type="number" class="form-control" name="precio_cliente" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required >     
+             <div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" class="form-control" name="precio_cliente" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+			</div>     
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
            <label for=""><span style="color:red;">* </span>Fecha:</label>
@@ -58,7 +64,10 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-4">
            <label for=""><span style="color:red;">* </span>Abono:</label>
-            <input type="number" class="form-control" name="abono" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required >       
+           <div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" class="form-control" name="abono" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+			</div>       
 		</div>
 		 <div class="form-group col-sm-6 col-md-4 col-lg-4"> <br>  
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-ok"></span></button>

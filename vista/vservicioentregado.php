@@ -32,15 +32,24 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-6">
             <label for="">Precio:</label>
-            <input type="text" class="form-control" name="saldo1" id="sal1" readonly>       
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control" name="saldo1" id="sal1" readonly>
+            </div>     
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-6">
             <label for="">Abono:</label>
-            <input type="text" class="form-control" name="saldo2" id="sal2" readonly>     
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control" name="saldo2" id="sal2" readonly>
+            </div>    
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-6">
             <label for="">Saldo Pendiente:</label>
-            <input type="text" class="form-control" name="saldo_cancel" id="saldo" readonly >       
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="text" class="form-control" name="saldo_cancel" id="saldo" readonly>
+            </div>      
 		</div>
 		 <div class="form-group col-sm-6 col-md-6 col-lg-6"> <br>
               <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-ok"></span></button>

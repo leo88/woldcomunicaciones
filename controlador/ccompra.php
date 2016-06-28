@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mcompra.php');
+	include 'modelo/mcompra.php';
 
 	$compra = new Mcompra();
 

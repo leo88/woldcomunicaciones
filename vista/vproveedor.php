@@ -35,7 +35,7 @@
                     <option value="2">Local</option>
             	</select>        
 		</div>
-			<div class="form-group col-md-6"> <br>          		
+			<div class="form-group col-md-6"> <br>
          			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
       		</div>
 	</form>

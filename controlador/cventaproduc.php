@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mventaproduc.php');
+	include 'modelo/mventaproduc.php';
 
 	$ventaproduc = new Mventaproduc();
 

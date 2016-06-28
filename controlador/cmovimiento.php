@@ -1,6 +1,6 @@
 <?php
 	
-	include('modelo/mmovimiento.php');
+	include 'modelo/mmovimiento.php';
 
 	$movimiento = new Mmovimiento();
 

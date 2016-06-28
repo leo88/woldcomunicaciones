@@ -10,7 +10,10 @@
 						</div>
 						<div class="form-group campo">
     				        <label for=""><span style="color:red;">* </span>Valor de la venta:</label>
-    				        <input type="number" class="form-control" name="venta_recarga" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>
+    				        <div class="input-group">
+  								<span class="input-group-addon">$</span>
+  								<input type="number" class="form-control" name="venta_recarga" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>
+							</div>
 						</div>
 						 <div class="form-group campo"> <br>          		
     				        <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
