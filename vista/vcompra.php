@@ -141,66 +141,9 @@
 	</div>
 </div>
 <!-- final movimiento -->	
-            
- <!-- inicio ventaxproducto -->
-<div class="span4">			      
-<?php include("controlador/ccompraproduc.php"); ?>
-    
-<div class="container-fluid lol">
-<div class="eti">Registrar Valor</div>
-
-	<form action="" method="POST" class="blanco">
-		<div class="form-group campo">
-            <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
-            <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros" required> 
-            <input type="hidden" name="numero_compra" value="<?= $numero_compra2[0]['numero_compra'] ?>">
-            <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">     
-		</div>
-		 <div class="form-group campo"><br>
-            <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-credit"></span></button>
-        </div>
-        <div class="campo">
-         Si el producto que va a comprar no esta esta en el inventario actualmente, antes de hacer la compra <a href="home.php?pag=3">Registre la referencia</a> 
-         </div>  
-	</form>			 
-</div>
-<?php $consultacompraproduc = $compraproduc->consultar_compraproduc_u(); ?>
-                
-                
-                
-					<div id='margentabla'>
-						<table class="table">
-				  <thead>
-            <tr>
-                <th colspan="12">Ultimo Valor</th>
-            </tr>
-            <tr>
-                <th>ID Compra</th>
-				<th>ID Movimiento</th>
-				<th>Valor Unirario</th>
-				<th>Edición</th>
-            </tr>
-        </thead>
-        <tbody>
-         <?php for($i=0;$i<count($consultacompraproduc);$i++): ?>
-				<tr>
-					<td><?= $consultacompraproduc[$i]['numero_compra'] ?></td>
-					<td><?= $consultacompraproduc[$i]['movimiento'] ?></td>
-					<td><?= "$ ".number_format($consultacompraproduc[$i]['valor']) ?></td>
-					<td><a href="home.php?pag=23&id=<?= $consultacompraproduc[$i]['numero_compra'] ?>&idm=<?= $consultacompraproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
-				</tr>
-			<?php endfor; ?>
-        </tbody>
-						</table>
-					</div>
-
-
-
-		        </div>
-<!-- final ventaxproducto -->	           	        	        
+                       	        	        
 		        <!--/span-->
 
-          
 		      </div><!--/row-->
 
 				<br/><br/>    

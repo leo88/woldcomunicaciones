@@ -97,7 +97,7 @@
         </div>
 	</form>	           
 </div>
-<?php $consultamovimiento = $movimiento->consultar_movimiento_v(); ?>                
+<?php $consultamovimiento = $movimiento->consultar_movimiento_v($idgeneral2[0]['numero_venta']); ?>                
                 
 					<div id=''>
 						<table class="table">

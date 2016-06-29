@@ -77,9 +77,9 @@
 		/*
 		 *función para la consulta de los datos de la tabla tbmovimiento por VENTA limitandolo a un solo registro
 		 */
-		function consultar_movimiento_v()
+		function consultar_movimiento_v($numero_venta)
 		{
-			$sql = "SELECT * FROM `tbmovimiento` WHERE `motivo` = 'Venta' ORDER BY idmovimiento DESC LIMIT 1";
+			$sql = "SELECT * FROM `tbmovimiento` WHERE motivo = 'Venta' AND idgeneral = '$numero_venta'";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*
