@@ -154,67 +154,13 @@
 		        </div>
 <!-- final movimiento -->	
             
- <!-- inicio ventaxproducto -->
-<div class="span4">			      
-<?php include("controlador/cventaproduc.php"); ?>
-    
-<div class="container-fluid lol">
-<div class="eti">Registrar Valor</div>
+<div class="col-lg-3 col-md-offset-6">
+	<a href="home.php?pag=40" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
+</div>           	        	        
+<!--/span-->
 
-	<form action="" method="POST" class="blanco">
-		<div class="form-group campo">
-            <label for=""><span style="color:red;">* </span>Valor Unitario:</label>
-            <input type="number" class="form-control" name="valor" pattern="[0-9]{1,10}" title="Solo validos numeros" min="0" required> 
-            <input type="hidden" name="numero_venta" value="<?= $numero_venta2[0]['numero_venta'] ?>">
-            <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">    
-		</div>
-		 <div class="form-group campo"><br> 
-            <button type="submit" class="btn btn-success" value="Insertar"><span class="icon-credit"></span></button>
-        </div>
-	</form>
-	<br><br><br>		 
-</div>
-<?php $consultaventaproduc = $ventaproduc->consultar_ventaproduc_u(); ?>
-                
-                
-                
-					<div id='margentabla'>
-						<table class="table">
-				  <thead>
-            <tr>
-                <th colspan="12">Ultimo Valor</th>
-            </tr>
-            <tr>
-                <th>ID Venta</th>
-				<th>ID Movimiento</th>
-				<th>Valor Unirario</th>
-				<th>Edición</th>
-            </tr>
-        </thead>
-        <tbody>
-          <?php for($i=0;$i<count($consultaventaproduc);$i++): ?>
-				<tr>
-					<td><?= $consultaventaproduc[$i]['numero_venta'] ?></td>
-					<td><?= $consultaventaproduc[$i]['movimiento'] ?></td>
-					<td><?= "$ ".number_format($consultaventaproduc[$i]['precio_venta']) ?></td>
-					<td><a href="home.php?pag=27&id=<?= $consultaventaproduc[$i]['numero_venta'] ?>&idm=<?= $consultaventaproduc[$i]['movimiento']?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
-				</tr>
-			<?php endfor; ?>
-        </tbody>
-						</table>
-					</div>
-		<div class="col-lg-3 col-md-offset-6">
-			<a href="home.php?pag=40" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
-		</div>
-		        </div>
-<!-- final ventaxproducto -->	           	        	        
-		        <!--/span-->
-
-          
-		      </div><!--/row-->
-
-				<br/><br/>    
-
+</div><!--/row-->
+	<br/><br/>
 		   
 <div class="row-fluid"><!--spoiler de informacion-->
     <input type="checkbox"  id="spoiler2" /> 
