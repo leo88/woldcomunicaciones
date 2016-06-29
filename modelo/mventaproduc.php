@@ -56,7 +56,7 @@
 			return $this -> SeleccionDatos($sql);
 		}
 		 /*
-		 	Función para la seleccion del ultimo registro de la tabla comra
+		 	Función para la seleccion del ultimo registro de la tabla venta
 		 */
 		function sel_numeroventa()        
 		{
@@ -64,7 +64,7 @@
             return $this->SeleccionDatos($sql);
         }
         /*
-		 	Función para la seleccion especifica de los datos de la tabla compra
+		 	Función para la seleccion especifica de los datos de la tabla venta
 		 */
 		function sel_numeroventa1($numero_venta)
 		{

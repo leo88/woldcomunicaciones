@@ -12,10 +12,10 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbmovimiento
 		 */
-		function insertar_movimiento($motivo, $referencia, $cantidad)
+		function insertar_movimiento($idgeneral, $motivo, $referencia, $cantidad, $valor)
 		{
-			$sql = "INSERT INTO tbmovimiento (motivo, referencia, cantidad)
-						VALUES ('".$motivo."','".$referencia."','".$cantidad."');";
+			$sql = "INSERT INTO tbmovimiento (idgeneral, motivo, referencia, cantidad, valor)
+						VALUES ('".$idgeneral."','".$motivo."','".$referencia."','".$cantidad."','".$valor."');";
 			$this -> cons($sql);
 		}
 		/*
@@ -106,4 +106,12 @@
 			$sql = "SELECT * FROM tbproducto WHERE referencia='".$referencia."';";
 			return $this->SeleccionDatos($sql);
 		}
+		 /*
+		 	Función para la seleccion del ultimo registro de la tabla venta
+		 */
+		function sel_numeroventa()        
+		{
+            $sql = "SELECT * FROM `tbventa` order by numero_venta desc limit 1" ;
+            return $this->SeleccionDatos($sql);
+        }
 	}

@@ -4,18 +4,18 @@
 				<div class="eti">Recargas</div>
 
 					<form action="" method="POST" class="blanco">
-						<div class="form-group campo">
+						<div class="form-group col-sm-6 col-md-4 col-lg-4">
     				        <label for=""><span style="color:red;">* </span>Fecha:</label>
     				        <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly re	uired>
 						</div>
-						<div class="form-group campo">
+						<div class="form-group col-sm-6 col-md-4 col-lg-4">
     				        <label for=""><span style="color:red;">* </span>Valor de la venta:</label>
     				        <div class="input-group">
   								<span class="input-group-addon">$</span>
   								<input type="number" class="form-control" name="venta_recarga" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>
 							</div>
 						</div>
-						 <div class="form-group campo"> <br>          		
+						 <div class="form-group col-sm-6 col-md-4 col-lg-4"> <br>          		
     				        <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
     				    </div>
 					</form>
