@@ -9,70 +9,29 @@
   ?>
   	<!-- Tabla donde se muestra la informacion ingresada-->
     <?php $consultaventa = $venta->consultar_venta(); ?>
-    <div class="well">
-        <table>
-		<tbody>
+    <div id="vt">        	
 				<?php for($j=0;$j<count($consultaventa);$j++): 
 				$cliente1 	= $venta->sel_cliente1($consultaventa[$j]['idcliente']);
 				$empleado1 	= $venta->sel_empleado1($consultaventa[$j]['idempleado']);
 			?>
-				<tr class="ventareg">No. Compra: <?= $consultaventa[$j]['numero_venta'] ?></tr>
-				<tr class="ventareg">Cliente: <?= $cliente1[0]['nombre'] ?></tr>
-				<tr class="ventareg">Fecha: <?= $consultaventa[$j]['fecha'] ?></tr>
-				<tr class="ventareg">Empleado: <?= $empleado1[0]['nombre'] ?></tr>
-				<!--<tr><a href="home.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></tr>-->
-				
-			<?php endfor; ?>
-		</tbody>
-	</table>
+			       <span class="vt1">REGISTRO DE VENTA NO. <?= $consultaventa[$j]['numero_venta'] ?></span>         <br><br>         
+                   <span class="vt1">Cliente: <?= $cliente1[0]['nombre'] ?></span>
+                   <span class="vt1">Fecha: <?= $consultaventa[$j]['fecha'] ?></span>
+                   <span class="vt1">Vendedor: <?= $empleado1[0]['nombre'] ?></span>
+                    <!--<div><a href="home.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></div>-->
+
+                <?php endfor; ?>
+	           
     </div> 
-  	<?php 
-  		} 
-  		if($displayForm){
-  	?>
-    <div class="container-fluid lol">
-        <div class="eti">Registrar Venta</div>
-        <form action="" method="POST" class="blanco">
-		<div class="form-group campo">
-            <label for=""><span style="color:red;">* </span>Cliente:</label><br> 
-            <select name="cliente" class="chzn-select form-control" >
-				<option value=0>Seleccione cliente</option>
-				<?php for($j=0;$j<count($cliente2);$j++): ?>
-					<option value="<?= $cliente2[$j]['idcliente'] ?>"><?= $cliente2[$j]['nombre'] ?></option>
-				<?php endfor; ?>
-			</select>      
-		</div>
-		<div class="form-group campo">
-           <label for=""><span style="color:red;">* </span>Fecha:</label>
-            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly required>          
-		</div>
-		<div class="form-group campo">
-           <label for=""><span style="color:red;">* </span>Empleado:</label> 
-            <select name="empleado" class="form-control" >
-				<option value=0>Seleccione empleado</option>
-				<?php for($j=0;$j<count($empleado2);$j++): ?>
-					<option value="<?= $empleado2[$j]['idempleado'] ?>"><?= $empleado2[$j]['nombre'] ?></option>
-				<?php endfor; ?>
-			</select>           
-		</div>
-        <div class="form-group campo"> <br> 
-              <button type="submit" name="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"></span></button>
-        </div>
-	</form>	
-    </div>
-<?php } ?>
-</div>
-<!-- final venta -->
-          	
+    
+             	
 <!-- inicio movimiento -->
-<div class="span4">			      
+		      
 <?php include 'controlador/cmovimiento.php'; ?>
     
 <div class="container-fluid lol">
-<div class="eti">Registrar Movimiento</div>
-
 	<form action="" method="POST" class="blanco">
-		<div class="form-group campo">
+		<div class="form-group campo col-md-3">
           	<input type="hidden" name="motivo" value="Venta" required>
           	<input type="hidden" name="idgeneral" value="<?= $idgeneral2[0]['numero_venta'] ?>">
            	<label for=""><span style="color:red;">* </span>Referencia:</label><br>
@@ -84,19 +43,20 @@
 				<?php endfor; ?>
 			</select>  
 		</div>
-		<div class="form-group campo">
+		<div class="form-group campo col-md-3">
            <label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>  
 		</div>
-		<div class="form-group campo">
+		<div class="form-group campo col-md-3">
            <label for=""><span style="color:red;">* </span>Valor:</label>
             <input type="number" class="form-control" name="valor" pattern="[0-9]{0,9}" min="0" title="Solo numeros validos" required>  
 		</div>
         <div class="form-group campo"><br> 
-           <button type="submit" name="Sale" class="btn btn-warning" value="-"><span class="icon-minus"></span></button>
+           <button type="submit" name="Sale" class="btn btn-warning" value="-"><span class="glyphicon glyphicon-shopping-cart"> INCLUIR ARTICULO</span></button>
         </div>
 	</form>	           
 </div>
+
 <?php $consultamovimiento = $movimiento->consultar_movimiento_v($idgeneral2[0]['numero_venta']); ?>                
                 
 					<div id=''>
@@ -137,17 +97,53 @@
         </tbody>
 						</table>
 					</div>
-
-		        </div>
+		       
 <!-- final movimiento -->	
-            
-<div class="col-lg-3 col-md-offset-6">
-	<a href="home.php?pag=40" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
-</div>           	        	        
-<!--/span-->
+    
+  	<?php 
+  		} 
+  		if($displayForm){
+  	?>
+    <div class="container-fluid lol">
+        <div class="eti">Registrar Venta</div>
+        <form action="" method="POST" class="blanco">
+		<div class="form-group campo col-md-3">
+            <label for=""><span style="color:red;">* </span>Cliente:</label><br> 
+            <select name="cliente" class="chzn-select form-control" >
+				<option value=0>Seleccione cliente</option>
+				<?php for($j=0;$j<count($cliente2);$j++): ?>
+					<option value="<?= $cliente2[$j]['idcliente'] ?>"><?= $cliente2[$j]['nombre'] ?></option>
+				<?php endfor; ?>
+			</select>      
+		</div>
+		<div class="form-group campo col-md-3">
+           <label for=""><span style="color:red;">* </span>Fecha:</label>
+            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly required>          
+		</div>
+		<div class="form-group campo col-md-3">
+           <label for=""><span style="color:red;">* </span>Empleado:</label> 
+            <select name="empleado" class="form-control" >
+				<option value=0>Seleccione empleado</option>
+				<?php for($j=0;$j<count($empleado2);$j++): ?>
+					<option value="<?= $empleado2[$j]['idempleado'] ?>"><?= $empleado2[$j]['nombre'] ?></option>
+				<?php endfor; ?>
+			</select>           
+		</div>
+        <div class="form-group campo"> <br> 
+              <button type="submit" name="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark">  REGISTAR VENTA</span></button>
+        </div>
+	</form>	
+    </div>
+<?php } ?>
+<!-- final venta --> 
+</div>
 
-</div><!--/row-->
-	<br/><br/>
+             
+<div class="col-lg-3 col-md-offset-9">
+	<a href="home.php?pag=40" class="btn btn-primary">Vista Impresión <span class="glyphicon glyphicon-print"></span></a>
+</div>  
+
+<br/><br/><br/>
 		   
 <div class="row-fluid"><!--spoiler de informacion-->
     <input type="checkbox"  id="spoiler2" /> 

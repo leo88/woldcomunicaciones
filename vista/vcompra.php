@@ -1,7 +1,6 @@
 
 <div class="row-fluid">
 <!-- inicio compra -->
-<div class="span4">	
 <?php include("controlador/ccompra.php"); ?>
 
 <?php
@@ -11,71 +10,25 @@
 ?>
 <!-- Tabla donde se muestra la informacion ingresada-->
     <?php $consultacompra = $compra->consultar_compra(); ?>
-    <div class="table-responsive">
-        <table class="table">
-		<thead>
-			<tr>
-				<th colspan="12">Ultima Compra</th>
-			</tr>
-			<tr>
-				<th>ID</th>
-				<th>Proveedor</th>
-				<th>Fecha</th>
-				<th>Codigo</th>
-			</tr>
-		</thead>
-		<tbody>
+    <div id="vt">
 				<?php for($j=0;$j<count($consultacompra);$j++): 
 				$proveedor1 = $compra->sel_proveedor1($consultacompra[$j]['proveedor']);
 			?>
-				<tr>
-				<td><?= $consultacompra[$j]['numero_compra'] ?></td>
-					<td><?= $proveedor1[0]['nombre'] ?></td>
-					<td><?= $consultacompra[$j]['fecha'] ?></td>
-					<td><a href="home.php?pag=41&id=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary"><span class="glyphicon glyphicon-barcode"></span></a></td>
+				    <span class="vt1">REGISTRO DE COMPRA NO. <?= $consultacompra[$j]['numero_compra'] ?></span>         <br><br> 
+				    <span class="vt1"><?= $consultacompra[$j]['numero_compra'] ?></span>
+					<span class="vt1"><?= $proveedor1[0]['nombre'] ?></span>
+					<span class="vt1"><?= $consultacompra[$j]['fecha'] ?></span>
+					<span class="vt1"><a href="home.php?pag=41&id=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary"><span class="glyphicon glyphicon-barcode"></span></a></span>
 				</tr>
-			<?php endfor; ?>
-		</tbody>
-		</table>
+			<?php endfor; ?>		
 	</div>
-	<?php 
-  		} 
-  		if($displayForm){
-  	?>
-    <div class="container-fluid lol">
-        <div class="eti">Registrar Compra</div>
-        <form action="" method="POST" class="blanco">
-		<div class="form-group campo">
-            <label for=""><span style="color:red;">* </span>Proveedor:</label><br> 
-            <select name="proveedor" class="chzn-select form-control" >
-				<option value=0>Seleccione proveedor</option>
-				<?php for($j=0;$j<count($proveedor2);$j++): ?>
-					<option value="<?= $proveedor2[$j]['idproveedor'] ?>"><?= $proveedor2[$j]['nombre'] ?></option>
-				<?php endfor; ?>
-			</select>         
-		</div>
-		<div class="form-group campo">
-           <label for=""><span style="color:red;">* </span>Fecha:</label>
-            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly>         
-		</div>
-        <div class="form-group campo"> <br>
-              <button type="submit" name="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"></span></button>
-        </div>
-	</form>	
-    </div>
-    <?php } ?>
-</div>
-<!-- final venta -->
-          	
-<!-- inicio movimiento -->
-<div class="span4">			      
+	
+	<!-- inicio movimiento -->	      
 <?php include('controlador/cmovimiento.php'); ?>
     
 <div class="container-fluid lol">
-<div class="eti">Registrar Movimiento</div>
-
 	<form action="" method="POST" class="blanco">
-		<div class="form-group campo">
+		<div class="form-group campo col-md-3">
            	<input type="hidden" name="motivo" value="Compra" required>
            	<input type="hidden" name="idgeneral" value="<?= $idgeneral3[0]['numero_compra'] ?>">
             <label for=""><span style="color:red;">* </span>Referencia:</label><br>
@@ -87,16 +40,16 @@
 				<?php endfor; ?>
 			</select>       
 		</div>
-		<div class="form-group campo">
+		<div class="form-group campo col-md-3">
             <label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>        
 		</div>
-		<div class="form-group campo">
+		<div class="form-group campo col-md-3">
            <label for=""><span style="color:red;">* </span>Valor:</label>
             <input type="number" class="form-control" name="valor" pattern="[0-9]{0,9}" min="0" title="Solo numeros validos" required>  
 		</div>
-        <div class="form-group campo"><br>         
-           <button type="submit" name="Entra" class="btn btn-warning" value="+"><span class="icon-plus"></span></button>
+        <div class="form-group campo col-md-2"><br>         
+           <button type="submit" name="Entra" class="btn btn-warning" value="+"><span class="glyphicon glyphicon-usd"> COMPRAR</span></button>
         </div>        
 	</form>	           
 </div>
@@ -139,14 +92,40 @@
         </tbody>
 	</table>
 	</div>
-</div>
 <!-- final movimiento -->	
-                       	        	        
-		        <!--/span-->
+	
+	<?php 
+  		} 
+  		if($displayForm){
+  	?>
+    <div class="container-fluid lol">
+        <div class="eti">Registrar Compra</div>
+        <form action="" method="POST" class="blanco">
+		<div class="form-group campo col-md-4">
+            <label for=""><span style="color:red;">* </span>Proveedor:</label><br> 
+            <select name="proveedor" class="chzn-select form-control" >
+				<option value=0>Seleccione proveedor</option>
+				<?php for($j=0;$j<count($proveedor2);$j++): ?>
+					<option value="<?= $proveedor2[$j]['idproveedor'] ?>"><?= $proveedor2[$j]['nombre'] ?></option>
+				<?php endfor; ?>
+			</select>         
+		</div>
+		<div class="form-group campo col-md-4">
+           <label for=""><span style="color:red;">* </span>Fecha:</label>
+            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>" readonly>         
+		</div>
+        <div class="form-group campo col-md-3"> <br>
+              <button type="submit" name="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark"> REGISTRAR COMPRA</span></button>
+        </div>
+	</form>	
+    </div>
+    <?php } ?>
+<!-- final compra -->          	                      	        	        
+ <!--/span-->
 
 		      </div><!--/row-->
 
-				<br/><br/>    
+<br/><br/>    
 
 <div class="row-fluid"><!--spoiler de informacion-->
 <input type="checkbox"  id="spoiler2" /> 
