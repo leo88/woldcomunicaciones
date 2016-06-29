@@ -11,6 +11,12 @@
     margin-bottom: 2px;
     margin-top: 2px;
 }
+.ventareg {
+    width: 100%;
+    display: inline-block;
+    margin: 12%;
+    background-color: red;
+}
 .eti, .etinfo {
     width: 100%;
     text-align: center;

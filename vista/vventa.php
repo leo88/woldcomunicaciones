@@ -1,6 +1,5 @@
 <div class="row-fluid">
 <!-- inicio venta -->
-<div class="span4">	
   <?php include 'controlador/cventa.php'; ?>
 
   <?php
@@ -10,35 +9,23 @@
   ?>
   	<!-- Tabla donde se muestra la informacion ingresada-->
     <?php $consultaventa = $venta->consultar_venta(); ?>
-    <div class="table-responsive">
-        <table class="table">
-		<thead>
-			<tr>
-				<th colspan="12">Ultima venta</th>
-			</tr>
-			<tr>
-				<th>ID</th>
-				<th>Cliente</th>
-				<th>Fecha</th>
-				<th>Empleado</th>
-			</tr>
-		</thead>
+    <div class="well">
+        <table>
 		<tbody>
 				<?php for($j=0;$j<count($consultaventa);$j++): 
 				$cliente1 	= $venta->sel_cliente1($consultaventa[$j]['idcliente']);
 				$empleado1 	= $venta->sel_empleado1($consultaventa[$j]['idempleado']);
 			?>
-				<tr>
-					<td><?= $consultaventa[$j]['numero_venta'] ?></td>
-					<td><?= $cliente1[0]['nombre'] ?></td>
-					<td><?= $consultaventa[$j]['fecha'] ?></td>
-					<td><?= $empleado1[0]['nombre'] ?></td>
-					<!--<td><a href="home.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></td>-->
-				</tr>
+				<tr class="ventareg">No. Compra: <?= $consultaventa[$j]['numero_venta'] ?></tr>
+				<tr class="ventareg">Cliente: <?= $cliente1[0]['nombre'] ?></tr>
+				<tr class="ventareg">Fecha: <?= $consultaventa[$j]['fecha'] ?></tr>
+				<tr class="ventareg">Empleado: <?= $empleado1[0]['nombre'] ?></tr>
+				<!--<tr><a href="home.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></tr>-->
+				
 			<?php endfor; ?>
 		</tbody>
 	</table>
-	</div>
+    </div> 
   	<?php 
   		} 
   		if($displayForm){
