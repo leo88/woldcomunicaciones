@@ -53,9 +53,9 @@
         /*
 		 *función para la consulta de los datos de la tabla tbmovimiento por COMPRA limitandolo a un solo registro
 		 */
-		function consultar_movimiento_c()
+		function consultar_movimiento_c($numero_compra)
 		{
-			$sql = "SELECT * FROM `tbmovimiento` WHERE `motivo` = 'Compra' ORDER BY idmovimiento DESC LIMIT 1";
+			$sql = "SELECT * FROM `tbmovimiento` WHERE motivo = 'Compra' AND idgeneral = '$numero_compra'";
 			 return $this->SeleccionDatos($sql);
 		}
         /*
@@ -112,6 +112,14 @@
 		function sel_numeroventa()        
 		{
             $sql = "SELECT * FROM `tbventa` order by numero_venta desc limit 1" ;
+            return $this->SeleccionDatos($sql);
+        }
+         /*
+		 	Función para la seleccion del ultimo registro de la tabla Compra
+		 */
+		function sel_numerocompra()        
+		{
+            $sql = "SELECT * FROM `tbcompra` order by numero_compra desc limit 1" ;
             return $this->SeleccionDatos($sql);
         }
 	}

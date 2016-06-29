@@ -19,6 +19,7 @@
 	*/
 	$referencia2= $movimiento->sel_producto();
 	$idgeneral2	= $movimiento->sel_numeroventa();
+	$idgeneral3	= $movimiento->sel_numerocompra();
 	
 	/*
 		Se evalua el boton de envio desde el formulario, para las salidas la cantidad sera negativa
