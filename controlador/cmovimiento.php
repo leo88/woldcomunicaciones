@@ -17,9 +17,10 @@
 	/*
 		Variables para traer los datos de los desplegables
 	*/
-	$referencia2= $movimiento->sel_producto();
-	$idgeneral2	= $movimiento->sel_numeroventa();
-	$idgeneral3	= $movimiento->sel_numerocompra();
+	$referencia2	= $movimiento->sel_producto();
+	$idgeneral2		= $movimiento->sel_numeroventa();
+	$idgeneral3		= $movimiento->sel_numerocompra();
+	$idgeneral4		= $movimiento->sel_numerorepo();
 	
 	/*
 		Se evalua el boton de envio desde el formulario, para las salidas la cantidad sera negativa

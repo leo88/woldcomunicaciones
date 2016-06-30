@@ -14,8 +14,8 @@
 				<?php for($j=0;$j<count($consultacompra);$j++): 
 				$proveedor1 = $compra->sel_proveedor1($consultacompra[$j]['proveedor']);
 			?>
-				    <span class="vt1">REGISTRO DE COMPRA NO. <?= $consultacompra[$j]['numero_compra'] ?></span>         <br><br> 
-				    <span class="vt1"><?= $consultacompra[$j]['numero_compra'] ?></span>
+				  <span class="vt1">REGISTRO DE COMPRA NO. <?= $consultacompra[$j]['numero_compra'] ?></span>         <br><br> 
+				  <span class="vt1"><?= $consultacompra[$j]['numero_compra'] ?></span>
 					<span class="vt1"><?= $proveedor1[0]['nombre'] ?></span>
 					<span class="vt1"><?= $consultacompra[$j]['fecha'] ?></span>
 					<span class="vt1"><a href="home.php?pag=41&id=<?= $consultacompra[$j]['numero_compra'] ?>" class="btn btn-primary"><span class="glyphicon glyphicon-barcode"></span></a></span>
@@ -79,7 +79,7 @@
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
-					<td><?= $consultamovimiento[$i]['valor'] ?></td>			
+					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>			
 					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

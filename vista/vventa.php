@@ -84,7 +84,7 @@
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
-					<td><?= $consultamovimiento[$i]['valor'] ?></td>				
+					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>				
 					<td><a href="home.php?pag=45&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
@@ -130,7 +130,7 @@
 			</select>           
 		</div>
         <div class="form-group campo"> <br> 
-              <button type="submit" name="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark">  REGISTAR VENTA</span></button>
+              <button type="submit" name="submit" class="btn btn-success" value="Insertar"><span class="icon-checkmark">  REGISTRAR VENTA</span></button>
         </div>
 	</form>	
     </div>

@@ -61,9 +61,9 @@
         /*
 		 *función para la consulta de los datos de la tabla tbmovimiento por REPOSICION limitandolo a un solo registro
 		 */
-		function consultar_movimiento_r()
+		function consultar_movimiento_r($idreposicion)
 		{
-			$sql = "SELECT * FROM `tbmovimiento` WHERE `motivo` = 'Reposición' ORDER BY idmovimiento DESC LIMIT 1";
+			$sql = "SELECT * FROM `tbmovimiento` WHERE motivo = 'Reposición' AND idgeneral = '$idreposicion'";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*
@@ -114,12 +114,20 @@
             $sql = "SELECT * FROM `tbventa` order by numero_venta desc limit 1" ;
             return $this->SeleccionDatos($sql);
         }
-         /*
+        /*
 		 	Función para la seleccion del ultimo registro de la tabla Compra
 		 */
 		function sel_numerocompra()        
 		{
             $sql = "SELECT * FROM `tbcompra` order by numero_compra desc limit 1" ;
+            return $this->SeleccionDatos($sql);
+        }
+        /*
+		 	Función para la seleccion del ultimo registro de la tabla Reposicion
+		 */
+		function sel_numerorepo()        
+		{
+            $sql = "SELECT * FROM `tbreposicion` order by idreposicion desc limit 1" ;
             return $this->SeleccionDatos($sql);
         }
 	}
