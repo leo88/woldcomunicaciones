@@ -28,11 +28,7 @@
 			<input type="text" class="form-control" name="observacion" value="<?= $consultaedit[0]['observacion'] ?>" maxlength="50">
 		</div>
 		<div class="form-group col-lg-6">
-			<label for="">Costo del servicio:</label>
-			<input type="number" class="form-control" name="costo_st" value="<?= $consultaedit[0]['costo_st']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" min="0" required>
-		</div>
-		<div class="form-group col-lg-6">
-			<label for="">Precio Cliente:</label>
+			<label for="">Valor del servicio:</label>
 			<input type="number" class="form-control" name="precio_cliente" value="<?= $consultaedit[0]['precio_cliente']  ?>" pattern="[0-9]{1,11}" title="Solo se permiten numeros, máximo 11" min="0" required>
 		</div>
 		<div class="form-group col-lg-6">

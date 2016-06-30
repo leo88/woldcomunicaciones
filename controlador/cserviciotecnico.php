@@ -35,17 +35,17 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($nombre && $marca && $referencia && $descripcion_st && $costo_st && $precio_cliente && $fecha && $id_cliente && $empleado && $abono && !$actu) 
+	if ($nombre && $marca && $referencia && $descripcion_st && $precio_cliente && $fecha && $id_cliente && $empleado && $abono && !$actu) 
 	{
         
-		$serviciotecnico->insertar_serviciotecnico($newName, $newMarca, $referencia, $descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
+		$serviciotecnico->insertar_serviciotecnico($newName, $newMarca, $referencia, $descripcion_st, $observacion, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
 	}
 	/*
 		Comprobacion datos para actualizar
 	*/
 	if ($idservitecedit && $nombre && $marca && $referencia && $actu) 
 	{
-		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $newName, $newMarca, $referencia,$descripcion_st, $observacion, $costo_st, $precio_cliente, $fecha, $abono);
+		$serviciotecnico->actualizar_serviciotecnico($idservitecedit, $newName, $newMarca, $referencia,$descripcion_st, $observacion, $precio_cliente, $fecha, $abono);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

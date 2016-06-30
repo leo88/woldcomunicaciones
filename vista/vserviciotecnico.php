@@ -26,15 +26,8 @@
              <label for="">Observacion:</label>
             <input type="text" class="form-control" name="observacion" maxlength="50">           
 		</div>
-		<div class="form-group col-sm-6 col-md-4 ccol-md-4 ol-lg-4">
-           <label for=""><span style="color:red;">* </span>Costo del servicio:</label>
-           <div class="input-group">
-  				<span class="input-group-addon">$</span>
-  				<input type="number" class="form-control" name="costo_st" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
-			</div>      
-		</div>
 		<div class="form-group col-sm-6 col-md-4 -lg-4">
-             <label for=""><span style="color:red;">* </span>Precio al cliente:</label>
+             <label for=""><span style="color:red;">* </span>Valor de servicio:</label>
              <div class="input-group">
   				<span class="input-group-addon">$</span>
   				<input type="number" class="form-control" name="precio_cliente" pattern="[0-9]{1,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
@@ -89,7 +82,6 @@
 				<th>Referencia</th>
 				<th>Descripcion</th>
 				<th>Observacion</th>
-				<th>Costo Servicio</th>
 				<th>Precio Cliente</th>
 				<th>Fecha Recibido</th>
 				<th>ID Cliente</th>
@@ -111,7 +103,6 @@
 					<td data-title='Referencia'><?= $consultaserviciotecnico[$i]['referencia'] ?></td>
 					<td data-title='Descripcion'><?= $consultaserviciotecnico[$i]['descripcion_st'] ?></td>
 					<td data-title='Observacion'><?= $consultaserviciotecnico[$i]['observacion'] ?></td>
-					<td data-title='Costo Servicio'>$ <?= number_format($consultaserviciotecnico[$i]['costo_st']) ?></td>
 					<td data-title='Precio Cliente'>$ <?= number_format($consultaserviciotecnico[$i]['precio_cliente']) ?></td>
 					<td data-title='Fecha'><?= $consultaserviciotecnico[$i]['fecha'] ?></td>
 					<td data-title='ID Cliente'><?= $cliente1[0]['nombre'] ?></td>
