@@ -9,7 +9,7 @@
 	$motivo      		= isset($_POST['motivo']) ? $_POST['motivo'] : NULL;
 	$referencia         = isset($_POST['referencia']) ? $_POST['referencia'] : NULL;
 	$cantidad   		= isset($_POST['cantidad']) ? $_POST['cantidad'] : NULL;
-	$valor   			= isset($_POST['valor']) ? $_POST['valor'] : NULL;
+	$valor   			= isset($_POST['valor']) ? $_POST['valor'] : 0;
    	$idmovimientoeli  	= isset($_POST['idmovimientoeli']) ? $_POST['idmovimientoeli'] : NULL;
 	$actu          		= isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$idmovimiento     	= isset($_GET['id']) ? $_GET['id'] : NULL;
@@ -38,7 +38,7 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($idgeneral && $motivo && $referencia && $cantidad && $valor && !$actu) 
+	if ($idgeneral && $motivo && $referencia && $cantidad && !$actu) 
 	{
 		$movimiento->insertar_movimiento($idgeneral, $motivo, $referencia, $cantidad, $valor);
 	}

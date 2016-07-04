@@ -47,8 +47,6 @@
             <input type="number" class="form-control" name="valor" pattern="[0-9]{0,9}" min="0" title="Solo numeros validos" required>
 		</div>
 		 <div class="form-group campo"> <br>  
-           <button type="submit" name="Sale" class="btn btn-danger" value="-"><span class="icon-minus">BAJA INVENTARIO</span></button>  
-           <button type="submit" name="Entra" class="btn btn-success" value="+"><span class="icon-plus">ALTA INVENTARIO</span></button> 
         </div>
 	</form>	
     <div class="campo">
@@ -95,7 +93,6 @@
 		</tbody>
 	</table>
 	</div>
-</div>
 <!-- final movimiento -->
 
 <?php 
@@ -107,19 +104,15 @@
 <div class="eti">Insertar Reposicion</div>
 
 	<form action="" method="POST" class="blanco">
-		<div class="form-group campo">
+		<div class="form-group col-md-6 col-lg-5">
            <label for=""><span style="color:red;">* </span>No. Compra:</label>
-            <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros" required>       
+            <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros">       
 		</div>
-		<div class="form-group campo">
-            <label for=""><span style="color:red;">* </span>Fecha:</label>
-            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>"readonly required>        
-		</div>
-		<div class="form-group campo">
+		<div class="form-group col-md-6 col-lg-5">
            <label for=""><span style="color:red;">* </span>Descripción:</label>
-            <input type="text" class="form-control" name="numero_compra" max="100">       
+            <input type="text" class="form-control" name="descripcion" max="100">
 		</div>
-		 <div class="form-group campo"> <br>
+		 <div class="form-group col-lg-2"> <br>
            <button type="submit" name="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>  
         </div>
 	</form>	           

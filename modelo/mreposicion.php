@@ -21,9 +21,9 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbreposicion
 		 */
-		function  actualizar_reposicion($idreposicion,$numero_compra,$fecha,$descripcion)
+		function  actualizar_reposicion($idreposicion,$numero_compra,$descripcion)
 		{
-			$sql = "UPDATE tbreposicion SET numero_compra = '".$numero_compra."',fecha = '".$fecha."',descripcion = '".$descripcion."' WHERE idreposicion = '".$idreposicion."';";
+			$sql = "UPDATE tbreposicion SET numero_compra = '".$numero_compra."',descripcion = '".$descripcion."' WHERE idreposicion = '".$idreposicion."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -40,7 +40,7 @@
 		 */
 		function consultar_reposicion()
 		{
-			$sql = "SELECT * FROM `tbreposicion` ORDER BY idreposicion DESC";
+			$sql = "SELECT * FROM `tbreposicion` ORDER BY idreposicion DESC LIMIT 1";
 			 return $this->SeleccionDatos($sql);
 		}
         /*
