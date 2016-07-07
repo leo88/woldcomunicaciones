@@ -27,7 +27,7 @@
     <div class="container-fluid lol">
         <form action="" method="POST" class="blanco">
 		<div class="form-group campo col-md-3">
-            <input type="hidden" name="motivo" value="Reposición" required>
+            <input type="hidden" name="motivo" value="Reposicion" required>
             <input type="hidden" name="idgeneral" value="<?= $idgeneral4[0]['idreposicion'] ?>">
             <label for=""><span style="color:red;">* </span>Referencia:</label><br>
             <select name="referencia" class="chzn-select form-control">

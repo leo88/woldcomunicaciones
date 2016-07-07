@@ -63,7 +63,7 @@
 		 */
 		function consultar_movimiento_r($idreposicion)
 		{
-			$sql = "SELECT * FROM `tbmovimiento` WHERE motivo = 'Reposición' AND idgeneral = '$idreposicion'";
+			$sql = "SELECT * FROM `tbmovimiento` WHERE motivo = 'Reposicion' AND idgeneral = '$idreposicion'";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*
