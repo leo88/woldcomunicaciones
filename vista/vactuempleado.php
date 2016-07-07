@@ -17,7 +17,10 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
 			<label for=""><span style="color:red;">* </span>Sueldo:</label>
-            <input type="number" class="form-control" name="sueldo" value="<?= $consultaedit[0]['sueldo'] ?>" maxlength="11" required>
+			<div class="input-group">
+  				<span class="input-group-addon">$</span>
+  				<input type="number" class="form-control" name="sueldo" value="<?= $consultaedit[0]['sueldo'] ?>" min="0" maxlength="11" required>
+			</div>
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
 			<label for=""><span style="color:red;">* </span>Dirección del empleado:</label>
@@ -37,7 +40,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
 			<label for="">Email:</label>
-            <input type="email" class="form-control" name="email" value="<?= $consultaedit[0]['email']  ?>">
+            <input type="email" class="form-control" name="email" value="<?= $consultaedit[0]['email'] ?>" maxlength="70">
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
             <label for=""><span style="color:red;">* </span>Fecha de Ingreso:</label>
@@ -45,7 +48,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
             <label for=""><span style="color:red;">* </span>Estado:</label> 
-            <input type=text class="form-control"list=estado name="estado" value="<?= $consultaedit[0]['estado']  ?>"required>
+            <input type=text class="form-control" list="estado" name="estado" value="<?= $consultaedit[0]['estado']  ?>"required>
                 <datalist id="estado">
                    <option> Activo </option>
                    <option> Inactivo </option>

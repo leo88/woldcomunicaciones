@@ -12,7 +12,7 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Nombre del empleado:</label>
-            <input type="text" class="form-control" name="nombre" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 50 caracteres" required>     
+            <input type="text" class="form-control" name="nombre" placeholder="No utlizar la letra 'ñ' ni tildes" pattern="[A-z ]{2,50}" title="Solo se permiten letras, no se permite la letra 'ñ' ni tildes, máximo 50 caracteres" required>     
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Sueldo:</label>
@@ -27,7 +27,7 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Ciudad de residencia:</label>
-            <input type="text" class="form-control" name="ciudad" pattern="[A-z ]{2,50}" title="Solo se permiten letras máximo 30 caracteres" required>       
+            <input type="text" class="form-control" name="ciudad" pattern="[A-z ]{2,50}" title="Solo se permiten letras, no se permite la letra 'ñ' ni tildes, máximo 30 caracteres" required>       
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
             <label for=""><span style="color:red;">* </span>Teléfono del empleado:</label>
@@ -39,7 +39,7 @@
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-4">
            <label for="">Email:</label>
-            <input type="email" class="form-control" name="email">   
+            <input type="email" class="form-control" name="email" maxlength="70">   
 		</div>
 		<div class="form-group col-sm-12 col-md-12 col-lg-4">
             <label for=""><span style="color:red;">* </span>Fecha de Ingreso:</label>
@@ -63,7 +63,7 @@
 				<th>Sueldo Mensual</th>
 				<th>Direccion</th>
 				<th>Residencia</th>
-				<th>Teléfono</th>
+				<th>Teléfono Personal</th>
 				<th>Teléfono de referencia</th>
 				<th>Email</th>
 				<th>Fecha Ingreso</th>

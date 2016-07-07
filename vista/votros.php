@@ -15,11 +15,11 @@
             <textarea name="descripcion" rows="1" cols="25" class="form-control" maxlength="100" required> </textarea>   
 		</div>
 		<div class="form-group col-sm-6 col-md-6 col-lg-6">
-          <label for=""><span style="color:red;">* </span>Valor:</label>
-            <div class="input-group">
-              <span class="input-group-addon">$</span>
-              <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten valores reales" required>
-          </div>           
+      <label for=""><span style="color:red;">* </span>Valor:</label>
+      <div class="input-group">
+        <span class="input-group-addon">$</span>
+        <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten valores reales" required>
+      </div>           
 		</div>		
 		 <div class="form-group col-sm-6 col-md-6 col-lg-6"> <br>
            <button type="submit" name="Entra" class="btn btn-success" value="Entra"><span class="glyphicon glyphicon-plus"></span></button>     		

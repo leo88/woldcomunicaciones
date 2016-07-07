@@ -21,7 +21,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-6">
 			<label for="">Email:</label>
-            <input type="text" class="form-control" name="email" value="<?= $consultaedit[0]['email']  ?>" maxlength="30">
+            <input type="text" class="form-control" name="email" value="<?= $consultaedit[0]['email']  ?>" maxlength="100">
 		</div>		
 		<div class="form-group col-md-6 col-lg-6">
 			<label for=""><span style="color:red;">* </span>Detalle:</label>

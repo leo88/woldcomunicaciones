@@ -12,7 +12,7 @@
     				        <label for=""><span style="color:red;">* </span>Valor de la venta:</label>
     				        <div class="input-group">
   								<span class="input-group-addon">$</span>
-  								<input type="number" class="form-control" name="venta_recarga" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>
+  								<input type="number" class="form-control" name="venta_recarga" pattern="[0-9]{1,11}" min="0" title="Solo validos numeros" required>
 							</div>
 						</div>
 						 <div class="form-group col-sm-6 col-md-4 col-lg-4"> <br>          		

@@ -64,7 +64,7 @@
       					<ul class="dropdown-menu">
       						<?php if ($perfil=='Administrador'): ?>
       						<li><a href="home.php?pag=16">Movimiento</a></li>
-      						<li><a href="home.php?pag=26">Venta por Producto</a></li>
+      						<!--<li><a href="home.php?pag=26">Venta por Producto</a></li>-->
       						<?php endif ?> 
       						<li><a href="home.php?pag=24">Ventas</a></li>
                   <?php if ($perfil=='Vendedor'): ?>
@@ -89,9 +89,9 @@
       						<li><a href="home.php?pag=7">Proveedor</a></li>
       						<li><a href="home.php?pag=19">Compra</a></li>
       						<li><a href="home.php?pag=16">Movimiento</a></li>
-      						<li><a href="home.php?pag=20">Compra por Producto</a></li>
+      						<!--<li><a href="home.php?pag=20">Compra por Producto</a></li>-->
       						<li><a href="home.php?pag=21">Reposición</a></li>
-      						<li><a href="home.php?pag=18">Devolución</a></li>
+      						<!--<li><a href="home.php?pag=18">Devolución</a></li>-->
       					</ul>
       				</li>
       				<?php endif ?>

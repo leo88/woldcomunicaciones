@@ -10,12 +10,12 @@
     $referencia     = isset($_POST['referencia']) ? $_POST['referencia'] : NULL;
     $descripcion_st = isset($_POST['descripcion_st']) ? $_POST['descripcion_st'] : NULL;
     $observacion    = isset($_POST['observacion']) ? $_POST['observacion'] : NULL;
-    $costo_st       = isset($_POST['costo_st']) ? $_POST['costo_st'] : NULL;
+    //$costo_st       = isset($_POST['costo_st']) ? $_POST['costo_st'] : NULL;
     $precio_cliente = isset($_POST['precio_cliente']) ? $_POST['precio_cliente'] : NULL;
     $fecha          = isset($_POST['fecha']) ? $_POST['fecha'] : NULL;
     $id_cliente     = isset($_POST['id_cliente']) ? $_POST['id_cliente'] : NULL;
     $empleado       = isset($_POST['empleado']) ? $_POST['empleado'] : NULL;
-    $abono          = isset($_POST['abono']) ? $_POST['abono'] : NULL;
+    $abono          = isset($_POST['abono']) ? $_POST['abono'] : 0;
 	$idserviteceli  = isset($_POST['idserviteceli']) ? $_POST['idserviteceli'] : NULL;
 	$actu           = isset($_POST['actu']) ? $_POST['actu'] : NULL;
 	$numero_orden   = isset($_GET['id']) ? $_GET['id'] : NULL;	
@@ -35,7 +35,7 @@
 	/*
 		Comprobacion datos para insertar
 	*/
-	if ($nombre && $marca && $referencia && $descripcion_st && $precio_cliente && $fecha && $id_cliente && $empleado && $abono && !$actu) 
+	if ($nombre && $marca && $referencia && $descripcion_st && $precio_cliente && $fecha && $id_cliente && $empleado && !$actu) 
 	{
         
 		$serviciotecnico->insertar_serviciotecnico($newName, $newMarca, $referencia, $descripcion_st, $observacion, $precio_cliente, $fecha, $id_cliente, $empleado, $abono);
