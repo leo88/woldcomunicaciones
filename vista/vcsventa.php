@@ -1,7 +1,7 @@
 
 <?php 
-    include('estilos.php'); 
-    include('modelo/mconsulta.php'); 
+    include 'estilos.php'; 
+    include 'modelo/mconsulta.php'; 
     $venta = new Mconsulta();
 ?>
 
@@ -68,7 +68,6 @@ $consultamestotalventas = $venta->consultar_mestotalventas();
             <tr>
                 <th>No. venta</th>
                 <th>Referencia</th>
-                <th>Nombre</th>
                 <th>Precio</th>
                 <th>Cantidad</th>
                 <th>Subtotal</th>                
@@ -79,7 +78,6 @@ $consultamestotalventas = $venta->consultar_mestotalventas();
                 <tr>
                     <td data-title='No. venta'><?= $consultaventaproductos[$i]['numero_venta'] ?></td>
                     <td data-title='Referencia'><?= $consultaventaproductos[$i]['referencia'] ?></td>
-                    <td data-title='Nombre'><?= $consultaventaproductos[$i]['nombre'] ?></td>
                     <td data-title='Precio'>$ <?= number_format($consultaventaproductos[$i]['precio_venta']) ?></td>
                     <td data-title='Cantidad'><?= $consultaventaproductos[$i]['cantidad'] ?></td>
                     <td data-title='Subtotal'>$ <?= number_format($consultaventaproductos[$i]['SUBTOTAL']) ?></td>

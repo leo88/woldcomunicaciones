@@ -47,7 +47,7 @@
 	*/
     if ($idmovimientoedit && $motivo && $referencia && $cantidad && $actu) 
 	{
-		$movimiento->actualizar_movimiento($idmovimientoedit,$motivo, $referencia, $cantidad);
+		$movimiento->actualizar_movimiento($idmovimientoedit,$idgeneral,$motivo, $referencia, $cantidad,$valor);
 	}
 	/*
 		Comprobar el id para editar ese unico registro

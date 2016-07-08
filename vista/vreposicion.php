@@ -43,8 +43,11 @@
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros" required>      
 		</div>
 		<div class="form-group campo col-md-3">
-           	<label for=""><span style="color:red;">* </span>Valor:</label>
-            <input type="number" class="form-control" name="valor" pattern="[0-9]{0,9}" min="0" title="Solo numeros validos" required>
+          <label for=""><span style="color:red;">* </span>Valor:</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="number" class="form-control" name="valor" placeholder="Ingresar '0' si no entra dinero extra"  pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+          </div>
 		</div>
 		 <div class="form-group campo"> <br>  
            <button type="submit" name="Sale" class="btn btn-danger" value="-"><span class="icon-minus"> Sale</span></button>  

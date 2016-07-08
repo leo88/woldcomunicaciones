@@ -1,4 +1,4 @@
-<?php include("modelo/mseguridad.php");?>
+<?php include "modelo/mseguridad.php";?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,9 +67,6 @@
       						<!--<li><a href="home.php?pag=26">Venta por Producto</a></li>-->
       						<?php endif ?> 
       						<li><a href="home.php?pag=24">Ventas</a></li>
-                  <?php if ($perfil=='Vendedor'): ?>
-                  <li><a href="home.php?pag=44">Movimiento</a></li>
-                  <?php endif ?>
       					</ul>
       				</li>
       				<li class="dropdown" id="st">
@@ -102,7 +99,7 @@
       						<?php if ($perfil=='Administrador'): ?>
       						<li><a href="home.php?pag=36">Compras</a></li>
       						<li><a href="home.php?pag=37">Ventas</a></li>
-      						<li><a href="home.php?pag=38">Devolucion</a></li>
+      						<li><a href="home.php?pag=38">Reposicion</a></li>
       						<li><a href="home.php?pag=39">Contabilidad</a></li>
       						<?php endif ?> 
       						<li><a href="home.php?pag=34">Existencia</a></li>
@@ -273,7 +270,7 @@
       }
       if ($page == 38) 
       {
-                include("vista/vcsdevolucion.php");
+                include("vista/vcsreposicion.php");
       }
       if ($page == 39) 
       {

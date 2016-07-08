@@ -21,9 +21,9 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbmovimiento
 		 */
-		function  actualizar_movimiento($idmovimiento,$motivo,$referencia,$cantidad)
+		function  actualizar_movimiento($idmovimiento,$idgeneral,$motivo,$referencia,$cantidad,$valor)
 		{
-			$sql = "UPDATE tbmovimiento SET motivo = '".$motivo."',referencia = '".$referencia."',cantidad = '".$cantidad."' WHERE idmovimiento = '".$idmovimiento."';";
+			$sql = "UPDATE tbmovimiento SET idgeneral = '".$idgeneral."',motivo = '".$motivo."',referencia = '".$referencia."',cantidad = '".$cantidad."',valor = '".$valor."' WHERE idmovimiento = '".$idmovimiento."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -39,7 +39,7 @@
 		 */
 		function consultar_movimiento()
 		{
-			$sql = "SELECT * FROM `tbmovimiento` ORDER BY idmovimiento DESC";
+			$sql = "SELECT * FROM `tbmovimiento` ORDER BY idmovimiento DESC limit 1";
 			 return $this->SeleccionDatos($sql);
 		}
 		/*

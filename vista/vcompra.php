@@ -46,7 +46,10 @@
 		</div>
 		<div class="form-group campo col-md-3">
            <label for=""><span style="color:red;">* </span>Valor:</label>
-            <input type="number" class="form-control" name="valor" pattern="[0-9]{0,9}" min="0" title="Solo numeros validos" required>  
+          <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+          </div> 
 		</div>
         <div class="form-group campo col-md-2"><br>         
            <button type="submit" name="Entra" class="btn btn-warning" value="+"><span class="glyphicon glyphicon-usd"> COMPRAR</span></button>

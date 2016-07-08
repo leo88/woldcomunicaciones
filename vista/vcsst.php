@@ -1,6 +1,6 @@
 <?php 
-    include('estilos.php'); 
-    include('modelo/mconsulta.php'); 
+    include 'estilos.php'; 
+    include 'modelo/mconsulta.php'; 
     $st = new Mconsulta();
 ?>
 <?php $consultast               = $st->consultar_stcomparativo(); 
@@ -69,7 +69,6 @@
             </tr>
             <tr>
                 <th>Fecha</th>
-                <th>Costo Servico Técnico</th>
                 <th>Abono</th>
             </tr>
         </thead>
@@ -77,7 +76,6 @@
            <?php for($i=0;$i<count($consultasstdia);$i++): ?>
                 <tr>
                     <td data-title='Fecha'><?= $consultasstdia[$i]['fecha'] ?></td>
-                    <td data-title='Costo Servicio Técnico'><?= number_format($consultasstdia[$i]['costo_st']) ?></td>
                     <td data-title='Abono'>$ <?= number_format($consultasstdia[$i]['abono'] )?></td>
                 </tr>
             <?php endfor; ?>
@@ -128,7 +126,6 @@
             <tr>
                 <th>Mes</th>
                 <th>Año</th>
-                <th>Costo del Servicio</th>
                 <th>Abono</th>
             </tr>
         </thead>
@@ -137,7 +134,6 @@
                 <tr>
                     <td data-title='Mes'><?= $consultasstmes[$i]['Mes'] ?></td>
                     <td data-title='Año'><?= $consultasstmes[$i]['year'] ?></td>
-                    <td data-title='Costo Servico'><?= number_format($consultasstmes[$i]['SumaDecosto_st']) ?></td>
                     <td data-title='Abono'><?= number_format($consultasstmes[$i]['SumaDeabono']) ?></td>
                 </tr>
             <?php endfor; ?>

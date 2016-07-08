@@ -48,8 +48,11 @@
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,9}" min="0" title="Solo validos numeros" required>  
 		</div>
 		<div class="form-group campo col-md-3">
-           <label for=""><span style="color:red;">* </span>Valor:</label>
-            <input type="number" class="form-control" name="valor" pattern="[0-9]{0,9}" min="0" title="Solo numeros validos" required>  
+          <label for=""><span style="color:red;">* </span>Valor:</label>
+          <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+          </div>  
 		</div>
         <div class="form-group campo"><br> 
            <button type="submit" name="Sale" class="btn btn-warning" value="-"><span class="glyphicon glyphicon-shopping-cart"> INCLUIR ARTICULO</span></button>
@@ -85,7 +88,7 @@
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
 					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>				
-					<td><a href="home.php?pag=45&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
+					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
 							<input type="hidden" name="idmovimientoeli" value="<?= $consultamovimiento[$i]['idmovimiento'] ?>">
