@@ -155,14 +155,12 @@
       <div class="info">
               <h5>¿Como realizo una venta?</h5>
                <ul>
-                   <li>Ingresar los datos de la venta (Cliente, Fecha y Empleado) y registrarlos con el boton <span class="icon-checkmark tama"></span> este paso se realiza una vez por cada venta</li>
-                   <li>Ingresar los datos del movimiento (Referencia y Cantidad) y registrarlos con el boton <span class="icon-minus tama2"></span> este paso se puede repetir varias veces por cada venta</li>
-                   <li>Ingresar el dato del valor (Valor Unitario) y registrarlo con el boton <span class="icon-credit tama"></span>  este paso se puede repetir varias veces por cada venta</li>
+                   <li>Ingrese los datos de la venta (Cliente, Fecha y Empleado) y registrelos con el boton <span class="icon-checkmark tama"> REGISTRAR VENTA</span> este paso se realiza una vez por cada venta</li>
+                   <li>Ingrese cada producto referente a esa venta (Referencia, Cantidad Valor) y registrarlos con el boton <span class="glyphicon glyphicon-shopping-cart tama2"> INCLUIR ARTICULO</span> este paso se puede repetir varias veces por cada venta</li>
+                   <li>Para editar los datos de algun articulo registrado use el boton <span class="icon-pencil2 tama3"></span>  (Solo para la ultima venta activa)</li>
                </ul>
-        <span style="font-weight: bold">Nota:</span> No intente registrar todos los movimentos uno tras otro y luego todos los valores correspondientes a estos, asegurese de registrar un formulario a la vez ya que siempre debe registrar el valor despues de haber registrado el movimiento. 
         <br><br>
-        <!--inicio modal mensaje-->
-        <a href="#" class="mostrarmodal btn btn-primary"><span class="icon-film"></span> VER VIDEO</a>  
+        <!--inicio modal mensaje-->          
              <div class="cajaexterna">
               <div class="cajainterna animated">
                 <div class="cajacentrada">                                 

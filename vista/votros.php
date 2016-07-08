@@ -64,8 +64,7 @@
         </tbody>
 		</table>
 		</div>
-        <!--inicio modal mensaje-->
-        <a href="#" class="mostrarmodal btn btn-primary"><span class="icon-film"></span> VER VIDEO</a>  
+        <!--inicio modal mensaje-->        
              <div class="cajaexterna">
               <div class="cajainterna animated">
                 <div class="cajacentrada">                                 

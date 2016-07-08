@@ -133,12 +133,11 @@
       <div class="info">
               <h5>¿Cuando realizo una Reposicion?</h5>
               <ul>
-                  <li>Una Reposicion se realiza cuando se hace un cambio de una referencia que se compro a un proveedor por otra distinta</li>
-                  <li>Si la referencia que ingresa tiene un valor diferente a la retornada al proveedor puede hacer el ajuste de caja en <a href="home.php?pag=11" class="btn btn-default btn-xs">Ingresos y Egresos Varios</a> justificando dicha diferencia</li>
+                  <li>Una Reposicion se realiza cuando se hace una devolucion o un cambio de una referencia </li>
+                  <li>Si al hacer una reposicion necesita hacer un ajuste de caja use <a href="home.php?pag=11" class="btn btn-default btn-xs">Ingresos y Egresos Varios</a> justificando dicho ajuste</li>
               </ul>
                <br>
-        <!--inicio modal mensaje-->
-        <a href="#" class="mostrarmodal btn btn-primary"><span class="icon-film"></span> VER VIDEO</a>  
+        <!--inicio modal mensaje-->     
              <div class="cajaexterna">
               <div class="cajainterna animated">
                 <div class="cajacentrada">                                 
