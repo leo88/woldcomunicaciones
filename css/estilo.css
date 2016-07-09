@@ -11,6 +11,21 @@
     margin-bottom: 2px;
     margin-top: 2px;
 }
+#vt{
+    width: 100%;
+    display: inline-block;    
+    background-color: #4DB2C6;    
+    margin: 2% auto 0;
+    padding: 2% 4%;
+    text-align: center;
+    border-radius: 20px;
+}
+.vt1 {
+    margin: 5% 2%;
+    font-size: 140%;
+    font-weight: bold;
+    color: #FFF;
+}
 .eti, .etinfo {
     width: 100%;
     text-align: center;
@@ -40,22 +55,22 @@
     vertical-align: middle;    
 }
 .tama {
-    width: 30px;
-    text-align: center;
+    border-radius: 4px;
     background-color: #65B457;
     color: #FFF;
-    padding-top: 2px;
-    padding-bottom: 2px; 
-    border-radius: 3px;    
+    padding: 3px;
 }
-.tama2 {
-    width: 30px;
-    text-align: center;
+.tama2 {  
+    border-radius: 4px;
     background-color: #D8A91A;
     color: #FFF;
-    padding-top: 2px;
-    padding-bottom: 2px; 
-    border-radius: 3px;    
+    padding: 3px;
+}
+.tama3 {    
+    border-radius: 4px;
+    background-color: #3872A2;
+    color: #FFF;
+    padding: 3px;
 }
 .info {
     width: 100%;

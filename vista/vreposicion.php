@@ -1,12 +1,34 @@
 <div class="row-fluid">
-<!-- inicio movimiento -->
-<div class="span6">	
-   <?php include('controlador/cmovimiento.php'); ?>
+
+<!-- inicio reposicion -->			      
+<?php include 'controlador/creposicion.php'; ?>
+
+<?php
+  	$displayForm = True;
+  	if(isset($_POST['submit']) or isset($_POST['Sale']) or isset($_POST['Entra'])){
+  		$displayForm = False;
+?>
+
+<!-- Tabla donde se muestra la informacion ingresada-->
+    <?php $consultareposicion = $reposicion->consultar_reposicion(); ?>
+    <div id="vt">
+		<?php for($j=0;$j<count($consultareposicion);$j++): ?>
+		<span class="vt1">REGISTRO DE REPOSICION NO. <?= $consultareposicion[$j]['idreposicion'] ?></span>         <br><br>         
+        <span class="vt1">Número de Compra: <?= $consultareposicion[$j]['numero_compra'] ?></span>
+        <span class="vt1">Fecha: <?= $consultareposicion[$j]['fecha'] ?></span>
+        <span class="vt1">Descripción: <?= $consultareposicion[$j]['descripcion'] ?></span>
+        <!--<div><a href="home.php?pag=25&idv=<?= $consultaventa[$j]['numero_venta'] ?>" class="btn btn-primary">Editar</a></div>-->
+    	<?php endfor; ?>
+    </div> 
+    
+    <!-- inicio movimiento -->
+   	<?php include('controlador/cmovimiento.php'); ?>
+
     <div class="container-fluid lol">
-        <div class="eti">Insertar Movimiento</div>
         <form action="" method="POST" class="blanco">
-		<div class="form-group campo">
-            <input type="hidden" name="motivo" value="Reposición" required>
+		<div class="form-group campo col-md-3">
+            <input type="hidden" name="motivo" value="Reposicion" required>
+            <input type="hidden" name="idgeneral" value="<?= $idgeneral4[0]['idreposicion'] ?>">
             <label for=""><span style="color:red;">* </span>Referencia:</label><br>
             <select name="referencia" class="chzn-select form-control">
 				<option value=0>Seleccione producto</option>
@@ -16,13 +38,20 @@
 				<?php endfor; ?>
 			</select>   
 		</div>
-		<div class="form-group campo">
-          <label for=""><span style="color:red;">* </span>Cantidad:</label>
+		<div class="form-group campo col-md-3">
+          	<label for=""><span style="color:red;">* </span>Cantidad:</label>
             <input type="number" class="form-control" name="cantidad" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros" required>      
 		</div>
+		<div class="form-group campo col-md-3">
+          <label for=""><span style="color:red;">* </span>Valor:</label>
+            <div class="input-group">
+              <span class="input-group-addon">$</span>
+              <input type="number" class="form-control" name="valor" placeholder="Ingresar '0' si no entra dinero extra"  pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+          </div>
+		</div>
 		 <div class="form-group campo"> <br>  
-           <button type="submit" name="Sale" class="btn btn-danger" value="-"><span class="icon-minus"></span></button>  
-           <button type="submit" name="Entra" class="btn btn-success" value="+"><span class="icon-plus"></span></button> 
+           <button type="submit" name="Sale" class="btn btn-danger" value="-"><span class="icon-minus"> Sale</span></button>  
+           <button type="submit" name="Entra" class="btn btn-success" value="+"><span class="icon-plus"> Entra</span></button> 
         </div>
 	</form>	
     <div class="campo">
@@ -30,8 +59,8 @@
                 <a href="home.php?pag=3">Registrar referencia</a> 
             </div>
     </div>
-    <?php $consultamovimiento = $movimiento->consultar_movimiento_r(); ?>
-    <div class="table-responsive">
+    <?php $consultamovimiento = $movimiento->consultar_movimiento_r($idgeneral4[0]['idreposicion']); ?>
+    <div id=''>
         <table class="table">
 		<thead>
 			<tr>
@@ -39,9 +68,11 @@
 			</tr>
 			<tr>
 				<th>ID</th>
+                <th>ID Reposición</th>
 				<th>Motivo</th>
 				<th>Referencia</th>
 				<th>Cantidad</th>
+				<th>Valor</th>
 				<th>Edición</th>
 				<!--<th>Eliminación</th>-->
 			</tr>
@@ -50,9 +81,11 @@
 			<?php for($i=0;$i<count($consultamovimiento);$i++): ?>
 				<tr>
 					<td><?= $consultamovimiento[$i]['idmovimiento'] ?></td>
+					<td><?= $consultamovimiento[$i]['idgeneral'] ?></td>
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
-					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>					
+					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
+					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>				
 					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
@@ -65,88 +98,46 @@
 		</tbody>
 	</table>
 	</div>
-</div>
 <!-- final movimiento -->
-          	
-<!-- inicio reposicion -->
-<div class="span6">			      
-<?php include('controlador/creposicion.php'); ?>
-    
+
+<?php 
+  	} 
+  	if($displayForm){
+?>
+
 <div class="container-fluid lol">
 <div class="eti">Insertar Reposicion</div>
 
 	<form action="" method="POST" class="blanco">
-		<div class="form-group campo">
-            <input type="hidden" name="movimiento" value="<?= $movimiento2[0]['idmovimiento'] ?>">
-		</div>
-		<div class="form-group campo">
+		<div class="form-group col-md-6 col-lg-5">
            <label for=""><span style="color:red;">* </span>No. Compra:</label>
-            <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros" required>       
+            <input type="number" class="form-control" name="numero_compra" pattern="[0-9]{1,6}" min="0" title="Solo validos numeros">       
 		</div>
-		<div class="form-group campo">
-            <label for=""><span style="color:red;">* </span>Fecha:</label>
-            <input type="date" class="form-control" name="fecha" value="<?php echo date('Y-m-d'); ?>"readonly required>        
+		<div class="form-group col-md-6 col-lg-5">
+           <label for=""><span style="color:red;">* </span>Descripción:</label>
+            <input type="text" class="form-control" name="descripcion" max="100">
 		</div>
-		 <div class="form-group campo"> <br>
-           <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>  
+		 <div class="form-group col-lg-2"> <br>
+           <button type="submit" name="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>  
         </div>
 	</form>	           
 </div>
-<?php $consultareposicion = $reposicion->consultar_reposicion(); ?>
-					<div id='no-more-tables'>
-						<table class="table table-bordered table-hover" id="example">
-				  <thead>
-            <tr>
-                <th colspan="12">Listado de Reposiciones</th>
-            </tr>
-            <tr>
-                <th>ID</th>
-				<th>Movimiento</th>
-				<th>No. Compra</th>	
-				<th>Fecha</th>				
-				<!--<th>Edición</th>
-				<th>Eliminación</th>-->
-            </tr>
-        </thead>
-        <tbody>
-           <?php for($i=0;$i<count($consultareposicion);$i++): ?>
-				<tr>
-					<td data-title='ID'><?= $consultareposicion[$i]['idreposicion'] ?></td>
-					<td data-title='Movimiento'><?= $consultareposicion[$i]['movimiento'] ?></td>
-					<td data-title='No. Compra'><?= $consultareposicion[$i]['numero_compra'] ?></td>
-					<td data-title='Fecha'><?= $consultareposicion[$i]['fecha'] ?></td>					
-					<!--<td><a href="home.php?pag=6&id=<?= $consultareposicion[$i]['idreposicion'] ?>" class="btn btn-primary">Editar</a></td>
-					<td>
-						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
-							<input type="hidden" name="idreposicioneli" value="<?= $consultareposicion[$i]['idreposicion'] ?>">
-							<input type="submit" class="btn btn-danger" value="Eliminar">
-						</form>
-					</td>-->
-				</tr>
-			<?php endfor; ?>
-        </tbody>
-						</table>
-					</div>
+<?php } ?>
+</div>
 
-
-
-		        </div><!--/span-->
-
-		      </div><!--/row-->
-
-				<div class="row-fluid"><!--spoiler de informacion--> <br>
+          	
+<div class="row-fluid"><!--spoiler de informacion--> <br>
 <input type="checkbox"  id="spoiler2" /> 
 <label for="spoiler2" >Acerca de la Reposicion</label>
 <div class="spoiler">
       <div class="info">
               <h5>¿Cuando realizo una Reposicion?</h5>
               <ul>
-                  <li>Una Reposicion se realiza cuando se hace un cambio de una referencia que se compro a un proveedor por otra distinta</li>
-                  <li>Si la referencia que ingresa tiene un valor diferente a la retornada al proveedor puede hacer el ajuste de caja en <a href="home.php?pag=11" class="btn btn-default btn-xs">Ingresos y Egresos Varios</a> justificando dicha diferencia</li>
+                  <li>Una Reposicion se realiza cuando se hace una devolucion o un cambio de una referencia </li>
+                  <li>Si al hacer una reposicion necesita hacer un ajuste de caja use <a href="home.php?pag=11" class="btn btn-default btn-xs">Ingresos y Egresos Varios</a> justificando dicho ajuste</li>
               </ul>
                <br>
-        <!--inicio modal mensaje-->
-        <a href="#" class="mostrarmodal btn btn-primary"><span class="icon-film"></span> VER VIDEO</a>  
+        <!--inicio modal mensaje-->     
              <div class="cajaexterna">
               <div class="cajainterna animated">
                 <div class="cajacentrada">                                 

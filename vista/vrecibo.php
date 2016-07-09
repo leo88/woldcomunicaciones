@@ -53,7 +53,7 @@ $consultaventatotal     = $venta->consultar_ventatotal_id($idprint);
             <?php for($i=0;$i<count($consultaventaproducto);$i++): ?>
                 <tr>
                     <!--<td data-title='referencia'><?= $consultaventaproducto[$i]['referencia'] ?></td>-->
-                    <td data-title='nombre'><?= $consultaventaproducto[$i]['nombre'] ?></td>
+                    <td data-title='referencia'><?= $consultaventaproducto[$i]['referencia'] ?></td>
                     <td data-title='precio'>$ <?= number_format($consultaventaproducto[$i]['precio_venta']) ?></td>
                     <td data-title='cantidad'><?= $consultaventaproducto[$i]['cantidad']*(-1) ?></td> 
                     <td data-title='subtotal'>$ <?= number_format($consultaventaproducto[$i]['SUBTOTAL']) ?></td>    

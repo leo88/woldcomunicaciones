@@ -5,35 +5,35 @@
 <div class="eti">Producto</div>
 
 	<form class="blanco" action="" method="POST">
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-3">
 			<label for=""><span style="color:red;">* </span>Referencia:</label>
 			<input type="text" class="form-control" name="referencia" maxlength="100" required>      
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-3">
 			<label for=""><span style="color:red;">* </span>Tipo de Dispositivo:</label>
 				<input type="text" class="form-control" name="nombre" placeholder="Que tipo es el producto" pattern="[A-z ]{2,40}" title="Solo se permiten letras máximo 40 caracteres" required>     
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-3">
 			<label for=""><span style="color:red;">* </span>Marca:</label>
 			<input type="text" class="form-control" name="marca" pattern="[A-z ]{2,20}" title="Solo se permiten letras máximo 20 caracteres" required >         
 		</div>
-		<div class="form-group campo">
+		<div class="form-group col-sm-6 col-md-4 col-lg-3">
 			<label for=""><span style="color:red;">* </span>Precio:</label>
 			<div class="input-group">
   				<span class="input-group-addon">$</span>
   				<input type="number" class="form-control" name="precio" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros" required>
 			</div>    
 		</div>		
-		<div class="form-group campo"> <br>          		
+		<div class="form-group col-xs-4 col-xs-offset-4 col-sm-6 col-md-3 col-lg-4 col-lg-offset-5"> <br>          		
 			<button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
 		</div>
-		</form>
-			<div class="btn-toolbar campo" role="toolbar">             
-				<a href="home.php?pag=19"><button type="button" class="btn btn-default">Volver a Compra</button></a>
-				<span class="campo"></span>
-				<a href="home.php?pag=21"><button type="button" class="btn btn-default">Volver a Reposicion</button></a> 
-			</div>	 
-		</div>
+	</form>
+		<div class="btn-toolbar campo" role="toolbar">             
+			<a href="home.php?pag=19"><button type="button" class="btn btn-default">Volver a Compra</button></a>
+			<span class="campo"></span>
+			<a href="home.php?pag=21"><button type="button" class="btn btn-default">Volver a Reposicion</button></a> 
+		</div>	 
+</div>
 		<?php $consultaproducto = $producto->consultar_producto(); ?>
 		<div id='no-more-tables'>
 			<table class="table table-bordered table-hover" id="example">

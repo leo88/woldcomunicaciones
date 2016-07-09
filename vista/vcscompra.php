@@ -52,35 +52,31 @@ $consultacompratotal = $compra->consultar_compratotal();
 <!--Inicio Compra por Producto-->
 <div class="row-fluid">
 <input type="checkbox"  id="spoiler3" /> 
-<label for="spoiler3" >Informe Compra por Producto</label>
+<label for="spoiler3" >Informe Productos por Compra</label>
 <div class="spoiler">
 <div class="info"> 
             
 <table id="" class="display" cellspacing="0" width="100%">
 	   <thead>
             <tr>
-                <th colspan="12">Compras por Producto</th>
+                <th colspan="12">Productos por compra</th>
             </tr>
             <tr>
                 <th>No. Compra</th>
-                <th>Referencia</th>
-                <th>Nombre</th>
+                <th>Referencia</th>                
                 <th>Valor</th>
                 <th>Cantidad</th>
-                <th>Subtotal</th>
-                <th>Moviento</th>
+                <th>Subtotal</th>                
             </tr>
         </thead>
         <tbody>
             <?php for($i=0;$i<count($consultacompraproductos);$i++): ?>
                 <tr>
                     <td data-title='No. Compra'><?= $consultacompraproductos[$i]['numero_compra'] ?></td>
-                    <td data-title='Referencia'><?= $consultacompraproductos[$i]['referencia'] ?></td>
-                    <td data-title='Nombre'><?= $consultacompraproductos[$i]['nombre'] ?></td>
+                    <td data-title='Referencia'><?= $consultacompraproductos[$i]['referencia'] ?></td>                   
                     <td data-title='Valor'>$ <?= number_format($consultacompraproductos[$i]['valor']) ?></td>
                     <td data-title='Cantidad'><?= $consultacompraproductos[$i]['cantidad'] ?></td>
-                    <td data-title='Subtotal'>$ <?= number_format($consultacompraproductos[$i]['SUBTOTAL']) ?></td>
-                    <td data-title='Moviento'><?= $consultacompraproductos[$i]['idmovimiento'] ?></td>
+                    <td data-title='Subtotal'>$ <?= number_format($consultacompraproductos[$i]['SUBTOTAL']) ?></td> 
                 </tr>
             <?php endfor; ?>
         </tbody>

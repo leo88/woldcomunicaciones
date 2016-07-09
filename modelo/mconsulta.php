@@ -1,11 +1,11 @@
 <?php
 
 	/*  
-        *   @Version: V4 25/05/16
+        *   @Version: V4.1 08/07/16
     */
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include 'controlador/conexion.php';
+	include 'functions.php';
 
 	class Mconsulta extends Funciones
 	{
@@ -66,11 +66,11 @@
 			return $this->SeleccionDatos($sql);
 		}
 		/*
-		 *función para la consulta de los datos de la consulta devolucion
+		 *función para la consulta de los datos de la consulta reposicion
 		 */
-		function consultar_devolucion()
+		function consultar_reposicion()
 		{
-			$sql = "SELECT * FROM csdevolucion";
+			$sql = "SELECT * FROM csreposicion";
 			return $this->SeleccionDatos($sql);
 		}
 		/*
@@ -255,6 +255,14 @@
 		function consultar_st_id()
 		{
 			$sql = "SELECT * FROM csst ORDER BY numero_orden desc limit 1";
+			return $this->SeleccionDatos($sql);
+		}
+		/*
+		 *función para la consulta de los datos de la tbreposicion
+		 */
+		function consultar_rep()
+		{
+			$sql = "SELECT * FROM tbreposicion ORDER BY idreposicion";
 			return $this->SeleccionDatos($sql);
 		}
 	}

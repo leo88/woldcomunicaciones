@@ -19,7 +19,7 @@
 		</div>
 		<div class="form-group campo">
             <label for="">Email:</label>
-            <input type="text" class="form-control" name="email" maxlength="30">       
+            <input type="text" class="form-control" name="email" maxlength="100">       
 		</div>
 		<div class="form-group campo">
             <label for=""><span style="color:red;">* </span>Detalle:</label>

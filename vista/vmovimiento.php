@@ -44,9 +44,11 @@
             </tr>
             <tr>
                 <th>ID</th>
+				<th>ID general</th>
 				<th>Motivo</th>
 				<th>Referencia</th>
 				<th>Cantidad</th>
+				<th>Valor</th>
 				<th>Edición</th>
 				<!--<th>Eliminación</th>-->
             </tr>
@@ -55,9 +57,11 @@
            <?php for($i=0;$i<count($consultamovimiento);$i++): ?>
 				<tr>
 					<td data-title='ID'><?= $consultamovimiento[$i]['idmovimiento'] ?></td>
+					<td data-title='idgeneral'><?= $consultamovimiento[$i]['idgeneral'] ?></td>
 					<td data-title='Motivo'><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td data-title='Referencia'><?= $consultamovimiento[$i]['referencia'] ?></td>
-					<td data-title='Cantidad'><?= $consultamovimiento[$i]['cantidad'] ?></td>					
+					<td data-title='Cantidad'><?= $consultamovimiento[$i]['cantidad'] ?></td>
+					<td data-title='valor'><?= $consultamovimiento[$i]['valor'] ?></td>					
 					<td data-title='Edición'><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

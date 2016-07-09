@@ -1,7 +1,7 @@
 <?php
 
-	include_once('controlador/conexion.php');
-	include_once('functions.php');
+	include_once 'controlador/conexion.php';
+	include_once 'functions.php';
 
 	class Mreposicion extends Funciones
 	{
@@ -12,18 +12,18 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbreposicion
 		 */
-		function insertar_reposicion($movimiento, $numero_compra, $fecha)
+		function insertar_reposicion($numero_compra, $fecha, $descripcion)
 		{
-			$sql = "INSERT INTO tbreposicion (movimiento, numero_compra, fecha)
-						VALUES ('".$movimiento."','".$numero_compra."','".$fecha."');";
+			$sql = "INSERT INTO tbreposicion (numero_compra, fecha, descripcion)
+						VALUES ('".$numero_compra."','".$fecha."','".$descripcion."');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbreposicion
 		 */
-		function  actualizar_reposicion($idreposicion,$movimiento,$numero_compra,$fecha)
+		function  actualizar_reposicion($idreposicion,$numero_compra,$descripcion)
 		{
-			$sql = "UPDATE tbreposicion SET movimiento = '".$movimiento."',numero_compra = '".$numero_compra."',fecha = '".$fecha."' WHERE idreposicion = '".$idreposicion."';";
+			$sql = "UPDATE tbreposicion SET numero_compra = '".$numero_compra."',descripcion = '".$descripcion."' WHERE idreposicion = '".$idreposicion."';";
 			$this -> cons($sql);
 		}
 		/*
@@ -40,7 +40,7 @@
 		 */
 		function consultar_reposicion()
 		{
-			$sql = "SELECT * FROM `tbreposicion` ORDER BY idreposicion DESC";
+			$sql = "SELECT * FROM `tbreposicion` ORDER BY idreposicion DESC LIMIT 1";
 			 return $this->SeleccionDatos($sql);
 		}
         /*
@@ -59,13 +59,13 @@
 		{
             $sql = "SELECT * FROM `tbmovimiento` order by idmovimiento desc limit 1";
             return $this->SeleccionDatos($sql);
-             /*
+		}
+        /*
 		 	Función para la seleccion especifica de los datos de la tabla movimiento
 		 */
 		function sel_movimiento1($idmovimiento)
 		{
 			$sql = "SELECT * FROM tbmovimiento WHERE idmovimiento='".$idmovimiento."';";
 			return $this->SeleccionDatos($sql);
-		}
         }
 	}

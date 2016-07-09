@@ -25,7 +25,7 @@
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Email:</label>
-   	        <input type="email" class="form-control" name="email" maxlength="50">          
+   	        <input type="email" class="form-control" name="email" maxlength="70">          
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Descripcion:</label>
