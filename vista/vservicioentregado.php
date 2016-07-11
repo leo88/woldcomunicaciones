@@ -51,6 +51,10 @@
               <input type="text" class="form-control" name="saldo_cancel" id="saldo" readonly>
             </div>      
 		</div>
+		<div class="form-group col-sm-6 col-md-6 col-lg-6">
+            <label for=""><span style="color:red;">* </span>Tecnico encargado:</label>
+            <input type="text" class="form-control" name="tecnico" pattern="[A-z ]{2,50}" title="Solo se permiten letras, no se permite la letra 'ñ' ni tildes, máximo 50 caracteres" required>     
+		</div>
 		 <div class="form-group col-sm-6 col-md-6 col-lg-6"> <br>
               <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="glyphicon glyphicon-ok"></span></button>
         </div>
@@ -67,6 +71,7 @@
                 <th>No. Orden</th>
 				<th>Fecha</th>
 				<th>Saldo Cancelado</th>
+				<th>Tecnico encargado</th>
 				<!--<th>Edición</th>
 				<th>Eliminación</th>-->
             </tr>
@@ -80,6 +85,7 @@
 					<td data-title='No. Orden'><?= $numorden1[0]['numero_orden'] ?></td>
 					<td data-title='Fecha'><?= $consultaservicioentregado[$i]['fecha'] ?></td>
 					<td data-title='Saldo Cancelado'>$ <?= number_format($consultaservicioentregado[$i]['saldo_cancel']) ?></td>
+					<td data-title='Tecnico encargado'><?= $consultaservicioentregado[$i]['tecnico'] ?></td>
 					<!--<td><a href="index.php?pag=4&id=<?= $consultaservicioentregado[$i]['numero_orden'] ?>" class="btn btn-primary">Editar</a></td>
 					<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">

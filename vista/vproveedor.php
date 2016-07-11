@@ -5,15 +5,15 @@
    	<form class="blanco" action="" method="POST">
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Identificacion proveedor:</label>
-   	        <input type="text" class="form-control" name="idproveedor" pattern="[0-9]{4,12}" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>    
+   	        <input type="text" class="form-control" placeholder="NIT o Cedula" name="idproveedor" pattern="[0-9]{4,12}" title="Solo se permite un NIT valido o Cèdula de Ciudadanìa, máximo 12 caracteres" required>    
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for=""><span style="color:red;">* </span>Nombre proveedor:</label>
-   	        <input type="text" class="form-control" name="nombre" maxlength="50" required>        
+   	        <input type="text" class="form-control" placeholder="Nombre de la empresa o proveedor" name="nombre" maxlength="50" required>        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">contacto:</label>
-   	        <input type="text" class="form-control" name="contacto" maxlength="50">        
+   	        <input type="text" class="form-control" placeholder="Nombre del contacto" name="contacto" maxlength="50">        
 		</div>
 		<div class="form-group col-md-6 col-lg-4">
    	        <label for="">Telefono proveedor:</label>

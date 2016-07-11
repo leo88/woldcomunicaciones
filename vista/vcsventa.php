@@ -11,6 +11,8 @@ $consultaventaproductos = $venta->consultar_ventaproducto();
 $consultaventatotal = $venta->consultar_ventatotal();
 $consultadiatotalventas = $venta->consultar_diatotalventas();
 $consultamestotalventas = $venta->consultar_mestotalventas();
+$consultatopcliente = $venta->consultar_top_cliente();
+$consultatopvendedor = $venta->consultar_top_vendedor();
 ?>
 <!--Inicio venta-->
 <div class="row-fluid">
@@ -186,6 +188,66 @@ $consultamestotalventas = $venta->consultar_mestotalventas();
 </div>
 </div>
 </div>
+
+<!-- top clientes y empleados-->
+<div class="row-fluid">
+<input type="checkbox"  id="spoiler7" /> 
+<label for="spoiler7" >Top Clientes y Vendedores</label>
+<div class="spoiler">
+<div class="span6">
+<div class="info"> 
+     <table id="" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="12">Ventas por cliente</th>
+            </tr>
+            <tr>
+                <th>Cliente</th>
+                <th>Numero de ventas</th>
+            </tr>
+        </thead>
+        <tbody>
+           <?php for($i=0;$i<count($consultatopcliente);$i++): ?>
+                <tr>
+                    <td data-title='Cliente'><?= $consultatopcliente[$i]['nombre'] ?></td>
+                    <td data-title='Numero de ventas'><?= $consultatopcliente[$i]['no_ventas'] ?></td>
+                </tr>
+            <?php endfor; ?>
+        </tbody>
+
+    </table>
+</div>
+</div>
+
+<div class="span6">
+<div class="info"> 
+     <table id="" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th colspan="12">Ventas por Empleado</th>
+            </tr>
+            <tr>
+                <th>Vendedor</th>
+                <th>Numero de ventas</th>
+            </tr>
+        </thead>
+        <tbody>
+           <?php for($i=0;$i<count($consultatopvendedor);$i++): ?>
+                <tr>
+                    <td data-title='Vendedor'><?= $consultatopvendedor[$i]['nombre'] ?></td>
+                    <td data-title='Numero de ventas'><?= $consultatopvendedor[$i]['no_ventas'] ?></td>
+                </tr>
+            <?php endfor; ?>
+        </tbody>
+
+    </table>
+</div>
+</div>  
+
+
+</div>     
+</div>
+
 <script type="text/javascript">
     $(document).ready(function () {
         $(".nav li").removeClass("active");//this will remove the active class from  
