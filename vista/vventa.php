@@ -24,6 +24,15 @@
 	           
     </div> 
     
+<!-- Script para generar el saldo que queda  por cancelar-->
+<script>
+    $(function(){
+  $('#price').change(function() {
+      selectedOption = $('option:selected', this);
+      var a = parseInt($('input[name=valor]').val( selectedOption.data('precio')));
+  }).change();
+  });
+</script>
              	
 <!-- inicio movimiento -->
 		      
@@ -35,10 +44,10 @@
           	<input type="hidden" name="motivo" value="Venta" required>
           	<input type="hidden" name="idgeneral" value="<?= $idgeneral2[0]['numero_venta'] ?>">
            	<label for=""><span style="color:red;">* </span>Referencia:</label><br>
-            <select name="referencia" class="chzn-select form-control">
+            <select name="referencia" id="price" class="chzn-select form-control">
 				<option value=0>Seleccione producto</option>
 				<?php for($i=0;$i<count($referencia2);$i++): ?>
-					<option value="<?= $referencia2[$i]['referencia'] ?>">
+					<option value="<?= $referencia2[$i]['referencia'] ?>" data-precio="<?= $referencia2[$i]['precio'] ?>">
 					<?= $referencia2[$i]['referencia'] ?></option>
 				<?php endfor; ?>
 			</select>  
@@ -51,7 +60,7 @@
           <label for=""><span style="color:red;">* </span>Valor:</label>
           <div class="input-group">
               <span class="input-group-addon">$</span>
-              <input type="number" class="form-control" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
+              <input type="number" class="form-control" id="price1" name="valor" pattern="[0-9]{0,11}" min="0" title="Solo se permiten numeros, máximo 11" required>
           </div>  
 		</div>
         <div class="form-group campo"><br> 

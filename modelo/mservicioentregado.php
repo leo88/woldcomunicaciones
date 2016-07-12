@@ -1,7 +1,7 @@
 <?php
 
-	include('controlador/conexion.php');
-	include('functions.php');
+	include 'controlador/conexion.php';
+	include 'functions.php';
 
 	class Mservicioentregado extends Funciones
 	{
@@ -21,7 +21,7 @@
 		/*
 		 *función para la actualización de los datos de la tabla tbservicioentregado
 		 */
-		function  actualizar_servicioentregado($numero_orden,$fecha,$tecnico)
+		function actualizar_servicioentregado($numero_orden,$fecha,$tecnico)
 		{
 			$sql = "UPDATE tbservicioentregado SET precio = '".$precio."', tecnico = '".$tecnico."' WHERE $numero_orden = '".$numero_orden."';";
 			$this -> cons($sql);
