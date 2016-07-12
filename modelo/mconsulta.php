@@ -265,4 +265,24 @@
 			$sql = "SELECT * FROM tbreposicion ORDER BY idreposicion";
 			return $this->SeleccionDatos($sql);
 		}
+        /*
+		 *función para la consulta de los datos de cantidad ventas por cliente
+		 */
+		function consultar_top_cliente()
+		{
+			$sql = "SELECT tbcliente.nombre AS nombre, Count(tbventa.idcliente) AS no_ventas
+            FROM tbcliente INNER JOIN tbventa ON tbcliente.idcliente = tbventa.idcliente
+            GROUP BY tbcliente.nombre";
+			return $this->SeleccionDatos($sql);
+		}
+        /*
+		 *función para la consulta de los datos de cantidad ventas por vendedor
+		 */
+		function consultar_top_vendedor()
+		{
+			$sql = "SELECT tbempleado.nombre AS nombre, Count(tbventa.idempleado) AS no_ventas
+            FROM tbempleado INNER JOIN tbventa ON tbempleado.idempleado = tbventa.idempleado
+            GROUP BY tbempleado.nombre";
+			return $this->SeleccionDatos($sql);
+		}
 	}

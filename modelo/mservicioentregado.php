@@ -12,18 +12,18 @@
         /*
 		 *función para el ingreso de los datos de la tabla tbservicioentregado
 		 */
-		function insertar_servicioentregado($numero_orden, $fecha, $saldo_cancel)
+		function insertar_servicioentregado($numero_orden, $fecha, $saldo_cancel, $tecnico)
 		{
-			$sql = "INSERT INTO tbservicioentregado (numero_orden, fecha, saldo_cancel)
-						VALUES ('".$numero_orden."','".$fecha."','".$saldo_cancel."');";
+			$sql = "INSERT INTO tbservicioentregado (numero_orden, fecha, saldo_cancel, tecnico)
+						VALUES ('".$numero_orden."','".$fecha."','".$saldo_cancel."','".$tecnico."');";
 			$this -> cons($sql);
 		}
 		/*
 		 *función para la actualización de los datos de la tabla tbservicioentregado
 		 */
-		function  actualizar_servicioentregado($numero_orden,$fecha)
+		function  actualizar_servicioentregado($numero_orden,$fecha,$tecnico)
 		{
-			$sql = "UPDATE tbservicioentregado SET precio = '".$precio."' WHERE $numero_orden = '".$numero_orden."';";
+			$sql = "UPDATE tbservicioentregado SET precio = '".$precio."', tecnico = '".$tecnico."' WHERE $numero_orden = '".$numero_orden."';";
 			$this -> cons($sql);
 		}
 		/*
