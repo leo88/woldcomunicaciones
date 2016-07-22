@@ -65,7 +65,7 @@
             </tr>
             <tr>
                 <th>ID</th>
-                <th>ID Venta</th>
+                <th>ID Compra</th>
 				<th>Motivo</th>
 				<th>Referencia</th>
 				<th>Cantidad</th>
