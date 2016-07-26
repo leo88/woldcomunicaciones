@@ -18,7 +18,7 @@
 			<input type="text" class="form-control" name="marca" pattern="[A-z ]{2,20}" title="Solo se permiten letras máximo 20 caracteres" required >         
 		</div>
 		<div class="form-group col-sm-6 col-md-4 col-lg-3">
-			<label for=""><span style="color:red;">* </span>Precio:</label>
+			<label for=""><span style="color:red;">* </span>Precio sugerido al cliente:</label>
 			<div class="input-group">
   				<span class="input-group-addon">$</span>
   				<input type="number" class="form-control" name="precio" pattern="[0-9]{1,10}" min="0" title="Solo validos numeros" required>
