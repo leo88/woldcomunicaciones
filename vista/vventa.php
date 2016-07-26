@@ -80,11 +80,12 @@
             <tr>
                 <th>ID</th>
                 <th>ID Venta</th>
-				<th>Motivo</th>
-				<th>Referencia</th>
-				<th>Cantidad</th>
-				<th>Valor Unitario</th>
-				<th>Edición</th>
+				        <th>Motivo</th>
+				        <th>Referencia</th>
+				        <th>Cantidad</th>
+				        <th>Valor Unitario</th>
+                <th>Subtotal</th>
+				        <th>Edición</th>
 				<!--<th>Eliminación</th>-->
             </tr>
         </thead>
@@ -96,7 +97,8 @@
 					<td><?= $consultamovimiento[$i]['motivo'] ?></td>
 					<td><?= $consultamovimiento[$i]['referencia'] ?></td>
 					<td><?= $consultamovimiento[$i]['cantidad'] ?></td>
-					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>				
+					<td>$ <?= number_format($consultamovimiento[$i]['valor']) ?></td>
+          <td>$ <?= number_format($consultamovimiento[$i]['valor'] * ($consultamovimiento[$i]['cantidad'] *-1)) ?></td>			
 					<td><a href="home.php?pag=17&id=<?= $consultamovimiento[$i]['idmovimiento'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
