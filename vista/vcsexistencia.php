@@ -39,8 +39,11 @@
                                             //previously active menu item 
         $('#consulta').addClass('active');
         $('.changeColor').each(function() {
+        var cant = $(this).text();
 
+        if (cant < 3) {
             $(this).css("color", "red");
+        } else if(cant < 6){
             $(this).css("color", "orange");
         }
         else{
