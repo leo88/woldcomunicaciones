@@ -23,9 +23,7 @@ body {
 }
 #encabezado {
     font-size: 14px;    
-	width: 7cm;	
-    border-bottom-style: double; 
-    border-bottom-width: 4px;
+	width: 7cm;	   
     font-family: 'BenchNine', sans-serif;
 }
 #encabezado th {
@@ -108,7 +106,18 @@ body {
 .barra4{
     margin-left: 10px;
 }
-
+#patron {
+    width: 7cm;
+    text-align: center;
+    border-bottom-style: double; 
+    border-bottom-width: 4px;
+    border-top-style: dashed;    
+    border-top-width: 1.8px;
+    margin-bottom: 8px;
+}
+img{
+    margin-top: 2px;
+}
 @media print{
     #boton {   
         visibility: hidden;
