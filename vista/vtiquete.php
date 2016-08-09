@@ -54,6 +54,10 @@ $idprint             = $consultast[0]['numero_orden'];
             <?php endfor; ?>
         </tbody>
     </table>
+    <div id="patron">
+        <br><img src="img/circulos.jpg"><br>
+        <img src="img/rectangulo.jpg"><br><br>
+    </div>
 <div id="clausula">
     Nota: Después de 30 días WOLD Comunicaciones cobrará $200 diarios por bodegaje y NO se hace responsable por ningún aparato
     y automaticamente al mismo procedera a rematarlo, para poder recuperar el costo de revision, reparacion y repuestos. WOLD Comunicaciones NO ofrece ninguna clase de garantia por repuestos, ya que estos se compran sin garantia. La garantia solo incluye 
@@ -64,7 +68,7 @@ $idprint             = $consultast[0]['numero_orden'];
     Cra 13 No. 10-110 
 </div>
 <button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="javascript:window.print()"> Imprimir</span></button> 
-<div id="prueba">
+<!--<div id="prueba">
 <table id="prueba2">
 <tbody>
             <?php for($i=0;$i<count($consultast);$i++): ?>
@@ -82,9 +86,9 @@ $idprint             = $consultast[0]['numero_orden'];
             <?php endfor; ?>
         </tbody>
 </table>
-<img src="img/circles3.png"><br>
+<img src="img/circulos.jpg"><br>
 <img src="img/rectangulo.jpg">
-</div>
+</div>-->
 <script type="text/javascript">
 function printDiv(prueba) {
      var printContents = document.getElementById(prueba).innerHTML;
@@ -97,4 +101,4 @@ function printDiv(prueba) {
      document.body.innerHTML = originalContents;
 }
 </script>
-<button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="printDiv('prueba')"> Imprimir</span></button> 
+<!--<button id="boton" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-print" onclick="printDiv('prueba')"> Imprimir</span></button> -->
