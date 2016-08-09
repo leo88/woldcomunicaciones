@@ -27,7 +27,7 @@
                     <td data-title='Referencia'><?= $consultexistencia[$i]['referencia'] ?></td>
                     <td data-title='Tipo de Dispositivo'><?= $consultexistencia[$i]['nombre'] ?></td>
                     <td data-title='Marca'><?= $consultexistencia[$i]['marca'] ?></td>
-                    <td data-title='Cantidad'><?= $consultexistencia[$i]['SumaDecantidad'] ?></td>
+                    <td class="changeColor" data-title='Cantidad'><?= $consultexistencia[$i]['SumaDecantidad'] ?></td>
                     <td data-title='Precio'>$ <?= number_format($consultexistencia[$i]['precio']) ?></td>
                 </tr>
             <?php endfor; ?>
@@ -38,5 +38,15 @@
         $(".nav li").removeClass("active");//this will remove the active class from  
                                             //previously active menu item 
         $('#consulta').addClass('active');
+        $('.changeColor').each(function() {
+
+            $(this).css("color", "red");
+            $(this).css("color", "orange");
+        }
+        else{
+            $(this).css("color", "green");
+        }
+
+        });
     });
 </script>
