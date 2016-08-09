@@ -42,8 +42,14 @@
             <input type="email" class="form-control" name="email" maxlength="70">   
 		</div>
 		<div class="form-group col-sm-12 col-md-12 col-lg-4">
-            <label for=""><span style="color:red;">* </span>Fecha de Ingreso:</label>
-            <input type="date" class="form-control" name="fecha" value="<?= date('Y-m-d'); ?>" readonly required>    
+            <label for=""><span style="color:red;">* </span>Perfil:</label>
+            <select name="perfil" class="form-control" required>
+                <option value="">Seleccione una Opción</option>
+                <option value="1">Administrador</option>
+                <option value="2">Tecnico</option>
+                <option value="3" selected>Vendedor</option>
+            </select>
+            <input type="hidden" class="form-control" name="fecha" value="<?= date('Y-m-d'); ?>" required>
 		</div>
 		 <div class="form-group col-xs-4 col-xs-offset-4 col-sm-6 col-md-6 col-lg-4 col-lg-offset-5"> <br>          		
             <button type="submit" class="btn btn-success" value="Insertar">Registrar <span class="icon-checkmark"></span></button>
@@ -66,8 +72,9 @@
 				<th>Teléfono Personal</th>
 				<th>Teléfono de referencia</th>
 				<th>Email</th>
-				<th>Fecha Ingreso</th>
+				<th>Fecha de Registro al Sistema</th>
 				<th>Estado</th>
+				<th>Perfil</th>
 				<th>Edición</th>
             </tr>
         </thead>
@@ -82,8 +89,9 @@
 					<td data-title='Teléfono'><?= $empleado->formato_telefono_general($consultaempleado[$i]['telefono_emple']) ?></td>
 					<td data-title='Teléfono de referencia'><?= $empleado->formato_telefono_general($consultaempleado[$i]['telefono_refe']) ?></td>
 					<td data-title='Email'><?= $consultaempleado[$i]['email'] ?></td>
-					<td data-title='Fecha Ingreso'><?= $consultaempleado[$i]['fecha_ingreso'] ?></td>
+					<td data-title='Fecha de Registro al Sistema'><?= $consultaempleado[$i]['fecha_ingreso'] ?></td>
 					<td data-title='Estado'><?= $consultaempleado[$i]['estado'] ?></td>
+					<td data-title='Perfil'><?= $consultaempleado[$i]['perfil'] ?></td>
                     <td data-title='Edición'><a href="home.php?pag=10&id=<?= $consultaempleado[$i]['idempleado'] ?>" class="btn btn-primary"><span class="icon-pencil2"></span></a></td>
 					<!--<td>
 						<form action="" method="POST" onSubmit="return confirm('Desea eliminar el registro!');">
